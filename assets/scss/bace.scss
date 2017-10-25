@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+/*! =======================================================
+***********************************************************
+このファイルはSCSSで作成されています。
+数値の調整などは、
+/assets/scss/bace/のなかのファイルを編集してください。
+***********************************************************
+======================================================== */
+// bourbon mixin
+@import "vendor/bourbon/bourbon";
+//@import "vendor/neat/neat";
+//@import "vendor/base/base";
+
+// reset css
+@import "bace/reset";
+
+// list-style
+$list_margin: 2.0em;
+@import "bace/list-style";
+
+// video
+@import "bace/video";
