@@ -1,0 +1,1446 @@
+@charset "UTF-8";
+/* CSS Document */
+/*! =======================================================
+***********************************************************
+このファイルはSCSSで作成されています。
+数値の調整などは、
+/assets/scss/fundamental/のなかのファイルを編集してください。
+***********************************************************
+======================================================== */
+/* CSS Document */
+/* line 4, ../scss/fundamental/_reset.scss */
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* line 13, ../scss/fundamental/_reset.scss */
+:invalid,
+:-moz-submit-invalid,
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+	
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+/* line 34, ../scss/fundamental/_reset.scss */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 44, ../scss/fundamental/_reset.scss */
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements: 
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+/* line 48, ../scss/fundamental/_reset.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 52, ../scss/fundamental/_reset.scss */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+/* line 65, ../scss/fundamental/_reset.scss */
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+/* line 70, ../scss/fundamental/_reset.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+/* line 74, ../scss/fundamental/_reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 76, ../scss/fundamental/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 78, ../scss/fundamental/_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 83, ../scss/fundamental/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 85, ../scss/fundamental/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 87, ../scss/fundamental/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+/* line 90, ../scss/fundamental/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 91, ../scss/fundamental/_reset.scss */
+th {
+  font-weight: inherit;
+  vertical-align: bottom;
+}
+
+/* line 92, ../scss/fundamental/_reset.scss */
+td {
+  font-weight: inherit;
+  vertical-align: top;
+}
+
+/* line 94, ../scss/fundamental/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 96, ../scss/fundamental/_reset.scss */
+input, select {
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+/* line 98, ../scss/fundamental/_reset.scss */
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+/* line 105, ../scss/fundamental/_reset.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 106, ../scss/fundamental/_reset.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 107, ../scss/fundamental/_reset.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 108, ../scss/fundamental/_reset.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/*select, input, textarea {font: 99% sans-serif;}*/
+/* line 112, ../scss/fundamental/_reset.scss */
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+/* line 114, ../scss/fundamental/_reset.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 116, ../scss/fundamental/_reset.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 118, ../scss/fundamental/_reset.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+/* line 121, ../scss/fundamental/_reset.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 122, ../scss/fundamental/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 123, ../scss/fundamental/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+/* line 126, ../scss/fundamental/_reset.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+/* line 129, ../scss/fundamental/_reset.scss */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+/* line 137, ../scss/fundamental/_reset.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+/* line 140, ../scss/fundamental/_reset.scss */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+/* line 144, ../scss/fundamental/_reset.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover 
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+/* line 152, ../scss/fundamental/_reset.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 153, ../scss/fundamental/_reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 154, ../scss/fundamental/_reset.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* CSS Document */
+/* リスト */
+/* line 8, ../scss/fundamental/_list-style.scss */
+.list-style--lower-alpha > li {
+  list-style-type: lower-alpha;
+}
+
+/* line 9, ../scss/fundamental/_list-style.scss */
+.list-style--upper-alpha > li {
+  list-style-type: upper-alpha;
+}
+
+/* line 10, ../scss/fundamental/_list-style.scss */
+.list-style--decimal > li {
+  list-style-type: decimal;
+}
+
+/* line 11, ../scss/fundamental/_list-style.scss */
+.list-style--katakana > li {
+  list-style-type: katakana;
+}
+
+/* line 12, ../scss/fundamental/_list-style.scss */
+.list-style--lower-roman > li {
+  list-style-type: lower-roman;
+}
+
+/* line 13, ../scss/fundamental/_list-style.scss */
+.list-style--upper-roman > li {
+  list-style-type: upper-roman;
+}
+
+/* line 14, ../scss/fundamental/_list-style.scss */
+.list-style--disc li > {
+  list-style-type: disc;
+}
+
+/* line 24, ../scss/fundamental/_list-style.scss */
+.list-style--none li {
+  list-style: none;
+}
+
+/* line 27, ../scss/fundamental/_list-style.scss */
+.list-style--circle > li {
+  list-style-type: circle;
+}
+
+/* line 28, ../scss/fundamental/_list-style.scss */
+.list-style--disc > li {
+  list-style-type: disc;
+}
+
+/* line 29, ../scss/fundamental/_list-style.scss */
+.list-style--square > li {
+  list-style-type: square;
+}
+
+/* line 31, ../scss/fundamental/_list-style.scss */
+.list-style--decimal > li {
+  list-style-type: decimal;
+}
+
+/* line 32, ../scss/fundamental/_list-style.scss */
+.list-style--decimal-zero > li {
+  list-style-type: decimal-leading-zero;
+}
+
+/* line 33, ../scss/fundamental/_list-style.scss */
+.list-style--lower-roman > li {
+  list-style-type: lower-roman;
+}
+
+/* line 34, ../scss/fundamental/_list-style.scss */
+.list-style--lower-alpha > li {
+  list-style-type: lower-alpha;
+}
+
+/* line 35, ../scss/fundamental/_list-style.scss */
+.list-style--upper-alpha > li {
+  list-style-type: upper-alpha;
+}
+
+/* line 36, ../scss/fundamental/_list-style.scss */
+.list-style--cjk-ideographic > li {
+  list-style-type: cjk-ideographic;
+}
+
+/* line 37, ../scss/fundamental/_list-style.scss */
+.list-style--hiragana > li {
+  list-style-type: hiragana;
+}
+
+/* line 38, ../scss/fundamental/_list-style.scss */
+.list-style--hiragana-iroha li {
+  list-style-type: hiragana-iroha;
+}
+
+/* line 39, ../scss/fundamental/_list-style.scss */
+.list-style--katakana > li {
+  list-style-type: katakana;
+}
+
+/* line 40, ../scss/fundamental/_list-style.scss */
+.list-style--katakana-iroha > li {
+  list-style-type: katakana-iroha;
+}
+
+/* line 42, ../scss/fundamental/_list-style.scss */
+.list-style--circle,
+.list-style--disc,
+.list-style--square,
+.list-style--decimal,
+.list-style--decimal-zero,
+.list-style--lower-roman,
+.list-style--lower-alpha,
+.list-style--upper-alpha,
+.list-style--cjk-ideographic,
+.list-style--hiragana,
+.list-style--hiragana-iroha,
+.list-style--katakana,
+.list-style--katakana-iroha {
+  margin-left: 2em !important;
+  list-style-position: outside;
+  text-indent: 0;
+}
+
+/* リスト */
+/* line 59, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar, .list-style__peculiar--original, .list-style__peculiar--brackets-decimal, .list-style__peculiar--brackets-lowerroman, .list-style__peculiar--brackets-upperroman, .list-style__peculiar--brackets-loweralpha, .list-style__peculiar--brackets-upperalpha, .list-style__peculiar--brackets-hiragana, .list-style__peculiar--brackets-katakana, .list-style__peculiar--dot-decimal, .list-style__peculiar--dot-lowerroman, .list-style__peculiar--dot-upperroman, .list-style__peculiar--dot-loweralpha, .list-style__peculiar--dot-upperalpha, .list-style__peculiar--dot-hiragana, .list-style__peculiar--dot-katakana, .list-style__peculiar--character_circle-decimal {
+  margin-left: 2em !important;
+}
+/* line 62, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar > li, .list-style__peculiar--original > li, .list-style__peculiar--brackets-decimal > li, .list-style__peculiar--brackets-lowerroman > li, .list-style__peculiar--brackets-upperroman > li, .list-style__peculiar--brackets-loweralpha > li, .list-style__peculiar--brackets-upperalpha > li, .list-style__peculiar--brackets-hiragana > li, .list-style__peculiar--brackets-katakana > li, .list-style__peculiar--dot-decimal > li, .list-style__peculiar--dot-lowerroman > li, .list-style__peculiar--dot-upperroman > li, .list-style__peculiar--dot-loweralpha > li, .list-style__peculiar--dot-upperalpha > li, .list-style__peculiar--dot-hiragana > li, .list-style__peculiar--dot-katakana > li, .list-style__peculiar--character_circle-decimal > li {
+  list-style-type: none;
+  list-style-position: inside;
+  text-indent: -2em;
+}
+/* line 67, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar > li::before, .list-style__peculiar--original > li::before, .list-style__peculiar--brackets-decimal > li::before, .list-style__peculiar--brackets-lowerroman > li::before, .list-style__peculiar--brackets-upperroman > li::before, .list-style__peculiar--brackets-loweralpha > li::before, .list-style__peculiar--brackets-upperalpha > li::before, .list-style__peculiar--brackets-hiragana > li::before, .list-style__peculiar--brackets-katakana > li::before, .list-style__peculiar--dot-decimal > li::before, .list-style__peculiar--dot-lowerroman > li::before, .list-style__peculiar--dot-upperroman > li::before, .list-style__peculiar--dot-loweralpha > li::before, .list-style__peculiar--dot-upperalpha > li::before, .list-style__peculiar--dot-hiragana > li::before, .list-style__peculiar--dot-katakana > li::before, .list-style__peculiar--character_circle-decimal > li::before {
+  display: inline-block;
+  width: 2em;
+  text-indent: 0;
+}
+
+/* spanでリストヘッド自由入力 */
+/* line 76, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--original > li {
+  counter-increment: cnt_brackets-decimal;
+}
+/* line 78, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--original > li::before {
+  display: none;
+}
+/* line 82, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--original .list-style__peculiar--original__mark {
+  display: inline-block;
+  width: 2em;
+  text-indent: 0;
+}
+
+/* (1) カッコに数字 */
+/* line 86, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-decimal {
+  counter-reset: cnt_brackets-decimal 0;
+}
+/* line 89, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-decimal > li {
+  counter-increment: cnt_brackets-decimal;
+}
+/* line 91, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-decimal > li::before {
+  content: "(" counter(cnt_brackets-decimal) ") ";
+}
+
+/* (a) カッコに小文字アルファベット */
+/* line 98, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-lowerroman {
+  counter-reset: cnt_brackets-lowerroman 0;
+}
+/* line 101, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-lowerroman > li {
+  counter-increment: cnt_brackets-lowerroman;
+}
+/* line 103, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-lowerroman > li::before {
+  content: "(" counter(cnt_brackets-lowerroman,lower-roman) ") ";
+}
+
+/* (A) カッコに大文字アルファベット */
+/* line 110, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-upperroman {
+  counter-reset: cnt_brackets-upperroman 0;
+}
+/* line 113, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-upperroman > li {
+  counter-increment: cnt_brackets-upperroman;
+}
+/* line 115, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-upperroman > li::before {
+  content: "(" counter(cnt_brackets-upperroman,upper-roman) ") ";
+}
+
+/* (i) カッコに小文字アルファベット */
+/* line 123, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-loweralpha {
+  counter-reset: cnt_brackets-loweralpha 0;
+}
+/* line 126, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-loweralpha > li {
+  counter-increment: cnt_brackets-loweralpha;
+}
+/* line 128, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-loweralpha > li::before {
+  content: "(" counter(cnt_brackets-loweralpha,lower-alpha) ") ";
+}
+
+/* (I) カッコに大文字アルファベット */
+/* line 135, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-upperalpha {
+  counter-reset: cnt_brackets-upperalpha 0;
+}
+/* line 138, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-upperalpha > li {
+  counter-increment: cnt_brackets-upperalpha;
+}
+/* line 140, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-upperalpha > li::before {
+  content: "(" counter(cnt_brackets-upperalpha,upper-alpha) ") ";
+}
+
+/* (あ) カッコにひらがな */
+/* line 154, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(1)::before {
+  content: "(あ)";
+}
+/* line 155, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(2)::before {
+  content: "(い)";
+}
+/* line 156, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(3)::before {
+  content: "(う)";
+}
+/* line 157, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(4)::before {
+  content: "(え)";
+}
+/* line 158, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(5)::before {
+  content: "(お)";
+}
+/* line 160, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(6)::before {
+  content: "(か)";
+}
+/* line 161, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(7)::before {
+  content: "(き)";
+}
+/* line 162, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(8)::before {
+  content: "(く)";
+}
+/* line 163, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(9)::before {
+  content: "(け)";
+}
+/* line 164, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(10)::before {
+  content: "(こ)";
+}
+/* line 166, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(11)::before {
+  content: "(さ)";
+}
+/* line 167, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(12)::before {
+  content: "(し)";
+}
+/* line 168, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(13)::before {
+  content: "(す)";
+}
+/* line 169, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(14)::before {
+  content: "(せ)";
+}
+/* line 170, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(15)::before {
+  content: "(そ)";
+}
+/* line 172, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(16)::before {
+  content: "(た)";
+}
+/* line 173, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(17)::before {
+  content: "(ち)";
+}
+/* line 174, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(18)::before {
+  content: "(つ)";
+}
+/* line 175, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(19)::before {
+  content: "(て)";
+}
+/* line 176, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(20)::before {
+  content: "(と)";
+}
+/* line 178, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(21)::before {
+  content: "(な)";
+}
+/* line 179, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(22)::before {
+  content: "(に)";
+}
+/* line 180, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(23)::before {
+  content: "(ぬ)";
+}
+/* line 181, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(24)::before {
+  content: "(ね)";
+}
+/* line 182, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(25)::before {
+  content: "(の)";
+}
+/* line 184, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(26)::before {
+  content: "(は)";
+}
+/* line 185, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(27)::before {
+  content: "(ひ)";
+}
+/* line 186, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(28)::before {
+  content: "(ふ)";
+}
+/* line 187, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(29)::before {
+  content: "(へ)";
+}
+/* line 188, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(30)::before {
+  content: "(ほ)";
+}
+/* line 190, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(31)::before {
+  content: "(ま)";
+}
+/* line 191, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(32)::before {
+  content: "(み)";
+}
+/* line 192, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(33)::before {
+  content: "(む)";
+}
+/* line 193, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(34)::before {
+  content: "(め)";
+}
+/* line 194, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(35)::before {
+  content: "(も)";
+}
+/* line 196, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(36)::before {
+  content: "(や)";
+}
+/* line 197, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(37)::before {
+  content: "(ゆ)";
+}
+/* line 198, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(38)::before {
+  content: "(よ)";
+}
+/* line 200, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(39)::before {
+  content: "(ら)";
+}
+/* line 201, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(40)::before {
+  content: "(り)";
+}
+/* line 202, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(41)::before {
+  content: "(る)";
+}
+/* line 203, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(42)::before {
+  content: "(れ)";
+}
+/* line 204, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(43)::before {
+  content: "(ろ)";
+}
+/* line 206, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(44)::before {
+  content: "(わ)";
+}
+/* line 207, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(45)::before {
+  content: "(を)";
+}
+/* line 208, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-hiragana > li:nth-of-type(46)::before {
+  content: "(ん)";
+}
+
+/* (ア) カッコにカタカナ */
+/* line 220, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(1)::before {
+  content: "(ア)";
+}
+/* line 221, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(2)::before {
+  content: "(イ)";
+}
+/* line 222, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(3)::before {
+  content: "(ウ)";
+}
+/* line 223, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(4)::before {
+  content: "(エ)";
+}
+/* line 224, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(5)::before {
+  content: "(オ)";
+}
+/* line 226, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(6)::before {
+  content: "(カ)";
+}
+/* line 227, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(7)::before {
+  content: "(キ)";
+}
+/* line 228, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(8)::before {
+  content: "(ク)";
+}
+/* line 229, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(9)::before {
+  content: "(ケ)";
+}
+/* line 230, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(10)::before {
+  content: "(コ)";
+}
+/* line 232, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(11)::before {
+  content: "(サ)";
+}
+/* line 233, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(12)::before {
+  content: "(シ)";
+}
+/* line 234, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(13)::before {
+  content: "(ス)";
+}
+/* line 235, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(14)::before {
+  content: "(セ)";
+}
+/* line 236, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(15)::before {
+  content: "(ソ)";
+}
+/* line 238, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(16)::before {
+  content: "(タ)";
+}
+/* line 239, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(17)::before {
+  content: "(チ)";
+}
+/* line 240, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(18)::before {
+  content: "(ツ)";
+}
+/* line 241, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(19)::before {
+  content: "(テ)";
+}
+/* line 242, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(20)::before {
+  content: "(ト)";
+}
+/* line 244, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(21)::before {
+  content: "(ナ)";
+}
+/* line 245, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(22)::before {
+  content: "(ニ)";
+}
+/* line 246, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(23)::before {
+  content: "(ヌ)";
+}
+/* line 247, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(24)::before {
+  content: "(ネ)";
+}
+/* line 248, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(25)::before {
+  content: "(ノ)";
+}
+/* line 250, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(26)::before {
+  content: "(ハ)";
+}
+/* line 251, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(27)::before {
+  content: "(ヒ)";
+}
+/* line 252, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(28)::before {
+  content: "(フ)";
+}
+/* line 253, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(29)::before {
+  content: "(ヘ)";
+}
+/* line 254, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(30)::before {
+  content: "(ホ)";
+}
+/* line 256, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(31)::before {
+  content: "(マ)";
+}
+/* line 257, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(32)::before {
+  content: "(ミ)";
+}
+/* line 258, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(33)::before {
+  content: "(ム)";
+}
+/* line 259, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(34)::before {
+  content: "(メ)";
+}
+/* line 260, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(35)::before {
+  content: "(モ)";
+}
+/* line 262, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(36)::before {
+  content: "(ヤ)";
+}
+/* line 263, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(37)::before {
+  content: "(ユ)";
+}
+/* line 264, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(38)::before {
+  content: "(ヨ)";
+}
+/* line 266, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(39)::before {
+  content: "(ラ)";
+}
+/* line 267, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(40)::before {
+  content: "(リ)";
+}
+/* line 268, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(41)::before {
+  content: "(ル)";
+}
+/* line 269, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(42)::before {
+  content: "(レ)";
+}
+/* line 270, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(43)::before {
+  content: "(ロ)";
+}
+/* line 272, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(44)::before {
+  content: "(ワ)";
+}
+/* line 273, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(45)::before {
+  content: "(ヲ)";
+}
+/* line 274, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--brackets-katakana > li:nth-of-type(46)::before {
+  content: "(ン)";
+}
+
+/* 1. ドットに数字 */
+/* line 279, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-decimal {
+  counter-reset: cnt_dot-decimal 0;
+}
+/* line 282, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-decimal > li {
+  counter-increment: cnt_dot-decimal;
+}
+/* line 284, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-decimal > li::before {
+  content: counter(cnt_dot-decimal) ".";
+}
+
+/* a. ドットに小文字アルファベット */
+/* line 291, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-lowerroman {
+  counter-reset: cnt_dot-lowerroman 0;
+}
+/* line 294, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-lowerroman > li {
+  counter-increment: cnt_dot-lowerroman;
+}
+/* line 296, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-lowerroman > li::before {
+  content: counter(cnt_dot-lowerroman,lower-roman) ".";
+}
+
+/* A. ドットに大文字アルファベット */
+/* line 303, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-upperroman {
+  counter-reset: cnt_dot-upperroman 0;
+}
+/* line 306, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-upperroman > li {
+  counter-increment: cnt_dot-upperroman;
+}
+/* line 308, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-upperroman > li::before {
+  content: counter(cnt_dot-upperroman,upper-roman) ".";
+}
+
+/* i. ドットに小文字アルファベット */
+/* line 316, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-loweralpha {
+  counter-reset: cnt_dot-loweralpha 0;
+}
+/* line 319, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-loweralpha > li {
+  counter-increment: cnt_dot-loweralpha;
+}
+/* line 321, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-loweralpha > li::before {
+  content: counter(cnt_dot-loweralpha,lower-alpha) ".";
+}
+
+/* I. ドットに大文字アルファベット */
+/* line 328, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-upperalpha {
+  counter-reset: cnt_dot-upperalpha 0;
+}
+/* line 331, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-upperalpha > li {
+  counter-increment: cnt_dot-upperalpha;
+}
+/* line 333, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-upperalpha > li::before {
+  content: counter(cnt_dot-upperalpha,upper-alpha) ".";
+}
+
+/* あ. ドットにひらがな */
+/* line 346, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(1)::before {
+  content: "あ.";
+}
+/* line 347, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(2)::before {
+  content: "い.";
+}
+/* line 348, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(3)::before {
+  content: "う.";
+}
+/* line 349, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(4)::before {
+  content: "え.";
+}
+/* line 350, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(5)::before {
+  content: "お.";
+}
+/* line 352, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(6)::before {
+  content: "か.";
+}
+/* line 353, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(7)::before {
+  content: "き.";
+}
+/* line 354, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(8)::before {
+  content: "く.";
+}
+/* line 355, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(9)::before {
+  content: "け.";
+}
+/* line 356, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(10)::before {
+  content: "こ.";
+}
+/* line 358, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(11)::before {
+  content: "さ.";
+}
+/* line 359, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(12)::before {
+  content: "し.";
+}
+/* line 360, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(13)::before {
+  content: "す.";
+}
+/* line 361, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(14)::before {
+  content: "せ.";
+}
+/* line 362, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(15)::before {
+  content: "そ.";
+}
+/* line 364, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(16)::before {
+  content: "た.";
+}
+/* line 365, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(17)::before {
+  content: "ち.";
+}
+/* line 366, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(18)::before {
+  content: "つ.";
+}
+/* line 367, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(19)::before {
+  content: "て.";
+}
+/* line 368, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(20)::before {
+  content: "と.";
+}
+/* line 370, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(21)::before {
+  content: "な.";
+}
+/* line 371, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(22)::before {
+  content: "に.";
+}
+/* line 372, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(23)::before {
+  content: "ぬ.";
+}
+/* line 373, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(24)::before {
+  content: "ね.";
+}
+/* line 374, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(25)::before {
+  content: "の.";
+}
+/* line 376, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(26)::before {
+  content: "は.";
+}
+/* line 377, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(27)::before {
+  content: "ひ.";
+}
+/* line 378, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(28)::before {
+  content: "ふ.";
+}
+/* line 379, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(29)::before {
+  content: "へ.";
+}
+/* line 380, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(30)::before {
+  content: "ほ.";
+}
+/* line 382, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(31)::before {
+  content: "ま.";
+}
+/* line 383, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(32)::before {
+  content: "み.";
+}
+/* line 384, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(33)::before {
+  content: "む.";
+}
+/* line 385, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(34)::before {
+  content: "め.";
+}
+/* line 386, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(35)::before {
+  content: "も.";
+}
+/* line 388, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(36)::before {
+  content: "や.";
+}
+/* line 389, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(37)::before {
+  content: "ゆ.";
+}
+/* line 390, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(38)::before {
+  content: "よ.";
+}
+/* line 392, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(39)::before {
+  content: "ら.";
+}
+/* line 393, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(40)::before {
+  content: "り.";
+}
+/* line 394, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(41)::before {
+  content: "る.";
+}
+/* line 395, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(42)::before {
+  content: "れ.";
+}
+/* line 396, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(43)::before {
+  content: "ろ.";
+}
+/* line 398, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(44)::before {
+  content: "わ.";
+}
+/* line 399, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(45)::before {
+  content: "を.";
+}
+/* line 400, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-hiragana > li:nth-of-type(46)::before {
+  content: "ん.";
+}
+
+/* ア. ドットにカタカナ */
+/* line 411, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(1)::before {
+  content: "ア.";
+}
+/* line 412, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(2)::before {
+  content: "イ.";
+}
+/* line 413, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(3)::before {
+  content: "ウ.";
+}
+/* line 414, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(4)::before {
+  content: "エ.";
+}
+/* line 415, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(5)::before {
+  content: "オ.";
+}
+/* line 417, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(6)::before {
+  content: "カ.";
+}
+/* line 418, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(7)::before {
+  content: "キ.";
+}
+/* line 419, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(8)::before {
+  content: "ク.";
+}
+/* line 420, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(9)::before {
+  content: "ケ.";
+}
+/* line 421, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(10)::before {
+  content: "コ.";
+}
+/* line 423, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(11)::before {
+  content: "サ.";
+}
+/* line 424, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(12)::before {
+  content: "シ.";
+}
+/* line 425, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(13)::before {
+  content: "ス.";
+}
+/* line 426, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(14)::before {
+  content: "セ.";
+}
+/* line 427, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(15)::before {
+  content: "ソ.";
+}
+/* line 429, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(16)::before {
+  content: "タ.";
+}
+/* line 430, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(17)::before {
+  content: "チ.";
+}
+/* line 431, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(18)::before {
+  content: "ツ.";
+}
+/* line 432, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(19)::before {
+  content: "テ.";
+}
+/* line 433, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(20)::before {
+  content: "ト.";
+}
+/* line 435, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(21)::before {
+  content: "ナ.";
+}
+/* line 436, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(22)::before {
+  content: "ニ.";
+}
+/* line 437, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(23)::before {
+  content: "ヌ.";
+}
+/* line 438, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(24)::before {
+  content: "ネ.";
+}
+/* line 439, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(25)::before {
+  content: "ノ.";
+}
+/* line 441, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(26)::before {
+  content: "ハ.";
+}
+/* line 442, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(27)::before {
+  content: "ヒ.";
+}
+/* line 443, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(28)::before {
+  content: "フ.";
+}
+/* line 444, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(29)::before {
+  content: "ヘ.";
+}
+/* line 445, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(30)::before {
+  content: "ホ.";
+}
+/* line 447, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(31)::before {
+  content: "マ.";
+}
+/* line 448, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(32)::before {
+  content: "ミ.";
+}
+/* line 449, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(33)::before {
+  content: "ム.";
+}
+/* line 450, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(34)::before {
+  content: "メ.";
+}
+/* line 451, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(35)::before {
+  content: "モ.";
+}
+/* line 453, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(36)::before {
+  content: "ヤ.";
+}
+/* line 454, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(37)::before {
+  content: "ユ.";
+}
+/* line 455, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(38)::before {
+  content: "ヨ.";
+}
+/* line 457, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(39)::before {
+  content: "ラ.";
+}
+/* line 458, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(40)::before {
+  content: "リ.";
+}
+/* line 459, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(41)::before {
+  content: "ル.";
+}
+/* line 460, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(42)::before {
+  content: "レ.";
+}
+/* line 461, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(43)::before {
+  content: "ロ.";
+}
+/* line 463, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(44)::before {
+  content: "ワ.";
+}
+/* line 464, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(45)::before {
+  content: "ヲ.";
+}
+/* line 465, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--dot-katakana > li:nth-of-type(46)::before {
+  content: "ン.";
+}
+
+/* character */
+/* ① 丸数字 */
+/* line 477, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(1)::before {
+  content: "\02460";
+}
+/* line 478, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(2)::before {
+  content: "\02461";
+}
+/* line 479, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(3)::before {
+  content: "\02462";
+}
+/* line 480, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(4)::before {
+  content: "\02463";
+}
+/* line 481, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(5)::before {
+  content: "\02464";
+}
+/* line 482, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(6)::before {
+  content: "\02465";
+}
+/* line 483, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(7)::before {
+  content: "\02466";
+}
+/* line 484, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(8)::before {
+  content: "\02467";
+}
+/* line 485, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(9)::before {
+  content: "\02468";
+}
+/* line 486, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(10)::before {
+  content: "\02469";
+}
+/* line 487, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(11)::before {
+  content: "\0246a";
+}
+/* line 488, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(12)::before {
+  content: "\0246b";
+}
+/* line 489, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(13)::before {
+  content: "\0246c";
+}
+/* line 490, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(14)::before {
+  content: "\0246d";
+}
+/* line 491, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(15)::before {
+  content: "\0246e";
+}
+/* line 492, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(16)::before {
+  content: "\0246f";
+}
+/* line 493, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(17)::before {
+  content: "\02476";
+}
+/* line 494, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(18)::before {
+  content: "\02470";
+}
+/* line 495, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(19)::before {
+  content: "\02471";
+}
+/* line 496, ../scss/fundamental/_list-style.scss */
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(20)::before {
+  content: "\02472";
+}
+
+/* Scss Document */
+/* ---------------------------------------------------------------------------------
+	video set
+--------------------------------------------------------------------------------- */
+/* line 8, ../scss/fundamental/_video.scss */
+.video-respons {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+/* line 15, ../scss/fundamental/_video.scss */
+.video-respons iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=fundamental.css.map */

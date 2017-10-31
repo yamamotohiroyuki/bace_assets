@@ -4,7 +4,7 @@
 ***********************************************************
 このファイルはSCSSで作成されています。
 数値の調整などは、
-/assets/scss/bace/のなかのファイルを編集してください。
+/assets/scss/fundamental/のなかのファイルを編集してください。
 ***********************************************************
 ======================================================== */
 // bourbon mixin
@@ -13,14 +13,12 @@
 //@import "vendor/base/base";
 
 // reset css
-@import "bace/reset";
+@import "fundamental/reset";
 
 // list-style
 $list_margin: 2.0em;
-@import "bace/list-style";
+@import "fundamental/list-style";
 
 // video
-@import "bace/video";
+@import "fundamental/video";
 
-// size
-@import "bace/size";
