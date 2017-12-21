@@ -309,7 +309,7 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 }
 
 
-/* (あ) カッコにひらがな */
+/* あ. カッコにひらがな */
 .list-style__peculiar--dot-hiragana {
 	@extend .list-style__peculiar;
 	@each $value in $set_hiragana {
@@ -320,7 +320,7 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 	}
 }
 
-/* (ア) カッコにカタカナ */
+/* ア. カッコにカタカナ */
 .list-style__peculiar--dot-katakana {
 	@extend .list-style__peculiar;
 	@each $value in $set_katakana {

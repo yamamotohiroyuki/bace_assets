@@ -62,18 +62,6 @@ $num: 5;
 	.margin-left--negative-#{$i * $num} {
 		margin-left: -#{$i * $num}px !important;
 	}
-	.padding-top--negative-#{$i * $num} {
-		padding-top: -#{$i * $num}px !important;
-	}
-	.padding-right--negative-#{$i * $num} {
-		padding-right: -#{$i * $num}px !important;
-	}
-	.padding-bottom--negative-#{$i * $num} {
-		padding-bottom: -#{$i * $num}px !important;
-	}
-	.padding-left--negative-#{$i * $num} {
-		padding-left: -#{$i * $num}px !important;
-	}
 }
 
 @for $i from 0 through 20 {
@@ -114,17 +102,5 @@ $num: 5;
 	}
 	.margin-left--negative-percent-#{$i * $num} {
 		margin-left: -#{$i * $num}% !important;
-	}
-	.padding-top--negative-percent-#{$i * $num} {
-		padding-top: -#{$i * $num}% !important;
-	}
-	.padding-right--negative-percent-#{$i * $num} {
-		padding-right: -#{$i * $num}% !important;
-	}
-	.padding-bottom--negative-percent-#{$i * $num} {
-		padding-bottom: -#{$i * $num}% !important;
-	}
-	.padding-left--negative-percent-#{$i * $num} {
-		padding-left: -#{$i * $num}% !important;
 	}
 }

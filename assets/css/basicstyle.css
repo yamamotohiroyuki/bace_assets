@@ -439,7 +439,7 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--dot-upperalpha > li { counter-increment: cnt_dot-upperalpha; }
 .list-style__peculiar--dot-upperalpha > li::before { content: counter(cnt_dot-upperalpha,upper-alpha) "."; }
 
-/* (あ) カッコにひらがな */
+/* あ. カッコにひらがな */
 .list-style__peculiar--dot-hiragana > li:nth-child(1):before { content: "あ."; }
 .list-style__peculiar--dot-hiragana > li:nth-child(2):before { content: "い."; }
 .list-style__peculiar--dot-hiragana > li:nth-child(3):before { content: "う."; }
@@ -487,7 +487,7 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--dot-hiragana > li:nth-child(45):before { content: "を."; }
 .list-style__peculiar--dot-hiragana > li:nth-child(46):before { content: "ん."; }
 
-/* (ア) カッコにカタカナ */
+/* ア. カッコにカタカナ */
 .list-style__peculiar--dot-katakana > li:nth-child(1):before { content: "ア."; }
 .list-style__peculiar--dot-katakana > li:nth-child(2):before { content: "イ."; }
 .list-style__peculiar--dot-katakana > li:nth-child(3):before { content: "ウ."; }
@@ -567,7 +567,7 @@ button, input[type=button] { width: auto; overflow: visible; }
 .indent-list { display: table; }
 .indent-list > li { display: table-row; }
 .indent-list > li::before { display: table-cell; padding: 0.25em 0; vertical-align: top; width: 1%; white-space: nowrap; content: attr(data-indent-head); }
-.indent-list div { display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
+.indent-list span { display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
 
 /* Scss Document */
 /* table-style
@@ -1321,14 +1321,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-0 { margin-left: -0px !important; }
 
-.padding-top--negative-0 { padding-top: -0px !important; }
-
-.padding-right--negative-0 { padding-right: -0px !important; }
-
-.padding-bottom--negative-0 { padding-bottom: -0px !important; }
-
-.padding-left--negative-0 { padding-left: -0px !important; }
-
 .margin-top--5 { margin-top: 5px !important; }
 
 .margin-right--5 { margin-right: 5px !important; }
@@ -1352,14 +1344,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-5 { margin-bottom: -5px !important; }
 
 .margin-left--negative-5 { margin-left: -5px !important; }
-
-.padding-top--negative-5 { padding-top: -5px !important; }
-
-.padding-right--negative-5 { padding-right: -5px !important; }
-
-.padding-bottom--negative-5 { padding-bottom: -5px !important; }
-
-.padding-left--negative-5 { padding-left: -5px !important; }
 
 .margin-top--10 { margin-top: 10px !important; }
 
@@ -1385,14 +1369,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-10 { margin-left: -10px !important; }
 
-.padding-top--negative-10 { padding-top: -10px !important; }
-
-.padding-right--negative-10 { padding-right: -10px !important; }
-
-.padding-bottom--negative-10 { padding-bottom: -10px !important; }
-
-.padding-left--negative-10 { padding-left: -10px !important; }
-
 .margin-top--15 { margin-top: 15px !important; }
 
 .margin-right--15 { margin-right: 15px !important; }
@@ -1416,14 +1392,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-15 { margin-bottom: -15px !important; }
 
 .margin-left--negative-15 { margin-left: -15px !important; }
-
-.padding-top--negative-15 { padding-top: -15px !important; }
-
-.padding-right--negative-15 { padding-right: -15px !important; }
-
-.padding-bottom--negative-15 { padding-bottom: -15px !important; }
-
-.padding-left--negative-15 { padding-left: -15px !important; }
 
 .margin-top--20 { margin-top: 20px !important; }
 
@@ -1449,14 +1417,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-20 { margin-left: -20px !important; }
 
-.padding-top--negative-20 { padding-top: -20px !important; }
-
-.padding-right--negative-20 { padding-right: -20px !important; }
-
-.padding-bottom--negative-20 { padding-bottom: -20px !important; }
-
-.padding-left--negative-20 { padding-left: -20px !important; }
-
 .margin-top--25 { margin-top: 25px !important; }
 
 .margin-right--25 { margin-right: 25px !important; }
@@ -1480,14 +1440,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-25 { margin-bottom: -25px !important; }
 
 .margin-left--negative-25 { margin-left: -25px !important; }
-
-.padding-top--negative-25 { padding-top: -25px !important; }
-
-.padding-right--negative-25 { padding-right: -25px !important; }
-
-.padding-bottom--negative-25 { padding-bottom: -25px !important; }
-
-.padding-left--negative-25 { padding-left: -25px !important; }
 
 .margin-top--30 { margin-top: 30px !important; }
 
@@ -1513,14 +1465,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-30 { margin-left: -30px !important; }
 
-.padding-top--negative-30 { padding-top: -30px !important; }
-
-.padding-right--negative-30 { padding-right: -30px !important; }
-
-.padding-bottom--negative-30 { padding-bottom: -30px !important; }
-
-.padding-left--negative-30 { padding-left: -30px !important; }
-
 .margin-top--35 { margin-top: 35px !important; }
 
 .margin-right--35 { margin-right: 35px !important; }
@@ -1544,14 +1488,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-35 { margin-bottom: -35px !important; }
 
 .margin-left--negative-35 { margin-left: -35px !important; }
-
-.padding-top--negative-35 { padding-top: -35px !important; }
-
-.padding-right--negative-35 { padding-right: -35px !important; }
-
-.padding-bottom--negative-35 { padding-bottom: -35px !important; }
-
-.padding-left--negative-35 { padding-left: -35px !important; }
 
 .margin-top--40 { margin-top: 40px !important; }
 
@@ -1577,14 +1513,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-40 { margin-left: -40px !important; }
 
-.padding-top--negative-40 { padding-top: -40px !important; }
-
-.padding-right--negative-40 { padding-right: -40px !important; }
-
-.padding-bottom--negative-40 { padding-bottom: -40px !important; }
-
-.padding-left--negative-40 { padding-left: -40px !important; }
-
 .margin-top--45 { margin-top: 45px !important; }
 
 .margin-right--45 { margin-right: 45px !important; }
@@ -1608,14 +1536,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-45 { margin-bottom: -45px !important; }
 
 .margin-left--negative-45 { margin-left: -45px !important; }
-
-.padding-top--negative-45 { padding-top: -45px !important; }
-
-.padding-right--negative-45 { padding-right: -45px !important; }
-
-.padding-bottom--negative-45 { padding-bottom: -45px !important; }
-
-.padding-left--negative-45 { padding-left: -45px !important; }
 
 .margin-top--50 { margin-top: 50px !important; }
 
@@ -1641,14 +1561,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-50 { margin-left: -50px !important; }
 
-.padding-top--negative-50 { padding-top: -50px !important; }
-
-.padding-right--negative-50 { padding-right: -50px !important; }
-
-.padding-bottom--negative-50 { padding-bottom: -50px !important; }
-
-.padding-left--negative-50 { padding-left: -50px !important; }
-
 .margin-top--55 { margin-top: 55px !important; }
 
 .margin-right--55 { margin-right: 55px !important; }
@@ -1672,14 +1584,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-55 { margin-bottom: -55px !important; }
 
 .margin-left--negative-55 { margin-left: -55px !important; }
-
-.padding-top--negative-55 { padding-top: -55px !important; }
-
-.padding-right--negative-55 { padding-right: -55px !important; }
-
-.padding-bottom--negative-55 { padding-bottom: -55px !important; }
-
-.padding-left--negative-55 { padding-left: -55px !important; }
 
 .margin-top--60 { margin-top: 60px !important; }
 
@@ -1705,14 +1609,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-60 { margin-left: -60px !important; }
 
-.padding-top--negative-60 { padding-top: -60px !important; }
-
-.padding-right--negative-60 { padding-right: -60px !important; }
-
-.padding-bottom--negative-60 { padding-bottom: -60px !important; }
-
-.padding-left--negative-60 { padding-left: -60px !important; }
-
 .margin-top--65 { margin-top: 65px !important; }
 
 .margin-right--65 { margin-right: 65px !important; }
@@ -1736,14 +1632,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-65 { margin-bottom: -65px !important; }
 
 .margin-left--negative-65 { margin-left: -65px !important; }
-
-.padding-top--negative-65 { padding-top: -65px !important; }
-
-.padding-right--negative-65 { padding-right: -65px !important; }
-
-.padding-bottom--negative-65 { padding-bottom: -65px !important; }
-
-.padding-left--negative-65 { padding-left: -65px !important; }
 
 .margin-top--70 { margin-top: 70px !important; }
 
@@ -1769,14 +1657,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-70 { margin-left: -70px !important; }
 
-.padding-top--negative-70 { padding-top: -70px !important; }
-
-.padding-right--negative-70 { padding-right: -70px !important; }
-
-.padding-bottom--negative-70 { padding-bottom: -70px !important; }
-
-.padding-left--negative-70 { padding-left: -70px !important; }
-
 .margin-top--75 { margin-top: 75px !important; }
 
 .margin-right--75 { margin-right: 75px !important; }
@@ -1800,14 +1680,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-75 { margin-bottom: -75px !important; }
 
 .margin-left--negative-75 { margin-left: -75px !important; }
-
-.padding-top--negative-75 { padding-top: -75px !important; }
-
-.padding-right--negative-75 { padding-right: -75px !important; }
-
-.padding-bottom--negative-75 { padding-bottom: -75px !important; }
-
-.padding-left--negative-75 { padding-left: -75px !important; }
 
 .margin-top--80 { margin-top: 80px !important; }
 
@@ -1833,14 +1705,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-80 { margin-left: -80px !important; }
 
-.padding-top--negative-80 { padding-top: -80px !important; }
-
-.padding-right--negative-80 { padding-right: -80px !important; }
-
-.padding-bottom--negative-80 { padding-bottom: -80px !important; }
-
-.padding-left--negative-80 { padding-left: -80px !important; }
-
 .margin-top--85 { margin-top: 85px !important; }
 
 .margin-right--85 { margin-right: 85px !important; }
@@ -1864,14 +1728,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-85 { margin-bottom: -85px !important; }
 
 .margin-left--negative-85 { margin-left: -85px !important; }
-
-.padding-top--negative-85 { padding-top: -85px !important; }
-
-.padding-right--negative-85 { padding-right: -85px !important; }
-
-.padding-bottom--negative-85 { padding-bottom: -85px !important; }
-
-.padding-left--negative-85 { padding-left: -85px !important; }
 
 .margin-top--90 { margin-top: 90px !important; }
 
@@ -1897,14 +1753,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-90 { margin-left: -90px !important; }
 
-.padding-top--negative-90 { padding-top: -90px !important; }
-
-.padding-right--negative-90 { padding-right: -90px !important; }
-
-.padding-bottom--negative-90 { padding-bottom: -90px !important; }
-
-.padding-left--negative-90 { padding-left: -90px !important; }
-
 .margin-top--95 { margin-top: 95px !important; }
 
 .margin-right--95 { margin-right: 95px !important; }
@@ -1928,14 +1776,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-95 { margin-bottom: -95px !important; }
 
 .margin-left--negative-95 { margin-left: -95px !important; }
-
-.padding-top--negative-95 { padding-top: -95px !important; }
-
-.padding-right--negative-95 { padding-right: -95px !important; }
-
-.padding-bottom--negative-95 { padding-bottom: -95px !important; }
-
-.padding-left--negative-95 { padding-left: -95px !important; }
 
 .margin-top--100 { margin-top: 100px !important; }
 
@@ -1961,14 +1801,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-100 { margin-left: -100px !important; }
 
-.padding-top--negative-100 { padding-top: -100px !important; }
-
-.padding-right--negative-100 { padding-right: -100px !important; }
-
-.padding-bottom--negative-100 { padding-bottom: -100px !important; }
-
-.padding-left--negative-100 { padding-left: -100px !important; }
-
 .margin-top--105 { margin-top: 105px !important; }
 
 .margin-right--105 { margin-right: 105px !important; }
@@ -1992,14 +1824,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-105 { margin-bottom: -105px !important; }
 
 .margin-left--negative-105 { margin-left: -105px !important; }
-
-.padding-top--negative-105 { padding-top: -105px !important; }
-
-.padding-right--negative-105 { padding-right: -105px !important; }
-
-.padding-bottom--negative-105 { padding-bottom: -105px !important; }
-
-.padding-left--negative-105 { padding-left: -105px !important; }
 
 .margin-top--110 { margin-top: 110px !important; }
 
@@ -2025,14 +1849,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-110 { margin-left: -110px !important; }
 
-.padding-top--negative-110 { padding-top: -110px !important; }
-
-.padding-right--negative-110 { padding-right: -110px !important; }
-
-.padding-bottom--negative-110 { padding-bottom: -110px !important; }
-
-.padding-left--negative-110 { padding-left: -110px !important; }
-
 .margin-top--115 { margin-top: 115px !important; }
 
 .margin-right--115 { margin-right: 115px !important; }
@@ -2056,14 +1872,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-115 { margin-bottom: -115px !important; }
 
 .margin-left--negative-115 { margin-left: -115px !important; }
-
-.padding-top--negative-115 { padding-top: -115px !important; }
-
-.padding-right--negative-115 { padding-right: -115px !important; }
-
-.padding-bottom--negative-115 { padding-bottom: -115px !important; }
-
-.padding-left--negative-115 { padding-left: -115px !important; }
 
 .margin-top--120 { margin-top: 120px !important; }
 
@@ -2089,14 +1897,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-120 { margin-left: -120px !important; }
 
-.padding-top--negative-120 { padding-top: -120px !important; }
-
-.padding-right--negative-120 { padding-right: -120px !important; }
-
-.padding-bottom--negative-120 { padding-bottom: -120px !important; }
-
-.padding-left--negative-120 { padding-left: -120px !important; }
-
 .margin-top--125 { margin-top: 125px !important; }
 
 .margin-right--125 { margin-right: 125px !important; }
@@ -2120,14 +1920,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-125 { margin-bottom: -125px !important; }
 
 .margin-left--negative-125 { margin-left: -125px !important; }
-
-.padding-top--negative-125 { padding-top: -125px !important; }
-
-.padding-right--negative-125 { padding-right: -125px !important; }
-
-.padding-bottom--negative-125 { padding-bottom: -125px !important; }
-
-.padding-left--negative-125 { padding-left: -125px !important; }
 
 .margin-top--130 { margin-top: 130px !important; }
 
@@ -2153,14 +1945,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-130 { margin-left: -130px !important; }
 
-.padding-top--negative-130 { padding-top: -130px !important; }
-
-.padding-right--negative-130 { padding-right: -130px !important; }
-
-.padding-bottom--negative-130 { padding-bottom: -130px !important; }
-
-.padding-left--negative-130 { padding-left: -130px !important; }
-
 .margin-top--135 { margin-top: 135px !important; }
 
 .margin-right--135 { margin-right: 135px !important; }
@@ -2184,14 +1968,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-135 { margin-bottom: -135px !important; }
 
 .margin-left--negative-135 { margin-left: -135px !important; }
-
-.padding-top--negative-135 { padding-top: -135px !important; }
-
-.padding-right--negative-135 { padding-right: -135px !important; }
-
-.padding-bottom--negative-135 { padding-bottom: -135px !important; }
-
-.padding-left--negative-135 { padding-left: -135px !important; }
 
 .margin-top--140 { margin-top: 140px !important; }
 
@@ -2217,14 +1993,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-140 { margin-left: -140px !important; }
 
-.padding-top--negative-140 { padding-top: -140px !important; }
-
-.padding-right--negative-140 { padding-right: -140px !important; }
-
-.padding-bottom--negative-140 { padding-bottom: -140px !important; }
-
-.padding-left--negative-140 { padding-left: -140px !important; }
-
 .margin-top--145 { margin-top: 145px !important; }
 
 .margin-right--145 { margin-right: 145px !important; }
@@ -2248,14 +2016,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-145 { margin-bottom: -145px !important; }
 
 .margin-left--negative-145 { margin-left: -145px !important; }
-
-.padding-top--negative-145 { padding-top: -145px !important; }
-
-.padding-right--negative-145 { padding-right: -145px !important; }
-
-.padding-bottom--negative-145 { padding-bottom: -145px !important; }
-
-.padding-left--negative-145 { padding-left: -145px !important; }
 
 .margin-top--150 { margin-top: 150px !important; }
 
@@ -2281,14 +2041,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-150 { margin-left: -150px !important; }
 
-.padding-top--negative-150 { padding-top: -150px !important; }
-
-.padding-right--negative-150 { padding-right: -150px !important; }
-
-.padding-bottom--negative-150 { padding-bottom: -150px !important; }
-
-.padding-left--negative-150 { padding-left: -150px !important; }
-
 .margin-top--percent-0 { margin-top: 0% !important; }
 
 .margin-right--percent-0 { margin-right: 0% !important; }
@@ -2312,14 +2064,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-0 { margin-bottom: -0% !important; }
 
 .margin-left--negative-percent-0 { margin-left: -0% !important; }
-
-.padding-top--negative-percent-0 { padding-top: -0% !important; }
-
-.padding-right--negative-percent-0 { padding-right: -0% !important; }
-
-.padding-bottom--negative-percent-0 { padding-bottom: -0% !important; }
-
-.padding-left--negative-percent-0 { padding-left: -0% !important; }
 
 .margin-top--percent-5 { margin-top: 5% !important; }
 
@@ -2345,14 +2089,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-5 { margin-left: -5% !important; }
 
-.padding-top--negative-percent-5 { padding-top: -5% !important; }
-
-.padding-right--negative-percent-5 { padding-right: -5% !important; }
-
-.padding-bottom--negative-percent-5 { padding-bottom: -5% !important; }
-
-.padding-left--negative-percent-5 { padding-left: -5% !important; }
-
 .margin-top--percent-10 { margin-top: 10% !important; }
 
 .margin-right--percent-10 { margin-right: 10% !important; }
@@ -2376,14 +2112,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-10 { margin-bottom: -10% !important; }
 
 .margin-left--negative-percent-10 { margin-left: -10% !important; }
-
-.padding-top--negative-percent-10 { padding-top: -10% !important; }
-
-.padding-right--negative-percent-10 { padding-right: -10% !important; }
-
-.padding-bottom--negative-percent-10 { padding-bottom: -10% !important; }
-
-.padding-left--negative-percent-10 { padding-left: -10% !important; }
 
 .margin-top--percent-15 { margin-top: 15% !important; }
 
@@ -2409,14 +2137,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-15 { margin-left: -15% !important; }
 
-.padding-top--negative-percent-15 { padding-top: -15% !important; }
-
-.padding-right--negative-percent-15 { padding-right: -15% !important; }
-
-.padding-bottom--negative-percent-15 { padding-bottom: -15% !important; }
-
-.padding-left--negative-percent-15 { padding-left: -15% !important; }
-
 .margin-top--percent-20 { margin-top: 20% !important; }
 
 .margin-right--percent-20 { margin-right: 20% !important; }
@@ -2440,14 +2160,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-20 { margin-bottom: -20% !important; }
 
 .margin-left--negative-percent-20 { margin-left: -20% !important; }
-
-.padding-top--negative-percent-20 { padding-top: -20% !important; }
-
-.padding-right--negative-percent-20 { padding-right: -20% !important; }
-
-.padding-bottom--negative-percent-20 { padding-bottom: -20% !important; }
-
-.padding-left--negative-percent-20 { padding-left: -20% !important; }
 
 .margin-top--percent-25 { margin-top: 25% !important; }
 
@@ -2473,14 +2185,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-25 { margin-left: -25% !important; }
 
-.padding-top--negative-percent-25 { padding-top: -25% !important; }
-
-.padding-right--negative-percent-25 { padding-right: -25% !important; }
-
-.padding-bottom--negative-percent-25 { padding-bottom: -25% !important; }
-
-.padding-left--negative-percent-25 { padding-left: -25% !important; }
-
 .margin-top--percent-30 { margin-top: 30% !important; }
 
 .margin-right--percent-30 { margin-right: 30% !important; }
@@ -2504,14 +2208,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-30 { margin-bottom: -30% !important; }
 
 .margin-left--negative-percent-30 { margin-left: -30% !important; }
-
-.padding-top--negative-percent-30 { padding-top: -30% !important; }
-
-.padding-right--negative-percent-30 { padding-right: -30% !important; }
-
-.padding-bottom--negative-percent-30 { padding-bottom: -30% !important; }
-
-.padding-left--negative-percent-30 { padding-left: -30% !important; }
 
 .margin-top--percent-35 { margin-top: 35% !important; }
 
@@ -2537,14 +2233,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-35 { margin-left: -35% !important; }
 
-.padding-top--negative-percent-35 { padding-top: -35% !important; }
-
-.padding-right--negative-percent-35 { padding-right: -35% !important; }
-
-.padding-bottom--negative-percent-35 { padding-bottom: -35% !important; }
-
-.padding-left--negative-percent-35 { padding-left: -35% !important; }
-
 .margin-top--percent-40 { margin-top: 40% !important; }
 
 .margin-right--percent-40 { margin-right: 40% !important; }
@@ -2568,14 +2256,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-40 { margin-bottom: -40% !important; }
 
 .margin-left--negative-percent-40 { margin-left: -40% !important; }
-
-.padding-top--negative-percent-40 { padding-top: -40% !important; }
-
-.padding-right--negative-percent-40 { padding-right: -40% !important; }
-
-.padding-bottom--negative-percent-40 { padding-bottom: -40% !important; }
-
-.padding-left--negative-percent-40 { padding-left: -40% !important; }
 
 .margin-top--percent-45 { margin-top: 45% !important; }
 
@@ -2601,14 +2281,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-45 { margin-left: -45% !important; }
 
-.padding-top--negative-percent-45 { padding-top: -45% !important; }
-
-.padding-right--negative-percent-45 { padding-right: -45% !important; }
-
-.padding-bottom--negative-percent-45 { padding-bottom: -45% !important; }
-
-.padding-left--negative-percent-45 { padding-left: -45% !important; }
-
 .margin-top--percent-50 { margin-top: 50% !important; }
 
 .margin-right--percent-50 { margin-right: 50% !important; }
@@ -2632,14 +2304,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-50 { margin-bottom: -50% !important; }
 
 .margin-left--negative-percent-50 { margin-left: -50% !important; }
-
-.padding-top--negative-percent-50 { padding-top: -50% !important; }
-
-.padding-right--negative-percent-50 { padding-right: -50% !important; }
-
-.padding-bottom--negative-percent-50 { padding-bottom: -50% !important; }
-
-.padding-left--negative-percent-50 { padding-left: -50% !important; }
 
 .margin-top--percent-55 { margin-top: 55% !important; }
 
@@ -2665,14 +2329,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-55 { margin-left: -55% !important; }
 
-.padding-top--negative-percent-55 { padding-top: -55% !important; }
-
-.padding-right--negative-percent-55 { padding-right: -55% !important; }
-
-.padding-bottom--negative-percent-55 { padding-bottom: -55% !important; }
-
-.padding-left--negative-percent-55 { padding-left: -55% !important; }
-
 .margin-top--percent-60 { margin-top: 60% !important; }
 
 .margin-right--percent-60 { margin-right: 60% !important; }
@@ -2696,14 +2352,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-60 { margin-bottom: -60% !important; }
 
 .margin-left--negative-percent-60 { margin-left: -60% !important; }
-
-.padding-top--negative-percent-60 { padding-top: -60% !important; }
-
-.padding-right--negative-percent-60 { padding-right: -60% !important; }
-
-.padding-bottom--negative-percent-60 { padding-bottom: -60% !important; }
-
-.padding-left--negative-percent-60 { padding-left: -60% !important; }
 
 .margin-top--percent-65 { margin-top: 65% !important; }
 
@@ -2729,14 +2377,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-65 { margin-left: -65% !important; }
 
-.padding-top--negative-percent-65 { padding-top: -65% !important; }
-
-.padding-right--negative-percent-65 { padding-right: -65% !important; }
-
-.padding-bottom--negative-percent-65 { padding-bottom: -65% !important; }
-
-.padding-left--negative-percent-65 { padding-left: -65% !important; }
-
 .margin-top--percent-70 { margin-top: 70% !important; }
 
 .margin-right--percent-70 { margin-right: 70% !important; }
@@ -2760,14 +2400,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-70 { margin-bottom: -70% !important; }
 
 .margin-left--negative-percent-70 { margin-left: -70% !important; }
-
-.padding-top--negative-percent-70 { padding-top: -70% !important; }
-
-.padding-right--negative-percent-70 { padding-right: -70% !important; }
-
-.padding-bottom--negative-percent-70 { padding-bottom: -70% !important; }
-
-.padding-left--negative-percent-70 { padding-left: -70% !important; }
 
 .margin-top--percent-75 { margin-top: 75% !important; }
 
@@ -2793,14 +2425,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-75 { margin-left: -75% !important; }
 
-.padding-top--negative-percent-75 { padding-top: -75% !important; }
-
-.padding-right--negative-percent-75 { padding-right: -75% !important; }
-
-.padding-bottom--negative-percent-75 { padding-bottom: -75% !important; }
-
-.padding-left--negative-percent-75 { padding-left: -75% !important; }
-
 .margin-top--percent-80 { margin-top: 80% !important; }
 
 .margin-right--percent-80 { margin-right: 80% !important; }
@@ -2824,14 +2448,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-80 { margin-bottom: -80% !important; }
 
 .margin-left--negative-percent-80 { margin-left: -80% !important; }
-
-.padding-top--negative-percent-80 { padding-top: -80% !important; }
-
-.padding-right--negative-percent-80 { padding-right: -80% !important; }
-
-.padding-bottom--negative-percent-80 { padding-bottom: -80% !important; }
-
-.padding-left--negative-percent-80 { padding-left: -80% !important; }
 
 .margin-top--percent-85 { margin-top: 85% !important; }
 
@@ -2857,14 +2473,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-85 { margin-left: -85% !important; }
 
-.padding-top--negative-percent-85 { padding-top: -85% !important; }
-
-.padding-right--negative-percent-85 { padding-right: -85% !important; }
-
-.padding-bottom--negative-percent-85 { padding-bottom: -85% !important; }
-
-.padding-left--negative-percent-85 { padding-left: -85% !important; }
-
 .margin-top--percent-90 { margin-top: 90% !important; }
 
 .margin-right--percent-90 { margin-right: 90% !important; }
@@ -2888,14 +2496,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-90 { margin-bottom: -90% !important; }
 
 .margin-left--negative-percent-90 { margin-left: -90% !important; }
-
-.padding-top--negative-percent-90 { padding-top: -90% !important; }
-
-.padding-right--negative-percent-90 { padding-right: -90% !important; }
-
-.padding-bottom--negative-percent-90 { padding-bottom: -90% !important; }
-
-.padding-left--negative-percent-90 { padding-left: -90% !important; }
 
 .margin-top--percent-95 { margin-top: 95% !important; }
 
@@ -2921,14 +2521,6 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-95 { margin-left: -95% !important; }
 
-.padding-top--negative-percent-95 { padding-top: -95% !important; }
-
-.padding-right--negative-percent-95 { padding-right: -95% !important; }
-
-.padding-bottom--negative-percent-95 { padding-bottom: -95% !important; }
-
-.padding-left--negative-percent-95 { padding-left: -95% !important; }
-
 .margin-top--percent-100 { margin-top: 100% !important; }
 
 .margin-right--percent-100 { margin-right: 100% !important; }
@@ -2953,10 +2545,21 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .margin-left--negative-percent-100 { margin-left: -100% !important; }
 
-.padding-top--negative-percent-100 { padding-top: -100% !important; }
+/* Scss Document */
+/* ===========================================================
 
-.padding-right--negative-percent-100 { padding-right: -100% !important; }
+	responsive
 
-.padding-bottom--negative-percent-100 { padding-bottom: -100% !important; }
+=========================================================== */
+/*
+todo:
+レスポンス関連（画像・）
+汎用スタイル（タブ・ページャーなど）
+pagetop-plane
 
-.padding-left--negative-percent-100 { padding-left: -100% !important; }
+arrow類
+
+code past(汎用スタイルコピペ用なにか)
+
+プレーンデザインのなにか
+*/

@@ -19,7 +19,7 @@
 		width: 1%; white-space: nowrap;
 		content: attr(data-indent-head);
 	}
-	div {
+	span {
 		display: table-cell;
 		padding: 0.25em 0 0.25em 0.25em;
 		vertical-align: top;
