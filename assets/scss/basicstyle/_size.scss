@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* Scss Document */
+
+$num: 5;
+
+@for $i from 0 through 140 {
+	// px
+	.width--#{$i * $num} {
+		width:  #{$i * $num}px !important;
+	}
+	.height--#{$i * $num} {
+		height:  #{$i * $num}px !important;
+	}
+}
+@for $i from 0 through 20 {
+	// percent
+	.width--percent-#{$i * $num} {
+		width:  #{$i * $num}% !important;
+	}
+	.height--percent-#{$i * $num} {
+		height:  #{$i * $num}% !important;
+	}
+}
+
+
+@for $i from 0 through 30 {
+	// px
+	.margin-top--#{$i * $num} {
+		margin-top: #{$i * $num}px !important;
+	}
+	.margin-right--#{$i * $num} {
+		margin-right: #{$i * $num}px !important;
+	}
+	.margin-bottom--#{$i * $num} {
+		margin-bottom: #{$i * $num}px !important;
+	}
+	.margin-left--#{$i * $num} {
+		margin-left: #{$i * $num}px !important;
+	}
+	.padding-top--#{$i * $num} {
+		padding-top: #{$i * $num}px !important;
+	}
+	.padding-right--#{$i * $num} {
+		padding-right: #{$i * $num}px !important;
+	}
+	.padding-bottom--#{$i * $num} {
+		padding-bottom: #{$i * $num}px !important;
+	}
+	.padding-left--#{$i * $num} {
+		padding-left: #{$i * $num}px !important;
+	}
+	// px negative
+	.margin-top--negative-#{$i * $num} {
+		margin-top: -#{$i * $num}px !important;
+	}
+	.margin-right--negative-#{$i * $num} {
+		margin-right: -#{$i * $num}px !important;
+	}
+	.margin-bottom--negative-#{$i * $num} {
+		margin-bottom: -#{$i * $num}px !important;
+	}
+	.margin-left--negative-#{$i * $num} {
+		margin-left: -#{$i * $num}px !important;
+	}
+	.padding-top--negative-#{$i * $num} {
+		padding-top: -#{$i * $num}px !important;
+	}
+	.padding-right--negative-#{$i * $num} {
+		padding-right: -#{$i * $num}px !important;
+	}
+	.padding-bottom--negative-#{$i * $num} {
+		padding-bottom: -#{$i * $num}px !important;
+	}
+	.padding-left--negative-#{$i * $num} {
+		padding-left: -#{$i * $num}px !important;
+	}
+}
+
+@for $i from 0 through 20 {
+	// percent
+	.margin-top--percent-#{$i * $num} {
+		margin-top: #{$i * $num}% !important;
+	}
+	.margin-right--percent-#{$i * $num} {
+		margin-right: #{$i * $num}% !important;
+	}
+	.margin-bottom--percent-#{$i * $num} {
+		margin-bottom: #{$i * $num}% !important;
+	}
+	.margin-left--percent-#{$i * $num} {
+		margin-left: #{$i * $num}% !important;
+	}
+	.padding-top--percent-#{$i * $num} {
+		padding-top: #{$i * $num}% !important;
+	}
+	.padding-right--percent-#{$i * $num} {
+		padding-right: #{$i * $num}% !important;
+	}
+	.padding-bottom--percent-#{$i * $num} {
+		padding-bottom: #{$i * $num}% !important;
+	}
+	.padding-left--percent-#{$i * $num} {
+		padding-left: #{$i * $num}% !important;
+	}
+	// negative percent
+	.margin-top--negative-percent-#{$i * $num} {
+		margin-top: -#{$i * $num}% !important;
+	}
+	.margin-right--negative-percent-#{$i * $num} {
+		margin-right: -#{$i * $num}% !important;
+	}
+	.margin-bottom--negative-percent-#{$i * $num} {
+		margin-bottom: -#{$i * $num}% !important;
+	}
+	.margin-left--negative-percent-#{$i * $num} {
+		margin-left: -#{$i * $num}% !important;
+	}
+	.padding-top--negative-percent-#{$i * $num} {
+		padding-top: -#{$i * $num}% !important;
+	}
+	.padding-right--negative-percent-#{$i * $num} {
+		padding-right: -#{$i * $num}% !important;
+	}
+	.padding-bottom--negative-percent-#{$i * $num} {
+		padding-bottom: -#{$i * $num}% !important;
+	}
+	.padding-left--negative-percent-#{$i * $num} {
+		padding-left: -#{$i * $num}% !important;
+	}
+}

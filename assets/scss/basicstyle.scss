@@ -1,10 +1,10 @@
 @charset "UTF-8";
-/* CSS Document */
+/* Scss Document */
 /*! =======================================================
 ***********************************************************
 このファイルはSCSSで作成されています。
 数値の調整などは、
-/assets/scss/fundamental/のなかのファイルを編集してください。
+/assets/scss/basicstyle/のなかのファイルを編集してください。
 ***********************************************************
 ======================================================== */
 // bourbon mixin
@@ -13,12 +13,23 @@
 //@import "vendor/base/base";
 
 // reset css
-@import "fundamental/reset";
+@import "basicstyle/reset";
 
 // list-style
 $list_margin: 2.0em;
-@import "fundamental/list-style";
+@import "basicstyle/list-style";
+
+// indent-list
+@import "basicstyle/indent-list";
+
+// table
+@import "basicstyle/table";
+
+// clear&float
+@import "basicstyle/clear-float";
 
 // video
-@import "fundamental/video";
+@import "basicstyle/video";
 
+// size
+@import "basicstyle/size";

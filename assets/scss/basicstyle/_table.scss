@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* Scss Document */
+
+/* table-style
+----------------------------------------------------------- */
+.table-layout--fixed {
+	table-layout: fixed !important;
+}
+
+
+/*
+
+cell
+
+*/
+table th.cell-width--percent-1,
+table td.cell-width--percent-1 {
+	width: 1% !important;
+	white-space: nowrap !important;
+}
+$num: 5;
+@for $i from 0 through 10 {
+	// percent
+	table th.cell-width--percent-#{$i * $num},
+	table td.cell-width--percent-#{$i * $num} {
+		width:  #{$i * $num}% !important;
+	}
+}
+
+/*
+
+border
+
+*/
+table th.cell-border--none,
+table td.cell-border--none {
+	border: none !important;
+}
+table th.cell-border--top-none,
+table td.cell-border--top-none {
+	border-top: none !important;
+}
+table th.cell-border--left-none,
+table td.cell-border--left-none {
+	border-left: none !important;
+}
+table th.cell-border--right-none,
+table td.cell-border--right-none {
+	border-right: none !important;
+}
+table th.cell-border--bottom-none,
+table td.cell-border--bottom-none {
+	border-bottom: none !important;
+}
