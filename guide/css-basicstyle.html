@@ -1,0 +1,683 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>basicstyle.css</title>
+
+<link href="../assets/css/basicstyle.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	body {
+		padding: 2em; margin: 0;
+		font-size: 16px;
+		font-family: sans-serif;
+		background-color: #fff;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-feature-settings : "palt";
+	}
+	small { font-size: 0.75em; opacity: 0.5;}
+	h1 {
+		padding: 0.5em 0; margin: 0 0 0.5em 0;
+		font-size: 2.0em; line-height: 1.4; font-weight: bold;
+		border-bottom: solid 4px #333;
+	}
+	h2 {
+		padding: 0.5em 0; margin: 1em 0;
+		font-size: 1.8em; line-height: 1.4; font-weight: bold;
+		border-bottom: solid 1px #333;
+	}
+	h3 {
+		padding: 0 0 0 0.5em; margin: 1em 0;
+		font-size: 1.4em; line-height: 1.4; font-weight: bold;
+		color: #333; border-left: solid 5px #333;
+	}
+	h4 {
+		padding: 0 0 0 0.5em; margin: 1em 0 0.5em 0;
+		font-size: 1.2em; line-height: 1.4; font-weight: bold;
+		color: #333; border-left: solid 2px #666;
+	}
+	h5 {
+		padding: 0 0 0 0.5em; margin: 1em 0 0.5em 0;
+		font-size: 1.0em; line-height: 1.4; font-weight: bold;
+		color: #666; border-left: solid 1px #999;
+	}
+	p {
+		padding: 0; margin: 1em 0;
+		font-size: 1.0em; line-height: 1.8;
+	}
+	.code-wrapper {
+		display: block; padding: 0 0 0 4.0em; margin: 1.0em 0;
+		background-color: #111; color: #fff;
+		font-size: 0.850em;
+	}
+	.code-ex {
+		display: block; padding: 2.0em 4.0em; margin: 1.0em 0;
+		background-color: #f1f1f1; position: relative;
+	}
+	.code-ex::before {
+		display: block; padding: 0 1.0em 0.5em 0; margin: 0;
+		background-color: #fff; font-size: 0.75em;
+		content: "Display Example"; color: #999;
+		position: absolute; top: 0; left: 0;
+	}
+	.code-wrapper .linenums li { padding: 0.25em 1.0em; }
+	
+	.code-set { display: flex; padding: 0; margin: 1.0em 0; }
+	.code-set .code-wrapper { margin: 0; width: 50%; }
+	.code-set .code-ex { margin: 0; width: 50%; }
+	.code-wrapper pre.prettyprint { margin: 0; }
+</style>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+</head>
+
+<body>
+<h1>basicstyle.css</h1>
+<h2>概要</h2>
+<p>とにかく作業効率を上げるために作られた、JRT案件特化型リセット系CSSと制作に関するスタイルのセットです。</p>
+<h2>構成</h2>
+<p>scssで作られています。</p>
+<h3><small>/assets/css/</small>basicstyle.css</h3>
+<p>書き出されたCSS</p>
+<h3><small>/assets/scss/</small>basicstyle.scss</h3>
+<p>インクルードでまとめられたSCSS、これで変数なんかをいじれる。</p>
+<h3><small>/assets/scss/</small>basicstyle</h3>
+<p>basicstyle.scssにインクルードされるファイルがまとめられたディレクトリ。</p>
+<h3><small>/assets/scss/basicstyle/</small>_reset.scss</h3>
+<p>"<a href="http://html5doctor.com/html-5-reset-stylesheet/" target="_blank">HTML5 Reset Stylesheet</a>"をベースに&lt;span&gt;や&lt;a&gt;なんかの、&quot;font-weight: nomal;&quot;を&quot;font-weight: inherit;&quot;とかにしています。</p>
+<p>あと、最初の方に&quot;box-sizing: border-box&quot;をすべてのタグに適用しています。</p>
+<div class="code-wrapper">
+	<pre class="prettyprint lang-css linenums prettyprinted">
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+	</pre>
+</div>
+<h3><small>/assets/scss/basicstyle/</small>_list-style.scss</h3>
+<p>ulやolリストのスタイルをまとめています。ulリストのlist-type-styleはresetにて何も表示されない状態になってます。</p>
+<div class="code-set">
+<div class="code-ex">
+	<ul>
+		<li>なにもクラスをつけていないulリスト</li>
+		<li>なにもクラスをつけていないulリスト</li>
+	</ul>
+	<ol>
+		<li>なにもクラスをつけていないolリスト</li>
+		<li>なにもクラスをつけていないolリスト</li>
+	</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<ul>
+	<li>なにもクラスをつけていないulリスト</li>
+	<li>なにもクラスをつけていないulリスト</li>
+</ul>
+<ol>
+	<li>なにもクラスをつけていないolリスト</li>
+	<li>なにもクラスをつけていないolリスト</li>
+</ol>
+</pre>
+</div>
+</div>
+<h4>.list-style--*</h4>
+<p>".list-style" から始まるスタイルはデフォルトのリストスタイルを設定したものです。<br>
+ただブラウザ依存が強いので全てがちゃんと表示されるかは確認が必要です。</p>
+<p>ulやolにクラスをつければ、クラスをつけた子要素のliにスタイルが当てられます。孫要素には設定されませんので、都度設定してください。</p>
+<p>リストの左マージンは2.0emで"list-style-position: outside;"になっています。マージンの調整は上書きするか、basicstyle.scssに変数を入れて書き出し直してください。</p>
+<h5>.list-style--circle<br>
+	.list-style--disc<br>
+	.list-style--square
+</h5>
+<div class="code-set">
+<div class="code-ex">
+<ul class="list-style--circle">
+	<li>list-style--circle リスト</li>
+	<li>list-style--circle リスト</li>
+</ul>
+<ul class="list-style--disc">
+	<li>list-style--disc リスト</li>
+	<li>list-style--disc リスト</li>
+</ul>
+<ul class="list-style--square">
+	<li>list-style--square リスト</li>
+	<li>list-style--square リスト</li>
+</ul>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- ぬきまる -->
+<ul class="list-style--circle">
+	<li>list-style--circle リスト</li>
+	<li>list-style--circle リスト</li>
+</ul>
+<!-- くろまる -->
+<ul class="list-style--disc">
+	<li>list-style--disc リスト</li>
+	<li>list-style--disc リスト</li>
+</ul>
+<!-- しかく -->
+<ul class="list-style--square">
+	<li>list-style--square リスト</li>
+	<li>list-style--square リスト</li>
+</ul>
+</pre>
+</div>
+</div>
+
+
+
+<h5>.list-style--decimal<br>
+	.list-style--decimal-zero</h5>
+<div class="code-set">
+<div class="code-ex">
+<ol class="list-style--decimal">
+	<li>list-style--decimal リスト</li>
+	<li>list-style--decimal リスト</li>
+</ol>
+<ol class="list-style--decimal-zero">
+	<li>list-style--decimal-zero リスト</li>
+	<li>list-style--decimal-zero リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- 数字 -->
+<ol class="list-style--decimal">
+	<li>list-style--decimal リスト</li>
+	<li>list-style--decimal リスト</li>
+</ol>
+<!-- ゼロパディングの数字 -->
+<ol class="list-style--decimal-zero">
+	<li>list-style--decimal-zero リスト</li>
+	<li>list-style--decimal-zero リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+<h5>.list-style--lower-roman<br>
+	.list-style--upper-roman<br>
+	.list-style--lower-alpha<br>
+	.list-style--upper-alpha
+</h5>
+<div class="code-set">
+<div class="code-ex">
+<ol class="list-style--lower-roman">
+	<li>list-style--lower-roman リスト</li>
+	<li>list-style--lower-roman リスト</li>
+</ol>
+<ol class="list-style--upper-roman">
+	<li>list-style--upper-roman リスト</li>
+	<li>list-style--upper-roman リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- ローマ数字小文字 -->
+<ol class="list-style--lower-roman">
+	<li>list-style--lower-roman リスト</li>
+	<li>list-style--lower-roman リスト</li>
+</ol>
+<!-- ローマ数字大文字 -->
+<ol class="list-style--upper-roman">
+	<li>list-style--upper-roman リスト</li>
+	<li>list-style--upper-roman リスト</li>
+</ol>
+<!-- アルファベット小文字 -->
+<ol class="list-style--lower-alpha">
+	<li>list-style--lower-alpha リスト</li>
+	<li>list-style--lower-alpha リスト</li>
+</ol>
+<!-- アルファベット大文字 -->
+<ol class="list-style--upper-alpha">
+	<li>list-style--upper-alpha リスト</li>
+	<li>list-style--upper-alpha リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+
+<h5>.list-style--cjk-ideographic</h5>
+<div class="code-set">
+<div class="code-ex">
+<ol class="list-style--cjk-ideographic">
+	<li>list-style--cjk-ideographic リスト</li>
+	<li>list-style--cjk-ideographic リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- 漢数字 -->
+<ol class="list-style--cjk-ideographic">
+	<li>list-style--cjk-ideographic リスト</li>
+	<li>list-style--cjk-ideographic リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+<h5>.list-style--hiragana<br>
+	.list-style--hiragana-iroha<br>
+	.list-style--katakana<br>
+	.list-style--katakana-iroha
+</h5>
+<div class="code-set">
+<div class="code-ex">
+<ol class="list-style--hiragana">
+	<li>list-style--hiragana リスト</li>
+	<li>list-style--hiragana リスト</li>
+</ol>
+<ol class="list-style--hiragana-iroha">
+	<li>list-style--hiragana-iroha リスト</li>
+	<li>list-style--hiragana-iroha リスト</li>
+</ol>
+<ol class="list-style--katakana">
+	<li>list-style--katakana リスト</li>
+	<li>list-style--katakana リスト</li>
+</ol>
+<ol class="list-style--katakana-iroha">
+	<li>list-style--katakana-iroha リスト</li>
+	<li>list-style--katakana-iroha リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- ひらがな -->
+<ol class="list-style--hiragana">
+	<li>list-style--hiragana リスト</li>
+	<li>list-style--hiragana リスト</li>
+</ol>
+<!-- いろは -->
+<ol class="list-style--hiragana-iroha">
+	<li>list-style--hiragana-iroha リスト</li>
+	<li>list-style--hiragana-iroha リスト</li>
+</ol>
+<!-- カタカナ -->
+<ol class="list-style--katakana">
+	<li>list-style--katakana リスト</li>
+	<li>list-style--katakana リスト</li>
+</ol>
+<!-- イロハ -->
+<ol class="list-style--katakana-iroha">
+	<li>list-style--katakana-iroha リスト</li>
+	<li>list-style--katakana-iroha リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+
+
+
+
+<h4>.list-style__peculiar--*</h4>
+<p>".list-style__peculiar" から始まるスタイルは、よく使いそうな独自のスタイルです。デフォルトのスタイルでは難しい左頭揃えになっています。</p>
+<p>ulやolにクラスをつければ、クラスをつけた子要素のliにスタイルが当てられます。孫要素には設定されませんので、都度設定してください。</p>
+<p>リストの左マージンと、リストマークの幅は2.0emです。値は上書きするか、basicstyle.scssに変数を入れて書き出し直してください。</p>
+<p>peculiar : 独自の</p>
+<h5>.list-style__peculiar--original</h5>
+<p>このcssではカバーできていないリストマークなんかは暫定的にこれを使いましょう</p>
+<div class="code-set">
+<div class="code-ex">
+<ul class="list-style__peculiar--original">
+	<li><span class="list-style__peculiar--original__mark">独</span>list-style--katakana-iroha リスト</li>
+	<li><span class="list-style__peculiar--original__mark">自</span>list-style--katakana-iroha リスト</li>
+</ul>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<ul class="list-style__peculiar--original">
+	<li><span class="list-style__peculiar--original__mark">独</span>list-style--katakana-iroha リスト</li>
+	<li><span class="list-style__peculiar--original__mark">自</span>list-style--katakana-iroha リスト</li>
+</ul>
+</pre>
+</div>
+</div>
+
+
+<h5>.list-style__peculiar--brackets-decimal<br>
+	.list-style__peculiar--brackets-lowerroman<br>
+	.list-style__peculiar--brackets-upperroman<br>
+	.list-style__peculiar--brackets-loweralpha<br>
+	.list-style__peculiar--brackets-upperalpha<br>
+	.list-style__peculiar--brackets-hiragana<br>
+	.list-style__peculiar--brackets-katakana
+</h5>
+<p>brackets : 括弧</p>
+<div class="code-set">
+<div class="code-ex">
+<!-- (1) カッコに数字 -->
+<ol class="list-style__peculiar--brackets-decimal">
+	<li>list-style__peculiar--brackets-decimal リスト</li>
+	<li>list-style__peculiar--brackets-decimal リスト</li>
+</ol>
+<!-- (i) カッコに小文字ローマ数字 -->
+<ol class="list-style__peculiar--brackets-lowerroman">
+	<li>list-style__peculiar--brackets-lowerroman リスト</li>
+	<li>list-style__peculiar--brackets-lowerroman リスト</li>
+</ol>
+<!-- (I) カッコに大文字ローマ数字  -->
+<ol class="list-style__peculiar--brackets-upperroman">
+	<li>list-style__peculiar--brackets-upperroman リスト</li>
+	<li>list-style__peculiar--brackets-upperroman リスト</li>
+</ol>
+<!-- (a) カッコに小文字アルファベット -->
+<ol class="list-style__peculiar--brackets-loweralpha">
+	<li>list-style__peculiar--brackets-loweralpha リスト</li>
+	<li>list-style__peculiar--brackets-loweralpha リスト</li>
+</ol>
+<!-- (A) カッコに大文字アルファベット -->
+<ol class="list-style__peculiar--brackets-upperalpha">
+	<li>list-style__peculiar--brackets-upperalpha リスト</li>
+	<li>list-style__peculiar--brackets-upperalpha リスト</li>
+</ol>
+<!-- (あ) カッコにひらがな -->
+<ol class="list-style__peculiar--brackets-hiragana">
+	<li>list-style__peculiar--brackets-hiragana リスト</li>
+	<li>list-style__peculiar--brackets-hiragana リスト</li>
+</ol>
+<!-- (ア) カッコにカタカナ -->
+<ol class="list-style__peculiar--brackets-katakana">
+	<li>list-style__peculiar--brackets-katakana リスト</li>
+	<li>list-style__peculiar--brackets-katakana リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- (1) カッコに数字 -->
+<ol class="list-style__peculiar--brackets-decimal">
+	<li>list-style__peculiar--brackets-decimal リスト</li>
+	<li>list-style__peculiar--brackets-decimal リスト</li>
+</ol>
+<!-- (a) カッコに小文字ローマ数字 -->
+<ol class="list-style__peculiar--brackets-lowerroman">
+	<li>list-style__peculiar--brackets-lowerroman リスト</li>
+	<li>list-style__peculiar--brackets-lowerroman リスト</li>
+</ol>
+<!-- (I) カッコに大文字ローマ数字  -->
+<ol class="list-style__peculiar--brackets-upperroman">
+	<li>list-style__peculiar--brackets-upperroman リスト</li>
+	<li>list-style__peculiar--brackets-upperroman リスト</li>
+</ol>
+<!-- (a) カッコに小文字アルファベット -->
+<ol class="list-style__peculiar--brackets-loweralpha">
+	<li>list-style__peculiar--brackets-loweralpha リスト</li>
+	<li>list-style__peculiar--brackets-loweralpha リスト</li>
+</ol>
+<!-- (A) カッコに大文字アルファベット -->
+<ol class="list-style__peculiar--brackets-upperalpha">
+	<li>list-style__peculiar--brackets-upperalpha リスト</li>
+	<li>list-style__peculiar--brackets-upperalpha リスト</li>
+</ol>
+<!-- (あ) カッコにひらがな -->
+<ol class="list-style__peculiar--brackets-hiragana">
+	<li>list-style__peculiar--brackets-hiragana リスト</li>
+	<li>list-style__peculiar--brackets-hiragana リスト</li>
+</ol>
+<!-- (ア) カッコにカタカナ -->
+<ol class="list-style__peculiar--brackets-katakana">
+	<li>list-style__peculiar--brackets-katakana リスト</li>
+	<li>list-style__peculiar--brackets-katakana リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+
+<h5>.list-style__peculiar--side-brackets-decimal<br>
+	.list-style__peculiar--side-brackets-lowerroman<br>
+	.list-style__peculiar--side-brackets-upperroman<br>
+	.list-style__peculiar--side-brackets-loweralpha<br>
+	.list-style__peculiar--side-brackets-upperalpha<br>
+	.list-style__peculiar--side-brackets-hiragana<br>
+	.list-style__peculiar--side-brackets-katakana
+</h5>
+<p>side-brackets : 片方括弧</p>
+<div class="code-set">
+<div class="code-ex">
+<!-- 1) 片方カッコに数字 -->
+<ol class="list-style__peculiar--side-brackets-decimal">
+	<li>list-style__peculiar--side-brackets-decimal リスト</li>
+	<li>list-style__peculiar--side-brackets-decimal リスト</li>
+</ol>
+<!-- i) 片方カッコに小文字ローマ数字 -->
+<ol class="list-style__peculiar--side-brackets-lowerroman">
+	<li>list-style__peculiar--side-brackets-lowerroman リスト</li>
+	<li>list-style__peculiar--side-brackets-lowerroman リスト</li>
+</ol>
+<!-- I) 片方カッコに大文字ローマ数字  -->
+<ol class="list-style__peculiar--side-brackets-upperroman">
+	<li>list-style__peculiar--side-brackets-upperroman リスト</li>
+	<li>list-style__peculiar--side-brackets-upperroman リスト</li>
+</ol>
+<!-- a) 片方カッコに小文字アルファベット -->
+<ol class="list-style__peculiar--side-brackets-loweralpha">
+	<li>list-style__peculiar--side-brackets-loweralpha リスト</li>
+	<li>list-style__peculiar--side-brackets-loweralpha リスト</li>
+</ol>
+<!-- A) 片方カッコに大文字アルファベット -->
+<ol class="list-style__peculiar--side-brackets-upperalpha">
+	<li>list-style__peculiar--side-brackets-upperalpha リスト</li>
+	<li>list-style__peculiar--side-brackets-upperalpha リスト</li>
+</ol>
+<!-- あ) 片方カッコにひらがな -->
+<ol class="list-style__peculiar--side-brackets-hiragana">
+	<li>list-style__peculiar--side-brackets-hiragana リスト</li>
+	<li>list-style__peculiar--side-brackets-hiragana リスト</li>
+</ol>
+<!-- ア) 片方カッコにカタカナ -->
+<ol class="list-style__peculiar--side-brackets-katakana">
+	<li>list-style__peculiar--side-brackets-katakana リスト</li>
+	<li>list-style__peculiar--side-brackets-katakana リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- 1) 片方カッコに数字 -->
+<ol class="list-style__peculiar--side-brackets-decimal">
+	<li>list-style__peculiar--side-brackets-decimal リスト</li>
+	<li>list-style__peculiar--side-brackets-decimal リスト</li>
+</ol>
+<!-- a) 片方カッコに小文字ローマ数字 -->
+<ol class="list-style__peculiar--side-brackets-lowerroman">
+	<li>list-style__peculiar--side-brackets-lowerroman リスト</li>
+	<li>list-style__peculiar--side-brackets-lowerroman リスト</li>
+</ol>
+<!-- I) 片方カッコに大文字ローマ数字  -->
+<ol class="list-style__peculiar--side-brackets-upperroman">
+	<li>list-style__peculiar--side-brackets-upperroman リスト</li>
+	<li>list-style__peculiar--side-brackets-upperroman リスト</li>
+</ol>
+<!-- a) 片方カッコに小文字アルファベット -->
+<ol class="list-style__peculiar--side-brackets-loweralpha">
+	<li>list-style__peculiar--side-brackets-loweralpha リスト</li>
+	<li>list-style__peculiar--side-brackets-loweralpha リスト</li>
+</ol>
+<!-- A) 片方カッコに大文字アルファベット -->
+<ol class="list-style__peculiar--side-brackets-upperalpha">
+	<li>list-style__peculiar--side-brackets-upperalpha リスト</li>
+	<li>list-style__peculiar--side-brackets-upperalpha リスト</li>
+</ol>
+<!-- あ) 片方カッコにひらがな -->
+<ol class="list-style__peculiar--side-brackets-hiragana">
+	<li>list-style__peculiar--side-brackets-hiragana リスト</li>
+	<li>list-style__peculiar--side-brackets-hiragana リスト</li>
+</ol>
+<!-- ア) 片方カッコにカタカナ -->
+<ol class="list-style__peculiar--side-brackets-katakana">
+	<li>list-style__peculiar--side-brackets-katakana リスト</li>
+	<li>list-style__peculiar--side-brackets-katakana リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+
+
+
+
+<h5>.list-style__peculiar--dot-decimal<br>
+	.list-style__peculiar--dot-lowerroman<br>
+	.list-style__peculiar--dot-upperroman<br>
+	.list-style__peculiar--dot-loweralpha<br>
+	.list-style__peculiar--dot-upperalpha<br>
+	.list-style__peculiar--dot-hiragana<br>
+	.list-style__peculiar--dot-katakana
+</h5>
+<p>side-brackets : 片方括弧</p>
+<div class="code-set">
+<div class="code-ex">
+<!-- 1. ドットに数字 -->
+<ol class="list-style__peculiar--dot-decimal">
+	<li>list-style__peculiar--dot-decimal リスト</li>
+	<li>list-style__peculiar--dot-decimal リスト</li>
+</ol>
+<!-- i. ドットに小文字ローマ数字 -->
+<ol class="list-style__peculiar--dot-lowerroman">
+	<li>list-style__peculiar--dot-lowerroman リスト</li>
+	<li>list-style__peculiar--dot-lowerroman リスト</li>
+</ol>
+<!-- I. ドットに大文字ローマ数字  -->
+<ol class="list-style__peculiar--dot-upperroman">
+	<li>list-style__peculiar--dot-upperroman リスト</li>
+	<li>list-style__peculiar--dot-upperroman リスト</li>
+</ol>
+<!-- a. ドットに小文字アルファベット -->
+<ol class="list-style__peculiar--dot-loweralpha">
+	<li>list-style__peculiar--dot-loweralpha リスト</li>
+	<li>list-style__peculiar--dot-loweralpha リスト</li>
+</ol>
+<!-- A. ドットに大文字アルファベット -->
+<ol class="list-style__peculiar--dot-upperalpha">
+	<li>list-style__peculiar--dot-upperalpha リスト</li>
+	<li>list-style__peculiar--dot-upperalpha リスト</li>
+</ol>
+<!-- あ. ドットにひらがな -->
+<ol class="list-style__peculiar--dot-hiragana">
+	<li>list-style__peculiar--dot-hiragana リスト</li>
+	<li>list-style__peculiar--dot-hiragana リスト</li>
+</ol>
+<!-- ア. ドットにカタカナ -->
+<ol class="list-style__peculiar--dot-katakana">
+	<li>list-style__peculiar--dot-katakana リスト</li>
+	<li>list-style__peculiar--dot-katakana リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- 1. ドットに数字 -->
+<ol class="list-style__peculiar--dot-decimal">
+	<li>list-style__peculiar--dot-decimal リスト</li>
+	<li>list-style__peculiar--dot-decimal リスト</li>
+</ol>
+<!-- a. ドットに小文字ローマ数字 -->
+<ol class="list-style__peculiar--dot-lowerroman">
+	<li>list-style__peculiar--dot-lowerroman リスト</li>
+	<li>list-style__peculiar--dot-lowerroman リスト</li>
+</ol>
+<!-- I. ドットに大文字ローマ数字  -->
+<ol class="list-style__peculiar--dot-upperroman">
+	<li>list-style__peculiar--dot-upperroman リスト</li>
+	<li>list-style__peculiar--dot-upperroman リスト</li>
+</ol>
+<!-- a. ドットに小文字アルファベット -->
+<ol class="list-style__peculiar--dot-loweralpha">
+	<li>list-style__peculiar--dot-loweralpha リスト</li>
+	<li>list-style__peculiar--dot-loweralpha リスト</li>
+</ol>
+<!-- A. ドットに大文字アルファベット -->
+<ol class="list-style__peculiar--dot-upperalpha">
+	<li>list-style__peculiar--dot-upperalpha リスト</li>
+	<li>list-style__peculiar--dot-upperalpha リスト</li>
+</ol>
+<!-- あ. ドットにひらがな -->
+<ol class="list-style__peculiar--dot-hiragana">
+	<li>list-style__peculiar--dot-hiragana リスト</li>
+	<li>list-style__peculiar--dot-hiragana リスト</li>
+</ol>
+<!-- ア. ドットにカタカナ -->
+<ol class="list-style__peculiar--dot-katakana">
+	<li>list-style__peculiar--dot-katakana リスト</li>
+	<li>list-style__peculiar--dot-katakana リスト</li>
+</ol>
+</pre>
+</div>
+</div><p
+
+
+	
+<h5>.list-style__peculiar--character_circle-decimal</h5>
+<p>① 丸数字のリストです。リミットは20までです。</p>
+<div class="code-set">
+<div class="code-ex">
+<!-- ① 丸数字にリスト -->
+<ol class="list-style__peculiar--character_circle-decimal">
+	<li>list-style__peculiar--character_circle-decimal リスト</li>
+	<li>list-style__peculiar--character_circle-decimal リスト</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<!-- ① 丸数字にリスト -->
+<ol class="list-style__peculiar--character_circle-decimal">
+	<li>list-style__peculiar--character_circle-decimal リスト</li>
+	<li>list-style__peculiar--character_circle-decimal リスト</li>
+</ol>
+</pre>
+</div>
+</div>
+
+
+
+<h3><small>/assets/scss/basicstyle/</small>_indent-list.scss</h3>
+<p>キャプションや注意書きなどに使うインデントリストです。</p>
+<h4>.indent-list</h4>
+<p>list-style__peculiar--originalと似ていますが、css的にはtableベースです。</p>
+<p>data-indent-headに値を入れたらヘッドマークとして出力されます。</p>
+<div class="code-set">
+<div class="code-ex">
+<ol class="indent-list">
+	<li data-indent-head="何か入れる">
+		<span>list-style__peculiar--character_circle-decimal リスト</span>
+	</li>
+	<li data-indent-head="注意1">
+		<span>list-style__peculiar--character_circle-decimal リスト</span>
+	</li>
+</ol>
+</div>
+<div class="code-wrapper">
+<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<ol class="indent-list">
+	<li data-indent-head="何か入れる">
+		<span>list-style__peculiar--character_circle-decimal リスト</span>
+	</li>
+	<li data-indent-head="注意1">
+		<span>list-style__peculiar--character_circle-decimal リスト</span>
+	</li>
+</ol>
+</pre>
+</div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+(function() {
+	var preTag = document.getElementsByClassName('sg-pre');
+	for (var i = 0; i < preTag.length; i++) {
+		var after = preTag[i].innerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		preTag[i].innerHTML = after;
+	}
+})();
+</script>
+</body>
+</html>

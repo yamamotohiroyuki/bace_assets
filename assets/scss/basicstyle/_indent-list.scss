@@ -11,6 +11,11 @@
 	display: table;
 	> li {
 		display: table-row;
+		> span {
+			display: table-cell;
+			padding: 0.25em 0 0.25em 0.25em;
+			vertical-align: top;
+		}
 	}
 	> li::before {
 		display: table-cell;
@@ -18,10 +23,5 @@
 		vertical-align: top;
 		width: 1%; white-space: nowrap;
 		content: attr(data-indent-head);
-	}
-	span {
-		display: table-cell;
-		padding: 0.25em 0 0.25em 0.25em;
-		vertical-align: top;
 	}
 }

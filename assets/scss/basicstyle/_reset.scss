@@ -2,7 +2,7 @@
 /* CSS Document */
 
 *,
-*:after,
+*::after,
 *::before {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -111,7 +111,7 @@ input[type="checkbox"] {vertical-align: bottom;}
 
 table {font-size: inherit; font: 100%;}
 
-small {font-size: 85%;}
+small {font-size: 75%;}
 
 strong {font-weight: bold;}
 
@@ -148,8 +148,4 @@ input[type=button] {width: auto; overflow: visible;}
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
 
-/* let's clear some floats */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-.clearfix:after { clear: both; }  
-.clearfix { zoom: 1; }  
 
