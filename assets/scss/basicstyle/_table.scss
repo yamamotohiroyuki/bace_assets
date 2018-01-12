@@ -3,10 +3,7 @@
 
 /* table-style
 ----------------------------------------------------------- */
-.table-layout--fixed {
-	table-layout: fixed !important;
-}
-
+.table-layout--fixed { table-layout: fixed !important; }
 
 /*
 
@@ -14,10 +11,7 @@ cell
 
 */
 table th.cell-width--fit,
-table td.cell-width--fit {
-	width: 1% !important;
-	white-space: nowrap !important;
-}
+table td.cell-width--fit { width: 1% !important; white-space: nowrap !important; }
 @for $i from 0 through 10 {
 	// percent
 	table th.cell-width--percent-#{$i * $size_num},
@@ -30,22 +24,16 @@ table td.cell-width--fit {
 border
 */
 table th.cell-border--none,
-table td.cell-border--none {
-	border: none !important;
-}
+table td.cell-border--none { border: none !important; }
+
 table th.cell-border--top-none,
-table td.cell-border--top-none {
-	border-top: none !important;
-}
+table td.cell-border--top-none { border-top: none !important; }
+
 table th.cell-border--left-none,
-table td.cell-border--left-none {
-	border-left: none !important;
-}
+table td.cell-border--left-none { border-left: none !important; }
+
 table th.cell-border--right-none,
-table td.cell-border--right-none {
-	border-right: none !important;
-}
+table td.cell-border--right-none { border-right: none !important; }
+
 table th.cell-border--bottom-none,
-table td.cell-border--bottom-none {
-	border-bottom: none !important;
-}
+table td.cell-border--bottom-none { border-bottom: none !important; }

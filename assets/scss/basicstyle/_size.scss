@@ -4,20 +4,16 @@
 @for $i from 0 through 140 {
 	// px
 	.width--#{$i * $size_num} {
-		width:  #{$i * $size_num}px !important;
+		width: #{$i * $size_num}px !important;
 	}
 	.height--#{$i * $size_num} {
-		height:  #{$i * $size_num}px !important;
+		height: #{$i * $size_num}px !important;
 	}
 }
 @for $i from 0 through 20 {
 	// percent
-	.width--percent-#{$i * $size_num} {
-		width:  #{$i * $size_num}% !important;
-	}
-	.height--percent-#{$i * $size_num} {
-		height:  #{$i * $size_num}% !important;
-	}
+	.width--percent-#{$i * $size_num} { width:  #{$i * $size_num}% !important; }
+	.height--percent-#{$i * $size_num} { height:  #{$i * $size_num}% !important; }
 }
 
 .margin--auto { margin: auto !important; }
@@ -114,6 +110,7 @@
 	.padding-left--percent-#{$i * $size_num} {
 		padding-left: #{$i * $size_num}% !important;
 	}
+	
 	// negative percent
 	.margin--negative-percent-#{$i * $size_num} { margin: -#{$i * $size_num}% !important; }
 	.margin-horizontal--negative-percent-#{$i * $size_num} { margin-right: -#{$i * $size_num}% !important; margin-left: -#{$i * $size_num}% !important; }
