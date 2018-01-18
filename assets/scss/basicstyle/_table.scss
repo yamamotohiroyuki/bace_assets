@@ -1,8 +1,12 @@
 @charset "UTF-8";
 /* Scss Document */
 
-/* table-style
------------------------------------------------------------ */
+
+/* ===========================================================
+
+	table-style
+
+=========================================================== */
 .table-layout--fixed { table-layout: fixed !important; }
 
 /*
@@ -37,3 +41,36 @@ table td.cell-border--right-none { border-right: none !important; }
 
 table th.cell-border--bottom-none,
 table td.cell-border--bottom-none { border-bottom: none !important; }
+
+
+
+/* ===========================================================
+
+	dl-table
+
+=========================================================== */
+.dl-table {
+	display: table; margin: 1.0em 0; padding: 0;
+	border-collapse: collapse;
+	
+	> dl { display: table-row; margin: 0; padding: 0; }
+	> dl > dt,
+	> dl > dd { display: table-cell; vertical-align: middle; }
+	.dl-table { margin: 0; }
+}
+
+/* ===========================================================
+
+	date-list
+
+=========================================================== */
+.date-list {
+	display: table; padding: 0; margin: 0;
+	
+	> dl { display: table-row; padding: 0; margin: 0; }
+	> dl > dt,
+	> dl > dd { display: table-cell; margin: 0; }
+	> dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
+	> dl > dd { vertical-align: middle; }
+}
+

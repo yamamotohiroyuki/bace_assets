@@ -127,6 +127,18 @@ button, input[type=button] { width: auto; overflow: visible; }
 
 .vertical-align--bottom { vertical-align: bottom !important; }
 
+/* CSS Document */
+/* ===========================================================
+
+	mark
+
+=========================================================== */
+.link-triangle, .link-triangle a { position: relative; padding-left: 0.75em; }
+.link-triangle:before, .link-triangle a:before { position: absolute; content: ""; top: 50%; left: 0; width: 0; height: 0; margin-top: -0.20em; border-style: solid; border-width: 0.20em 0 0.20em 0.25em; border-color: transparent transparent transparent #000; }
+
+.link-arrow, .link-arrow a { position: relative; padding-left: 0.75em; }
+.link-arrow:before, .link-arrow a:before { position: absolute; content: ""; top: 50%; left: 0; width: 0.30em; height: 0.30em; margin-top: -0.15em; border-top: 1px solid #000; border-right: 1px solid #000; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
 /* Scss Document */
 /* ===========================================================
 
@@ -579,14 +591,17 @@ button, input[type=button] { width: auto; overflow: visible; }
 	indent-list ( 旧・indent-table )
 
 =========================================================== */
-.indent-list { display: table; }
-.indent-list > li { display: table-row; }
-.indent-list > li > span { display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
-.indent-list > li::before { display: table-cell; padding: 0.25em 0; vertical-align: top; width: 1%; white-space: nowrap; content: attr(data-indent-head); }
+.indent-list, .caution { display: table; }
+.indent-list > li, .caution > li { display: table-row; }
+.indent-list > li > span, .caution > li > span { display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
+.indent-list > li::before, .caution > li::before { display: table-cell; padding: 0.25em 0; vertical-align: top; width: 1%; white-space: nowrap; content: attr(data-indent-head); }
 
 /* Scss Document */
-/* table-style
------------------------------------------------------------ */
+/* ===========================================================
+
+	table-style
+
+=========================================================== */
 .table-layout--fixed { table-layout: fixed !important; }
 
 /*
@@ -630,6 +645,27 @@ table th.cell-border--left-none, table td.cell-border--left-none { border-left: 
 table th.cell-border--right-none, table td.cell-border--right-none { border-right: none !important; }
 
 table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bottom: none !important; }
+
+/* ===========================================================
+
+	dl-table
+
+=========================================================== */
+.dl-table { display: table; margin: 1.0em 0; padding: 0; border-collapse: collapse; }
+.dl-table > dl { display: table-row; margin: 0; padding: 0; }
+.dl-table > dl > dt, .dl-table > dl > dd { display: table-cell; vertical-align: middle; }
+.dl-table .dl-table { margin: 0; }
+
+/* ===========================================================
+
+	date-list
+
+=========================================================== */
+.date-list { display: table; padding: 0; margin: 0; }
+.date-list > dl { display: table-row; padding: 0; margin: 0; }
+.date-list > dl > dt, .date-list > dl > dd { display: table-cell; margin: 0; }
+.date-list > dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
+.date-list > dl > dd { vertical-align: middle; }
 
 /* Scss Document */
 /* ===========================================================
