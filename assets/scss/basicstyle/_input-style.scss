@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* Scss Document */
+
+/* ===========================================================
+
+	input
+
+=========================================================== */
+
+/* ===========================================================
+
+	input-resest
+
+=========================================================== */
+
+
+.input-resest {}
+/* form resest */
+.input-resest input,
+.input-resest button,
+.input-resest textarea,
+.input-resest select {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 1em; line-height: 28px;
+	text-indent: .01px;
+	text-overflow: "";
+	font-family: inherit;
+	font-weight: inherit;
+	
+	-webkit-box-sizing: border-box; /* 過去の WebKit ベースブラウザ向け */
+		-moz-box-sizing: border-box; /* 過去の (Firefox <29) Gecko ベースブラウザ向け */
+			box-sizing: border-box;
+}
+.input-resest select::-ms-expand { display: none; }
+
+
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=email],
+input[type=date],
+input[type=time],
+input[type=number],
+input[type=range],
+input[type=color],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=week],
+select,
+textarea { }
+input[type=checkbox],
+input[type=radio] { }
+input[type=hidden],
+input[type=file] { }
+input[type=submit],
+input[type=reset],
+input[type=button],
+input[type=image],
+button { }
