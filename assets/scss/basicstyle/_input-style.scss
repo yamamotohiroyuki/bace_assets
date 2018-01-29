@@ -6,6 +6,78 @@
 	input
 
 =========================================================== */
+.input-ui {
+	input,
+	button,
+	textarea,
+	select {
+		margin: 0;
+		padding: 0;
+		background: none;
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		font-size: 1em; line-height: 28px;
+		text-indent: .01px;
+		text-overflow: "";
+		font-family: inherit;
+		font-weight: inherit;
+		
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	select::-ms-expand { display: none; }
+}
+
+.input-ui .input-ui__select {
+	display: block; padding: 0; margin: 0;
+	border: solid 1px #ddd; border-radius: 4px;
+	position: relative; overflow: hidden;
+	select {
+		display: block; width: 100%; padding: 0.5em 2.0em 0.5em 1.0em; margin: 0;
+		font-size: 1em; line-height: 28px;
+	}
+	&::before {
+		display: block;
+		position: absolute;
+		content: "";
+		top: 50%;
+		right: 1.0em;
+		width: 0.60em;
+		height: 0.60em;
+		line-height: 1;
+		margin-top: -0.30em;
+		border-top: 1px solid #000;
+		border-left: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+		border-right: 1px solid #000;
+		transform: rotate(135deg);
+		pointer-events: none;
+	}
+}
+
+.input-ui input.input-ui__button,
+.input-ui button.input-ui__button {
+	display: block; padding: 0.5em 1.0em; margin: 0;
+	border: solid 1px #ddd; border-radius: 4px;
+	font-size: 1em; line-height: 28px;
+	position: relative; overflow: hidden;
+}
+.input-ui input.input-ui__text,
+.input-ui textarea.input-ui__textarea {
+	display: block; padding: 0.5em 1.0em; margin: 0;
+	border: solid 1px #ddd; border-radius: 4px;
+	font-size: 1em; line-height: 28px;
+	position: relative; overflow: hidden;
+}
+.input-ui textarea.input-ui__textarea { height: 4.0em; }
+
+
 
 /* ===========================================================
 
@@ -13,58 +85,31 @@
 
 =========================================================== */
 
-
-.input-resest {}
-/* form resest */
-.input-resest input,
-.input-resest button,
-.input-resest textarea,
-.input-resest select {
-	margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	font-size: 1em; line-height: 28px;
-	text-indent: .01px;
-	text-overflow: "";
-	font-family: inherit;
-	font-weight: inherit;
-	
-	-webkit-box-sizing: border-box; /* 過去の WebKit ベースブラウザ向け */
-		-moz-box-sizing: border-box; /* 過去の (Firefox <29) Gecko ベースブラウザ向け */
-			box-sizing: border-box;
+.input-reset {
+	input,
+	button,
+	textarea,
+	select {
+		margin: 0;
+		padding: 0;
+		background: none;
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		font-size: 1em; line-height: 28px;
+		text-indent: .01px;
+		text-overflow: "";
+		font-family: inherit;
+		font-weight: inherit;
+		
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	select::-ms-expand { display: none; }
 }
-.input-resest select::-ms-expand { display: none; }
 
-
-input[type=text],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=url],
-input[type=email],
-input[type=date],
-input[type=time],
-input[type=number],
-input[type=range],
-input[type=color],
-input[type=datetime],
-input[type=datetime-local],
-input[type=month],
-input[type=week],
-select,
-textarea { }
-input[type=checkbox],
-input[type=radio] { }
-input[type=hidden],
-input[type=file] { }
-input[type=submit],
-input[type=reset],
-input[type=button],
-input[type=image],
-button { }

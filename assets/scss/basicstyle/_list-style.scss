@@ -2,7 +2,9 @@
 /* CSS Document */
 
 $set_hiragana: あ, い, う, え, お, か, き, く, け, こ, さ, し, す, せ, そ, た, ち, つ, て, と, な, に, ぬ, ね, の, は, ひ, ふ, へ, ほ, ま, み, む, め, も, や, ゆ, よ, ら, り, る, れ, ろ, わ, を, ん;
+$set_hiragana_iroha: い, ろ, は, に, ほ, へ, と, ち, り, ぬ, る, を, わ, か, よ, た, れ, そ, つ, ね, な, ら, む, う, ゐ, の, お, く, や, ま, け, ふ, こ, え, て, あ, さ, き, ゆ, め, み, し, ゑ, ひ, も, せ, す, ん;
 $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, セ, ソ, タ, チ, ツ, テ, ト, ナ, ニ, ヌ, ネ, ノ, ハ, ヒ, フ, ヘ, ホ, マ, ミ, ム, メ, モ, ヤ, ユ, ヨ, ラ, リ, ル, レ, ロ, ワ, ヲ, ン;
+$set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ, ワ, カ, ヨ, タ, レ, ソ, ツ, ネ, ナ, ラ, ム, ウ, ヰ, ノ, オ, ク, ヤ, マ, ケ, フ, コ, エ, テ, ア, サ, キ, ユ, メ, ミ, シ, ヱ, ヒ, モ, セ, ス, ン;
 
 /* リスト */
 
@@ -141,6 +143,16 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 		}
 	}
 }
+/* (い) カッコにいろは  */
+.list-style__peculiar--brackets-hiragana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana_iroha {
+		$key: index($set_hiragana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '(#{nth($set_hiragana_iroha, $key)})';
+		}
+	}
+}
 
 /* (ア) カッコにカタカナ */
 .list-style__peculiar--brackets-katakana {
@@ -149,6 +161,16 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
 			content: '(#{nth($set_katakana, $key)})';
+		}
+	}
+}
+/* (イ) カッコにイロハ  */
+.list-style__peculiar--brackets-katakana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana_iroha {
+		$key: index($set_katakana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '(#{nth($set_katakana_iroha, $key)})';
 		}
 	}
 }
@@ -223,6 +245,16 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 		}
 	}
 }
+/* い) 片方カッコにいろは */
+.list-style__peculiar--side-brackets-hiragana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana_iroha {
+		$key: index($set_hiragana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_hiragana_iroha, $key)})';
+		}
+	}
+}
 
 /* ア) 片方カッコにカタカナ */
 .list-style__peculiar--side-brackets-katakana {
@@ -234,6 +266,19 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 		}
 	}
 }
+/* イ) 片方カッコにイロハ */
+.list-style__peculiar--side-brackets-katakana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana_iroha {
+		$key: index($set_katakana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_katakana_iroha, $key)})';
+		}
+	}
+}
+
+
+
 
 
 /* 1. ドットに数字 */
@@ -298,7 +343,7 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 }
 
 
-/* あ. カッコにひらがな */
+/* あ. ドットにひらがな */
 .list-style__peculiar--dot-hiragana {
 	@extend .list-style__peculiar;
 	@each $value in $set_hiragana {
@@ -309,7 +354,18 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 	}
 }
 
-/* ア. カッコにカタカナ */
+/* い. ドットにいろは */
+.list-style__peculiar--dot-hiragana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana_iroha {
+		$key: index($set_hiragana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_hiragana_iroha, $key)}.';
+		}
+	}
+}
+
+/* ア. ドットにカタカナ */
 .list-style__peculiar--dot-katakana {
 	@extend .list-style__peculiar;
 	@each $value in $set_katakana {
@@ -320,6 +376,16 @@ $set_katakana: ア, イ, ウ, エ, オ, カ, キ, ク, ケ, コ, サ, シ, ス, 
 	}
 }
 
+/* イ. ドットにイロハ */
+.list-style__peculiar--dot-katakana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana_iroha {
+		$key: index($set_katakana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_katakana_iroha, $key)}.';
+		}
+	}
+}
 
 /* character */
 

@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/*! basicstyle : v1.0.0 */
 /* Scss Document */
-/*! =======================================================
+/* =======================================================
 ***********************************************************
 このファイルはSCSSで作成されています。
 数値の調整などは、
@@ -123,9 +124,9 @@ button, input[type=button] { width: auto; overflow: visible; }
 
 .vertical-align--middle, .vertical-align--middle th, .vertical-align--middle td { vertical-align: middle !important; }
 
-.vertical-align--top { vertical-align: top !important; }
+.vertical-align--top, .vertical-align--top th, .vertical-align--top td { vertical-align: top !important; }
 
-.vertical-align--bottom { vertical-align: bottom !important; }
+.vertical-align--bottom, .vertical-align--bottom th, .vertical-align--bottom td { vertical-align: bottom !important; }
 
 /* CSS Document */
 /* ===========================================================
@@ -133,11 +134,60 @@ button, input[type=button] { width: auto; overflow: visible; }
 	mark
 
 =========================================================== */
-.link-triangle, .link-triangle a { position: relative; padding-left: 0.75em; }
-.link-triangle:before, .link-triangle a:before { position: absolute; content: ""; top: 50%; left: 0; width: 0; height: 0; margin-top: -0.20em; border-style: solid; border-width: 0.20em 0 0.20em 0.25em; border-color: transparent transparent transparent #000; }
+a.link-triangle, .link-triangle a, a.link-triangle--top, .link-triangle--top a, a.link-triangle--left, .link-triangle--left a, a.link-triangle--bottom, .link-triangle--bottom a, a.link-triangle--right, .link-triangle--right a { position: relative; padding-left: 0.75em; }
+a.link-triangle::before, .link-triangle a::before, a.link-triangle--top::before, .link-triangle--top a::before, a.link-triangle--left::before, .link-triangle--left a::before, a.link-triangle--bottom::before, .link-triangle--bottom a::before, a.link-triangle--right::before, .link-triangle--right a::before { display: block; position: absolute; content: ""; top: 50%; left: 0; width: 0; height: 0; margin-top: -0.20em; border-style: solid; border-width: 0.20em 0 0.20em 0.25em; border-color: transparent transparent transparent #000; }
 
-.link-arrow, .link-arrow a { position: relative; padding-left: 0.75em; }
-.link-arrow:before, .link-arrow a:before { position: absolute; content: ""; top: 50%; left: 0; width: 0.30em; height: 0.30em; margin-top: -0.15em; border-top: 1px solid #000; border-right: 1px solid #000; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+a.link-triangle::before, .link-triangle a::before { -webkit-transform: rotate(0); transform: rotate(0); }
+
+a.link-triangle--top::before, .link-triangle--top a::before { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+a.link-triangle--left::before, .link-triangle--left a::before { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
+
+a.link-triangle--bottom::before, .link-triangle--bottom a::before { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+
+a.link-triangle--right::before, .link-triangle--right a::before { -webkit-transform: rotate(0); transform: rotate(0); }
+
+a.link-arrow, .link-arrow a, a.link-arrow--top, .link-arrow--top a, a.link-arrow--left, .link-arrow--left a, a.link-arrow--bottom, .link-arrow--bottom a, a.link-arrow--right, .link-arrow--right a { position: relative; padding-left: 0.75em; }
+a.link-arrow::before, .link-arrow a::before, a.link-arrow--top::before, .link-arrow--top a::before, a.link-arrow--left::before, .link-arrow--left a::before, a.link-arrow--bottom::before, .link-arrow--bottom a::before, a.link-arrow--right::before, .link-arrow--right a::before { display: block; position: absolute; content: ""; top: 50%; left: 0; width: 0.40em; height: 0.40em; line-height: 1; margin-top: -0.20em; border-top: 1px solid #000; border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid #000; }
+
+a.link-arrow::before, .link-arrow a::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+a.link-arrow--top::before, .link-arrow--top a::before { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+a.link-arrow--left::before, .link-arrow--left a::before { -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+
+a.link-arrow--bottom::before, .link-arrow--bottom a::before { -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+
+a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+/* CSS Document */
+/* ===========================================================
+
+	column
+
+=========================================================== */
+.column, .column--equal-width, .column--3, .column--4 { display: flex; margin-left: -1.0em; margin-right: -1.0em; }
+
+.column__cell { padding-left: 1.0em; padding-right: 1.0em; }
+
+/* 等幅コラム */
+.column--equal-width .column__cell { padding-left: 1.0em; padding-right: 1.0em; flex-grow: 1; flex-basis: 100%; }
+
+/* 3等分コラム */
+.column--3 .column__cell--3of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 33.3333%; }
+
+.column--3 .column__cell--3of2 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 66.6666%; }
+
+.column--3 .column__cell--3of3 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 100%; }
+
+/* 4等分コラム */
+.column--4 .column__cell--4of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 25%; }
+
+.column--4 .column__cell--4of2 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 50%; }
+
+.column--4 .column__cell--4of3 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 75%; }
+
+.column--4 .column__cell--4of4 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 100%; }
 
 /* Scss Document */
 /* ===========================================================
@@ -145,15 +195,26 @@ button, input[type=button] { width: auto; overflow: visible; }
 	input
 
 =========================================================== */
+.input-ui input, .input-ui button, .input-ui textarea, .input-ui select { margin: 0; padding: 0; background: none; background-color: transparent; border: none; border-radius: 0; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: 1em; line-height: 28px; text-indent: .01px; text-overflow: ""; font-family: inherit; font-weight: inherit; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+.input-ui select::-ms-expand { display: none; }
+
+.input-ui .input-ui__select { display: block; padding: 0; margin: 0; border: solid 1px #ddd; border-radius: 4px; position: relative; overflow: hidden; }
+.input-ui .input-ui__select select { display: block; width: 100%; padding: 0.5em 2.0em 0.5em 1.0em; margin: 0; font-size: 1em; line-height: 28px; }
+.input-ui .input-ui__select::before { display: block; position: absolute; content: ""; top: 50%; right: 1.0em; width: 0.60em; height: 0.60em; line-height: 1; margin-top: -0.30em; border-top: 1px solid #000; border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid #000; transform: rotate(135deg); pointer-events: none; }
+
+.input-ui input.input-ui__button, .input-ui button.input-ui__button { display: block; padding: 0.5em 1.0em; margin: 0; border: solid 1px #ddd; border-radius: 4px; font-size: 1em; line-height: 28px; position: relative; overflow: hidden; }
+
+.input-ui input.input-ui__text, .input-ui textarea.input-ui__textarea { display: block; padding: 0.5em 1.0em; margin: 0; border: solid 1px #ddd; border-radius: 4px; font-size: 1em; line-height: 28px; position: relative; overflow: hidden; }
+
+.input-ui textarea.input-ui__textarea { height: 4.0em; }
+
 /* ===========================================================
 
 	input-resest
 
 =========================================================== */
-/* form resest */
-.input-resest input, .input-resest button, .input-resest textarea, .input-resest select { margin: 0; padding: 0; background: none; border: none; border-radius: 0; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: 1em; line-height: 28px; text-indent: .01px; text-overflow: ""; font-family: inherit; font-weight: inherit; -webkit-box-sizing: border-box; /* 過去の WebKit ベースブラウザ向け */ -moz-box-sizing: border-box; /* 過去の (Firefox <29) Gecko ベースブラウザ向け */ box-sizing: border-box; }
-
-.input-resest select::-ms-expand { display: none; }
+.input-reset input, .input-reset button, .input-reset textarea, .input-reset select { margin: 0; padding: 0; background: none; background-color: transparent; border: none; border-radius: 0; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: 1em; line-height: 28px; text-indent: .01px; text-overflow: ""; font-family: inherit; font-weight: inherit; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+.input-reset select::-ms-expand { display: none; }
 
 /* CSS Document */
 /* リスト */
@@ -190,9 +251,9 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style--circle, .list-style--disc, .list-style--square, .list-style--decimal, .list-style--decimal-zero, .list-style--lower-roman, .list-style--upper-roman, .list-style--lower-alpha, .list-style--upper-alpha, .list-style--cjk-ideographic, .list-style--hiragana, .list-style--hiragana-iroha, .list-style--katakana, .list-style--katakana-iroha { margin-left: 2em !important; list-style-position: outside; text-indent: 0; }
 
 /* リスト */
-.list-style__peculiar, .list-style__peculiar--original, .list-style__peculiar--brackets-decimal, .list-style__peculiar--brackets-lowerroman, .list-style__peculiar--brackets-upperroman, .list-style__peculiar--brackets-loweralpha, .list-style__peculiar--brackets-upperalpha, .list-style__peculiar--brackets-hiragana, .list-style__peculiar--brackets-katakana, .list-style__peculiar--side-brackets-decimal, .list-style__peculiar--side-brackets-lowerroman, .list-style__peculiar--side-brackets-upperroman, .list-style__peculiar--side-brackets-loweralpha, .list-style__peculiar--side-brackets-upperalpha, .list-style__peculiar--side-brackets-hiragana, .list-style__peculiar--side-brackets-katakana, .list-style__peculiar--dot-decimal, .list-style__peculiar--dot-lowerroman, .list-style__peculiar--dot-upperroman, .list-style__peculiar--dot-loweralpha, .list-style__peculiar--dot-upperalpha, .list-style__peculiar--dot-hiragana, .list-style__peculiar--dot-katakana, .list-style__peculiar--character_circle-decimal { margin-left: 2em !important; }
-.list-style__peculiar > li, .list-style__peculiar--original > li, .list-style__peculiar--brackets-decimal > li, .list-style__peculiar--brackets-lowerroman > li, .list-style__peculiar--brackets-upperroman > li, .list-style__peculiar--brackets-loweralpha > li, .list-style__peculiar--brackets-upperalpha > li, .list-style__peculiar--brackets-hiragana > li, .list-style__peculiar--brackets-katakana > li, .list-style__peculiar--side-brackets-decimal > li, .list-style__peculiar--side-brackets-lowerroman > li, .list-style__peculiar--side-brackets-upperroman > li, .list-style__peculiar--side-brackets-loweralpha > li, .list-style__peculiar--side-brackets-upperalpha > li, .list-style__peculiar--side-brackets-hiragana > li, .list-style__peculiar--side-brackets-katakana > li, .list-style__peculiar--dot-decimal > li, .list-style__peculiar--dot-lowerroman > li, .list-style__peculiar--dot-upperroman > li, .list-style__peculiar--dot-loweralpha > li, .list-style__peculiar--dot-upperalpha > li, .list-style__peculiar--dot-hiragana > li, .list-style__peculiar--dot-katakana > li, .list-style__peculiar--character_circle-decimal > li { list-style-type: none; list-style-position: inside; text-indent: -2em; }
-.list-style__peculiar > li::before, .list-style__peculiar--original > li::before, .list-style__peculiar--brackets-decimal > li::before, .list-style__peculiar--brackets-lowerroman > li::before, .list-style__peculiar--brackets-upperroman > li::before, .list-style__peculiar--brackets-loweralpha > li::before, .list-style__peculiar--brackets-upperalpha > li::before, .list-style__peculiar--brackets-hiragana > li::before, .list-style__peculiar--brackets-katakana > li::before, .list-style__peculiar--side-brackets-decimal > li::before, .list-style__peculiar--side-brackets-lowerroman > li::before, .list-style__peculiar--side-brackets-upperroman > li::before, .list-style__peculiar--side-brackets-loweralpha > li::before, .list-style__peculiar--side-brackets-upperalpha > li::before, .list-style__peculiar--side-brackets-hiragana > li::before, .list-style__peculiar--side-brackets-katakana > li::before, .list-style__peculiar--dot-decimal > li::before, .list-style__peculiar--dot-lowerroman > li::before, .list-style__peculiar--dot-upperroman > li::before, .list-style__peculiar--dot-loweralpha > li::before, .list-style__peculiar--dot-upperalpha > li::before, .list-style__peculiar--dot-hiragana > li::before, .list-style__peculiar--dot-katakana > li::before, .list-style__peculiar--character_circle-decimal > li::before { display: inline-block; width: 2em; text-indent: 0; }
+.list-style__peculiar, .list-style__peculiar--original, .list-style__peculiar--brackets-decimal, .list-style__peculiar--brackets-lowerroman, .list-style__peculiar--brackets-upperroman, .list-style__peculiar--brackets-loweralpha, .list-style__peculiar--brackets-upperalpha, .list-style__peculiar--brackets-hiragana, .list-style__peculiar--brackets-hiragana-iroha, .list-style__peculiar--brackets-katakana, .list-style__peculiar--brackets-katakana-iroha, .list-style__peculiar--side-brackets-decimal, .list-style__peculiar--side-brackets-lowerroman, .list-style__peculiar--side-brackets-upperroman, .list-style__peculiar--side-brackets-loweralpha, .list-style__peculiar--side-brackets-upperalpha, .list-style__peculiar--side-brackets-hiragana, .list-style__peculiar--side-brackets-hiragana-iroha, .list-style__peculiar--side-brackets-katakana, .list-style__peculiar--side-brackets-katakana-iroha, .list-style__peculiar--dot-decimal, .list-style__peculiar--dot-lowerroman, .list-style__peculiar--dot-upperroman, .list-style__peculiar--dot-loweralpha, .list-style__peculiar--dot-upperalpha, .list-style__peculiar--dot-hiragana, .list-style__peculiar--dot-hiragana-iroha, .list-style__peculiar--dot-katakana, .list-style__peculiar--dot-katakana-iroha, .list-style__peculiar--character_circle-decimal { margin-left: 2em !important; }
+.list-style__peculiar > li, .list-style__peculiar--original > li, .list-style__peculiar--brackets-decimal > li, .list-style__peculiar--brackets-lowerroman > li, .list-style__peculiar--brackets-upperroman > li, .list-style__peculiar--brackets-loweralpha > li, .list-style__peculiar--brackets-upperalpha > li, .list-style__peculiar--brackets-hiragana > li, .list-style__peculiar--brackets-hiragana-iroha > li, .list-style__peculiar--brackets-katakana > li, .list-style__peculiar--brackets-katakana-iroha > li, .list-style__peculiar--side-brackets-decimal > li, .list-style__peculiar--side-brackets-lowerroman > li, .list-style__peculiar--side-brackets-upperroman > li, .list-style__peculiar--side-brackets-loweralpha > li, .list-style__peculiar--side-brackets-upperalpha > li, .list-style__peculiar--side-brackets-hiragana > li, .list-style__peculiar--side-brackets-hiragana-iroha > li, .list-style__peculiar--side-brackets-katakana > li, .list-style__peculiar--side-brackets-katakana-iroha > li, .list-style__peculiar--dot-decimal > li, .list-style__peculiar--dot-lowerroman > li, .list-style__peculiar--dot-upperroman > li, .list-style__peculiar--dot-loweralpha > li, .list-style__peculiar--dot-upperalpha > li, .list-style__peculiar--dot-hiragana > li, .list-style__peculiar--dot-hiragana-iroha > li, .list-style__peculiar--dot-katakana > li, .list-style__peculiar--dot-katakana-iroha > li, .list-style__peculiar--character_circle-decimal > li { list-style-type: none; list-style-position: inside; text-indent: -2em; }
+.list-style__peculiar > li::before, .list-style__peculiar--original > li::before, .list-style__peculiar--brackets-decimal > li::before, .list-style__peculiar--brackets-lowerroman > li::before, .list-style__peculiar--brackets-upperroman > li::before, .list-style__peculiar--brackets-loweralpha > li::before, .list-style__peculiar--brackets-upperalpha > li::before, .list-style__peculiar--brackets-hiragana > li::before, .list-style__peculiar--brackets-hiragana-iroha > li::before, .list-style__peculiar--brackets-katakana > li::before, .list-style__peculiar--brackets-katakana-iroha > li::before, .list-style__peculiar--side-brackets-decimal > li::before, .list-style__peculiar--side-brackets-lowerroman > li::before, .list-style__peculiar--side-brackets-upperroman > li::before, .list-style__peculiar--side-brackets-loweralpha > li::before, .list-style__peculiar--side-brackets-upperalpha > li::before, .list-style__peculiar--side-brackets-hiragana > li::before, .list-style__peculiar--side-brackets-hiragana-iroha > li::before, .list-style__peculiar--side-brackets-katakana > li::before, .list-style__peculiar--side-brackets-katakana-iroha > li::before, .list-style__peculiar--dot-decimal > li::before, .list-style__peculiar--dot-lowerroman > li::before, .list-style__peculiar--dot-upperroman > li::before, .list-style__peculiar--dot-loweralpha > li::before, .list-style__peculiar--dot-upperalpha > li::before, .list-style__peculiar--dot-hiragana > li::before, .list-style__peculiar--dot-hiragana-iroha > li::before, .list-style__peculiar--dot-katakana > li::before, .list-style__peculiar--dot-katakana-iroha > li::before, .list-style__peculiar--character_circle-decimal > li::before { display: inline-block; width: 2em; text-indent: 0; }
 
 /* spanでリストヘッド自由入力 */
 .list-style__peculiar--original > li { counter-increment: cnt_brackets-decimal; }
@@ -272,6 +333,56 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--brackets-hiragana > li:nth-child(45):before { content: "(を)"; }
 .list-style__peculiar--brackets-hiragana > li:nth-child(46):before { content: "(ん)"; }
 
+/* (い) カッコにいろは  */
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(1):before { content: "(い)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(2):before { content: "(ろ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(3):before { content: "(は)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(4):before { content: "(に)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(5):before { content: "(ほ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(6):before { content: "(へ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(7):before { content: "(と)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(8):before { content: "(ち)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(9):before { content: "(り)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(10):before { content: "(ぬ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(11):before { content: "(る)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(12):before { content: "(を)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(13):before { content: "(わ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(14):before { content: "(か)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(15):before { content: "(よ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(16):before { content: "(た)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(17):before { content: "(れ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(18):before { content: "(そ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(19):before { content: "(つ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(20):before { content: "(ね)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(21):before { content: "(な)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(22):before { content: "(ら)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(23):before { content: "(む)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(24):before { content: "(う)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(25):before { content: "(ゐ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(26):before { content: "(の)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(27):before { content: "(お)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(28):before { content: "(く)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(29):before { content: "(や)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(30):before { content: "(ま)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(31):before { content: "(け)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(32):before { content: "(ふ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(33):before { content: "(こ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(34):before { content: "(え)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(35):before { content: "(て)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(36):before { content: "(あ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(37):before { content: "(さ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(38):before { content: "(き)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(39):before { content: "(ゆ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(40):before { content: "(め)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(41):before { content: "(み)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(42):before { content: "(し)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(43):before { content: "(ゑ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(44):before { content: "(ひ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(45):before { content: "(も)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(46):before { content: "(せ)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(47):before { content: "(す)"; }
+.list-style__peculiar--brackets-hiragana-iroha > li:nth-child(48):before { content: "(ん)"; }
+
 /* (ア) カッコにカタカナ */
 .list-style__peculiar--brackets-katakana > li:nth-child(1):before { content: "(ア)"; }
 .list-style__peculiar--brackets-katakana > li:nth-child(2):before { content: "(イ)"; }
@@ -319,6 +430,56 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--brackets-katakana > li:nth-child(44):before { content: "(ワ)"; }
 .list-style__peculiar--brackets-katakana > li:nth-child(45):before { content: "(ヲ)"; }
 .list-style__peculiar--brackets-katakana > li:nth-child(46):before { content: "(ン)"; }
+
+/* (イ) カッコにイロハ  */
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(1):before { content: "(イ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(2):before { content: "(ロ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(3):before { content: "(ハ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(4):before { content: "(ニ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(5):before { content: "(ホ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(6):before { content: "(ヘ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(7):before { content: "(ト)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(8):before { content: "(チ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(9):before { content: "(リ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(10):before { content: "(ヌ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(11):before { content: "(ル)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(12):before { content: "(ヲ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(13):before { content: "(ワ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(14):before { content: "(カ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(15):before { content: "(ヨ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(16):before { content: "(タ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(17):before { content: "(レ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(18):before { content: "(ソ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(19):before { content: "(ツ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(20):before { content: "(ネ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(21):before { content: "(ナ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(22):before { content: "(ラ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(23):before { content: "(ム)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(24):before { content: "(ウ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(25):before { content: "(ヰ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(26):before { content: "(ノ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(27):before { content: "(オ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(28):before { content: "(ク)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(29):before { content: "(ヤ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(30):before { content: "(マ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(31):before { content: "(ケ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(32):before { content: "(フ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(33):before { content: "(コ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(34):before { content: "(エ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(35):before { content: "(テ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(36):before { content: "(ア)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(37):before { content: "(サ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(38):before { content: "(キ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(39):before { content: "(ユ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(40):before { content: "(メ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(41):before { content: "(ミ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(42):before { content: "(シ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(43):before { content: "(ヱ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(44):before { content: "(ヒ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(45):before { content: "(モ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(46):before { content: "(セ)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(47):before { content: "(ス)"; }
+.list-style__peculiar--brackets-katakana-iroha > li:nth-child(48):before { content: "(ン)"; }
 
 /* 1) 片方カッコに数字 */
 .list-style__peculiar--side-brackets-decimal { counter-reset: cnt_brackets-decimal 0; }
@@ -393,6 +554,56 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--side-brackets-hiragana > li:nth-child(45):before { content: "を)"; }
 .list-style__peculiar--side-brackets-hiragana > li:nth-child(46):before { content: "ん)"; }
 
+/* い) 片方カッコにいろは */
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(1):before { content: "い)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(2):before { content: "ろ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(3):before { content: "は)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(4):before { content: "に)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(5):before { content: "ほ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(6):before { content: "へ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(7):before { content: "と)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(8):before { content: "ち)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(9):before { content: "り)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(10):before { content: "ぬ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(11):before { content: "る)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(12):before { content: "を)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(13):before { content: "わ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(14):before { content: "か)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(15):before { content: "よ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(16):before { content: "た)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(17):before { content: "れ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(18):before { content: "そ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(19):before { content: "つ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(20):before { content: "ね)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(21):before { content: "な)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(22):before { content: "ら)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(23):before { content: "む)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(24):before { content: "う)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(25):before { content: "ゐ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(26):before { content: "の)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(27):before { content: "お)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(28):before { content: "く)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(29):before { content: "や)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(30):before { content: "ま)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(31):before { content: "け)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(32):before { content: "ふ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(33):before { content: "こ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(34):before { content: "え)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(35):before { content: "て)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(36):before { content: "あ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(37):before { content: "さ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(38):before { content: "き)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(39):before { content: "ゆ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(40):before { content: "め)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(41):before { content: "み)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(42):before { content: "し)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(43):before { content: "ゑ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(44):before { content: "ひ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(45):before { content: "も)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(46):before { content: "せ)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(47):before { content: "す)"; }
+.list-style__peculiar--side-brackets-hiragana-iroha > li:nth-child(48):before { content: "ん)"; }
+
 /* ア) 片方カッコにカタカナ */
 .list-style__peculiar--side-brackets-katakana > li:nth-child(1):before { content: "ア)"; }
 .list-style__peculiar--side-brackets-katakana > li:nth-child(2):before { content: "イ)"; }
@@ -441,6 +652,56 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--side-brackets-katakana > li:nth-child(45):before { content: "ヲ)"; }
 .list-style__peculiar--side-brackets-katakana > li:nth-child(46):before { content: "ン)"; }
 
+/* イ) 片方カッコにイロハ */
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(1):before { content: "イ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(2):before { content: "ロ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(3):before { content: "ハ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(4):before { content: "ニ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(5):before { content: "ホ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(6):before { content: "ヘ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(7):before { content: "ト)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(8):before { content: "チ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(9):before { content: "リ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(10):before { content: "ヌ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(11):before { content: "ル)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(12):before { content: "ヲ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(13):before { content: "ワ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(14):before { content: "カ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(15):before { content: "ヨ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(16):before { content: "タ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(17):before { content: "レ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(18):before { content: "ソ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(19):before { content: "ツ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(20):before { content: "ネ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(21):before { content: "ナ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(22):before { content: "ラ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(23):before { content: "ム)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(24):before { content: "ウ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(25):before { content: "ヰ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(26):before { content: "ノ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(27):before { content: "オ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(28):before { content: "ク)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(29):before { content: "ヤ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(30):before { content: "マ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(31):before { content: "ケ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(32):before { content: "フ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(33):before { content: "コ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(34):before { content: "エ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(35):before { content: "テ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(36):before { content: "ア)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(37):before { content: "サ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(38):before { content: "キ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(39):before { content: "ユ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(40):before { content: "メ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(41):before { content: "ミ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(42):before { content: "シ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(43):before { content: "ヱ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(44):before { content: "ヒ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(45):before { content: "モ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(46):before { content: "セ)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(47):before { content: "ス)"; }
+.list-style__peculiar--side-brackets-katakana-iroha > li:nth-child(48):before { content: "ン)"; }
+
 /* 1. ドットに数字 */
 .list-style__peculiar--dot-decimal { counter-reset: cnt_dot-decimal 0; }
 .list-style__peculiar--dot-decimal > li { counter-increment: cnt_dot-decimal; }
@@ -466,7 +727,7 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--dot-upperalpha > li { counter-increment: cnt_dot-upperalpha; }
 .list-style__peculiar--dot-upperalpha > li::before { content: counter(cnt_dot-upperalpha,upper-alpha) "."; }
 
-/* あ. カッコにひらがな */
+/* あ. ドットにひらがな */
 .list-style__peculiar--dot-hiragana > li:nth-child(1):before { content: "あ."; }
 .list-style__peculiar--dot-hiragana > li:nth-child(2):before { content: "い."; }
 .list-style__peculiar--dot-hiragana > li:nth-child(3):before { content: "う."; }
@@ -514,7 +775,57 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--dot-hiragana > li:nth-child(45):before { content: "を."; }
 .list-style__peculiar--dot-hiragana > li:nth-child(46):before { content: "ん."; }
 
-/* ア. カッコにカタカナ */
+/* い. ドットにいろは */
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(1):before { content: "い."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(2):before { content: "ろ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(3):before { content: "は."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(4):before { content: "に."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(5):before { content: "ほ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(6):before { content: "へ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(7):before { content: "と."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(8):before { content: "ち."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(9):before { content: "り."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(10):before { content: "ぬ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(11):before { content: "る."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(12):before { content: "を."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(13):before { content: "わ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(14):before { content: "か."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(15):before { content: "よ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(16):before { content: "た."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(17):before { content: "れ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(18):before { content: "そ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(19):before { content: "つ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(20):before { content: "ね."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(21):before { content: "な."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(22):before { content: "ら."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(23):before { content: "む."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(24):before { content: "う."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(25):before { content: "ゐ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(26):before { content: "の."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(27):before { content: "お."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(28):before { content: "く."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(29):before { content: "や."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(30):before { content: "ま."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(31):before { content: "け."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(32):before { content: "ふ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(33):before { content: "こ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(34):before { content: "え."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(35):before { content: "て."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(36):before { content: "あ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(37):before { content: "さ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(38):before { content: "き."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(39):before { content: "ゆ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(40):before { content: "め."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(41):before { content: "み."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(42):before { content: "し."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(43):before { content: "ゑ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(44):before { content: "ひ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(45):before { content: "も."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(46):before { content: "せ."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(47):before { content: "す."; }
+.list-style__peculiar--dot-hiragana-iroha > li:nth-child(48):before { content: "ん."; }
+
+/* ア. ドットにカタカナ */
 .list-style__peculiar--dot-katakana > li:nth-child(1):before { content: "ア."; }
 .list-style__peculiar--dot-katakana > li:nth-child(2):before { content: "イ."; }
 .list-style__peculiar--dot-katakana > li:nth-child(3):before { content: "ウ."; }
@@ -561,6 +872,56 @@ button, input[type=button] { width: auto; overflow: visible; }
 .list-style__peculiar--dot-katakana > li:nth-child(44):before { content: "ワ."; }
 .list-style__peculiar--dot-katakana > li:nth-child(45):before { content: "ヲ."; }
 .list-style__peculiar--dot-katakana > li:nth-child(46):before { content: "ン."; }
+
+/* イ. ドットにイロハ */
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(1):before { content: "イ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(2):before { content: "ロ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(3):before { content: "ハ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(4):before { content: "ニ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(5):before { content: "ホ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(6):before { content: "ヘ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(7):before { content: "ト."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(8):before { content: "チ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(9):before { content: "リ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(10):before { content: "ヌ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(11):before { content: "ル."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(12):before { content: "ヲ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(13):before { content: "ワ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(14):before { content: "カ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(15):before { content: "ヨ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(16):before { content: "タ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(17):before { content: "レ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(18):before { content: "ソ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(19):before { content: "ツ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(20):before { content: "ネ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(21):before { content: "ナ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(22):before { content: "ラ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(23):before { content: "ム."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(24):before { content: "ウ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(25):before { content: "ヰ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(26):before { content: "ノ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(27):before { content: "オ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(28):before { content: "ク."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(29):before { content: "ヤ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(30):before { content: "マ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(31):before { content: "ケ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(32):before { content: "フ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(33):before { content: "コ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(34):before { content: "エ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(35):before { content: "テ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(36):before { content: "ア."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(37):before { content: "サ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(38):before { content: "キ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(39):before { content: "ユ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(40):before { content: "メ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(41):before { content: "ミ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(42):before { content: "シ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(43):before { content: "ヱ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(44):before { content: "ヒ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(45):before { content: "モ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(46):before { content: "セ."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(47):before { content: "ス."; }
+.list-style__peculiar--dot-katakana-iroha > li:nth-child(48):before { content: "ン."; }
 
 /* character */
 /* ① 丸数字 */
@@ -661,7 +1022,7 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 	date-list
 
 =========================================================== */
-.date-list { display: table; padding: 0; margin: 0; }
+.date-list { display: table; padding: 0; margin: 0; border-collapse: collapse; }
 .date-list > dl { display: table-row; padding: 0; margin: 0; }
 .date-list > dl > dt, .date-list > dl > dd { display: table-cell; margin: 0; }
 .date-list > dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
@@ -689,660 +1050,769 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .clearfix { zoom: 1; }
 
+/* ===========================================================
+
+	img
+
+=========================================================== */
+.img-float--right { float: right !important; margin: 0 0 2.0em 2.0em; }
+
+.img-float--left { float: left !important; margin: 0 2.0em 2.0em 0; }
+
+.img-float--none { float: none !important; clear: both !important; margin: 0 0 2.0em 0; }
+
+/* ===========================================================
+
+	Display
+
+=========================================================== */
+.display-inline { display: inline !important; }
+
+.display-block { display: block !important; }
+
+.display-none { display: none !important; }
+
 /* Scss Document */
+/* ===========================================================
+
+	module
+
+=========================================================== */
+/* ===========================================================
+
+	tabs module
+
+=========================================================== */
+/* plain */
+.js-panel { display: none; }
+
+.js-panel.active { display: block; }
+
+/* tab-row */
+.tab-row { display: flex; flex-wrap: nowrap; }
+
+.tab-row > li { display: flex; width: 100%; flex-flow: 1; }
+
+.tab-row > li > a { display: flex; width: 100%; flex-flow: 1; align-items: center; align-content: center; }
+
+.tab-row > li > a > span { display: block; width: 100%; }
+
+/* ===========================================================
+
+	link module
+
+=========================================================== */
+/* link-button-parade */
+.link-button-parade, .link-button-parade--left, .link-button-parade--center, .link-button-parade--right { display: flex; padding: 0; margin-left: -0.25em; margin-right: -0.25em; }
+.link-button-parade li, .link-button-parade--left li, .link-button-parade--center li, .link-button-parade--right li { display: block; margin: 0; padding-left: 0.25em; padding-right: 0.25em; }
+.link-button-parade a, .link-button-parade--left a, .link-button-parade--center a, .link-button-parade--right a { display: block; padding: 0; }
+
+.link-button-parade--left { justify-content: flex-start; }
+
+.link-button-parade--center { justify-content: center; }
+
+.link-button-parade--right { justify-content: flex-end; }
+
+/* link-text-parade */
+.link-text-parade, .link-text-parade--left, .link-text-parade--center, .link-text-parade--right { display: flex; padding: 0; margin-left: -1.0em; margin-right: -1.0em; }
+.link-text-parade li, .link-text-parade--left li, .link-text-parade--center li, .link-text-parade--right li { display: block; margin: 0; padding-left: 1.0em; padding-right: 1.0em; }
+.link-text-parade a, .link-text-parade--left a, .link-text-parade--center a, .link-text-parade--right a { display: block; padding: 0; }
+
+.link-text-parade--left { justify-content: flex-start; }
+
+.link-text-parade--center { justify-content: center; }
+
+.link-text-parade--right { justify-content: flex-end; }
+
+/* link-list-box */
+.link-list-box, .link-list-box--row, .link-list-box--column { display: flex; width: 100%; clear: both; }
+.link-list-box > dt, .link-list-box--row > dt, .link-list-box--column > dt { display: flex; align-items: center; }
+.link-list-box > dd, .link-list-box--row > dd, .link-list-box--column > dd { display: block; }
+
+.link-list-box ul, .link-list-box--row ul, .link-list-box--column ul { display: flex; clear: both; flex-direction: row; flex-wrap: wrap; margin-left: -0.5em; margin-right: -0.5em; }
+
+.link-list-box li, .link-list-box--row li, .link-list-box--column li { display: block; margin: 0; padding-left: 0.5em; padding-right: 0.5em; }
+
+.link-list-box--row { flex-direction: row; }
+.link-list-box--row > dt { flex-grow: 1; white-space: nowrap; }
+.link-list-box--row > dd { flex-grow: 2; flex-basis: 100%; }
+
+.link-list-box--row ul { display: flex; clear: both; flex-direction: row; flex-wrap: wrap; margin-left: -0.5em; margin-right: -0.5em; }
+
+.link-list-box--row li { display: block; margin: 0; padding-left: 0.5em; padding-right: 0.5em; }
+
+.link-list-box--column { flex-direction: column; }
+.link-list-box--column > dt { flex-grow: 1; flex-basis: 100%; }
+.link-list-box--column > dd { flex-grow: 1; flex-basis: 100%; }
+
+.link-list-box--column ul { display: flex; clear: both; flex-direction: row; flex-wrap: wrap; margin-left: -0.5em; margin-right: -0.5em; }
+
+.link-list-box--column li { display: block; margin: 0; padding-left: 0.5em; padding-right: 0.5em; }
+
+/* Scss Document */
+/* ===========================================================
+
+	responsive
+
+=========================================================== */
+/* ---------------------------------------------------------------------------------
+	image set
+--------------------------------------------------------------------------------- */
+.responsive-image img, .responsive-image { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+
 /* ---------------------------------------------------------------------------------
 	video set
 --------------------------------------------------------------------------------- */
-.video-respons { display: block; position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; }
+.respons-video { display: block; position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; }
 
-.video-respons iframe { position: absolute; top: 0; right: 0; width: 100%; height: 100%; }
+.respons-video iframe { position: absolute; top: 0; right: 0; width: 100%; height: 100%; }
 
 /* Scss Document */
 .width--0 { width: 0px !important; }
 
-.height--0 { height: 0px !important; }
-
 .width--5 { width: 5px !important; }
-
-.height--5 { height: 5px !important; }
 
 .width--10 { width: 10px !important; }
 
-.height--10 { height: 10px !important; }
-
 .width--15 { width: 15px !important; }
-
-.height--15 { height: 15px !important; }
 
 .width--20 { width: 20px !important; }
 
-.height--20 { height: 20px !important; }
-
 .width--25 { width: 25px !important; }
-
-.height--25 { height: 25px !important; }
 
 .width--30 { width: 30px !important; }
 
-.height--30 { height: 30px !important; }
-
 .width--35 { width: 35px !important; }
-
-.height--35 { height: 35px !important; }
 
 .width--40 { width: 40px !important; }
 
-.height--40 { height: 40px !important; }
-
 .width--45 { width: 45px !important; }
-
-.height--45 { height: 45px !important; }
 
 .width--50 { width: 50px !important; }
 
-.height--50 { height: 50px !important; }
-
 .width--55 { width: 55px !important; }
-
-.height--55 { height: 55px !important; }
 
 .width--60 { width: 60px !important; }
 
-.height--60 { height: 60px !important; }
-
 .width--65 { width: 65px !important; }
-
-.height--65 { height: 65px !important; }
 
 .width--70 { width: 70px !important; }
 
-.height--70 { height: 70px !important; }
-
 .width--75 { width: 75px !important; }
-
-.height--75 { height: 75px !important; }
 
 .width--80 { width: 80px !important; }
 
-.height--80 { height: 80px !important; }
-
 .width--85 { width: 85px !important; }
-
-.height--85 { height: 85px !important; }
 
 .width--90 { width: 90px !important; }
 
-.height--90 { height: 90px !important; }
-
 .width--95 { width: 95px !important; }
-
-.height--95 { height: 95px !important; }
 
 .width--100 { width: 100px !important; }
 
-.height--100 { height: 100px !important; }
-
 .width--105 { width: 105px !important; }
-
-.height--105 { height: 105px !important; }
 
 .width--110 { width: 110px !important; }
 
-.height--110 { height: 110px !important; }
-
 .width--115 { width: 115px !important; }
-
-.height--115 { height: 115px !important; }
 
 .width--120 { width: 120px !important; }
 
-.height--120 { height: 120px !important; }
-
 .width--125 { width: 125px !important; }
-
-.height--125 { height: 125px !important; }
 
 .width--130 { width: 130px !important; }
 
-.height--130 { height: 130px !important; }
-
 .width--135 { width: 135px !important; }
-
-.height--135 { height: 135px !important; }
 
 .width--140 { width: 140px !important; }
 
-.height--140 { height: 140px !important; }
-
 .width--145 { width: 145px !important; }
-
-.height--145 { height: 145px !important; }
 
 .width--150 { width: 150px !important; }
 
-.height--150 { height: 150px !important; }
-
 .width--155 { width: 155px !important; }
-
-.height--155 { height: 155px !important; }
 
 .width--160 { width: 160px !important; }
 
-.height--160 { height: 160px !important; }
-
 .width--165 { width: 165px !important; }
-
-.height--165 { height: 165px !important; }
 
 .width--170 { width: 170px !important; }
 
-.height--170 { height: 170px !important; }
-
 .width--175 { width: 175px !important; }
-
-.height--175 { height: 175px !important; }
 
 .width--180 { width: 180px !important; }
 
-.height--180 { height: 180px !important; }
-
 .width--185 { width: 185px !important; }
-
-.height--185 { height: 185px !important; }
 
 .width--190 { width: 190px !important; }
 
-.height--190 { height: 190px !important; }
-
 .width--195 { width: 195px !important; }
-
-.height--195 { height: 195px !important; }
 
 .width--200 { width: 200px !important; }
 
-.height--200 { height: 200px !important; }
-
 .width--205 { width: 205px !important; }
-
-.height--205 { height: 205px !important; }
 
 .width--210 { width: 210px !important; }
 
-.height--210 { height: 210px !important; }
-
 .width--215 { width: 215px !important; }
-
-.height--215 { height: 215px !important; }
 
 .width--220 { width: 220px !important; }
 
-.height--220 { height: 220px !important; }
-
 .width--225 { width: 225px !important; }
-
-.height--225 { height: 225px !important; }
 
 .width--230 { width: 230px !important; }
 
-.height--230 { height: 230px !important; }
-
 .width--235 { width: 235px !important; }
-
-.height--235 { height: 235px !important; }
 
 .width--240 { width: 240px !important; }
 
-.height--240 { height: 240px !important; }
-
 .width--245 { width: 245px !important; }
-
-.height--245 { height: 245px !important; }
 
 .width--250 { width: 250px !important; }
 
-.height--250 { height: 250px !important; }
-
 .width--255 { width: 255px !important; }
-
-.height--255 { height: 255px !important; }
 
 .width--260 { width: 260px !important; }
 
-.height--260 { height: 260px !important; }
-
 .width--265 { width: 265px !important; }
-
-.height--265 { height: 265px !important; }
 
 .width--270 { width: 270px !important; }
 
-.height--270 { height: 270px !important; }
-
 .width--275 { width: 275px !important; }
-
-.height--275 { height: 275px !important; }
 
 .width--280 { width: 280px !important; }
 
-.height--280 { height: 280px !important; }
-
 .width--285 { width: 285px !important; }
-
-.height--285 { height: 285px !important; }
 
 .width--290 { width: 290px !important; }
 
-.height--290 { height: 290px !important; }
-
 .width--295 { width: 295px !important; }
-
-.height--295 { height: 295px !important; }
 
 .width--300 { width: 300px !important; }
 
-.height--300 { height: 300px !important; }
-
 .width--305 { width: 305px !important; }
-
-.height--305 { height: 305px !important; }
 
 .width--310 { width: 310px !important; }
 
-.height--310 { height: 310px !important; }
-
 .width--315 { width: 315px !important; }
-
-.height--315 { height: 315px !important; }
 
 .width--320 { width: 320px !important; }
 
-.height--320 { height: 320px !important; }
-
 .width--325 { width: 325px !important; }
-
-.height--325 { height: 325px !important; }
 
 .width--330 { width: 330px !important; }
 
-.height--330 { height: 330px !important; }
-
 .width--335 { width: 335px !important; }
-
-.height--335 { height: 335px !important; }
 
 .width--340 { width: 340px !important; }
 
-.height--340 { height: 340px !important; }
-
 .width--345 { width: 345px !important; }
-
-.height--345 { height: 345px !important; }
 
 .width--350 { width: 350px !important; }
 
-.height--350 { height: 350px !important; }
-
 .width--355 { width: 355px !important; }
-
-.height--355 { height: 355px !important; }
 
 .width--360 { width: 360px !important; }
 
-.height--360 { height: 360px !important; }
-
 .width--365 { width: 365px !important; }
-
-.height--365 { height: 365px !important; }
 
 .width--370 { width: 370px !important; }
 
-.height--370 { height: 370px !important; }
-
 .width--375 { width: 375px !important; }
-
-.height--375 { height: 375px !important; }
 
 .width--380 { width: 380px !important; }
 
-.height--380 { height: 380px !important; }
-
 .width--385 { width: 385px !important; }
-
-.height--385 { height: 385px !important; }
 
 .width--390 { width: 390px !important; }
 
-.height--390 { height: 390px !important; }
-
 .width--395 { width: 395px !important; }
-
-.height--395 { height: 395px !important; }
 
 .width--400 { width: 400px !important; }
 
-.height--400 { height: 400px !important; }
-
 .width--405 { width: 405px !important; }
-
-.height--405 { height: 405px !important; }
 
 .width--410 { width: 410px !important; }
 
-.height--410 { height: 410px !important; }
-
 .width--415 { width: 415px !important; }
-
-.height--415 { height: 415px !important; }
 
 .width--420 { width: 420px !important; }
 
-.height--420 { height: 420px !important; }
-
 .width--425 { width: 425px !important; }
-
-.height--425 { height: 425px !important; }
 
 .width--430 { width: 430px !important; }
 
-.height--430 { height: 430px !important; }
-
 .width--435 { width: 435px !important; }
-
-.height--435 { height: 435px !important; }
 
 .width--440 { width: 440px !important; }
 
-.height--440 { height: 440px !important; }
-
 .width--445 { width: 445px !important; }
-
-.height--445 { height: 445px !important; }
 
 .width--450 { width: 450px !important; }
 
-.height--450 { height: 450px !important; }
-
 .width--455 { width: 455px !important; }
-
-.height--455 { height: 455px !important; }
 
 .width--460 { width: 460px !important; }
 
-.height--460 { height: 460px !important; }
-
 .width--465 { width: 465px !important; }
-
-.height--465 { height: 465px !important; }
 
 .width--470 { width: 470px !important; }
 
-.height--470 { height: 470px !important; }
-
 .width--475 { width: 475px !important; }
-
-.height--475 { height: 475px !important; }
 
 .width--480 { width: 480px !important; }
 
-.height--480 { height: 480px !important; }
-
 .width--485 { width: 485px !important; }
-
-.height--485 { height: 485px !important; }
 
 .width--490 { width: 490px !important; }
 
-.height--490 { height: 490px !important; }
-
 .width--495 { width: 495px !important; }
-
-.height--495 { height: 495px !important; }
 
 .width--500 { width: 500px !important; }
 
-.height--500 { height: 500px !important; }
-
 .width--505 { width: 505px !important; }
-
-.height--505 { height: 505px !important; }
 
 .width--510 { width: 510px !important; }
 
-.height--510 { height: 510px !important; }
-
 .width--515 { width: 515px !important; }
-
-.height--515 { height: 515px !important; }
 
 .width--520 { width: 520px !important; }
 
-.height--520 { height: 520px !important; }
-
 .width--525 { width: 525px !important; }
-
-.height--525 { height: 525px !important; }
 
 .width--530 { width: 530px !important; }
 
-.height--530 { height: 530px !important; }
-
 .width--535 { width: 535px !important; }
-
-.height--535 { height: 535px !important; }
 
 .width--540 { width: 540px !important; }
 
-.height--540 { height: 540px !important; }
-
 .width--545 { width: 545px !important; }
-
-.height--545 { height: 545px !important; }
 
 .width--550 { width: 550px !important; }
 
-.height--550 { height: 550px !important; }
-
 .width--555 { width: 555px !important; }
-
-.height--555 { height: 555px !important; }
 
 .width--560 { width: 560px !important; }
 
-.height--560 { height: 560px !important; }
-
 .width--565 { width: 565px !important; }
-
-.height--565 { height: 565px !important; }
 
 .width--570 { width: 570px !important; }
 
-.height--570 { height: 570px !important; }
-
 .width--575 { width: 575px !important; }
-
-.height--575 { height: 575px !important; }
 
 .width--580 { width: 580px !important; }
 
-.height--580 { height: 580px !important; }
-
 .width--585 { width: 585px !important; }
-
-.height--585 { height: 585px !important; }
 
 .width--590 { width: 590px !important; }
 
-.height--590 { height: 590px !important; }
-
 .width--595 { width: 595px !important; }
-
-.height--595 { height: 595px !important; }
 
 .width--600 { width: 600px !important; }
 
-.height--600 { height: 600px !important; }
-
 .width--605 { width: 605px !important; }
-
-.height--605 { height: 605px !important; }
 
 .width--610 { width: 610px !important; }
 
-.height--610 { height: 610px !important; }
-
 .width--615 { width: 615px !important; }
-
-.height--615 { height: 615px !important; }
 
 .width--620 { width: 620px !important; }
 
-.height--620 { height: 620px !important; }
-
 .width--625 { width: 625px !important; }
-
-.height--625 { height: 625px !important; }
 
 .width--630 { width: 630px !important; }
 
-.height--630 { height: 630px !important; }
-
 .width--635 { width: 635px !important; }
-
-.height--635 { height: 635px !important; }
 
 .width--640 { width: 640px !important; }
 
-.height--640 { height: 640px !important; }
-
 .width--645 { width: 645px !important; }
-
-.height--645 { height: 645px !important; }
 
 .width--650 { width: 650px !important; }
 
-.height--650 { height: 650px !important; }
-
 .width--655 { width: 655px !important; }
-
-.height--655 { height: 655px !important; }
 
 .width--660 { width: 660px !important; }
 
-.height--660 { height: 660px !important; }
-
 .width--665 { width: 665px !important; }
-
-.height--665 { height: 665px !important; }
 
 .width--670 { width: 670px !important; }
 
-.height--670 { height: 670px !important; }
-
 .width--675 { width: 675px !important; }
-
-.height--675 { height: 675px !important; }
 
 .width--680 { width: 680px !important; }
 
-.height--680 { height: 680px !important; }
-
 .width--685 { width: 685px !important; }
-
-.height--685 { height: 685px !important; }
 
 .width--690 { width: 690px !important; }
 
-.height--690 { height: 690px !important; }
-
 .width--695 { width: 695px !important; }
-
-.height--695 { height: 695px !important; }
 
 .width--700 { width: 700px !important; }
 
-.height--700 { height: 700px !important; }
-
 .width--percent-0 { width: 0% !important; }
-
-.height--percent-0 { height: 0% !important; }
 
 .width--percent-5 { width: 5% !important; }
 
-.height--percent-5 { height: 5% !important; }
-
 .width--percent-10 { width: 10% !important; }
-
-.height--percent-10 { height: 10% !important; }
 
 .width--percent-15 { width: 15% !important; }
 
-.height--percent-15 { height: 15% !important; }
-
 .width--percent-20 { width: 20% !important; }
-
-.height--percent-20 { height: 20% !important; }
 
 .width--percent-25 { width: 25% !important; }
 
-.height--percent-25 { height: 25% !important; }
-
 .width--percent-30 { width: 30% !important; }
-
-.height--percent-30 { height: 30% !important; }
 
 .width--percent-35 { width: 35% !important; }
 
-.height--percent-35 { height: 35% !important; }
-
 .width--percent-40 { width: 40% !important; }
-
-.height--percent-40 { height: 40% !important; }
 
 .width--percent-45 { width: 45% !important; }
 
-.height--percent-45 { height: 45% !important; }
-
 .width--percent-50 { width: 50% !important; }
-
-.height--percent-50 { height: 50% !important; }
 
 .width--percent-55 { width: 55% !important; }
 
-.height--percent-55 { height: 55% !important; }
-
 .width--percent-60 { width: 60% !important; }
-
-.height--percent-60 { height: 60% !important; }
 
 .width--percent-65 { width: 65% !important; }
 
-.height--percent-65 { height: 65% !important; }
-
 .width--percent-70 { width: 70% !important; }
-
-.height--percent-70 { height: 70% !important; }
 
 .width--percent-75 { width: 75% !important; }
 
-.height--percent-75 { height: 75% !important; }
-
 .width--percent-80 { width: 80% !important; }
-
-.height--percent-80 { height: 80% !important; }
 
 .width--percent-85 { width: 85% !important; }
 
-.height--percent-85 { height: 85% !important; }
-
 .width--percent-90 { width: 90% !important; }
-
-.height--percent-90 { height: 90% !important; }
 
 .width--percent-95 { width: 95% !important; }
 
-.height--percent-95 { height: 95% !important; }
-
 .width--percent-100 { width: 100% !important; }
+
+.height--0 { height: 0px !important; }
+
+.height--5 { height: 5px !important; }
+
+.height--10 { height: 10px !important; }
+
+.height--15 { height: 15px !important; }
+
+.height--20 { height: 20px !important; }
+
+.height--25 { height: 25px !important; }
+
+.height--30 { height: 30px !important; }
+
+.height--35 { height: 35px !important; }
+
+.height--40 { height: 40px !important; }
+
+.height--45 { height: 45px !important; }
+
+.height--50 { height: 50px !important; }
+
+.height--55 { height: 55px !important; }
+
+.height--60 { height: 60px !important; }
+
+.height--65 { height: 65px !important; }
+
+.height--70 { height: 70px !important; }
+
+.height--75 { height: 75px !important; }
+
+.height--80 { height: 80px !important; }
+
+.height--85 { height: 85px !important; }
+
+.height--90 { height: 90px !important; }
+
+.height--95 { height: 95px !important; }
+
+.height--100 { height: 100px !important; }
+
+.height--105 { height: 105px !important; }
+
+.height--110 { height: 110px !important; }
+
+.height--115 { height: 115px !important; }
+
+.height--120 { height: 120px !important; }
+
+.height--125 { height: 125px !important; }
+
+.height--130 { height: 130px !important; }
+
+.height--135 { height: 135px !important; }
+
+.height--140 { height: 140px !important; }
+
+.height--145 { height: 145px !important; }
+
+.height--150 { height: 150px !important; }
+
+.height--155 { height: 155px !important; }
+
+.height--160 { height: 160px !important; }
+
+.height--165 { height: 165px !important; }
+
+.height--170 { height: 170px !important; }
+
+.height--175 { height: 175px !important; }
+
+.height--180 { height: 180px !important; }
+
+.height--185 { height: 185px !important; }
+
+.height--190 { height: 190px !important; }
+
+.height--195 { height: 195px !important; }
+
+.height--200 { height: 200px !important; }
+
+.height--205 { height: 205px !important; }
+
+.height--210 { height: 210px !important; }
+
+.height--215 { height: 215px !important; }
+
+.height--220 { height: 220px !important; }
+
+.height--225 { height: 225px !important; }
+
+.height--230 { height: 230px !important; }
+
+.height--235 { height: 235px !important; }
+
+.height--240 { height: 240px !important; }
+
+.height--245 { height: 245px !important; }
+
+.height--250 { height: 250px !important; }
+
+.height--255 { height: 255px !important; }
+
+.height--260 { height: 260px !important; }
+
+.height--265 { height: 265px !important; }
+
+.height--270 { height: 270px !important; }
+
+.height--275 { height: 275px !important; }
+
+.height--280 { height: 280px !important; }
+
+.height--285 { height: 285px !important; }
+
+.height--290 { height: 290px !important; }
+
+.height--295 { height: 295px !important; }
+
+.height--300 { height: 300px !important; }
+
+.height--305 { height: 305px !important; }
+
+.height--310 { height: 310px !important; }
+
+.height--315 { height: 315px !important; }
+
+.height--320 { height: 320px !important; }
+
+.height--325 { height: 325px !important; }
+
+.height--330 { height: 330px !important; }
+
+.height--335 { height: 335px !important; }
+
+.height--340 { height: 340px !important; }
+
+.height--345 { height: 345px !important; }
+
+.height--350 { height: 350px !important; }
+
+.height--355 { height: 355px !important; }
+
+.height--360 { height: 360px !important; }
+
+.height--365 { height: 365px !important; }
+
+.height--370 { height: 370px !important; }
+
+.height--375 { height: 375px !important; }
+
+.height--380 { height: 380px !important; }
+
+.height--385 { height: 385px !important; }
+
+.height--390 { height: 390px !important; }
+
+.height--395 { height: 395px !important; }
+
+.height--400 { height: 400px !important; }
+
+.height--405 { height: 405px !important; }
+
+.height--410 { height: 410px !important; }
+
+.height--415 { height: 415px !important; }
+
+.height--420 { height: 420px !important; }
+
+.height--425 { height: 425px !important; }
+
+.height--430 { height: 430px !important; }
+
+.height--435 { height: 435px !important; }
+
+.height--440 { height: 440px !important; }
+
+.height--445 { height: 445px !important; }
+
+.height--450 { height: 450px !important; }
+
+.height--455 { height: 455px !important; }
+
+.height--460 { height: 460px !important; }
+
+.height--465 { height: 465px !important; }
+
+.height--470 { height: 470px !important; }
+
+.height--475 { height: 475px !important; }
+
+.height--480 { height: 480px !important; }
+
+.height--485 { height: 485px !important; }
+
+.height--490 { height: 490px !important; }
+
+.height--495 { height: 495px !important; }
+
+.height--500 { height: 500px !important; }
+
+.height--505 { height: 505px !important; }
+
+.height--510 { height: 510px !important; }
+
+.height--515 { height: 515px !important; }
+
+.height--520 { height: 520px !important; }
+
+.height--525 { height: 525px !important; }
+
+.height--530 { height: 530px !important; }
+
+.height--535 { height: 535px !important; }
+
+.height--540 { height: 540px !important; }
+
+.height--545 { height: 545px !important; }
+
+.height--550 { height: 550px !important; }
+
+.height--555 { height: 555px !important; }
+
+.height--560 { height: 560px !important; }
+
+.height--565 { height: 565px !important; }
+
+.height--570 { height: 570px !important; }
+
+.height--575 { height: 575px !important; }
+
+.height--580 { height: 580px !important; }
+
+.height--585 { height: 585px !important; }
+
+.height--590 { height: 590px !important; }
+
+.height--595 { height: 595px !important; }
+
+.height--600 { height: 600px !important; }
+
+.height--605 { height: 605px !important; }
+
+.height--610 { height: 610px !important; }
+
+.height--615 { height: 615px !important; }
+
+.height--620 { height: 620px !important; }
+
+.height--625 { height: 625px !important; }
+
+.height--630 { height: 630px !important; }
+
+.height--635 { height: 635px !important; }
+
+.height--640 { height: 640px !important; }
+
+.height--645 { height: 645px !important; }
+
+.height--650 { height: 650px !important; }
+
+.height--655 { height: 655px !important; }
+
+.height--660 { height: 660px !important; }
+
+.height--665 { height: 665px !important; }
+
+.height--670 { height: 670px !important; }
+
+.height--675 { height: 675px !important; }
+
+.height--680 { height: 680px !important; }
+
+.height--685 { height: 685px !important; }
+
+.height--690 { height: 690px !important; }
+
+.height--695 { height: 695px !important; }
+
+.height--700 { height: 700px !important; }
+
+.height--percent-0 { height: 0% !important; }
+
+.height--percent-5 { height: 5% !important; }
+
+.height--percent-10 { height: 10% !important; }
+
+.height--percent-15 { height: 15% !important; }
+
+.height--percent-20 { height: 20% !important; }
+
+.height--percent-25 { height: 25% !important; }
+
+.height--percent-30 { height: 30% !important; }
+
+.height--percent-35 { height: 35% !important; }
+
+.height--percent-40 { height: 40% !important; }
+
+.height--percent-45 { height: 45% !important; }
+
+.height--percent-50 { height: 50% !important; }
+
+.height--percent-55 { height: 55% !important; }
+
+.height--percent-60 { height: 60% !important; }
+
+.height--percent-65 { height: 65% !important; }
+
+.height--percent-70 { height: 70% !important; }
+
+.height--percent-75 { height: 75% !important; }
+
+.height--percent-80 { height: 80% !important; }
+
+.height--percent-85 { height: 85% !important; }
+
+.height--percent-90 { height: 90% !important; }
+
+.height--percent-95 { height: 95% !important; }
 
 .height--percent-100 { height: 100% !important; }
 
@@ -3417,22 +3887,3 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .margin-bottom--negative-percent-100 { margin-bottom: -100% !important; }
 
 .margin-left--negative-percent-100 { margin-left: -100% !important; }
-
-/* Scss Document */
-/* ===========================================================
-
-	responsive
-
-=========================================================== */
-/*
-todo:
-レスポンス関連（画像・）
-汎用スタイル（タブ・ページャーなど）
-pagetop-plane
-
-arrow類
-
-code past(汎用スタイルコピペ用なにか)
-
-プレーンデザインのなにか
-*/

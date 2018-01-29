@@ -13,7 +13,11 @@
 .vertical-align--middle,
 .vertical-align--middle th,
 .vertical-align--middle td  {vertical-align: middle !important; }
-.vertical-align--top { vertical-align: top !important; }
-.vertical-align--bottom { vertical-align: bottom !important; }
+.vertical-align--top,
+.vertical-align--top th,
+.vertical-align--top td { vertical-align: top !important; }
+.vertical-align--bottom,
+.vertical-align--bottom th,
+.vertical-align--bottom td { vertical-align: bottom !important; }
 
 

@@ -1,38 +1,60 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.grid {
-	display: flex; flex-wrap: wrap; list-style: none;
-	margin: 0; padding: 0;
+/* ===========================================================
+
+	column
+
+=========================================================== */
+@mixin column_flex() {
+	display: flex;
+	margin-left: -1.0em; margin-right: -1.0em;
 }
-.grid-cell { flex: 1; }
-.grid--flex-cells > .grid-cell { display: flex; }
+@mixin column_flex__cell() {
+	padding-left: 1.0em; padding-right: 1.0em;
+}
 
-.grid--top    { align-items: flex-start; }
-.grid--bottom { align-items: flex-end;   }
-.grid--center { align-items: center;     }
+.column { @include column_flex(); }
+.column__cell { @include column_flex__cell(); }
 
-.grid--justify-center { justify-content: center; }
+/* 等幅コラム */
+.column--equal-width { @extend .column; }
+.column--equal-width .column__cell {
+	@include column_flex__cell();
+	flex-grow: 1; flex-basis: 100%;
+}
 
-.grid-cell--top    { align-self: flex-start; }
-.grid-cell--bottom { align-self: flex-end;   }
-.grid-cell--center { align-self: center;     }
-
-.grid-cell--autoSize     { flex: none;         }
-.grid--fit  > .grid-cell { flex: 1;            }
-.grid--full > .grid-cell { flex: 0 0 100%;     }
-.grid--1of2 > .grid-cell { flex: 0 0 50%;      }
-.grid--1of3 > .grid-cell { flex: 0 0 33.3333%; }
-.grid--1of4 > .grid-cell { flex: 0 0 25%;      }
-
-
-.grid--gutters    { margin: -1em 0 1em -1em;           }
-.grid--gutters    > .grid-cell { padding: 1em 0 0 1em; }
-
-.grid--gutters-lg { margin: -1.5em 0 1.5em -1.5em;         }
-.grid--gutters-lg > .grid-cell { padding: 1.5em 0 0 1.5em; }
-
-.grid--gutters-xl { margin: -2em 0 2em -2em;           }
-.grid--gutters-xl > .grid-cell { padding: 2em 0 0 2em; }
+/* 3等分コラム */
+.column--3 { @extend .column; }
+.column--3 .column__cell--3of1 {
+	@include column_flex__cell();
+	flex-basis: 33.3333%;
+}
+.column--3 .column__cell--3of2 {
+	@include column_flex__cell();
+	flex-basis: 66.6666%;
+}
+.column--3 .column__cell--3of3 {
+	@include column_flex__cell();
+	flex-basis: 100%;
+}
 
 
+/* 4等分コラム */
+.column--4 { @extend .column; }
+.column--4 .column__cell--4of1 {
+	@include column_flex__cell();
+	flex-basis: 25%;
+}
+.column--4 .column__cell--4of2 {
+	@include column_flex__cell();
+	flex-basis: 50%;
+}
+.column--4 .column__cell--4of3 {
+	@include column_flex__cell();
+	flex-basis: 75%;
+}
+.column--4 .column__cell--4of4 {
+	@include column_flex__cell();
+	flex-basis: 100%;
+}

@@ -66,6 +66,7 @@ table td.cell-border--bottom-none { border-bottom: none !important; }
 =========================================================== */
 .date-list {
 	display: table; padding: 0; margin: 0;
+	border-collapse: collapse;
 	
 	> dl { display: table-row; padding: 0; margin: 0; }
 	> dl > dt,

@@ -1,6 +1,6 @@
-@charset "UTF-8";
+@charset "UTF-8";/*! basicstyle : v1.0.0 */
 /* Scss Document */
-/*! =======================================================
+/* =======================================================
 ***********************************************************
 このファイルはSCSSで作成されています。
 数値の調整などは、
@@ -28,6 +28,9 @@ $size_num: 5;
 // mark 
 @import "basicstyle/mark";
 
+// grid
+@import "basicstyle/grid";
+
 // input-style
 @import "basicstyle/input-style";
 
@@ -43,24 +46,12 @@ $size_num: 5;
 // clear&float
 @import "basicstyle/clear-float";
 
-// video
-@import "basicstyle/video";
-
-// size
-@import "basicstyle/size";
+// module
+@import "basicstyle/module";
 
 // responsive
 @import "basicstyle/responsive";
 
-/*
-todo:
-レスポンス関連（画像・）
-汎用スタイル（タブ・ページャーなど）
-pagetop-plane
+// size
+@import "basicstyle/size";
 
-arrow類
-
-code past(汎用スタイルコピペ用なにか)
-
-プレーンデザインのなにか
-*/
