@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	padding: 2em; margin: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings : "palt";
+}
+small { font-size: 0.75em; opacity: 0.5;}
+h1 {
+	padding: 0.5em 0; margin: 0 0 0.5em 0;
+	font-size: 2.0em; line-height: 1.4; font-weight: bold;
+	border-bottom: solid 4px #333;
+}
+h2 {
+	padding: 0.5em 0; margin: 1em 0;
+	font-size: 1.8em; line-height: 1.4; font-weight: bold;
+	border-bottom: solid 1px #333;
+}
+h3 {
+	padding: 0 0 0 0.5em; margin: 1em 0;
+	font-size: 1.4em; line-height: 1.4; font-weight: bold;
+	color: #333; border-left: solid 5px #333;
+}
+h4 {
+	padding: 0 0 0 0.5em; margin: 1em 0 0.5em 0;
+	font-size: 1.2em; line-height: 1.4; font-weight: bold;
+	color: #333; border-left: solid 2px #666;
+}
+h5 {
+	padding: 0 0 0 0.5em; margin: 1em 0 0.5em 0;
+	font-size: 1.0em; line-height: 1.4; font-weight: bold;
+	color: #666; border-left: solid 1px #999;
+}
+p {
+	padding: 0; margin: 1em 0;
+	font-size: 1.0em; line-height: 1.8;
+}
+.code-wrapper {
+	display: block; padding: 0; margin: 1.0em 0;
+	font-size: 0.850em;
+}
+.code-ex {
+	display: block; padding: 2.0em 2.0em; margin: 1.0em 0;
+	background-color: #f1f1f1; position: relative;
+}
+.code-ex::before {
+	display: block; padding: 0 1.0em 0.5em 0; margin: 0;
+	background-color: #fff; font-size: 0.75em;
+	content: "Display Example"; color: #999;
+	position: absolute; top: 0; left: 0;
+}
+
+.code-set { display: flex; padding: 0; margin: 1.0em 0; }
+.code-set .code-wrapper { margin: 0; width: 100%; }
+.code-set .code-ex { margin: 0; width: 100%; }
+.code-wrapper > pre,
+.code-wrapper pre.prettyprint {
+	display: block; padding: 1.0em 2.0em; margin: 0;
+	position: relative; height: 100%; width: 100%;
+}
+
+

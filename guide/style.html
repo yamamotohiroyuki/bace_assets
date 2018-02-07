@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie6" lang="ja"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie7" lang="ja"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie8" lang="ja"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="ja">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>汎用スタイル | モジュール一覧 | 三井物産プライベートリート投資法人</title>
+<!--#include virtual="/include/meta.txt" -->
+<!--#include virtual="/include/ogp.txt" -->
+
+<!-- css -->
+<link rel="stylesheet" href="/assets/css/basicstyle.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/common.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/contents.css" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="/assets/vendor/prefixfree.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/modernizr.js"></script>
+<!--[if lt IE 9]>
+<script src="/assets/vendor/ie/css3-mediaqueries.js"></script>
+<script src="/assets/vendor/ie/html5.js"></script>
+<![endif]-->
+
+<!--module setting-->
+<link rel="stylesheet" href="/_module/assets/css/module.css" />
+<link rel="stylesheet" href="/_module/assets/highlight/styles/tomorrow-night-eighties.css"/>
+<!--module setting end-->
+
+</head>
+<body class="is_module is_member">
+<!--#include virtual="/include/analytics.txt" -->
+<!--#include virtual="/include/member/header.txt" -->
+<main class="global-main">
+	<nav class="global-breadcrumb">
+		<ul>
+			<li><a href="/member/">ホーム</a></li>
+			<li><a href="/_module/">モジュール一覧</a></li>
+			<li>コンテンツスタイル</li>
+		</ul>
+	</nav>
+	<div class="global-contents">
+		<section class="global-contents__main">
+			<h1 class="contents-title">モジュール一覧 : コンテンツスタイル</h1>
+			<div class="contents-style module">
+				<p class="module__title">Align</p>
+				<pre><code class="css">/* Align */
+.text-align--center { text-align: center !important; }
+.text-align--right { text-align: right !important; }
+.text-align--left { text-align: left !important; }
+.vertical-align--middle,
+.vertical-align--middle th,
+.vertical-align--middle td { vertical-align: middle !important; }
+.vertical-align--top,
+.vertical-align--top th,
+.vertical-align--top td { vertical-align: top !important; }
+.vertical-align--bottom,
+.vertical-align--bottom th,
+.vertical-align--bottom td { vertical-align: bottom !important; }
+/* from basicstyle.min.css */</code></pre>
+				<p class="module__title">Float / Clear</p>
+				<pre><code class="css">/* Float / Clear */
+/* clear */
+.clear--both { clear: both !important; }
+.clear--none { clear: none !important; }
+/* float */
+.float--right { float: right !important; }
+.float--left { float: left !important; }
+.float--none { float: none !important; }
+/* clearfix */
+.clearfix::after { clear: both; content: ""; display: table; }
+.clearfix { zoom: 1; }
+/* from basicstyle.min.css */</code></pre>
+				<p class="module__title">Display</p>
+				<pre><code class="css">/* Display */
+.display-inline { display: inline !important; }
+.display-block { display: block !important; }
+.display-none { display: none !important; }
+/* from basicstyle.min.css */</code></pre>
+				<p class="module__title">List-style</p>
+				<h2>ulリスト</h2>
+				<ul class="list-style--circle">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ul>
+				<ul class="list-style--disc">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ul>
+				<ul class="list-style--square">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ul>
+				<pre><code class="html">&lt;!-- ulリスト --&gt;
+&lt;ul class=&quot;list-style--circle&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;list-style--disc&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;list-style--square&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<h2>olリスト</h2>
+				<ol class="list-style--decimal">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--decimal-zero">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--lower-roman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--upper-roman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--lower-alpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--upper-alpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--cjk-ideographic">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--hiragana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--hiragana-iroha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--katakana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--katakana-iroha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<ol class="list-style--none">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<pre><code class="html">&lt;!-- olリスト --&gt;
+&lt;ol class=&quot;list-style--decimal&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--decimal-zero&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--lower-roman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--upper-roman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--lower-alpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--upper-alpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--cjk-ideographic&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--hiragana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--hiragana-iroha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--katakana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--katakana-iroha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;list-style--none&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<h2>特殊リスト</h2>
+				<h3>spanでリストヘッド自由入力</h3>
+				<ol class="list-style__peculiar--original">
+					<li><span class="list-style__peculiar--original__mark">特.</span>あああ</li>
+					<li><span class="list-style__peculiar--original__mark">特.</span>いいい</li>
+					<li><span class="list-style__peculiar--original__mark">特.</span>ううう </li>
+				</ol>
+				<pre><code class="html">&lt;!-- 特殊リスト --&gt;
+&lt;ol class=&quot;list-style__peculiar--original&quot;&gt;
+&lt;li&gt;&lt;span class=&quot;list-style__peculiar--original__mark&quot;&gt;特.&lt;/span&gt;あああ&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;list-style__peculiar--original__mark&quot;&gt;特.&lt;/span&gt;いいい&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;list-style__peculiar--original__mark&quot;&gt;特.&lt;/span&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<h2>特殊括弧リスト</h2>
+				<h3>(1) カッコに数字</h3>
+				<ol class="list-style__peculiar--brackets-decimal">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>(i) カッコに小文字ローマ数字</h3>
+				<ol class="list-style__peculiar--brackets-lowerroman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>(I) カッコに大文字ローマ数字</h3>
+				<ol class="list-style__peculiar--brackets-upperroman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>(a) カッコに小文字アルファベット</h3>
+				<ol class="list-style__peculiar--brackets-loweralpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>(A) カッコに大文字アルファベット</h3>
+				<ol class="list-style__peculiar--brackets-upperalpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>(あ) カッコにひらがな</h3>
+				<ol class="list-style__peculiar--brackets-hiragana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>(ア) カッコにカタカナ</h3>
+				<ol class="list-style__peculiar--brackets-katakana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<pre><code class="html">&lt;!-- 特殊括弧リスト --&gt;
+&lt;h3&gt;(1) カッコに数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-decimal&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;(i) カッコに小文字ローマ数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-lowerroman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;(I) カッコに大文字ローマ数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-upperroman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;(a) カッコに小文字アルファベット&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-loweralpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;(A) カッコに大文字アルファベット&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-upperalpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;(あ) カッコにひらがな&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-hiragana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;(ア) カッコにカタカナ&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--brackets-katakana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<h2>特殊片方括弧リスト</h2>
+				<h3>1) 片方カッコに数字</h3>
+				<ol class="list-style__peculiar--side-brackets-decimal">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>i) 片方カッコに小文字ローマ数字</h3>
+				<ol class="list-style__peculiar--side-brackets-lowerroman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>I) 片方カッコに大文字ローマ数字</h3>
+				<ol class="list-style__peculiar--side-brackets-upperroman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>a) 片方カッコに小文字アルファベット</h3>
+				<ol class="list-style__peculiar--side-brackets-loweralpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>A) 片方カッコに大文字アルファベット</h3>
+				<ol class="list-style__peculiar--side-brackets-upperalpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>あ) 片方カッコにひらがな</h3>
+				<ol class="list-style__peculiar--side-brackets-hiragana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>ア) 片方カッコにカタカナ</h3>
+				<ol class="list-style__peculiar--side-brackets-katakana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>ア) 片方カッコにカタカナ</h3>
+				<ol class="list-style__peculiar--side-brackets-katakana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<pre><code class="html">&lt;!-- 特殊括弧リスト --&gt;
+&lt;h3&gt;1) 片方カッコに数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-decimal&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;i) 片方カッコに小文字ローマ数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-lowerroman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;I) 片方カッコに大文字ローマ数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-upperroman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;a) 片方カッコに小文字アルファベット&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-loweralpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;A) 片方カッコに大文字アルファベット&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-upperalpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;あ) 片方カッコにひらがな&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-hiragana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;ア) 片方カッコにカタカナ&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-katakana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;ア) 片方カッコにカタカナ&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--side-brackets-katakana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<h2>特殊ドットリスト</h2>
+				<h3>1. ドットに数字</h3>
+				<ol class="list-style__peculiar--dot-decimal">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>i. ドットに小文字ローマ数字</h3>
+				<ol class="list-style__peculiar--dot-lowerroman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>I. ドットに大文字ローマ数字</h3>
+				<ol class="list-style__peculiar--dot-upperroman">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>a. ドットに小文字アルファベット</h3>
+				<ol class="list-style__peculiar--dot-loweralpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>A. ドットに大文字アルファベット</h3>
+				<ol class="list-style__peculiar--dot-upperalpha">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>あ. ドットにひらがな</h3>
+				<ol class="list-style__peculiar--dot-hiragana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>ア. ドットにカタカナ</h3>
+				<ol class="list-style__peculiar--dot-katakana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<h3>ア. ドットにカタカナ</h3>
+				<ol class="list-style__peculiar--dot-katakana">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<pre><code class="html">&lt;!-- 特殊ドットリスト --&gt;
+&lt;h3&gt;1. ドットに数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-decimal&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;i. ドットに小文字ローマ数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-lowerroman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;I. ドットに大文字ローマ数字&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-upperroman&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;a. ドットに小文字アルファベット&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-loweralpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;A. ドットに大文字アルファベット&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-upperalpha&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;あ. ドットにひらがな&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-hiragana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;ア. ドットにカタカナ&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-katakana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;ア. ドットにカタカナ&lt;/h3&gt;
+&lt;ol class=&quot;list-style__peculiar--dot-katakana&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<h2>特殊リスト</h2>
+				<h3>① 丸数字</h3>
+				<p>limit 20</p>
+				<ol class="list-style__peculiar--character_circle-decimal">
+					<li>あああ</li>
+					<li>いいい</li>
+					<li>ううう </li>
+				</ol>
+				<pre><code class="html">&lt;!-- 特殊リスト --&gt;
+&lt;h3&gt;① 丸数字&lt;/h3&gt;
+&lt;p&gt;limit 20&lt;/p&gt;
+&lt;ol class=&quot;list-style__peculiar--character_circle-decimal&quot;&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;li&gt;ううう &lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- マージン・サイズの編集は style.css、基本設定はbasicstyle.min.cssにて --&gt;</code></pre>
+				<p class="module__title">Margin / Padding</p>
+				<h2>Margin</h2>
+				<pre><code class="css">/* Margin */
+.margin--auto { margin: auto !important; }
+.margin--0 { margin: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin--150 { margin: 150px !important; }
+
+/* margin-horizontal */
+.margin-horizontal--auto { margin-right: auto !important; margin-left: auto !important; }
+.margin-horizontal--0 { margin-right: 0px !important; margin-left: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-horizontal--150 { margin-right: 150px !important; margin-bottom: 150px !important; }
+
+/* margin-vertical */
+.margin-vertical--auto { margin-top: auto !important; margin-bottom: auto !important; }
+.margin-vertical--0 { margin-top: 0px !important; margin-bottom: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-vertical--150 { margin-top: 150px !important; margin-left: 150px !important; }
+
+/* margin-top */
+.margin-top--auto { margin-top: auto !important; }
+.margin-top--0 { margin-top: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-top--150 { margin-top: 150px !important; }
+
+/* margin-right */
+.margin-right--auto { margin-right: auto !important; }
+.margin-right--0 { margin-right: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-right--150 { margin-right: 150px !important; }
+
+/* margin-bottom */
+.margin-bottom--auto { margin-bottom: auto !important; }
+.margin-bottom--0 { margin-bottom: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-bottom--150 { margin-bottom: 150px !important; }
+
+/* margin-left */
+.margin-left--auto { margin-left: auto !important; }
+.margin-left--0 { margin-left: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-left--150 { margin-left: 150px !important; }
+
+
+/* negative margin */
+.margin--negative-5 { margin: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin--negative-150 { margin: -150px !important; }
+
+/* negative margin-horizontal */
+.margin-horizontal--negative-5 { margin-right: -5px !important; margin-left: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-horizontal--negative-150 { margin-right: -150px !important; margin-bottom: -150px !important; }
+
+/* negative margin-vertical */
+.margin-vertical--negative-5 { margin-top: -5px !important; margin-bottom: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-vertical--negative-150 { margin-top: -150px !important; margin-left: -150px !important; }
+
+/* negative margin-top */
+.margin-top--negative-5 { margin-top: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-top--negative-150 { margin-top: -150px !important; }
+
+/* negative margin-right */
+.margin-right--negative-5 { margin-right: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-right--negative-150 { margin-right: -150px !important; }
+
+/* negative margin-bottom */
+.margin-bottom--negative-5 { margin-bottom: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-bottom--negative-150 { margin-bottom: -150px !important; }
+
+/* negative margin-left */
+.margin-left--negative-5 { margin-left: -5px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.margin-left--negative-150 { margin-left: -150px !important; }
+
+
+/* Margin percent */
+.margin--5 { margin: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin--100 { margin: 100% !important; }
+
+/* margin-horizontal percent */
+.margin-horizontal--5 { margin-right: 5% !important; margin-left: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-horizontal--100 { margin-right: 100% !important; margin-bottom: 100% !important; }
+
+/* margin-vertical percent */
+.margin-vertical--5 { margin-top: 5% !important; margin-bottom: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-vertical--100 { margin-top: 100% !important; margin-left: 100% !important; }
+
+/* margin-top percent */
+.margin-top--5 { margin-top: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-top--100 { margin-top: 100% !important; }
+
+/* margin-right percent */
+.margin-right--5 { margin-right: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-right--100 { margin-right: 100% !important; }
+
+/* margin-bottom percent */
+.margin-bottom--5 { margin-bottom: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-bottom--100 { margin-bottom: 100% !important; }
+
+/* margin-left percent */
+.margin-left--5 { margin-left: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-left--100 { margin-left: 100% !important; }
+
+
+/* negative Margin percent */
+.margin--negative-5 { margin: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin--negative-100 { margin: -100% !important; }
+
+/* negative margin-horizontal percent */
+.margin-horizontal--negative-5 { margin-right:- 5% !important; margin-left: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-horizontal--negative-100 { margin-right: -100% !important; margin-bottom: -100% !important; }
+
+/* negative margin-vertical percent */
+.margin-vertical--negative-5 { margin-top: -5% !important; margin-bottom: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-vertical--100 { margin-top: -100% !important; margin-left: -100% !important; }
+
+/* negative margin-top percent */
+.margin-top--negative-5 { margin-top: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-top--100 { margin-top: -100% !important; }
+
+/* negative margin-right percent */
+.margin-right--negative-5 { margin-right: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-right--100 { margin-right: -100% !important; }
+
+/* negative margin-bottom percent */
+.margin-bottom--negative-5 { margin-bottom: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-bottom--100 { margin-bottom: -100% !important; }
+
+/* negative margin-left percent */
+.margin-left--negative-5 { margin-left: -5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.margin-left--100 { margin-left: -100% !important; }
+/* from basicstyle.min.css */</code></pre>
+				<h2>Padding</h2>
+	<pre><code class="css">/* Padding */
+.padding--0 { padding: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding--150 { padding: 150px !important; }
+
+/* padding-horizontal */
+.padding-horizontal--0 { padding-right: 0px !important; padding-left: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding-horizontal--150 { padding-right: 150px !important; padding-bottom: 150px !important; }
+
+/* padding-vertical */
+.padding-vertical--0 { padding-top: 0px !important; padding-bottom: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding-vertical--150 { padding-top: 150px !important; padding-left: 150px !important; }
+
+/* padding-top */
+.padding-top--0 { padding-top: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding-top--150 { padding-top: 150px !important; }
+
+/* padding-right */
+.padding-right--0 { padding-right: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding-right--150 { padding-right: 150px !important; }
+
+/* padding-bottom */
+.padding-bottom--0 { padding-bottom: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding-bottom--150 { padding-bottom: 150px !important; }
+
+/* padding-left */
+.padding-left--0 { padding-left: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.padding-left--150 { padding-left: 150px !important; }
+
+
+/* padding percent */
+.padding--5 { padding: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding--100 { padding: 100% !important; }
+
+/* padding-horizontal percent */
+.padding-horizontal--5 { padding-right: 5% !important; padding-left: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding-horizontal--100 { padding-right: 100% !important; padding-bottom: 100% !important; }
+
+/* padding-vertical percent */
+.padding-vertical--5 { padding-top: 5% !important; padding-bottom: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding-vertical--100 { padding-top: 100% !important; padding-left: 100% !important; }
+
+/* padding-top percent */
+.padding-top--5 { padding-top: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding-top--100 { padding-top: 100% !important; }
+
+/* padding-right percent */
+.padding-right--5 { padding-right: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding-right--100 { padding-right: 100% !important; }
+
+/* padding-bottom percent */
+.padding-bottom--5 { padding-bottom: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding-bottom--100 { padding-bottom: 100% !important; }
+
+/* padding-left percent */
+.padding-left--5 { padding-left: 5% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.padding-left--100 { padding-left: 100% !important; }
+/* from basicstyle.min.css */</code></pre>
+	
+				<p class="module__title">Width</p>
+				<pre><code class="css">/* width */
+/* width px */
+.width--0 { width: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.width--700 { width: 700px !important; }
+/* width % */
+.width--percent-0 { width: 0% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.width--percent-100 { width: 100% !important; }
+/* from basicstyle.min.css */</code></pre>
+				<p class="module__title">Height</p>
+				<pre><code class="css">/* height */
+/* height px */
+.height--0 { height: 0px !important; }
+/* 〜〜〜 5px刻み 〜〜〜 */
+.height--700 { height: 700px !important; }
+/* height % */
+.height--percent-0 { height: 0% !important; }
+/* 〜〜〜 5%刻み 〜〜〜 */
+.height--percent-100 { height: 100% !important; }
+/* from basicstyle.min.css */</code></pre>
+			</div>
+		</section>
+		<div class="global-contents__sub">
+			<!--#include virtual="/_module/include/submenu.txt" -->
+		</div>
+	</div>
+</main>
+<!--#include virtual="/include/member/footer.txt" -->
+<script type="text/javascript" src="/assets/vendor/jquery.js"></script>
+<script type="text/javascript" src="/assets/vendor/yuga.js"></script>
+<script type="text/javascript" src="/assets/vendor/jquery.biggerlink.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/jquery.sticky-kit.min.js"></script>
+<script type="text/javascript" src="/assets/js/function.js"></script>
+<script type="text/javascript" src="/assets/js/common.js"></script>
+
+<!--module setting-->
+<script src="/_module/assets/js/module.js"></script>
+<script src="/_module/assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<!--module setting end-->
+</body>
+</html>

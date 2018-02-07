@@ -4,69 +4,9 @@
 <meta charset="UTF-8">
 <title>basicstyle.css</title>
 
-<link href="../assets/css/basicstyle.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	body {
-		padding: 2em; margin: 0;
-		font-size: 16px;
-		font-family: sans-serif;
-		background-color: #fff;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		font-feature-settings : "palt";
-	}
-	small { font-size: 0.75em; opacity: 0.5;}
-	h1 {
-		padding: 0.5em 0; margin: 0 0 0.5em 0;
-		font-size: 2.0em; line-height: 1.4; font-weight: bold;
-		border-bottom: solid 4px #333;
-	}
-	h2 {
-		padding: 0.5em 0; margin: 1em 0;
-		font-size: 1.8em; line-height: 1.4; font-weight: bold;
-		border-bottom: solid 1px #333;
-	}
-	h3 {
-		padding: 0 0 0 0.5em; margin: 1em 0;
-		font-size: 1.4em; line-height: 1.4; font-weight: bold;
-		color: #333; border-left: solid 5px #333;
-	}
-	h4 {
-		padding: 0 0 0 0.5em; margin: 1em 0 0.5em 0;
-		font-size: 1.2em; line-height: 1.4; font-weight: bold;
-		color: #333; border-left: solid 2px #666;
-	}
-	h5 {
-		padding: 0 0 0 0.5em; margin: 1em 0 0.5em 0;
-		font-size: 1.0em; line-height: 1.4; font-weight: bold;
-		color: #666; border-left: solid 1px #999;
-	}
-	p {
-		padding: 0; margin: 1em 0;
-		font-size: 1.0em; line-height: 1.8;
-	}
-	.code-wrapper {
-		display: block; padding: 0 0 0 4.0em; margin: 1.0em 0;
-		background-color: #111; color: #fff;
-		font-size: 0.850em;
-	}
-	.code-ex {
-		display: block; padding: 2.0em 4.0em; margin: 1.0em 0;
-		background-color: #f1f1f1; position: relative;
-	}
-	.code-ex::before {
-		display: block; padding: 0 1.0em 0.5em 0; margin: 0;
-		background-color: #fff; font-size: 0.75em;
-		content: "Display Example"; color: #999;
-		position: absolute; top: 0; left: 0;
-	}
-	.code-wrapper .linenums li { padding: 0.25em 1.0em; }
+<link href="../assets/css/basicstyle.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
 	
-	.code-set { display: flex; padding: 0; margin: 1.0em 0; }
-	.code-set .code-wrapper { margin: 0; width: 50%; }
-	.code-set .code-ex { margin: 0; width: 50%; }
-	.code-wrapper pre.prettyprint { margin: 0; }
-</style>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 
@@ -85,8 +25,7 @@
 <h3><small>/assets/scss/basicstyle/</small>_reset.scss</h3>
 <p>"<a href="http://html5doctor.com/html-5-reset-stylesheet/" target="_blank">HTML5 Reset Stylesheet</a>"をベースに&lt;span&gt;や&lt;a&gt;なんかの、&quot;font-weight: nomal;&quot;を&quot;font-weight: inherit;&quot;とかにしています。</p>
 <p>あと、最初の方に&quot;box-sizing: border-box&quot;をすべてのタグに適用しています。</p>
-<div class="code-wrapper">
-	<pre class="prettyprint lang-css linenums prettyprinted">
+<div class="code-wrapper"><pre class="sg-pre prettyprint lang-css">
 *,
 *::after,
 *::before {
@@ -94,23 +33,21 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-	</pre>
-</div>
+</pre></div>
 <h3><small>/assets/scss/basicstyle/</small>_list-style.scss</h3>
 <p>ulやolリストのスタイルをまとめています。ulリストのlist-type-styleはresetにて何も表示されない状態になってます。</p>
 <div class="code-set">
-<div class="code-ex">
-	<ul>
-		<li>なにもクラスをつけていないulリスト</li>
-		<li>なにもクラスをつけていないulリスト</li>
-	</ul>
-	<ol>
-		<li>なにもクラスをつけていないolリスト</li>
-		<li>なにもクラスをつけていないolリスト</li>
-	</ol>
-</div>
-<div class="code-wrapper">
-<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+	<div class="code-ex">
+		<ul>
+			<li>なにもクラスをつけていないulリスト</li>
+			<li>なにもクラスをつけていないulリスト</li>
+		</ul>
+		<ol>
+			<li>なにもクラスをつけていないolリスト</li>
+			<li>なにもクラスをつけていないolリスト</li>
+		</ol>
+	</div>
+<div class="code-wrapper"><pre class="sg-pre prettyprint lang-html">
 <ul>
 	<li>なにもクラスをつけていないulリスト</li>
 	<li>なにもクラスをつけていないulリスト</li>
@@ -119,8 +56,7 @@
 	<li>なにもクラスをつけていないolリスト</li>
 	<li>なにもクラスをつけていないolリスト</li>
 </ol>
-</pre>
-</div>
+</pre></div>
 </div>
 <h4>.list-style--*</h4>
 <p>".list-style" から始まるスタイルはデフォルトのリストスタイルを設定したものです。<br>
@@ -132,22 +68,24 @@
 	.list-style--square
 </h5>
 <div class="code-set">
-<div class="code-ex">
-<ul class="list-style--circle">
-	<li>list-style--circle リスト</li>
-	<li>list-style--circle リスト</li>
-</ul>
-<ul class="list-style--disc">
-	<li>list-style--disc リスト</li>
-	<li>list-style--disc リスト</li>
-</ul>
-<ul class="list-style--square">
-	<li>list-style--square リスト</li>
-	<li>list-style--square リスト</li>
-</ul>
-</div>
-<div class="code-wrapper">
-<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+	<div class="code-ex">
+		<p>ぬきまる</p>
+		<ul class="list-style--circle">
+			<li>list-style--circle リスト</li>
+			<li>list-style--circle リスト</li>
+		</ul>
+		<p>くろまる</p>
+		<ul class="list-style--disc">
+			<li>list-style--disc リスト</li>
+			<li>list-style--disc リスト</li>
+		</ul>
+		<p>しかく</p>
+		<ul class="list-style--square">
+			<li>list-style--square リスト</li>
+			<li>list-style--square リスト</li>
+		</ul>
+	</div>
+<div class="code-wrapper"><pre class="sg-pre prettyprint lang-html">
 <!-- ぬきまる -->
 <ul class="list-style--circle">
 	<li>list-style--circle リスト</li>
@@ -163,8 +101,7 @@
 	<li>list-style--square リスト</li>
 	<li>list-style--square リスト</li>
 </ul>
-</pre>
-</div>
+</pre></div>
 </div>
 
 
@@ -183,7 +120,7 @@
 </ol>
 </div>
 <div class="code-wrapper">
-<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<pre class="sg-pre prettyprint lang-html">
 <!-- 数字 -->
 <ol class="list-style--decimal">
 	<li>list-style--decimal リスト</li>
@@ -329,7 +266,7 @@
 </ul>
 </div>
 <div class="code-wrapper">
-<pre class="sg-pre prettyprint lang-html linenums prettyprinted">
+<pre class="sg-pre prettyprint lang-html">
 <ul class="list-style__peculiar--original">
 	<li><span class="list-style__peculiar--original__mark">独</span>list-style--katakana-iroha リスト</li>
 	<li><span class="list-style__peculiar--original__mark">自</span>list-style--katakana-iroha リスト</li>
@@ -670,6 +607,9 @@
 	
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- script src="../assets/js/basicfunction.js"></script>
+<script src="../assets/js/basicconfig.js"></script  -->
+	
 <script>
 (function() {
 	var preTag = document.getElementsByClassName('sg-pre');

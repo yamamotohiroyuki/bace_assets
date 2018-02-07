@@ -1,0 +1,19 @@
+
+<div class="js-stick">
+	<aside class="global-submenu">
+		<h2><a href="/_module/">モジュール一覧</a></h2>
+		<dl>
+			<dt><a href="/_module/">基本スタイル</a></dt>
+			<dt><a href="/_module/contents.html">コンテンツスタイル</a></dt>
+			<dt><a href="/_module/style.html">汎用スタイル</a></dt>
+			<dt><a href="/_module/color.html">カラーコード</a></dt>
+			<dt><a href="/_module/about.html">投資法人の概要</a></dt>
+			<dt><a href="/_module/features.html">投資法人の特徴</a></dt>
+			<dt><a href="/_module/portfolio.html">ポートフォリオ</a></dt>
+			<dt><a href="/_module/finance.html">財務情報</a></dt>
+			<dt><a href="/_module/ir.html">IR情報</a></dt>
+			<dt><a href="/_module/other.html">その他</a></dt>
+		</dl>
+	</aside>
+</div>
+

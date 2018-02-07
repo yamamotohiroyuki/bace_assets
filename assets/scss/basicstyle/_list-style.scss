@@ -139,7 +139,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_hiragana {
 		$key: index($set_hiragana, $value);
 		> li:nth-child(#{$key}):before{
-			content: '(#{nth($set_hiragana, $key)})';
+			content: '('+'#{nth($set_hiragana, $key)}'+')';
 		}
 	}
 }
@@ -149,7 +149,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_hiragana_iroha {
 		$key: index($set_hiragana_iroha, $value);
 		> li:nth-child(#{$key}):before{
-			content: '(#{nth($set_hiragana_iroha, $key)})';
+			content: '('+'#{nth($set_hiragana_iroha, $key)}'+')';
 		}
 	}
 }
@@ -160,7 +160,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_katakana {
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
-			content: '(#{nth($set_katakana, $key)})';
+			content: '('+'#{nth($set_katakana, $key)}'+')';
 		}
 	}
 }
@@ -170,7 +170,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_katakana_iroha {
 		$key: index($set_katakana_iroha, $value);
 		> li:nth-child(#{$key}):before{
-			content: '(#{nth($set_katakana_iroha, $key)})';
+			content: '('+'#{nth($set_katakana_iroha, $key)}'+')';
 		}
 	}
 }
@@ -241,7 +241,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_hiragana {
 		$key: index($set_hiragana, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_hiragana, $key)})';
+			content: '#{nth($set_hiragana, $key)}'+')';
 		}
 	}
 }
@@ -251,7 +251,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_hiragana_iroha {
 		$key: index($set_hiragana_iroha, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_hiragana_iroha, $key)})';
+			content: '#{nth($set_hiragana_iroha, $key)}'+')';
 		}
 	}
 }
@@ -262,7 +262,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_katakana {
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_katakana, $key)})';
+			content: '#{nth($set_katakana, $key)}'+')';
 		}
 	}
 }
@@ -272,7 +272,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_katakana_iroha {
 		$key: index($set_katakana_iroha, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_katakana_iroha, $key)})';
+			content: '#{nth($set_katakana_iroha, $key)}'+')';
 		}
 	}
 }
@@ -349,7 +349,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_hiragana {
 		$key: index($set_hiragana, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_hiragana, $key)}.';
+			content: '#{nth($set_hiragana, $key)}'+'.';
 		}
 	}
 }
@@ -360,7 +360,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_hiragana_iroha {
 		$key: index($set_hiragana_iroha, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_hiragana_iroha, $key)}.';
+			content: '#{nth($set_hiragana_iroha, $key)}'+'.';
 		}
 	}
 }
@@ -371,7 +371,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_katakana {
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_katakana, $key)}.';
+			content: '#{nth($set_katakana, $key)}'+'.';
 		}
 	}
 }
@@ -382,17 +382,15 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	@each $value in $set_katakana_iroha {
 		$key: index($set_katakana_iroha, $value);
 		> li:nth-child(#{$key}):before{
-			content: '#{nth($set_katakana_iroha, $key)}.';
+			content: '#{nth($set_katakana_iroha, $key)}'+'.';
 		}
 	}
 }
 
 /* character */
-
 /* ① 丸数字 */
 .list-style__peculiar--character_circle-decimal {
 	@extend .list-style__peculiar;
-	
 	> li:nth-of-type(1)::before { content: "\02460"; }
 	> li:nth-of-type(2)::before { content: "\02461"; }
 	> li:nth-of-type(3)::before { content: "\02462"; }
@@ -413,7 +411,7 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 	> li:nth-of-type(18)::before{ content: "\02470"; }
 	> li:nth-of-type(19)::before{ content: "\02471"; }
 	> li:nth-of-type(20)::before{ content: "\02472"; }
-	
+
 }
 
 
