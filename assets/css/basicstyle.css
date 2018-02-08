@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! basicstyle : v1.0.0 */
+/*! v1.0.0 */
 /* Scss Document */
 /* =======================================================
 ***********************************************************
@@ -1016,7 +1016,17 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .dl-table > dl { display: table-row; margin: 0; padding: 0; }
 .dl-table > dl > dt, .dl-table > dl > dd { display: table-cell; vertical-align: middle; }
 .dl-table .dl-table { margin: 0; }
+.dl-table .dl-table-responsive { margin: 0; }
 
+.dl-table-responsive { display: block; margin: 1.0em 0; padding: 0; }
+.dl-table-responsive > dl { display: block; margin: 0; padding: 0; }
+.dl-table-responsive > dl > dt, .dl-table-responsive > dl > dd { display: block; }
+.dl-table-responsive .dl-table { margin: 0; }
+.dl-table-responsive .dl-table-responsive { margin: 0; }
+
+@media print, screen and (min-width: 768px) { .dl-table-responsive { display: table; border-collapse: collapse; }
+  .dl-table-responsive > dl { display: table-row; }
+  .dl-table-responsive > dl > dt, .dl-table-responsive > dl > dd { display: table-cell; vertical-align: middle; } }
 /* ===========================================================
 
 	date-list
@@ -1028,6 +1038,15 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .date-list > dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
 .date-list > dl > dd { vertical-align: middle; }
 
+.date-list-responsive { display: block; margin: 0; padding: 0; }
+.date-list-responsive > dl { display: block; margin: 0; padding: 0; }
+.date-list-responsive > dl > dt, .date-list-responsive > dl > dd { display: block; }
+
+@media print, screen and (min-width: 768px) { .date-list-responsive { display: table; border-collapse: collapse; }
+  .date-list-responsive > dl { display: table-row; }
+  .date-list-responsive > dl > dt, .date-list-responsive > dl > dd { display: table-cell; margin: 0; }
+  .date-list-responsive > dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
+  .date-list-responsive > dl > dd { vertical-align: middle; } }
 /* Scss Document */
 /* ===========================================================
 

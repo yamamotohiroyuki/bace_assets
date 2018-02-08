@@ -1,4 +1,4 @@
-@charset "UTF-8";/*! basicstyle : v1.0.0 */
+@charset "UTF-8";/*! v1.0.0 */
 /* Scss Document */
 /* =======================================================
 ***********************************************************
@@ -13,7 +13,6 @@ $list_margin: 2.0em;
 
 //サイズの書き出し刻み方
 $size_num: 5;
-
 
 // bourbon mixin
 @import "vendor/bourbon/bourbon";
