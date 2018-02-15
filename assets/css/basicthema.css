@@ -28,6 +28,7 @@
 	基本設定
 
 =========================================================== */
+/* 游ゴシックの時WindowsとMacでフォントの太さを変える時の設定 */
 @font-face {
 	font-family: "Yu Gothic";
 	src: local("Yu Gothic Medium");
@@ -58,9 +59,7 @@
 	src: local("Yu Gothic Bold");
 	font-weight: bold;
 }
-html { font-size: 62.5%; }
 body {
-	background-color: #fff;
 	color: #000;
 	font-size: 16px;
 	font-size: 1.6rem;
