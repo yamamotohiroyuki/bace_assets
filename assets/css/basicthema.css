@@ -7,7 +7,7 @@
 
 =========================================================== */
 /*
-
+	基本設定
 	基本スタイル : テキスト
 	基本スタイル : コンテンツ間にマージンをとる
 	基本スタイル : リンク
@@ -23,7 +23,73 @@
 
 =========================================================== */
 
-.global-content { font-size: 1.0em; line-height: 1.8; }
+/* ===========================================================
+
+	基本設定
+
+=========================================================== */
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Bold");
+	font-weight: bold;
+}
+html { font-size: 62.5%; }
+body {
+	background-color: #fff;
+	color: #000;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1;
+	font-weight: 500;
+	text-rendering : optimizeSpeed;
+	font-family: "Yu Gothic", YuGothic, sans-serif;
+	/**/
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-feature-settings : "palt" 1;
+}
+body.is_ja { }
+body.is_en { }
+@media all and (-ms-high-contrast:none) {
+	body {
+		font-family: "メイリオ",Meiryo, "Yu Gothic", YuGothic, sans-serif;
+	}
+}
+
+
+
+
+.contents-style {
+	font-size: 1.0em; line-height: 1.8;
+}
+
+
+
 
 .link-button-parade a { color: #000; border: solid 1px #000; border-radius: 2px; }
 
