@@ -110,6 +110,8 @@ button, input[type=button] { width: auto; overflow: visible; }
 /* prevent BG image flicker upon hover  (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
+html { font-size: 62.5%; }
+
 /* Scss Document */
 /* ===========================================================
 
