@@ -7,12 +7,35 @@
 
 =========================================================== */
 
-.indent-list,
-.caution {
+.indent-list {
 	display: table;
 	> li {
 		display: table-row;
-		> span {
+		> span,
+		> div {
+			display: table-cell;
+			padding: 0.25em 0 0.25em 0.25em;
+			vertical-align: top;
+		}
+	}
+	> li::before {
+		display: table-cell;
+		padding: 0.25em 0;
+		vertical-align: top;
+		width: 1%; white-space: nowrap;
+		content: attr(data-indent-head);
+	}
+}
+
+
+.caption {
+	display: table;
+	> li {
+		display: table-row;
+		> span,
+		> div,
+		> small {
+			font-size: 1.0em !important;
 			display: table-cell;
 			padding: 0.25em 0 0.25em 0.25em;
 			vertical-align: top;

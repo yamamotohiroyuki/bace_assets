@@ -964,10 +964,15 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 	indent-list ( 旧・indent-table )
 
 =========================================================== */
-.indent-list, .caution { display: table; }
-.indent-list > li, .caution > li { display: table-row; }
-.indent-list > li > span, .caution > li > span { display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
-.indent-list > li::before, .caution > li::before { display: table-cell; padding: 0.25em 0; vertical-align: top; width: 1%; white-space: nowrap; content: attr(data-indent-head); }
+.indent-list { display: table; }
+.indent-list > li { display: table-row; }
+.indent-list > li > span, .indent-list > li > div { display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
+.indent-list > li::before { display: table-cell; padding: 0.25em 0; vertical-align: top; width: 1%; white-space: nowrap; content: attr(data-indent-head); }
+
+.caption { display: table; }
+.caption > li { display: table-row; }
+.caption > li > span, .caption > li > div, .caption > li > small { font-size: 1.0em !important; display: table-cell; padding: 0.25em 0 0.25em 0.25em; vertical-align: top; }
+.caption > li::before { display: table-cell; padding: 0.25em 0; vertical-align: top; width: 1%; white-space: nowrap; content: attr(data-indent-head); }
 
 /* Scss Document */
 /* ===========================================================
