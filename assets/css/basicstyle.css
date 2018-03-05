@@ -216,6 +216,9 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 .input-ui .input-ui__select select { display: block; width: 100%; padding: 0.5em 2.0em 0.5em 1.0em; margin: 0; font-size: 1em; line-height: 28px; }
 .input-ui .input-ui__select::before { display: block; position: absolute; content: ""; top: 50%; right: 1.0em; width: 0.60em; height: 0.60em; line-height: 1; margin-top: -0.30em; border-top: 1px solid #000; border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid #000; transform: rotate(135deg); pointer-events: none; }
 
+.input-ui .input-ui__select--multiple { display: block; padding: 0; margin: 0; border: solid 1px #ddd; border-radius: 4px; position: relative; overflow: hidden; }
+.input-ui .input-ui__select--multiple select { display: block; width: 100%; padding: 0.5em 2.0em 0.5em 1.0em; margin: 0; font-size: 1em; line-height: 28px; }
+
 .input-ui input.input-ui__button, .input-ui button.input-ui__button { display: block; padding: 0.5em 1.0em; margin: 0; border: solid 1px #ddd; border-radius: 4px; font-size: 1em; line-height: 28px; position: relative; overflow: hidden; }
 
 .input-ui input.input-ui__text, .input-ui textarea.input-ui__textarea { display: block; padding: 0.5em 1.0em; margin: 0; border: solid 1px #ddd; border-radius: 4px; font-size: 1em; line-height: 28px; position: relative; overflow: hidden; }
@@ -979,6 +982,11 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 /* Scss Document */
 /* ===========================================================
 
+	responsive scroll table
+
+=========================================================== */
+/* ===========================================================
+
 	table-style
 
 =========================================================== */
@@ -1179,7 +1187,7 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 
 .link-list-box--row li { display: block; margin: 0; padding-left: 0.5em; padding-right: 0.5em; }
 
-.link-list-box--column { flex-direction: column; }
+.link-list-box--column { display: block; }
 .link-list-box--column > dt { flex-grow: 1; flex-basis: 100%; }
 .link-list-box--column > dd { flex-grow: 1; flex-basis: 100%; }
 
