@@ -134,7 +134,7 @@
 
 .link-list-box--column {
 	@extend .link-list-box;
-	flex-direction: column;
+	display: block;
 	> dt { flex-grow: 1; flex-basis: 100%; }
 	> dd { flex-grow: 1; flex-basis: 100%; }
 }
