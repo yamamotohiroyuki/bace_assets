@@ -60,6 +60,15 @@
 		pointer-events: none;
 	}
 }
+.input-ui .input-ui__select--multiple {
+	display: block; padding: 0; margin: 0;
+	border: solid 1px #ddd; border-radius: 4px;
+	position: relative; overflow: hidden;
+	select {
+		display: block; width: 100%; padding: 0.5em 2.0em 0.5em 1.0em; margin: 0;
+		font-size: 1em; line-height: 28px;
+	}
+}
 
 .input-ui input.input-ui__button,
 .input-ui button.input-ui__button {
