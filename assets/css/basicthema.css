@@ -334,13 +334,16 @@ a.link-arrow--right::before, .link-arrow--right a::before {
 .contents-style li { margin: 0.25em 0; }
 
 
-img { vertical-align: baseline; }
 
-sup, sub { font-size: 0.78em; font-style: inherit; font-weight: inherit; }
-sup { vertical-align: top; }
-sub { vertical-align: baseline; }
+img { vertical-align: bottom; }
 
-small { font-size: 0.78em; }
+small, sup, sub {
+	font-size: 0.78em; font-style: inherit; font-weight: inherit;
+	position: relative;
+}
+sup { vertical-align: super; top: 0; }
+sub { vertical-align: baseline; top: 0; }
+small { }
 
 .contents-style input,
 .contents-style button,
