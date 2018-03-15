@@ -44,9 +44,9 @@
 		//ユーザエージェント
 		useragent: function(options) {
 			var c = $.extend({
-				mobileClass:'mobile',
-				tabletClass:'tablet',
-				pcClass:'pc'
+				mobileClass:'is_mobile',
+				tabletClass:'is_tablet',
+				pcClass:'is_pc'
 			}, options);
 			var ua = navigator.userAgent;
 			if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
@@ -79,7 +79,7 @@
 		category: function(options) {
 			var c = $.extend({
 				buttonSelector: '.same-category',
-				selfCategoryClass: 'selected'
+				selfCategoryClass: 'is_same'
 			}, options);
 			var bodyClasses = new Array();
 			if ($('body').attr('class')) {
@@ -97,16 +97,17 @@
 		//ページ内リンクはするするスクロール
 		scroll: function(options) {
 			var c = $.extend({
-				duration: 500
+				duration: 500,
+				scrollOffset: 0,
+				scrollSelector: ".js-scroll"
 			}, options);
-			$('a[href^="#"], area[href^="#"]').not('a[href="#"], area[href="#"]').click(function(event){
+			$(c.scrollSelector).click(function(event){
 				var hrefdata = new $.bf.Uri(this.getAttribute('href'));
 				var position = $('#'+hrefdata.fragment).offset().top;
-				$(navigator.userAgent.match(/safari/i) ? 'body' : 'html').animate({scrollTop: position}, {
-					duration: c.duration,
-					complete: function(){
-						location.href = hrefdata.absolutePath;
-					}
+				$(navigator.userAgent.match(/safari/i) ? 'body' : 'html').animate({
+					scrollTop: position - c.scrollOffset
+				}, {
+					duration: c.duration
 				});
 				event.preventDefault();
 				return false;
@@ -251,97 +252,51 @@
 			});
 		},
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		//タブ機能
 		tab: function(options) {
 			var c = $.extend({
-				tabNavSelector: '.tabnav',
-				activeTabClass: 'active'
+				tabNavWrapperSelector: '.js-tabs',
+				tabNavSelector: '.js-tab',
+				tabPanelWrapperSelector: '.js-panels',
+				tabPanelSelector: '.js-panel',
+				activeTabClass: 'is_active'
 			}, options);
-			$(c.tabNavSelector).each(function(){
-				var tabNavList = $(this).find('a[href^=#], area[href^=#]');
-				var tabBodyList;
-				tabNavList.each(function(){
-					this.hrefdata = new $.bf.Uri(this.getAttribute('href'));
-					var selecter = '#'+this.hrefdata.fragment;
-					if (tabBodyList) {
-						tabBodyList = tabBodyList.add(selecter);
-					} else {
-						tabBodyList = $(selecter);
-					}
-					$(this).unbind('click');
-					$(this).click(function(){
-						tabNavList.removeClass(c.activeTabClass);
-						$(this).addClass(c.activeTabClass);
-						tabBodyList.hide();
-						$(selecter).show();
-						return false;
-					});
-				});
-				tabBodyList.hide()
-				tabNavList.filter(':first').trigger('click');
-			});
-		},
-		//ボックスの高さを揃える
-		heightLine: function(options) {
-			var c = $.extend({
-				parentSelector: '.heightline-parent',
-				groupClassPrefix: 'heightline-'
-			}, options);
-			//heightline-parent
-			$(c.parentSelector).each(function(){
-				var height = 0;
-				$(this).children().each(function(){
-					if (height < parseInt($(this).height())) {
-						height = parseInt($(this).height());
-					}
-				});
-				$(this).children().height(height);
-			});
-			//heightline-group
-			var classes = new Array();
-			$('body *').not(c.parentSelector+',script,style,br').each(function(){
-				if ($(this).attr('class') && $(this).attr('class').match(new RegExp(c.groupClassPrefix))) {
-					var ary = $(this).attr('class').split(' ');
-					for (var i=0;i<ary.length;i++) {
-						if (ary[i].match(new RegExp(c.groupClassPrefix))) {
-							classes.push(ary[i]);
-						}
-					}
+			
+			$.each($(c.tabPanelSelector), function(i, val) {
+				if ($(val).hasClass(c.activeTabClass)) {
+					$(val).show();
 				}
 			});
-			classes = $.bf.uniqueArray(classes);
-			for (var i=0;i<classes.length;i++) {
-				height = 0;
-				$('.'+classes[i]).each(function(){
-					if (height < parseInt($(this).height())) {
-						height = parseInt($(this).height());
+			
+			$(c.tabNavWrapperSelector+' a, '+c.tabNavWrapperSelector+' area').on('click', function (event) {
+				// scroll cancell
+				/*event.preventDefault();
+				$("html, body").stop().animate();*/
+				// panel check
+				var target = $(this).attr('href');
+				if (!$(target).length) return false;
+				// hide tab
+				$(c.tabNavWrapperSelector+' a, '+c.tabNavWrapperSelector+' area').removeClass(c.activeTabClass);
+				// active tab
+				var href = $(this).attr('href');
+				$.each($(c.tabNavWrapperSelector+' a, '+c.tabNavWrapperSelector+' area'), function(i, val) {
+					if ($(val).attr('href') == href) {
+						$(val).addClass(c.activeTabClass);
 					}
 				});
-				$('.'+classes[i]).height(height);
-			}
+				// hide panel
+				$(c.tabPanelSelector, $(target).closest(c.tabPanelWrapperSelector)).removeClass(c.activeTabClass).hide();
+				// active panel
+				$(target).addClass(c.activeTabClass).fadeIn();
+				
+				return false;
+			});
 		},
+		
 		//トグル表示
 		toggleBox: function(options) {
 			var c = $.extend({
-				selector: '.toggle',
+				selector: '.js-toggle',
 				speed: 'normal'
 			}, options);
 			//要素を非表示
@@ -354,13 +309,4 @@
 			});
 		}
 	};
-	/*
-	 Sticky-kit v1.1.2 | WTFPL | Leaf Corcoran 2015 | http://leafo.net
-	*/
-	(function(){var b,f;b=this.jQuery||window.jQuery;f=b(window);b.fn.stick_in_parent=function(d){var A,w,J,n,B,K,p,q,k,E,t;null==d&&(d={});t=d.sticky_class;B=d.inner_scrolling;E=d.recalc_every;k=d.parent;q=d.offset_top;p=d.spacer;w=d.bottoming;null==q&&(q=0);null==k&&(k=void 0);null==B&&(B=!0);null==t&&(t="is_stuck");A=b(document);null==w&&(w=!0);J=function(a,d,n,C,F,u,r,G){var v,H,m,D,I,c,g,x,y,z,h,l;if(!a.data("sticky_kit")){a.data("sticky_kit",!0);I=A.height();g=a.parent();null!=k&&(g=g.closest(k));
-	if(!g.length)throw"failed to find stick parent";v=m=!1;(h=null!=p?p&&a.closest(p):b("<div />"))&&h.css("position",a.css("position"));x=function(){var c,f,e;if(!G&&(I=A.height(),c=parseInt(g.css("border-top-width"),10),f=parseInt(g.css("padding-top"),10),d=parseInt(g.css("padding-bottom"),10),n=g.offset().top+c+f,C=g.height(),m&&(v=m=!1,null==p&&(a.insertAfter(h),h.detach()),a.css({position:"",top:"",width:"",bottom:""}).removeClass(t),e=!0),F=a.offset().top-(parseInt(a.css("margin-top"),10)||0)-q,
-	u=a.outerHeight(!0),r=a.css("float"),h&&h.css({width:a.outerWidth(!0),height:u,display:a.css("display"),"vertical-align":a.css("vertical-align"),"float":r}),e))return l()};x();if(u!==C)return D=void 0,c=q,z=E,l=function(){var b,l,e,k;if(!G&&(e=!1,null!=z&&(--z,0>=z&&(z=E,x(),e=!0)),e||A.height()===I||x(),e=f.scrollTop(),null!=D&&(l=e-D),D=e,m?(w&&(k=e+u+c>C+n,v&&!k&&(v=!1,a.css({position:"fixed",bottom:"",top:c}).trigger("sticky_kit:unbottom"))),e<F&&(m=!1,c=q,null==p&&("left"!==r&&"right"!==r||a.insertAfter(h),
-	h.detach()),b={position:"",width:"",top:""},a.css(b).removeClass(t).trigger("sticky_kit:unstick")),B&&(b=f.height(),u+q>b&&!v&&(c-=l,c=Math.max(b-u,c),c=Math.min(q,c),m&&a.css({top:c+"px"})))):e>F&&(m=!0,b={position:"fixed",top:c},b.width="border-box"===a.css("box-sizing")?a.outerWidth()+"px":a.width()+"px",a.css(b).addClass(t),null==p&&(a.after(h),"left"!==r&&"right"!==r||h.append(a)),a.trigger("sticky_kit:stick")),m&&w&&(null==k&&(k=e+u+c>C+n),!v&&k)))return v=!0,"static"===g.css("position")&&g.css({position:"relative"}),
-	a.css({position:"absolute",bottom:d,top:"auto"}).trigger("sticky_kit:bottom")},y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scroll",l);f.off("resize",y);b(document.body).off("sticky_kit:recalc",y);a.off("sticky_kit:detach",H);a.removeData("sticky_kit");a.css({position:"",bottom:"",top:"",width:""});g.position("position","");if(m)return null==p&&("left"!==r&&"right"!==r||a.insertAfter(h),h.remove()),a.removeClass(t)},f.on("touchmove",l),f.on("scroll",l),f.on("resize",
-	y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTimeout(l,0)}};n=0;for(K=this.length;n<K;n++)d=this[n],J(b(d));return this}}).call(this);
 })(jQuery);
