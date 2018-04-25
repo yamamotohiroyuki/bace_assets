@@ -180,7 +180,7 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 	column
 
 =========================================================== */
-.column, .column--equal-width, .column--3, .column--4 { display: flex; margin-left: -1.0em; margin-right: -1.0em; }
+.column, .column--equal-width, .column--3, .column--4 { display: flex; width: 100%; margin-left: -1.0em; margin-right: -1.0em; }
 
 .column__cell { padding-left: 1.0em; padding-right: 1.0em; }
 
