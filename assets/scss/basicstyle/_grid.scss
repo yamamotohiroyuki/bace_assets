@@ -7,7 +7,7 @@
 
 =========================================================== */
 @mixin column_flex() {
-	display: flex;
+	display: flex; width: 100%;
 	margin-left: -1.0em; margin-right: -1.0em;
 }
 @mixin column_flex__cell() {
