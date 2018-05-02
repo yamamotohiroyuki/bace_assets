@@ -8,6 +8,22 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 
 /* リスト */
 
+.list-style--circle,
+.list-style--disc,
+.list-style--square,
+.list-style--decimal,
+.list-style--decimal-zero,
+.list-style--lower-roman,
+.list-style--upper-roman,
+.list-style--lower-alpha,
+.list-style--upper-alpha,
+.list-style--cjk-ideographic,
+.list-style--hiragana,
+.list-style--hiragana-iroha,
+.list-style--katakana,
+.list-style--katakana-iroha,
+.list-style--none { margin-left: $list_margin !important; list-style-position: outside; text-indent: 0; }
+
 .list-style--circle > li { list-style-type: circle; }
 .list-style--disc > li { list-style-type: disc; }
 .list-style--square > li { list-style-type: square; }
@@ -28,21 +44,6 @@ $set_katakana_iroha: イ, ロ, ハ, ニ, ホ, ヘ, ト, チ, リ, ヌ, ル, ヲ,
 .list-style--katakana-iroha > li { list-style-type: katakana-iroha; }
 
 .list-style--none > li {list-style: none;}
-
-.list-style--circle,
-.list-style--disc,
-.list-style--square,
-.list-style--decimal,
-.list-style--decimal-zero,
-.list-style--lower-roman,
-.list-style--upper-roman,
-.list-style--lower-alpha,
-.list-style--upper-alpha,
-.list-style--cjk-ideographic,
-.list-style--hiragana,
-.list-style--hiragana-iroha,
-.list-style--katakana,
-.list-style--katakana-iroha { margin-left: $list_margin !important; list-style-position: outside; text-indent: 0; }
 
 
 
