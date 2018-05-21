@@ -314,9 +314,9 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 .list-style--none > li { list-style: none; }
 
 /* リスト */
-.list-style__peculiar, .list-style__peculiar--original, .list-style__peculiar--brackets-decimal, .list-style__peculiar--brackets-lowerroman, .list-style__peculiar--brackets-upperroman, .list-style__peculiar--brackets-loweralpha, .list-style__peculiar--brackets-upperalpha, .list-style__peculiar--brackets-hiragana, .list-style__peculiar--brackets-hiragana-iroha, .list-style__peculiar--brackets-katakana, .list-style__peculiar--brackets-katakana-iroha, .list-style__peculiar--side-brackets-decimal, .list-style__peculiar--side-brackets-lowerroman, .list-style__peculiar--side-brackets-upperroman, .list-style__peculiar--side-brackets-loweralpha, .list-style__peculiar--side-brackets-upperalpha, .list-style__peculiar--side-brackets-hiragana, .list-style__peculiar--side-brackets-hiragana-iroha, .list-style__peculiar--side-brackets-katakana, .list-style__peculiar--side-brackets-katakana-iroha, .list-style__peculiar--dot-decimal, .list-style__peculiar--dot-lowerroman, .list-style__peculiar--dot-upperroman, .list-style__peculiar--dot-loweralpha, .list-style__peculiar--dot-upperalpha, .list-style__peculiar--dot-hiragana, .list-style__peculiar--dot-hiragana-iroha, .list-style__peculiar--dot-katakana, .list-style__peculiar--dot-katakana-iroha, .list-style__peculiar--character_circle-decimal { margin-left: 2em !important; }
-.list-style__peculiar > li, .list-style__peculiar--original > li, .list-style__peculiar--brackets-decimal > li, .list-style__peculiar--brackets-lowerroman > li, .list-style__peculiar--brackets-upperroman > li, .list-style__peculiar--brackets-loweralpha > li, .list-style__peculiar--brackets-upperalpha > li, .list-style__peculiar--brackets-hiragana > li, .list-style__peculiar--brackets-hiragana-iroha > li, .list-style__peculiar--brackets-katakana > li, .list-style__peculiar--brackets-katakana-iroha > li, .list-style__peculiar--side-brackets-decimal > li, .list-style__peculiar--side-brackets-lowerroman > li, .list-style__peculiar--side-brackets-upperroman > li, .list-style__peculiar--side-brackets-loweralpha > li, .list-style__peculiar--side-brackets-upperalpha > li, .list-style__peculiar--side-brackets-hiragana > li, .list-style__peculiar--side-brackets-hiragana-iroha > li, .list-style__peculiar--side-brackets-katakana > li, .list-style__peculiar--side-brackets-katakana-iroha > li, .list-style__peculiar--dot-decimal > li, .list-style__peculiar--dot-lowerroman > li, .list-style__peculiar--dot-upperroman > li, .list-style__peculiar--dot-loweralpha > li, .list-style__peculiar--dot-upperalpha > li, .list-style__peculiar--dot-hiragana > li, .list-style__peculiar--dot-hiragana-iroha > li, .list-style__peculiar--dot-katakana > li, .list-style__peculiar--dot-katakana-iroha > li, .list-style__peculiar--character_circle-decimal > li { list-style-type: none; list-style-position: inside; text-indent: -2em; }
-.list-style__peculiar > li::before, .list-style__peculiar--original > li::before, .list-style__peculiar--brackets-decimal > li::before, .list-style__peculiar--brackets-lowerroman > li::before, .list-style__peculiar--brackets-upperroman > li::before, .list-style__peculiar--brackets-loweralpha > li::before, .list-style__peculiar--brackets-upperalpha > li::before, .list-style__peculiar--brackets-hiragana > li::before, .list-style__peculiar--brackets-hiragana-iroha > li::before, .list-style__peculiar--brackets-katakana > li::before, .list-style__peculiar--brackets-katakana-iroha > li::before, .list-style__peculiar--side-brackets-decimal > li::before, .list-style__peculiar--side-brackets-lowerroman > li::before, .list-style__peculiar--side-brackets-upperroman > li::before, .list-style__peculiar--side-brackets-loweralpha > li::before, .list-style__peculiar--side-brackets-upperalpha > li::before, .list-style__peculiar--side-brackets-hiragana > li::before, .list-style__peculiar--side-brackets-hiragana-iroha > li::before, .list-style__peculiar--side-brackets-katakana > li::before, .list-style__peculiar--side-brackets-katakana-iroha > li::before, .list-style__peculiar--dot-decimal > li::before, .list-style__peculiar--dot-lowerroman > li::before, .list-style__peculiar--dot-upperroman > li::before, .list-style__peculiar--dot-loweralpha > li::before, .list-style__peculiar--dot-upperalpha > li::before, .list-style__peculiar--dot-hiragana > li::before, .list-style__peculiar--dot-hiragana-iroha > li::before, .list-style__peculiar--dot-katakana > li::before, .list-style__peculiar--dot-katakana-iroha > li::before, .list-style__peculiar--character_circle-decimal > li::before { display: inline-block; width: 2em; text-indent: 0; }
+.list-style__peculiar, .list-style__peculiar--original, .list-style__peculiar--brackets-decimal, .list-style__peculiar--brackets-lowerroman, .list-style__peculiar--brackets-upperroman, .list-style__peculiar--brackets-loweralpha, .list-style__peculiar--brackets-upperalpha, .list-style__peculiar--brackets-hiragana, .list-style__peculiar--brackets-hiragana-iroha, .list-style__peculiar--brackets-katakana, .list-style__peculiar--brackets-katakana-iroha, .list-style__peculiar--side-brackets-decimal, .list-style__peculiar--side-brackets-lowerroman, .list-style__peculiar--side-brackets-upperroman, .list-style__peculiar--side-brackets-loweralpha, .list-style__peculiar--side-brackets-upperalpha, .list-style__peculiar--side-brackets-hiragana, .list-style__peculiar--side-brackets-hiragana-iroha, .list-style__peculiar--side-brackets-katakana, .list-style__peculiar--side-brackets-katakana-iroha, .list-style__peculiar--dot-decimal, .list-style__peculiar--dot-lowerroman, .list-style__peculiar--dot-upperroman, .list-style__peculiar--dot-loweralpha, .list-style__peculiar--dot-upperalpha, .list-style__peculiar--dot-hiragana, .list-style__peculiar--dot-hiragana-iroha, .list-style__peculiar--dot-katakana, .list-style__peculiar--dot-katakana-iroha, .list-style__peculiar--character_circle-decimal, .list-style__peculiar--character_round-decimal { margin-left: 2em !important; }
+.list-style__peculiar > li, .list-style__peculiar--original > li, .list-style__peculiar--brackets-decimal > li, .list-style__peculiar--brackets-lowerroman > li, .list-style__peculiar--brackets-upperroman > li, .list-style__peculiar--brackets-loweralpha > li, .list-style__peculiar--brackets-upperalpha > li, .list-style__peculiar--brackets-hiragana > li, .list-style__peculiar--brackets-hiragana-iroha > li, .list-style__peculiar--brackets-katakana > li, .list-style__peculiar--brackets-katakana-iroha > li, .list-style__peculiar--side-brackets-decimal > li, .list-style__peculiar--side-brackets-lowerroman > li, .list-style__peculiar--side-brackets-upperroman > li, .list-style__peculiar--side-brackets-loweralpha > li, .list-style__peculiar--side-brackets-upperalpha > li, .list-style__peculiar--side-brackets-hiragana > li, .list-style__peculiar--side-brackets-hiragana-iroha > li, .list-style__peculiar--side-brackets-katakana > li, .list-style__peculiar--side-brackets-katakana-iroha > li, .list-style__peculiar--dot-decimal > li, .list-style__peculiar--dot-lowerroman > li, .list-style__peculiar--dot-upperroman > li, .list-style__peculiar--dot-loweralpha > li, .list-style__peculiar--dot-upperalpha > li, .list-style__peculiar--dot-hiragana > li, .list-style__peculiar--dot-hiragana-iroha > li, .list-style__peculiar--dot-katakana > li, .list-style__peculiar--dot-katakana-iroha > li, .list-style__peculiar--character_circle-decimal > li, .list-style__peculiar--character_round-decimal > li { list-style-type: none; list-style-position: inside; text-indent: -2em; }
+.list-style__peculiar > li::before, .list-style__peculiar--original > li::before, .list-style__peculiar--brackets-decimal > li::before, .list-style__peculiar--brackets-lowerroman > li::before, .list-style__peculiar--brackets-upperroman > li::before, .list-style__peculiar--brackets-loweralpha > li::before, .list-style__peculiar--brackets-upperalpha > li::before, .list-style__peculiar--brackets-hiragana > li::before, .list-style__peculiar--brackets-hiragana-iroha > li::before, .list-style__peculiar--brackets-katakana > li::before, .list-style__peculiar--brackets-katakana-iroha > li::before, .list-style__peculiar--side-brackets-decimal > li::before, .list-style__peculiar--side-brackets-lowerroman > li::before, .list-style__peculiar--side-brackets-upperroman > li::before, .list-style__peculiar--side-brackets-loweralpha > li::before, .list-style__peculiar--side-brackets-upperalpha > li::before, .list-style__peculiar--side-brackets-hiragana > li::before, .list-style__peculiar--side-brackets-hiragana-iroha > li::before, .list-style__peculiar--side-brackets-katakana > li::before, .list-style__peculiar--side-brackets-katakana-iroha > li::before, .list-style__peculiar--dot-decimal > li::before, .list-style__peculiar--dot-lowerroman > li::before, .list-style__peculiar--dot-upperroman > li::before, .list-style__peculiar--dot-loweralpha > li::before, .list-style__peculiar--dot-upperalpha > li::before, .list-style__peculiar--dot-hiragana > li::before, .list-style__peculiar--dot-hiragana-iroha > li::before, .list-style__peculiar--dot-katakana > li::before, .list-style__peculiar--dot-katakana-iroha > li::before, .list-style__peculiar--character_circle-decimal > li::before, .list-style__peculiar--character_round-decimal > li::before { display: inline-block; width: 2em; text-indent: 0; }
 
 /* spanでリストヘッド自由入力 */
 .list-style__peculiar--original > li { counter-increment: cnt_brackets-decimal; }
@@ -1009,6 +1009,28 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 .list-style__peculiar--character_circle-decimal > li:nth-of-type(19)::before { content: "\02471"; }
 .list-style__peculiar--character_circle-decimal > li:nth-of-type(20)::before { content: "\02472"; }
 
+/* ❶ 丸数字 */
+.list-style__peculiar--character_round-decimal > li:nth-of-type(1)::before { content: "\02776"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(2)::before { content: "\02777"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(3)::before { content: "\02778"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(4)::before { content: "\02779"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(5)::before { content: "\0277a"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(6)::before { content: "\0277b"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(7)::before { content: "\0277c"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(8)::before { content: "\0277d"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(9)::before { content: "\0277e"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(10)::before { content: "\0277f"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(11)::before { content: "\024eb"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(12)::before { content: "\024ec"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(13)::before { content: "\024ed"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(14)::before { content: "\024ee"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(15)::before { content: "\024ef"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(16)::before { content: "\024f0"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(17)::before { content: "\024f1"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(18)::before { content: "\024f2"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(19)::before { content: "\024f3"; }
+.list-style__peculiar--character_round-decimal > li:nth-of-type(20)::before { content: "\024f4"; }
+
 /* Scss Document */
 /* ===========================================================
 
@@ -1088,18 +1110,20 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .dl-table { display: table; margin: 1.0em 0; padding: 0; border-collapse: collapse; }
 .dl-table > dl { display: table-row; margin: 0; padding: 0; }
 .dl-table > dl > dt, .dl-table > dl > dd { display: table-cell; vertical-align: middle; }
+.dl-table > p { display: table-caption; }
 .dl-table .dl-table { margin: 0; }
 .dl-table .dl-table-responsive { margin: 0; }
 
 .dl-table-responsive { display: block; margin: 1.0em 0; padding: 0; }
 .dl-table-responsive > dl { display: block; margin: 0; padding: 0; }
-.dl-table-responsive > dl > dt, .dl-table-responsive > dl > dd { display: block; }
+.dl-table-responsive > dl > dt, .dl-table-responsive > dl > dd, .dl-table-responsive > p { display: block; }
 .dl-table-responsive .dl-table { margin: 0; }
 .dl-table-responsive .dl-table-responsive { margin: 0; }
 
 @media print, screen and (min-width: 768px) { .dl-table-responsive { display: table; border-collapse: collapse; }
   .dl-table-responsive > dl { display: table-row; }
-  .dl-table-responsive > dl > dt, .dl-table-responsive > dl > dd { display: table-cell; vertical-align: middle; } }
+  .dl-table-responsive > dl > dt, .dl-table-responsive > dl > dd { display: table-cell; vertical-align: middle; }
+  .dl-table-responsive > p { display: table-caption; } }
 /* ===========================================================
 
 	date-list
@@ -1110,16 +1134,18 @@ table th.cell-border--bottom-none, table td.cell-border--bottom-none { border-bo
 .date-list > dl > dt, .date-list > dl > dd { display: table-cell; margin: 0; }
 .date-list > dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
 .date-list > dl > dd { vertical-align: middle; }
+.date-list > p { display: table-caption; }
 
 .date-list-responsive { display: block; margin: 0; padding: 0; }
 .date-list-responsive > dl { display: block; margin: 0; padding: 0; }
-.date-list-responsive > dl > dt, .date-list-responsive > dl > dd { display: block; }
+.date-list-responsive > dl > dt, .date-list-responsive > dl > dd, .date-list-responsive > p { display: block; }
 
 @media print, screen and (min-width: 768px) { .date-list-responsive { display: table; border-collapse: collapse; }
   .date-list-responsive > dl { display: table-row; }
   .date-list-responsive > dl > dt, .date-list-responsive > dl > dd { display: table-cell; margin: 0; }
   .date-list-responsive > dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
-  .date-list-responsive > dl > dd { vertical-align: middle; } }
+  .date-list-responsive > dl > dd { vertical-align: middle; }
+  .date-list-responsive > p { display: table-caption; } }
 /* Scss Document */
 /* ===========================================================
 
