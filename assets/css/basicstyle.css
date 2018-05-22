@@ -1004,10 +1004,10 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
 .list-style__peculiar--character_circle-decimal > li:nth-of-type(14)::before { content: "\0246d"; }
 .list-style__peculiar--character_circle-decimal > li:nth-of-type(15)::before { content: "\0246e"; }
 .list-style__peculiar--character_circle-decimal > li:nth-of-type(16)::before { content: "\0246f"; }
-.list-style__peculiar--character_circle-decimal > li:nth-of-type(17)::before { content: "\02476"; }
-.list-style__peculiar--character_circle-decimal > li:nth-of-type(18)::before { content: "\02470"; }
-.list-style__peculiar--character_circle-decimal > li:nth-of-type(19)::before { content: "\02471"; }
-.list-style__peculiar--character_circle-decimal > li:nth-of-type(20)::before { content: "\02472"; }
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(17)::before { content: "\02470"; }
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(18)::before { content: "\02471"; }
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(19)::before { content: "\02472"; }
+.list-style__peculiar--character_circle-decimal > li:nth-of-type(20)::before { content: "\02473"; }
 
 /* ❶ 丸数字 */
 .list-style__peculiar--character_round-decimal > li:nth-of-type(1)::before { content: "\02776"; }
