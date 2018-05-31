@@ -7,7 +7,7 @@
 
 =========================================================== */
 @mixin column_flex() {
-	display: flex; width: 100%;
+	display: flex; flex-wrap: wrap;
 	margin-left: -1.0em; margin-right: -1.0em;
 }
 @mixin column_flex__cell() {
@@ -15,56 +15,70 @@
 }
 
 @mixin column_flex--block() {
-	display: block; width: 100%;
+	display: block;
 	margin-left: 0; margin-right: 0;
 }
 @mixin column_flex__cell--block() {
-	padding-left: 0; padding-right: 0;
+	margin-left: 0; margin-right: 0;
 }
 
 .column { @include column_flex(); }
 .column__cell { @include column_flex__cell(); }
 
 /* 等幅コラム */
-.column--equal-width { @extend .column; }
+.column--equal-width { @extend .column; flex-wrap: nowrap; }
 .column--equal-width .column__cell {
 	@include column_flex__cell();
 	flex-grow: 1; flex-basis: 100%;
 }
 
+/* 2等分コラム */
+.column--2 { @extend .column; }
+.column--2 .column__cell,
+.column--2 .column__cell--2of1 {
+	@include column_flex__cell();
+	flex-basis: 50%; width: 50%;
+}
+.column--2 .column__cell--2of2 {
+	@include column_flex__cell();
+	flex-basis: 100%; width: 100%;
+}
+
 /* 3等分コラム */
 .column--3 { @extend .column; }
+.column--3 .column__cell,
 .column--3 .column__cell--3of1 {
 	@include column_flex__cell();
-	flex-basis: 33.3333%;
+	flex-basis: 33.3333%; width: 33.3333%;
 }
 .column--3 .column__cell--3of2 {
 	@include column_flex__cell();
-	flex-basis: 66.6666%;
+	flex-basis: 66.6666%; width: 66.6666%;
 }
 .column--3 .column__cell--3of3 {
 	@include column_flex__cell();
-	flex-basis: 100%;
+	flex-basis: 100%; width: 100%;
 }
 
 
 /* 4等分コラム */
 .column--4 { @extend .column; }
+.column--4 .column__cell,
 .column--4 .column__cell--4of1 {
 	@include column_flex__cell();
-	flex-basis: 25%;
+	flex-basis: 25%; width: 25%;
 }
 .column--4 .column__cell--4of2 {
 	@include column_flex__cell();
-	flex-basis: 50%;
+	flex-basis: 50%; width: 50%;
 }
 .column--4 .column__cell--4of3 {
 	@include column_flex__cell();
-	flex-basis: 75%;
+	flex-basis: 75%; width: 75%;
 }
 .column--4 .column__cell--4of4 {
 	@include column_flex__cell();
-	flex-basis: 100%;
+	flex-basis: 100%; width: 100%;
 }
 
 
@@ -81,14 +95,23 @@
 .column-responsive--equal-width { @extend .column-responsive; }
 .column-responsive--equal-width .column__cell { @include column_flex__cell--block(); }
 
+
+/* 2等分コラム */
+.column-responsive--2 { @extend .column-responsive; }
+.column-responsive--2 .column__cell,
+.column-responsive--2 .column__cell--2of1 { @include column_flex__cell--block(); }
+.column-responsive--2 .column__cell--2of2 { @include column_flex__cell--block(); }
+
 /* 3等分コラム */
 .column-responsive--3 { @extend .column-responsive; }
+.column-responsive--3 .column__cell,
 .column-responsive--3 .column__cell--3of1 { @include column_flex__cell--block(); }
 .column-responsive--3 .column__cell--3of2 { @include column_flex__cell--block(); }
 .column-responsive--3 .column__cell--3of3 { @include column_flex__cell--block(); }
 
 /* 4等分コラム */
 .column-responsive--4 { @extend .column-responsive; }
+.column-responsive--4 .column__cell,
 .column-responsive--4 .column__cell--4of1 { @include column_flex__cell--block(); }
 .column-responsive--4 .column__cell--4of2 { @include column_flex__cell--block(); }
 .column-responsive--4 .column__cell--4of3 { @include column_flex__cell--block(); }
@@ -100,45 +123,59 @@
 	.column-responsive__cell { @include column_flex__cell(); }
 	
 	/* 等幅コラム */
-	.column-responsive--equal-width { @include column_flex(); }
+	.column-responsive--equal-width { @include column_flex(); flex-wrap: nowrap; }
 	.column-responsive--equal-width .column__cell {
 		@include column_flex__cell();
 		flex-grow: 1; flex-basis: 100%;
 	}
 
+	/* 2等分コラム */
+	.column-responsive--2 { @include column_flex(); }
+	.column-responsive--2 .column__cell,
+	.column-responsive--2 .column__cell--2of1 {
+		@include column_flex__cell();
+		flex-basis: 50%; width: 50%;
+	}
+	.column-responsive--2 .column-responsive__cell--2of2 {
+		@include column_flex__cell();
+		flex-basis: 100%; width: 100%;
+	}
+
 	/* 3等分コラム */
 	.column-responsive--3 { @include column_flex(); }
+	.column-responsive--3 .column__cell,
 	.column-responsive--3 .column__cell--3of1 {
 		@include column_flex__cell();
-		flex-basis: 33.3333%;
+		flex-basis: 33.3333%; width: 33.3333%;
 	}
 	.column-responsive--3 .column-responsive__cell--3of2 {
 		@include column_flex__cell();
-		flex-basis: 66.6666%;
+		flex-basis: 66.6666%; width: 66.6666%;
 	}
 	.column-responsive--3 .column-responsive__cell--3of3 {
 		@include column_flex__cell();
-		flex-basis: 100%;
+		flex-basis: 100%; width: 100%;
 	}
 
 
 	/* 4等分コラム */
 	.column-responsive--4 { @include column_flex(); }
+	.column-responsive--4 .column__cell,
 	.column-responsive--4 .column__cell--4of1 {
 		@include column_flex__cell();
-		flex-basis: 25%;
+		flex-basis: 25%; width: 25%;
 	}
 	.column-responsive--4 .column-responsive__cell--4of2 {
 		@include column_flex__cell();
-		flex-basis: 50%;
+		flex-basis: 50%; width: 50%;
 	}
 	.column-responsive--4 .column-responsive__cell--4of3 {
 		@include column_flex__cell();
-		flex-basis: 75%;
+		flex-basis: 75%; width: 75%;
 	}
 	.column-responsive--4 .column-responsive__cell--4of4 {
 		@include column_flex__cell();
-		flex-basis: 100%;
+		flex-basis: 100%; width: 100%;
 	}
 	
 }
