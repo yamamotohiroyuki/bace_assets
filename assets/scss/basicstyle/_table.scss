@@ -57,39 +57,90 @@ table td.cell-border--bottom-none { border-bottom: none !important; }
 
 =========================================================== */
 .dl-table {
-	display: table; margin: 1.0em 0; padding: 0;
+	display: table; margin: 1.0em 0;
 	border-collapse: collapse;
 	
-	> dl { display: table-row; margin: 0; padding: 0; }
-	> dl > dt,
-	> dl > dd { display: table-cell; vertical-align: middle; }
-	> p { display: table-caption; }
 	.dl-table { margin: 0; }
 	.dl-table-responsive { margin: 0; }
 }
 
-.dl-table-responsive {
-	display: block; margin: 1.0em 0; padding: 0;
-	> dl { display: block; margin: 0; padding: 0; }
+.dl-table__caption { display: table-caption; }
+.dl-table__header { display: table-header-group; }
+.dl-table__body { display: table-row-group; }
+.dl-table__footer { display: table-footer-group; }
+
+.dl-table,
+.dl-table__header,
+.dl-table__body,
+.dl-table__footer {
+	> dl { display: table-row; }
 	> dl > dt,
-	> dl > dd,
-	> p { display: block; }
+	> dl > dd { display: table-cell; }
+}
+
+
+.dl-table-responsive {
+	display: block; margin: 1.0em 0;
+	
 	.dl-table { margin: 0; }
 	.dl-table-responsive { margin: 0; }
 }
+
+.dl-table-responsive .dl-table__caption { display: block; }
+.dl-table-responsive .dl-table__header { display: block; }
+.dl-table-responsive .dl-table__body { display: block; }
+.dl-table-responsive .dl-table__footer { display: block; }
+
+.dl-table-responsive,
+.dl-table-responsive .dl-table__header,
+.dl-table-responsive .dl-table__body,
+.dl-table-responsive .dl-table__footer {
+	> dl { display: block; }
+	> dl > dt,
+	> dl > dd { display: block; }
+}
+
 
 @media print, screen and (min-width:768px) {
 	.dl-table-responsive {
 		display: table;
 		border-collapse: collapse;
+
+		.dl-table { margin: 0; }
+		.dl-table-responsive { margin: 0; }
+	}
+
+	.dl-table-responsive .dl-table__caption { display: table-caption; }
+	.dl-table-responsive .dl-table__header { display: table-header-group; }
+	.dl-table-responsive .dl-table__body { display: table-row-group; }
+	.dl-table-responsive .dl-table__footer { display: table-footer-group; }
+
+	.dl-table-responsive,
+	.dl-table-responsive .dl-table__header,
+	.dl-table-responsive .dl-table__body,
+	.dl-table-responsive .dl-table__footer {
 		> dl { display: table-row; }
 		> dl > dt,
-		> dl > dd { display: table-cell; vertical-align: middle; }
-		> p { display: table-caption; }
+		> dl > dd { display: table-cell; }
 	}
+
 }
 
 
+.dl-table-align--dt-left dt,
+.dl-table-align--dd-left dd,
+.dl-table-align--left dt,
+.dl-table-align--left dd { text-align: left; }
+
+.dl-table-align--dt-center dt,
+.dl-table-align--dd-center dd,
+.dl-table-align--center dt,
+.dl-table-align--center dd { text-align: center; }
+
+.dl-table-align--dt-right dt,
+.dl-table-align--dd-right dd,
+.dl-table-align--right dt,
+.dl-table-align--right dd { text-align: right; }
 
 
 /* ===========================================================
@@ -98,12 +149,12 @@ table td.cell-border--bottom-none { border-bottom: none !important; }
 
 =========================================================== */
 .date-list {
-	display: table; padding: 0; margin: 0;
+	display: table;
 	border-collapse: collapse;
 	
-	> dl { display: table-row; padding: 0; margin: 0; }
+	> dl { display: table-row; }
 	> dl > dt,
-	> dl > dd { display: table-cell; margin: 0; }
+	> dl > dd { display: table-cell; }
 	> dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
 	> dl > dd { vertical-align: middle; }
 	> p { display: table-caption; }
@@ -111,8 +162,8 @@ table td.cell-border--bottom-none { border-bottom: none !important; }
 
 
 .date-list-responsive {
-	display: block; margin: 0; padding: 0;
-	> dl { display: block; margin: 0; padding: 0; }
+	display: block;
+	> dl { display: block; }
 	> dl > dt,
 	> dl > dd,
 	> p { display: block; }
@@ -124,7 +175,7 @@ table td.cell-border--bottom-none { border-bottom: none !important; }
 		border-collapse: collapse;
 		> dl { display: table-row; }
 		> dl > dt,
-		> dl > dd { display: table-cell; margin: 0; }
+		> dl > dd { display: table-cell; }
 		> dl > dt { width: 1%; white-space: nowrap; vertical-align: top; }
 		> dl > dd { vertical-align: middle; }
 		> p { display: table-caption; }
