@@ -132,7 +132,7 @@
 	/* 2等分コラム */
 	.column-responsive--2 { @include column_flex(); }
 	.column-responsive--2 .column__cell,
-	.column-responsive--2 .column__cell--2of1 {
+	.column-responsive--2 .column-responsive__cell--2of1 {
 		@include column_flex__cell();
 		flex-basis: 50%; width: 50%;
 	}
@@ -144,7 +144,7 @@
 	/* 3等分コラム */
 	.column-responsive--3 { @include column_flex(); }
 	.column-responsive--3 .column__cell,
-	.column-responsive--3 .column__cell--3of1 {
+	.column-responsive--3 .column-responsive__cell--3of1 {
 		@include column_flex__cell();
 		flex-basis: 33.3333%; width: 33.3333%;
 	}
@@ -161,7 +161,7 @@
 	/* 4等分コラム */
 	.column-responsive--4 { @include column_flex(); }
 	.column-responsive--4 .column__cell,
-	.column-responsive--4 .column__cell--4of1 {
+	.column-responsive--4 .column-responsive__cell--4of1 {
 		@include column_flex__cell();
 		flex-basis: 25%; width: 25%;
 	}
