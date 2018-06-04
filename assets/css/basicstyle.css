@@ -79,7 +79,7 @@ input[type="checkbox"] { vertical-align: bottom; }
 /*select, input, textarea {font: 99% sans-serif;}*/
 table { font-size: inherit; }
 
-small { font-size: 75%; }
+small { font-size: 80%; }
 
 b, strong { font-weight: bold; }
 
@@ -88,7 +88,7 @@ i, em { font-style: italic; }
 td, td img { vertical-align: top; }
 
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
-sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; ertical-align: baseline; }
 
 sup { top: -0.5em; }
 
@@ -252,16 +252,16 @@ a.link-arrow--right::before, .link-arrow--right a::before { -webkit-transform: r
   .column-responsive--equal-width .column__cell { padding-left: 1.0em; padding-right: 1.0em; flex-grow: 1; flex-basis: 100%; }
   /* 2等分コラム */
   .column-responsive--2 { display: flex; flex-wrap: wrap; margin-left: -1.0em; margin-right: -1.0em; }
-  .column-responsive--2 .column__cell, .column-responsive--2 .column__cell--2of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 50%; width: 50%; }
+  .column-responsive--2 .column__cell, .column-responsive--2 .column-responsive__cell--2of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 50%; width: 50%; }
   .column-responsive--2 .column-responsive__cell--2of2 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 100%; width: 100%; }
   /* 3等分コラム */
   .column-responsive--3 { display: flex; flex-wrap: wrap; margin-left: -1.0em; margin-right: -1.0em; }
-  .column-responsive--3 .column__cell, .column-responsive--3 .column__cell--3of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 33.3333%; width: 33.3333%; }
+  .column-responsive--3 .column__cell, .column-responsive--3 .column-responsive__cell--3of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 33.3333%; width: 33.3333%; }
   .column-responsive--3 .column-responsive__cell--3of2 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 66.6666%; width: 66.6666%; }
   .column-responsive--3 .column-responsive__cell--3of3 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 100%; width: 100%; }
   /* 4等分コラム */
   .column-responsive--4 { display: flex; flex-wrap: wrap; margin-left: -1.0em; margin-right: -1.0em; }
-  .column-responsive--4 .column__cell, .column-responsive--4 .column__cell--4of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 25%; width: 25%; }
+  .column-responsive--4 .column__cell, .column-responsive--4 .column-responsive__cell--4of1 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 25%; width: 25%; }
   .column-responsive--4 .column-responsive__cell--4of2 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 50%; width: 50%; }
   .column-responsive--4 .column-responsive__cell--4of3 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 75%; width: 75%; }
   .column-responsive--4 .column-responsive__cell--4of4 { padding-left: 1.0em; padding-right: 1.0em; flex-basis: 100%; width: 100%; } }
