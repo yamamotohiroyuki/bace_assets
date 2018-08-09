@@ -1,0 +1,8 @@
+[submodule "_submodule/bourbon"]
+	path = _submodule/bourbon
+	url = https://github.com/thoughtbot/bourbon/
+	branch = master
+[submodule "_submodule/bootstrap"]
+	path = _submodule/bootstrap
+	url = https://github.com/twbs/bootstrap
+	branch = v4-dev

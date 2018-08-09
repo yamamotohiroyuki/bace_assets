@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+table.responsive-table,
+.responsive-table caption,
+.responsive-table thead,
+.responsive-table tbody,
+.responsive-table tfoot,
+.responsive-table tr,
+.responsive-table th,
+.responsive-table td { display: block; }
+
+table.responsive-table { }
+.responsive-table caption { }
+.responsive-table thead { }
+.responsive-table tbody { }
+.responsive-table tfoot { }
+.responsive-table tr { }
+.responsive-table th { }
+.responsive-table td { }
+/*
+<table>
+    <caption>caption</caption>
+    <thead>
+      <tr>
+          <th>thead th</th>
+          <th>thead th</th>
+          <td>thead td</td>
+          <td>thead td</td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>tbody th</th>
+            <th>tbody th</th>
+            <td>tbody td</td>
+            <td>tbody td</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>tbody th</th>
+            <th>tbody th</th>
+            <td>tbody td</td>
+            <td>tbody td</td>
+        </tr>
+    </tfoot>
+  </table>
+*/
