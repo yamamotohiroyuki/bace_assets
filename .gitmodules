@@ -9,3 +9,6 @@
 [submodule "_submodule/semantic-ui"]
 	path = _submodule/semantic-ui
 	url = https://github.com/Semantic-Org/Semantic-UI
+[submodule "_submodule/slick"]
+	path = _submodule/slick
+	url = https://github.com/kenwheeler/slick/
