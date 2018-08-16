@@ -6,3 +6,6 @@
 	path = _submodule/bootstrap
 	url = https://github.com/twbs/bootstrap
 	branch = v4-dev
+[submodule "_submodule/semantic-ui"]
+	path = _submodule/semantic-ui
+	url = https://github.com/Semantic-Org/Semantic-UI
