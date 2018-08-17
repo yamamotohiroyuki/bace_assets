@@ -1,22 +1,21 @@
 @charset "UTF-8";
 
 @media (max-width: 768px) {
-    table.table-responsive,
-    table.table-responsive caption,
-    table.table-responsive thead,
-    table.table-responsive tbody,
-    table.table-responsive tfoot,
-    table.table-responsive tr,
-    table.table-responsive th,
-    table.table-responsive td { display: block; }
+    table.is-responsive,
+    table.is-responsive caption,
+    table.is-responsive thead,
+    table.is-responsive tbody,
+    table.is-responsive tfoot,
+    table.is-responsive tr,
+    table.is-responsive th,
+    table.is-responsive td { display: block; }
 
-    table.table-responsive { }
-    table.table-responsive caption { }
-    table.table-responsive thead { }
-    table.table-responsive tbody { }
-    table.table-responsive tfoot { }
-    table.table-responsive tr { }
-    table.table-responsive th { }
-    table.table-responsive td { }
-
+    table.is-responsive { }
+    table.is-responsive caption { }
+    table.is-responsive thead { }
+    table.is-responsive tbody { }
+    table.is-responsive tfoot { }
+    table.is-responsive tr { }
+    table.is-responsive th { }
+    table.is-responsive td { }
 }

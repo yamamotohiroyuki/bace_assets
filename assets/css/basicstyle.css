@@ -14,6 +14,26 @@
 /* =======================================================
     Variables
 ======================================================== */
+/*====================================
+
+  * Variables
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    *.0. Default
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/8/16   Founding
+    
+====================================*/
+/*====================================
+
+    *.0. Default
+
+====================================*/
 /* =======================================================
     import style
 ======================================================== */
@@ -356,6 +376,8 @@ dfn[title] {
     ----------------------------------
     2.0. Default
     2.1. Layout Style
+    2.2. Responsive Table
+    2.3. Anomaly <dl> Table
  
     ----------------------------------
         Change Log
@@ -376,12 +398,6 @@ table {
 th,
 td {
   font-weight: inherit;
-  vertical-align: top;
-  text-align: left;
-}
-
-caption {
-  text-align: left;
 }
 
 /*====================================
@@ -402,8 +418,8 @@ table.table-layout--fixed td {
 
 table th.cell-width--fit,
 table td.cell-width--fit,
-table th.fit,
-table td.fit {
+table th.width--fit,
+table td.width--fit {
   width: 1% !important;
   white-space: nowrap !important;
 }
@@ -411,36 +427,36 @@ table td.fit {
 /* table cell border */
 table th.cell-border--none,
 table td.cell-border--none,
-table th.border-none,
-table td.border-none {
+table th.border--none,
+table td.border--none {
   border: none !important;
 }
 
 table th.cell-border--top-none,
 table td.cell-border--top-none,
-table th.border-top-none,
-table td.border-top-none {
+table th.border-top--none,
+table td.border-top--none {
   border-top: none !important;
 }
 
 table th.cell-border--left-none,
 table td.cell-border--left-none,
-table th.border-left-none,
-table td.border-left-none {
+table th.border-left--none,
+table td.border-left--none {
   border-left: none !important;
 }
 
 table th.cell-border--right-none,
 table td.cell-border--right-none,
-table th.border-right-none,
-table td.border-right-none {
+table th.border-right--none,
+table td.border-right--none {
   border-right: none !important;
 }
 
 table th.cell-border--bottom-none,
 table td.cell-border--bottom-none,
-table th.border-bottom-none,
-table td.border-bottom-none {
+table th.border-bottom--none,
+table td.border-bottom--none {
   border-bottom: none !important;
 }
 
@@ -486,15 +502,250 @@ table td.border-bottom-none {
 
 ====================================*/
 @media (max-width: 768px) {
-  table.table-responsive,
-  table.table-responsive caption,
-  table.table-responsive thead,
-  table.table-responsive tbody,
-  table.table-responsive tfoot,
-  table.table-responsive tr,
-  table.table-responsive th,
-  table.table-responsive td {
+  table.is-responsive,
+  table.is-responsive caption,
+  table.is-responsive thead,
+  table.is-responsive tbody,
+  table.is-responsive tfoot,
+  table.is-responsive tr,
+  table.is-responsive th,
+  table.is-responsive td {
     display: block;
+  }
+}
+
+/*====================================
+
+    2.3. Anomaly <dl> Table
+
+====================================*/
+/* dl-table */
+.dl-table {
+  display: table;
+  margin: 1.0em 0;
+  border-collapse: collapse;
+}
+
+.dl-table .dl-table {
+  margin: 0;
+}
+
+.dl-table .dl-table-responsive {
+  margin: 0;
+}
+
+.dl-table__caption {
+  display: table-caption;
+}
+
+.dl-table__header {
+  display: table-header-group;
+}
+
+.dl-table__body {
+  display: table-row-group;
+}
+
+.dl-table__footer {
+  display: table-footer-group;
+}
+
+.dl-table > dl,
+.dl-table__header > dl,
+.dl-table__body > dl,
+.dl-table__footer > dl {
+  display: table-row;
+}
+
+.dl-table > dl > dt,
+.dl-table > dl > dd,
+.dl-table__header > dl > dt,
+.dl-table__header > dl > dd,
+.dl-table__body > dl > dt,
+.dl-table__body > dl > dd,
+.dl-table__footer > dl > dt,
+.dl-table__footer > dl > dd {
+  display: table-cell;
+}
+
+.dl-table-responsive {
+  display: block;
+  margin: 1.0em 0;
+}
+
+.dl-table-responsive .dl-table {
+  margin: 0;
+}
+
+.dl-table-responsive .dl-table-responsive {
+  margin: 0;
+}
+
+.dl-table-responsive .dl-table__caption {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__header {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__body {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__footer {
+  display: block;
+}
+
+.dl-table-responsive > dl,
+.dl-table-responsive .dl-table__header > dl,
+.dl-table-responsive .dl-table__body > dl,
+.dl-table-responsive .dl-table__footer > dl {
+  display: block;
+}
+
+.dl-table-responsive > dl > dt,
+.dl-table-responsive > dl > dd,
+.dl-table-responsive .dl-table__header > dl > dt,
+.dl-table-responsive .dl-table__header > dl > dd,
+.dl-table-responsive .dl-table__body > dl > dt,
+.dl-table-responsive .dl-table__body > dl > dd,
+.dl-table-responsive .dl-table__footer > dl > dt,
+.dl-table-responsive .dl-table__footer > dl > dd {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .dl-table-responsive {
+    display: table;
+    border-collapse: collapse;
+  }
+  .dl-table-responsive .dl-table {
+    margin: 0;
+  }
+  .dl-table-responsive .dl-table-responsive {
+    margin: 0;
+  }
+  .dl-table-responsive .dl-table__caption {
+    display: table-caption;
+  }
+  .dl-table-responsive .dl-table__header {
+    display: table-header-group;
+  }
+  .dl-table-responsive .dl-table__body {
+    display: table-row-group;
+  }
+  .dl-table-responsive .dl-table__footer {
+    display: table-footer-group;
+  }
+  .dl-table-responsive > dl,
+  .dl-table-responsive .dl-table__header > dl,
+  .dl-table-responsive .dl-table__body > dl,
+  .dl-table-responsive .dl-table__footer > dl {
+    display: table-row;
+  }
+  .dl-table-responsive > dl > dt,
+  .dl-table-responsive > dl > dd,
+  .dl-table-responsive .dl-table__header > dl > dt,
+  .dl-table-responsive .dl-table__header > dl > dd,
+  .dl-table-responsive .dl-table__body > dl > dt,
+  .dl-table-responsive .dl-table__body > dl > dd,
+  .dl-table-responsive .dl-table__footer > dl > dt,
+  .dl-table-responsive .dl-table__footer > dl > dd {
+    display: table-cell;
+  }
+}
+
+.dl-table-align--dt-left dt,
+.dl-table-align--dd-left dd,
+.dl-table-align--left dt,
+.dl-table-align--left dd {
+  text-align: left;
+}
+
+.dl-table-align--dt-center dt,
+.dl-table-align--dd-center dd,
+.dl-table-align--center dt,
+.dl-table-align--center dd {
+  text-align: center;
+}
+
+.dl-table-align--dt-right dt,
+.dl-table-align--dd-right dd,
+.dl-table-align--right dt,
+.dl-table-align--right dd {
+  text-align: right;
+}
+
+/* ===========================================================
+
+	date-list
+
+=========================================================== */
+.date-list {
+  display: table;
+  border-collapse: collapse;
+}
+
+.date-list > dl {
+  display: table-row;
+}
+
+.date-list > dl > dt,
+.date-list > dl > dd {
+  display: table-cell;
+}
+
+.date-list > dl > dt {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.date-list > dl > dd {
+  vertical-align: middle;
+}
+
+.date-list > p {
+  display: table-caption;
+}
+
+.date-list-responsive {
+  display: block;
+}
+
+.date-list-responsive > dl {
+  display: block;
+}
+
+.date-list-responsive > dl > dt,
+.date-list-responsive > dl > dd,
+.date-list-responsive > p {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .date-list-responsive {
+    display: table;
+    border-collapse: collapse;
+  }
+  .date-list-responsive > dl {
+    display: table-row;
+  }
+  .date-list-responsive > dl > dt,
+  .date-list-responsive > dl > dd {
+    display: table-cell;
+  }
+  .date-list-responsive > dl > dt {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  .date-list-responsive > dl > dd {
+    vertical-align: middle;
+  }
+  .date-list-responsive > p {
+    display: table-caption;
   }
 }
 

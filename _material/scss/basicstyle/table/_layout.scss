@@ -7,10 +7,10 @@ table.table-layout--fixed {
   th,
   td { width: auto; white-space: normal; }
 }
-table th.cell-width--fit, //削除予定
+table th.cell-width--fit, /*削除予定*/
 table td.cell-width--fit, //削除予定
-table th.fit,
-table td.fit {
+table th.width--fit,
+table td.width--fit {
     width: 1% !important;
     white-space: nowrap !important;
 }
@@ -19,28 +19,28 @@ table td.fit {
 
 table th.cell-border--none, //削除予定
 table td.cell-border--none, //削除予定
-table th.border-none,
-table td.border-none { border: none !important; }
+table th.border--none,
+table td.border--none { border: none !important; }
 
 table th.cell-border--top-none, //削除予定
 table td.cell-border--top-none, //削除予定
-table th.border-top-none,
-table td.border-top-none { border-top: none !important; }
+table th.border-top--none,
+table td.border-top--none { border-top: none !important; }
 
 table th.cell-border--left-none, //削除予定
 table td.cell-border--left-none, //削除予定
-table th.border-left-none,
-table td.border-left-none { border-left: none !important; }
+table th.border-left--none,
+table td.border-left--none { border-left: none !important; }
 
 table th.cell-border--right-none, //削除予定
 table td.cell-border--right-none, //削除予定
-table th.border-right-none,
-table td.border-right-none { border-right: none !important; }
+table th.border-right--none,
+table td.border-right--none { border-right: none !important; }
 
 table th.cell-border--bottom-none, //削除予定
 table td.cell-border--bottom-none, //削除予定
-table th.border-bottom-none,
-table td.border-bottom-none { border-bottom: none !important; }
+table th.border-bottom--none,
+table td.border-bottom--none { border-bottom: none !important; }
 
 /* align */
 
