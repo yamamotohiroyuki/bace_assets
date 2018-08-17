@@ -6,7 +6,7 @@ const sass = require('gulp-sass');
 
 gulp.task('default', function () {
   // ★ style.scssファイルを監視
-  gulp.watch('scss/basicstyle.scss', function () {
+  gulp.watch('scss/**/*.scss', function () {
     // style.scssの更新があった場合の処理
   
     // style.scssファイルを取得
