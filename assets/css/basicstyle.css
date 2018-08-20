@@ -400,6 +400,25 @@ td {
   font-weight: inherit;
 }
 
+caption {
+  text-align: left;
+}
+
+thead th,
+thead td {
+  text-align: center;
+}
+
+tbody th,
+tbody td {
+  text-align: left;
+}
+
+tfoot th,
+tfoot td {
+  text-align: left;
+}
+
 /*====================================
 
     2.1. Layout Style
