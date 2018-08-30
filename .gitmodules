@@ -12,3 +12,6 @@
 [submodule "_submodule/slick"]
 	path = _submodule/slick
 	url = https://github.com/kenwheeler/slick/
+[submodule "_submodule/Fixed-Header-Table"]
+	path = _submodule/Fixed-Header-Table
+	url = https://github.com/markmalek/Fixed-Header-Table
