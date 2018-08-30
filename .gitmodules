@@ -15,3 +15,6 @@
 [submodule "_submodule/Fixed-Header-Table"]
 	path = _submodule/Fixed-Header-Table
 	url = https://github.com/markmalek/Fixed-Header-Table
+[submodule "_submodule/jquery-mousewheel"]
+	path = _submodule/jquery-mousewheel
+	url = https://github.com/jquery/jquery-mousewheel
