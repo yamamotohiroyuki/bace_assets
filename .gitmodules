@@ -18,3 +18,9 @@
 [submodule "_submodule/jquery-mousewheel"]
 	path = _submodule/jquery-mousewheel
 	url = https://github.com/jquery/jquery-mousewheel
+[submodule "_submodule/jquery"]
+	path = _submodule/jquery
+	url = https://github.com/jquery/jquery
+[submodule "_submodule/hover-css"]
+	path = _submodule/hover-css
+	url = https://github.com/IanLunn/Hover
