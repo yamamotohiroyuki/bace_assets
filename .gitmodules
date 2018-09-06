@@ -24,3 +24,9 @@
 [submodule "_submodule/hover-css"]
 	path = _submodule/hover-css
 	url = https://github.com/IanLunn/Hover
+[submodule "_submodule/foundation"]
+	path = _submodule/foundation
+	url = https://github.com/zurb/foundation-sites
+[submodule "_submodule/siimple"]
+	path = _submodule/siimple
+	url = https://github.com/siimple/siimple
