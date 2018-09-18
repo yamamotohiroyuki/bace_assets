@@ -23,3 +23,18 @@
 $list_margin: 2.5em;
 //サイズの書き出し刻み方
 $size_num: 5;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  x-small: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  x-large: 1200px
+) !default;
+
