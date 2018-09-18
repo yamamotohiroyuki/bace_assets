@@ -17,42 +17,116 @@
     0.8. Form
     0.9. IE （削除予定）
     0.10. HTML Bace Setting
+    0.11. Font Face
  
     ----------------------------------
         Change Log
     ----------------------------------
-    -2018/8/8   Founding
+    -2018/09/07   add "Font Face"
+    -2018/08/08   Founding
     
 ====================================*/
+
 /*====================================
 
     0.0. Full Reset
 
 ====================================*/
 
-html, body,
-div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, abbr, address,
-cite, code, del, dfn, em,
-img, ins, kbd, q, samp, small, strong, sub, sup,
-var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure,
-header, main, footer, menu, nav, section,
-time, mark, audio, video, details, summary {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font-weight: inherit;
-	vertical-align: baseline;
-	background: transparent;
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  } // stylelint-disable-line at-rule-no-vendor-prefix
 }
 
-article, aside, figure,
-header, main, footer, nav, section,
-details, summary { display: block; }
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+header,
+main,
+footer,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+figure,
+header,
+main,
+footer,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
 
 /*====================================
 
@@ -63,14 +137,15 @@ details, summary { display: block; }
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
+
 :invalid,
 :-moz-submit-invalid,
 :-moz-ui-invalid {
-  box-shadow:none;
+  box-shadow: none;
 }
 
 /*====================================
@@ -78,17 +153,24 @@ details, summary { display: block; }
     0.2. Objects
 
 ====================================*/
+
 img,
 object,
-embed { max-width: 100%; }
+embed {
+  max-width: 100%;
+}
 
 /*====================================
 
     0.3. List reset
 
 ====================================*/
+
 /* we use a lot of ULs that aren't bulleted. don't forget to restore the bullets within content. */
-ul { list-style: none; }
+
+ul {
+  list-style: none;
+}
 
 /*====================================
 
@@ -96,12 +178,18 @@ ul { list-style: none; }
 
 ====================================*/
 
-blockquote, q {quotes: none;}
+blockquote,
+q {
+  quotes: none;
+}
 
-blockquote:before, 
-blockquote:after, 
-q:before, 
-q:after {content: ''; content: none;}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
 
 /*====================================
 
@@ -110,10 +198,15 @@ q:after {content: ''; content: none;}
 ====================================*/
 
 a {
-    margin: 0; padding: 0; font-size: 100%;
-    vertical-align: baseline; background: transparent;
-    font-style: inherit; font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: inherit;
+  font-weight: inherit;
 }
+
 /*====================================
 
     0.6. hr
@@ -121,10 +214,12 @@ a {
 ====================================*/
 
 hr {
-    display: block;
-    height: 1px; border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0; padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*====================================
@@ -134,15 +229,22 @@ hr {
 ====================================*/
 
 /* standardize any monospaced elements */
-pre, code, kbd, samp { }
+
+pre,
+code,
+kbd,
+samp {}
 
 pre {
-    white-space: pre; /* CSS2 */
-    white-space: pre-wrap; /* CSS 2.1 */
-    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word; /* IE */
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
 }
-
 
 /*====================================
 
@@ -151,26 +253,51 @@ pre {
 ====================================*/
 
 /* hand cursor on clickable elements */
+
 .clickable,
 label,
-input[type="button"], 
-input[type="submit"], 
-input[type="file"], 
-button {cursor: "pointer";}
+input[type="button"],
+input[type="submit"],
+input[type="file"],
+button {
+  cursor: "pointer";
+}
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea { margin: 0; }
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
 
 /* make buttons play nice in IE */
+
 button,
-input[type="button"] {width: auto; overflow: visible;}
+input[type="button"] {
+  width: auto;
+  overflow: visible;
+}
 
-input, select { vertical-align: middle; }
+input,
+select {
+  vertical-align: middle;
+}
 
-input[type="radio"] {vertical-align: text-bottom;}
-input[type="checkbox"] {vertical-align: bottom;}
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
 
-select, input, textarea { font-size: 100%; }
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+select,
+input,
+textarea {
+  font-size: 100%;
+}
 
 /*====================================
 
@@ -179,10 +306,18 @@ select, input, textarea { font-size: 100%; }
 ====================================*/
 
 /* scale images in IE7 more attractively */
-.ie7 img {-ms-interpolation-mode: bicubic;}
 
-.ie7 input[type="checkbox"] {vertical-align: baseline;}
-.ie6 input {vertical-align: text-bottom;}
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
 
 /*====================================
 
@@ -190,6 +325,81 @@ select, input, textarea { font-size: 100%; }
 
 ====================================*/
 
-html { font-size: 62.5%; overflow-y: scroll; }
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+/*====================================
+
+    0.11. Font Face
+
+====================================*/
+/*
+游ゴシックおよび游明朝の時
+WindowsとMacでフォントの太さを揃える時の設定
+*/
+/* 游ゴシック */
+@font-face {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	src: local("Yu Gothic Medium");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	src: local("Yu Gothic Medium");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	src: local("Yu Gothic Medium");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	src: local("Yu Gothic Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	src: local("Yu Gothic Medium");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	src: local("Yu Gothic Bold");
+	font-weight: bold;
+}
 
 
+/* 游明朝 */
+@font-face {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	src: local("Yu Mincho Medium");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	src: local("Yu Mincho Medium");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	src: local("Yu Gothic Medium");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	src: local("Yu Mincho Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	src: local("Yu Mincho Medium");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	src: local("Yu Mincho Bold");
+	font-weight: bold;
+}
