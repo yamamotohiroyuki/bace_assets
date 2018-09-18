@@ -1,0 +1,1024 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fs9sau');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fs9sau#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?fs9sau') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?fs9sau') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?fs9sau##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bi {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-angle_left {
+  &:before {
+    content: $bi-angle_left; 
+  }
+}
+.bi-angle_right {
+  &:before {
+    content: $bi-angle_right; 
+  }
+}
+.bi-angle_up {
+  &:before {
+    content: $bi-angle_up; 
+  }
+}
+.bi-angle_down {
+  &:before {
+    content: $bi-angle_down; 
+  }
+}
+.bi-angle_left-right {
+  &:before {
+    content: $bi-angle_left-right; 
+  }
+}
+.bi-angle_up-down {
+  &:before {
+    content: $bi-angle_up-down; 
+  }
+}
+.bi-angle_left-border-square {
+  &:before {
+    content: $bi-angle_left-border-square; 
+  }
+}
+.bi-angle_right-border-square {
+  &:before {
+    content: $bi-angle_right-border-square; 
+  }
+}
+.bi-angle_up-border-square {
+  &:before {
+    content: $bi-angle_up-border-square; 
+  }
+}
+.bi-angle_down-border-square {
+  &:before {
+    content: $bi-angle_down-border-square; 
+  }
+}
+.bi-angle_left-border-circle {
+  &:before {
+    content: $bi-angle_left-border-circle; 
+  }
+}
+.bi-angle_right-border-circle {
+  &:before {
+    content: $bi-angle_right-border-circle; 
+  }
+}
+.bi-angle_up-border-circle {
+  &:before {
+    content: $bi-angle_up-border-circle; 
+  }
+}
+.bi-angle_down-border-circle {
+  &:before {
+    content: $bi-angle_down-border-circle; 
+  }
+}
+.bi-angle_left-square {
+  &:before {
+    content: $bi-angle_left-square; 
+  }
+}
+.bi-angle_right-square {
+  &:before {
+    content: $bi-angle_right-square; 
+  }
+}
+.bi-angle_up-square {
+  &:before {
+    content: $bi-angle_up-square; 
+  }
+}
+.bi-angle_down-square {
+  &:before {
+    content: $bi-angle_down-square; 
+  }
+}
+.bi-angle_left-circle {
+  &:before {
+    content: $bi-angle_left-circle; 
+  }
+}
+.bi-angle_right-circle {
+  &:before {
+    content: $bi-angle_right-circle; 
+  }
+}
+.bi-angle_up-circle {
+  &:before {
+    content: $bi-angle_up-circle; 
+  }
+}
+.bi-angle_down-circle {
+  &:before {
+    content: $bi-angle_down-circle; 
+  }
+}
+.bi-angle-light_left {
+  &:before {
+    content: $bi-angle-light_left; 
+  }
+}
+.bi-angle-light_right {
+  &:before {
+    content: $bi-angle-light_right; 
+  }
+}
+.bi-angle-light_up {
+  &:before {
+    content: $bi-angle-light_up; 
+  }
+}
+.bi-angle-light_down {
+  &:before {
+    content: $bi-angle-light_down; 
+  }
+}
+.bi-angle-light_left-right {
+  &:before {
+    content: $bi-angle-light_left-right; 
+  }
+}
+.bi-angle-light_up-down {
+  &:before {
+    content: $bi-angle-light_up-down; 
+  }
+}
+.bi-angle-light_left-border-square {
+  &:before {
+    content: $bi-angle-light_left-border-square; 
+  }
+}
+.bi-angle-light_right-border-square {
+  &:before {
+    content: $bi-angle-light_right-border-square; 
+  }
+}
+.bi-angle-light_up-border-square {
+  &:before {
+    content: $bi-angle-light_up-border-square; 
+  }
+}
+.bi-angle-light_down-border-square {
+  &:before {
+    content: $bi-angle-light_down-border-square; 
+  }
+}
+.bi-angle-light_left-border-circle {
+  &:before {
+    content: $bi-angle-light_left-border-circle; 
+  }
+}
+.bi-angle-light_right-border-circle {
+  &:before {
+    content: $bi-angle-light_right-border-circle; 
+  }
+}
+.bi-angle-light_up-border-circle {
+  &:before {
+    content: $bi-angle-light_up-border-circle; 
+  }
+}
+.bi-angle-light_down-border-circle {
+  &:before {
+    content: $bi-angle-light_down-border-circle; 
+  }
+}
+.bi-angle-light_left-square {
+  &:before {
+    content: $bi-angle-light_left-square; 
+  }
+}
+.bi-angle-light_right-square {
+  &:before {
+    content: $bi-angle-light_right-square; 
+  }
+}
+.bi-angle-light_up-square {
+  &:before {
+    content: $bi-angle-light_up-square; 
+  }
+}
+.bi-angle-light_down-square {
+  &:before {
+    content: $bi-angle-light_down-square; 
+  }
+}
+.bi-angle-light_left-circle {
+  &:before {
+    content: $bi-angle-light_left-circle; 
+  }
+}
+.bi-angle-light_right-circle {
+  &:before {
+    content: $bi-angle-light_right-circle; 
+  }
+}
+.bi-angle-light_up-circle {
+  &:before {
+    content: $bi-angle-light_up-circle; 
+  }
+}
+.bi-angle-light_down-circle {
+  &:before {
+    content: $bi-angle-light_down-circle; 
+  }
+}
+.bi-angle-bold_left {
+  &:before {
+    content: $bi-angle-bold_left; 
+  }
+}
+.bi-angle-bold_right {
+  &:before {
+    content: $bi-angle-bold_right; 
+  }
+}
+.bi-angle-bold_up {
+  &:before {
+    content: $bi-angle-bold_up; 
+  }
+}
+.bi-angle-bold_down {
+  &:before {
+    content: $bi-angle-bold_down; 
+  }
+}
+.bi-angle-bold_left-right {
+  &:before {
+    content: $bi-angle-bold_left-right; 
+  }
+}
+.bi-angle-bold_up-down {
+  &:before {
+    content: $bi-angle-bold_up-down; 
+  }
+}
+.bi-angle-bold_left-border-square {
+  &:before {
+    content: $bi-angle-bold_left-border-square; 
+  }
+}
+.bi-angle-bold_right-border-square {
+  &:before {
+    content: $bi-angle-bold_right-border-square; 
+  }
+}
+.bi-angle-bold_up-border-square {
+  &:before {
+    content: $bi-angle-bold_up-border-square; 
+  }
+}
+.bi-angle-bold_down-border-square {
+  &:before {
+    content: $bi-angle-bold_down-border-square; 
+  }
+}
+.bi-angle-bold_left-border-circle {
+  &:before {
+    content: $bi-angle-bold_left-border-circle; 
+  }
+}
+.bi-angle-bold_right-border-circle {
+  &:before {
+    content: $bi-angle-bold_right-border-circle; 
+  }
+}
+.bi-angle-bold_up-border-circle {
+  &:before {
+    content: $bi-angle-bold_up-border-circle; 
+  }
+}
+.bi-angle-bold_down-border-circle {
+  &:before {
+    content: $bi-angle-bold_down-border-circle; 
+  }
+}
+.bi-angle-bold_left-square {
+  &:before {
+    content: $bi-angle-bold_left-square; 
+  }
+}
+.bi-angle-bold_right-square {
+  &:before {
+    content: $bi-angle-bold_right-square; 
+  }
+}
+.bi-angle-bold_up-square {
+  &:before {
+    content: $bi-angle-bold_up-square; 
+  }
+}
+.bi-angle-bold_down-square {
+  &:before {
+    content: $bi-angle-bold_down-square; 
+  }
+}
+.bi-angle-bold_left-circle {
+  &:before {
+    content: $bi-angle-bold_left-circle; 
+  }
+}
+.bi-angle-bold_right-circle {
+  &:before {
+    content: $bi-angle-bold_right-circle; 
+  }
+}
+.bi-angle-bold_up-circle {
+  &:before {
+    content: $bi-angle-bold_up-circle; 
+  }
+}
+.bi-angle-bold_down-circle {
+  &:before {
+    content: $bi-angle-bold_down-circle; 
+  }
+}
+.bi-caret_left {
+  &:before {
+    content: $bi-caret_left; 
+  }
+}
+.bi-caret_right {
+  &:before {
+    content: $bi-caret_right; 
+  }
+}
+.bi-caret_up {
+  &:before {
+    content: $bi-caret_up; 
+  }
+}
+.bi-caret_down {
+  &:before {
+    content: $bi-caret_down; 
+  }
+}
+.bi-caret_left-right {
+  &:before {
+    content: $bi-caret_left-right; 
+  }
+}
+.bi-caret_up-down {
+  &:before {
+    content: $bi-caret_up-down; 
+  }
+}
+.bi-caret_left-border-square {
+  &:before {
+    content: $bi-caret_left-border-square; 
+  }
+}
+.bi-caret_right-border-square {
+  &:before {
+    content: $bi-caret_right-border-square; 
+  }
+}
+.bi-caret_up-border-square {
+  &:before {
+    content: $bi-caret_up-border-square; 
+  }
+}
+.bi-caret_down-border-square {
+  &:before {
+    content: $bi-caret_down-border-square; 
+  }
+}
+.bi-caret_left-border-circle {
+  &:before {
+    content: $bi-caret_left-border-circle; 
+  }
+}
+.bi-caret_right-border-circle {
+  &:before {
+    content: $bi-caret_right-border-circle; 
+  }
+}
+.bi-caret_up-border-circle {
+  &:before {
+    content: $bi-caret_up-border-circle; 
+  }
+}
+.bi-caret_down-border-circle {
+  &:before {
+    content: $bi-caret_down-border-circle; 
+  }
+}
+.bi-caret_left-square {
+  &:before {
+    content: $bi-caret_left-square; 
+  }
+}
+.bi-caret_right-square {
+  &:before {
+    content: $bi-caret_right-square; 
+  }
+}
+.bi-caret_up-square {
+  &:before {
+    content: $bi-caret_up-square; 
+  }
+}
+.bi-caret_down-square {
+  &:before {
+    content: $bi-caret_down-square; 
+  }
+}
+.bi-caret_left-circle {
+  &:before {
+    content: $bi-caret_left-circle; 
+  }
+}
+.bi-caret_right-circle {
+  &:before {
+    content: $bi-caret_right-circle; 
+  }
+}
+.bi-caret_up-circle {
+  &:before {
+    content: $bi-caret_up-circle; 
+  }
+}
+.bi-caret_down-circle {
+  &:before {
+    content: $bi-caret_down-circle; 
+  }
+}
+.bi-arrow_left {
+  &:before {
+    content: $bi-arrow_left; 
+  }
+}
+.bi-arrow_right {
+  &:before {
+    content: $bi-arrow_right; 
+  }
+}
+.bi-arrow_up {
+  &:before {
+    content: $bi-arrow_up; 
+  }
+}
+.bi-arrow_down {
+  &:before {
+    content: $bi-arrow_down; 
+  }
+}
+.bi-arrow_left-right {
+  &:before {
+    content: $bi-arrow_left-right; 
+  }
+}
+.bi-arrow_up-down {
+  &:before {
+    content: $bi-arrow_up-down; 
+  }
+}
+.bi-arrow_left-border-circle {
+  &:before {
+    content: $bi-arrow_left-border-circle; 
+  }
+}
+.bi-arrow_right-border-circle {
+  &:before {
+    content: $bi-arrow_right-border-circle; 
+  }
+}
+.bi-arrow_up-border-circle {
+  &:before {
+    content: $bi-arrow_up-border-circle; 
+  }
+}
+.bi-arrow_down-border-circle {
+  &:before {
+    content: $bi-arrow_down-border-circle; 
+  }
+}
+.bi-arrow_left-border-square {
+  &:before {
+    content: $bi-arrow_left-border-square; 
+  }
+}
+.bi-arrow_right-border-square {
+  &:before {
+    content: $bi-arrow_right-border-square; 
+  }
+}
+.bi-arrow_up-border-square {
+  &:before {
+    content: $bi-arrow_up-border-square; 
+  }
+}
+.bi-arrow_down-border-square {
+  &:before {
+    content: $bi-arrow_down-border-square; 
+  }
+}
+.bi-arrow_left-circle {
+  &:before {
+    content: $bi-arrow_left-circle; 
+  }
+}
+.bi-arrow_right-circle {
+  &:before {
+    content: $bi-arrow_right-circle; 
+  }
+}
+.bi-arrow_up-circle {
+  &:before {
+    content: $bi-arrow_up-circle; 
+  }
+}
+.bi-arrow_down-circle {
+  &:before {
+    content: $bi-arrow_down-circle; 
+  }
+}
+.bi-arrow_left-square {
+  &:before {
+    content: $bi-arrow_left-square; 
+  }
+}
+.bi-arrow_right-square {
+  &:before {
+    content: $bi-arrow_right-square; 
+  }
+}
+.bi-arrow_up-square {
+  &:before {
+    content: $bi-arrow_up-square; 
+  }
+}
+.bi-arrow_down-square {
+  &:before {
+    content: $bi-arrow_down-square; 
+  }
+}
+.bi-arrow-bold_left {
+  &:before {
+    content: $bi-arrow-bold_left; 
+  }
+}
+.bi-arrow-bold_right {
+  &:before {
+    content: $bi-arrow-bold_right; 
+  }
+}
+.bi-arrow-bold_up {
+  &:before {
+    content: $bi-arrow-bold_up; 
+  }
+}
+.bi-arrow-bold_down {
+  &:before {
+    content: $bi-arrow-bold_down; 
+  }
+}
+.bi-arrow-bold_left-right {
+  &:before {
+    content: $bi-arrow-bold_left-right; 
+  }
+}
+.bi-arrow-bold_up-down {
+  &:before {
+    content: $bi-arrow-bold_up-down; 
+  }
+}
+.bi-arrow-bold_left-border-circle {
+  &:before {
+    content: $bi-arrow-bold_left-border-circle; 
+  }
+}
+.bi-arrow-bold_right-border-circle {
+  &:before {
+    content: $bi-arrow-bold_right-border-circle; 
+  }
+}
+.bi-arrow-bold_up-border-circle {
+  &:before {
+    content: $bi-arrow-bold_up-border-circle; 
+  }
+}
+.bi-arrow-bold_down-border-circle {
+  &:before {
+    content: $bi-arrow-bold_down-border-circle; 
+  }
+}
+.bi-arrow-bold_left-border-square {
+  &:before {
+    content: $bi-arrow-bold_left-border-square; 
+  }
+}
+.bi-arrow-bold_right-border-square {
+  &:before {
+    content: $bi-arrow-bold_right-border-square; 
+  }
+}
+.bi-arrow-bold_up-border-square {
+  &:before {
+    content: $bi-arrow-bold_up-border-square; 
+  }
+}
+.bi-arrow-bold_down-border-square {
+  &:before {
+    content: $bi-arrow-bold_down-border-square; 
+  }
+}
+.bi-arrow-bold_left-circle {
+  &:before {
+    content: $bi-arrow-bold_left-circle; 
+  }
+}
+.bi-arrow-bold_right-circle {
+  &:before {
+    content: $bi-arrow-bold_right-circle; 
+  }
+}
+.bi-arrow-bold_up-circle {
+  &:before {
+    content: $bi-arrow-bold_up-circle; 
+  }
+}
+.bi-arrow-bold_down-circle {
+  &:before {
+    content: $bi-arrow-bold_down-circle; 
+  }
+}
+.bi-arrow-bold_left-square {
+  &:before {
+    content: $bi-arrow-bold_left-square; 
+  }
+}
+.bi-arrow-bold_right-square {
+  &:before {
+    content: $bi-arrow-bold_right-square; 
+  }
+}
+.bi-arrow-bold_up-square {
+  &:before {
+    content: $bi-arrow-bold_up-square; 
+  }
+}
+.bi-arrow-bold_down-square {
+  &:before {
+    content: $bi-arrow-bold_down-square; 
+  }
+}
+.bi-files_border-blank-light {
+  &:before {
+    content: $bi-files_border-blank-light; 
+  }
+}
+.bi-files_border-pdf-light {
+  &:before {
+    content: $bi-files_border-pdf-light; 
+  }
+}
+.bi-files_border-excel-light {
+  &:before {
+    content: $bi-files_border-excel-light; 
+  }
+}
+.bi-files_border-word-light {
+  &:before {
+    content: $bi-files_border-word-light; 
+  }
+}
+.bi-files_border-powerpoint-light {
+  &:before {
+    content: $bi-files_border-powerpoint-light; 
+  }
+}
+.bi-files_border-video-light {
+  &:before {
+    content: $bi-files_border-video-light; 
+  }
+}
+.bi-files_border-zip-light {
+  &:before {
+    content: $bi-files_border-zip-light; 
+  }
+}
+.bi-files_border-blank {
+  &:before {
+    content: $bi-files_border-blank; 
+  }
+}
+.bi-files_border-pdf {
+  &:before {
+    content: $bi-files_border-pdf; 
+  }
+}
+.bi-files_border-excel {
+  &:before {
+    content: $bi-files_border-excel; 
+  }
+}
+.bi-files_border-word {
+  &:before {
+    content: $bi-files_border-word; 
+  }
+}
+.bi-files_border-powerpoint {
+  &:before {
+    content: $bi-files_border-powerpoint; 
+  }
+}
+.bi-files_border-video {
+  &:before {
+    content: $bi-files_border-video; 
+  }
+}
+.bi-files_border-zip {
+  &:before {
+    content: $bi-files_border-zip; 
+  }
+}
+.bi-files_solid-blank {
+  &:before {
+    content: $bi-files_solid-blank; 
+  }
+}
+.bi-files_solid-pdf {
+  &:before {
+    content: $bi-files_solid-pdf; 
+  }
+}
+.bi-files_solid-excel {
+  &:before {
+    content: $bi-files_solid-excel; 
+  }
+}
+.bi-files_solid-word {
+  &:before {
+    content: $bi-files_solid-word; 
+  }
+}
+.bi-files_solid-powerpoint {
+  &:before {
+    content: $bi-files_solid-powerpoint; 
+  }
+}
+.bi-files_solid-video {
+  &:before {
+    content: $bi-files_solid-video; 
+  }
+}
+.bi-files_solid-zip {
+  &:before {
+    content: $bi-files_solid-zip; 
+  }
+}
+.bi-files_icon-pdf {
+  &:before {
+    content: $bi-files_icon-pdf; 
+  }
+}
+.bi-files_icon-excel {
+  &:before {
+    content: $bi-files_icon-excel; 
+  }
+}
+.bi-files_icon-word {
+  &:before {
+    content: $bi-files_icon-word; 
+  }
+}
+.bi-files_icon-powerpoint {
+  &:before {
+    content: $bi-files_icon-powerpoint; 
+  }
+}
+.bi-files_icon-video {
+  &:before {
+    content: $bi-files_icon-video; 
+  }
+}
+.bi-files_icon-zip {
+  &:before {
+    content: $bi-files_icon-zip; 
+  }
+}
+.bi-blank_line {
+  &:before {
+    content: $bi-blank_line; 
+  }
+}
+.bi-blank_window {
+  &:before {
+    content: $bi-blank_window; 
+  }
+}
+.bi-blank_arrow-line {
+  &:before {
+    content: $bi-blank_arrow-line; 
+  }
+}
+.bi-blank_external-box {
+  &:before {
+    content: $bi-blank_external-box; 
+  }
+}
+.bi-blank_external {
+  &:before {
+    content: $bi-blank_external; 
+  }
+}
+.bi-blank_bold-line {
+  &:before {
+    content: $bi-blank_bold-line; 
+  }
+}
+.bi-blank_bold-window {
+  &:before {
+    content: $bi-blank_bold-window; 
+  }
+}
+.bi-blank_bold-arrow-line {
+  &:before {
+    content: $bi-blank_bold-arrow-line; 
+  }
+}
+.bi-blank_bold-external-box {
+  &:before {
+    content: $bi-blank_bold-external-box; 
+  }
+}
+.bi-blank_bold-external {
+  &:before {
+    content: $bi-blank_bold-external; 
+  }
+}
+.bi-icons_envelope {
+  &:before {
+    content: $bi-icons_envelope; 
+  }
+}
+.bi-icons_envelope-regular {
+  &:before {
+    content: $bi-icons_envelope-regular; 
+  }
+}
+.bi-icons_envelope-light {
+  &:before {
+    content: $bi-icons_envelope-light; 
+  }
+}
+.bi-icons_global {
+  &:before {
+    content: $bi-icons_global; 
+  }
+}
+.bi-icons_globe-regular {
+  &:before {
+    content: $bi-icons_globe-regular; 
+  }
+}
+.bi-icons_globe-light {
+  &:before {
+    content: $bi-icons_globe-light; 
+  }
+}
+.bi-icons_download {
+  &:before {
+    content: $bi-icons_download; 
+  }
+}
+.bi-icons_download-regular {
+  &:before {
+    content: $bi-icons_download-regular; 
+  }
+}
+.bi-icons_download-light {
+  &:before {
+    content: $bi-icons_download-light; 
+  }
+}
+.bi-icons_rss {
+  &:before {
+    content: $bi-icons_rss; 
+  }
+}
+.bi-icons_rss-regular {
+  &:before {
+    content: $bi-icons_rss-regular; 
+  }
+}
+.bi-icons_rss-light {
+  &:before {
+    content: $bi-icons_rss-light; 
+  }
+}
+.bi-icons_signout {
+  &:before {
+    content: $bi-icons_signout; 
+  }
+}
+.bi-icons_signin {
+  &:before {
+    content: $bi-icons_signin; 
+  }
+}
+.bi-icons_flamein {
+  &:before {
+    content: $bi-icons_flamein; 
+  }
+}
+.bi-icons_flamein-regular {
+  &:before {
+    content: $bi-icons_flamein-regular; 
+  }
+}
+.bi-icons_flamedown-regular {
+  &:before {
+    content: $bi-icons_flamedown-regular; 
+  }
+}
+.bi-icons_flamein-light {
+  &:before {
+    content: $bi-icons_flamein-light; 
+  }
+}
+.bi-icons_flamedown {
+  &:before {
+    content: $bi-icons_flamedown; 
+  }
+}
+.bi-icons_flamedown-light {
+  &:before {
+    content: $bi-icons_flamedown-light; 
+  }
+}
+.bi-icons_flameout-light {
+  &:before {
+    content: $bi-icons_flameout-light; 
+  }
+}
+.bi-icons_flameout-regular {
+  &:before {
+    content: $bi-icons_flameout-regular; 
+  }
+}
+.bi-icons_flameout {
+  &:before {
+    content: $bi-icons_flameout; 
+  }
+}
+.bi-icons_flameup-light {
+  &:before {
+    content: $bi-icons_flameup-light; 
+  }
+}
+.bi-icons_flameup-regular {
+  &:before {
+    content: $bi-icons_flameup-regular; 
+  }
+}
+.bi-icons_flameup {
+  &:before {
+    content: $bi-icons_flameup; 
+  }
+}
+.bi-icons_signin-light {
+  &:before {
+    content: $bi-icons_signin-light; 
+  }
+}
+.bi-icons_signin-regular {
+  &:before {
+    content: $bi-icons_signin-regular; 
+  }
+}
+.bi-icons_signout-light {
+  &:before {
+    content: $bi-icons_signout-light; 
+  }
+}
+.bi-icons_signout-regular {
+  &:before {
+    content: $bi-icons_signout-regular; 
+  }
+}
+
