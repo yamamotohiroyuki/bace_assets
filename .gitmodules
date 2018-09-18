@@ -30,3 +30,6 @@
 [submodule "_submodule/siimple"]
 	path = _submodule/siimple
 	url = https://github.com/siimple/siimple
+[submodule "_submodule/sticky-kit"]
+	path = _submodule/sticky-kit
+	url = https://github.com/leafo/sticky-kit
