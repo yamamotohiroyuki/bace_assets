@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+
+/* dl-table */
+.dl-table {
+    display: table;
+    margin: 1.0em 0;
+    border-collapse: collapse;
+    .dl-table {
+        margin: 0;
+    }
+    .dl-table-responsive {
+        margin: 0;
+    }
+}
+
+.dl-table__caption {
+    display: table-caption;
+}
+
+.dl-table__header {
+    display: table-header-group;
+}
+
+.dl-table__body {
+    display: table-row-group;
+}
+
+.dl-table__footer {
+    display: table-footer-group;
+}
+
+.dl-table,
+.dl-table__header,
+.dl-table__body,
+.dl-table__footer {
+    dl {
+        display: table-row;
+        dt,
+        dd {
+            display: table-cell;
+        }
+    }
+}
+
+.dl-table-responsive {
+    display: block;
+    margin: 1.0em 0;
+    .dl-table {
+        margin: 0;
+    }
+    .dl-table-responsive {
+        margin: 0;
+    }
+}
+
+.dl-table-responsive .dl-table__caption {
+    display: block;
+}
+
+.dl-table-responsive .dl-table__header {
+    display: block;
+}
+
+.dl-table-responsive .dl-table__body {
+    display: block;
+}
+
+.dl-table-responsive .dl-table__footer {
+    display: block;
+}
+
+.dl-table-responsive,
+.dl-table-responsive .dl-table__header,
+.dl-table-responsive .dl-table__body,
+.dl-table-responsive .dl-table__footer {
+    dl {
+        display: block;
+        dt,
+        dd {
+        display: block;
+    }
+    }
+}
+
+@media print,
+screen and (min-width:768px) {
+    .dl-table-responsive {
+        display: table;
+        border-collapse: collapse;
+        .dl-table {
+            margin: 0;
+        }
+        .dl-table-responsive {
+            margin: 0;
+        }
+    }
+    .dl-table-responsive .dl-table__caption {
+        display: table-caption;
+    }
+    .dl-table-responsive .dl-table__header {
+        display: table-header-group;
+    }
+    .dl-table-responsive .dl-table__body {
+        display: table-row-group;
+    }
+    .dl-table-responsive .dl-table__footer {
+        display: table-footer-group;
+    }
+    .dl-table-responsive,
+    .dl-table-responsive .dl-table__header,
+    .dl-table-responsive .dl-table__body,
+    .dl-table-responsive .dl-table__footer {
+        dl {
+            display: table-row;
+            dt,
+            dd {
+               display: table-cell;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@include media-breakpoint-down(small) {
+    table.is-responsive,
+    table.is-responsive caption,
+    table.is-responsive thead,
+    table.is-responsive tbody,
+    table.is-responsive tfoot,
+    table.is-responsive tr,
+    table.is-responsive th,
+    table.is-responsive td { display: block; }
+
+    table.is-responsive { }
+    table.is-responsive caption { }
+    table.is-responsive thead { }
+    table.is-responsive tbody { }
+    table.is-responsive tfoot { }
+    table.is-responsive tr { }
+    table.is-responsive th { }
+    table.is-responsive td { }
+}

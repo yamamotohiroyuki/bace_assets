@@ -1,0 +1,1370 @@
+@charset "UTF-8";
+/*! v1.0.6 */
+/* Scss Document */
+/* =======================================================
+***********************************************************
+このファイルはSCSSで作成されています。
+数値の調整などは、
+/assets/scss/basic-style/のなかのファイルを編集してください。
+***********************************************************
+======================================================== */
+/* =======================================================
+    Variables
+======================================================== */
+/*====================================
+
+  * Variables
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    *.0. Default
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/8/16   Founding
+    
+====================================*/
+/*====================================
+
+    *.0. Default
+
+====================================*/
+/* =======================================================
+    bourbon
+======================================================== */
+/* =======================================================
+    bootstrap
+======================================================== */
+/* =======================================================
+    import style
+======================================================== */
+/*====================================
+
+  0.Reset Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. Full Reset
+    0.1. Border Box
+    0.2. Objects
+    0.3. List reset
+    0.4. Blockquote reset
+    0.5. link tag
+    0.6. hr
+    0.7. Computer code
+    0.8. Form
+    0.9. IE （削除予定）
+    0.10. HTML Bace Setting
+    0.11. Font Face
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/09/19   add Form
+    -2018/09/07   add "Font Face"
+    -2018/08/08   Founding
+    
+====================================*/
+/*====================================
+
+    0.0. Full Reset
+
+====================================*/
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  line-height: 1.15;
+  /* normalize.css */
+  -webkit-text-size-adjust: 100%;
+  /* normalize.css */
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+header,
+main,
+footer,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+figure,
+header,
+main,
+footer,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+/*====================================
+
+    0.1. Border Box
+
+====================================*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:invalid,
+:-moz-submit-invalid,
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*====================================
+
+    0.2. Objects
+
+====================================*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*====================================
+
+    0.3. List reset
+
+====================================*/
+/* we use a lot of ULs that aren't bulleted. don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+/*====================================
+
+    0.4. Blockquote reset
+
+====================================*/
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/*====================================
+
+    0.5. link tag
+
+====================================*/
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+/*====================================
+
+    0.6. hr
+
+====================================*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*====================================
+
+    0.7. Computer code
+
+====================================*/
+/* standardize any monospaced elements */
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+  font-size: 1em;
+  /* nomalize.css */
+}
+
+/*====================================
+
+    0.8. Form
+
+====================================*/
+/* hand cursor on clickable elements */
+.is-clickable,
+label,
+input[type="button"],
+input[type="submit"],
+input[type="file"],
+button {
+  cursor: "pointer";
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type="button"] {
+  width: auto;
+  overflow: visible;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+select,
+input,
+textarea {
+  font-size: 100%;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+  * Remove the inner border and padding in Firefox.
+  */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+  * Restore the focus styles unset by the previous rule.
+  */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+  * Correct the padding in Firefox.
+  */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+  * 1. Correct the text wrapping in Edge and IE.
+  * 2. Correct the color inheritance from `fieldset` elements in IE.
+  * 3. Remove the padding so developers are not caught out when they zero out
+  *    `fieldset` elements in all browsers.
+  */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+textarea {
+  overflow: auto;
+}
+
+/**
+  * 1. Add the correct box sizing in IE 10.
+  * 2. Remove the padding in IE 10.
+  */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+  * Correct the cursor style of increment and decrement buttons in Chrome.
+  */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+  * Remove the inner padding in Chrome and Safari on macOS.
+  */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+  * 1. Correct the inability to style clickable types in iOS and Safari.
+  * 2. Change font properties to `inherit` in Safari.
+  */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*====================================
+
+    0.9. IE （削除予定）
+
+====================================*/
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/*====================================
+
+    0.10. HTML Bace Setting
+
+====================================*/
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+/*====================================
+
+    0.11. Font Face
+
+====================================*/
+/*
+游ゴシックおよび游明朝の時
+WindowsとMacでフォントの太さを揃える時の設定
+*/
+/* 游ゴシック */
+@font-face {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  src: local("Yu Gothic Medium");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+/* 游明朝 */
+@font-face {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  src: local("Yu Mincho Medium");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  src: local("Yu Mincho Medium");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  src: local("Yu Mincho Medium");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  src: local("Yu Mincho Medium");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  src: local("Yu Mincho Bold");
+  font-weight: bold;
+}
+
+/*====================================
+
+  1.Text Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    1.0. Default
+    1.1. Align
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/8/8   Founding
+    
+====================================*/
+/*====================================
+
+    1.0. Default
+
+====================================*/
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+sub, sup {
+  font-size: 75%;
+  position: relative;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: baseline;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/*====================================
+
+    1.1. Align
+
+====================================*/
+.text-align--left {
+  text-align: left !important;
+}
+
+.text-align--center {
+  text-align: center !important;
+}
+
+.text-align--right {
+  text-align: right !important;
+}
+
+.vertical-align--top {
+  vertical-align: top !important;
+}
+
+.vertical-align--text-top {
+  vertical-align: text-top !important;
+}
+
+.vertical-align--middle {
+  vertical-align: middle !important;
+}
+
+.vertical-align--baseline {
+  vertical-align: baseline !important;
+}
+
+.vertical-align--text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.vertical-align--bottom {
+  vertical-align: bottom !important;
+}
+
+/* 以下作業中 */
+/*====================================
+
+  2.Table Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    2.0. Default
+    2.1. Layout Style
+    2.2. Responsive Table
+    2.3. Anomaly <dl> Table
+    2.4. Anomaly <ul> Table
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/8/8   Founding
+    
+====================================*/
+/*====================================
+
+    2.0. Default
+
+====================================*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  font-weight: inherit;
+}
+
+caption {
+  text-align: left;
+}
+
+thead th,
+thead td {
+  text-align: center;
+}
+
+tbody th,
+tbody td {
+  text-align: left;
+}
+
+tfoot th,
+tfoot td {
+  text-align: left;
+}
+
+/*====================================
+
+    2.1. Layout Style
+
+====================================*/
+/* table layout fixed */
+table.table-layout--fixed {
+  table-layout: fixed !important;
+}
+
+table.table-layout--fixed th,
+table.table-layout--fixed td {
+  width: auto;
+  white-space: normal;
+}
+
+table th.cell-width--fit,
+table td.cell-width--fit,
+table th.width--fit,
+table td.width--fit {
+  width: 1% !important;
+  white-space: nowrap !important;
+}
+
+/* table cell border */
+table th.cell-border--none,
+table td.cell-border--none,
+table th.border--none,
+table td.border--none {
+  border: none !important;
+}
+
+table th.cell-border--top-none,
+table td.cell-border--top-none,
+table th.border-top--none,
+table td.border-top--none {
+  border-top: none !important;
+}
+
+table th.cell-border--left-none,
+table td.cell-border--left-none,
+table th.border-left--none,
+table td.border-left--none {
+  border-left: none !important;
+}
+
+table th.cell-border--right-none,
+table td.cell-border--right-none,
+table th.border-right--none,
+table td.border-right--none {
+  border-right: none !important;
+}
+
+table th.cell-border--bottom-none,
+table td.cell-border--bottom-none,
+table th.border-bottom--none,
+table td.border-bottom--none {
+  border-bottom: none !important;
+}
+
+/* align */
+.text-align--left th,
+.text-align--left td {
+  text-align: left !important;
+}
+
+.text-align--center th,
+.text-align--center td {
+  text-align: center !important;
+}
+
+.text-align--right th,
+.text-align--right td {
+  text-align: right !important;
+}
+
+.vertical-align--top th,
+.vertical-align--top td {
+  vertical-align: top !important;
+}
+
+.vertical-align--middle th,
+.vertical-align--middle td {
+  vertical-align: middle !important;
+}
+
+.vertical-align--top th,
+.vertical-align--top td {
+  vertical-align: top !important;
+}
+
+.vertical-align--bottom th,
+.vertical-align--bottom td {
+  vertical-align: bottom !important;
+}
+
+/*====================================
+
+    2.2. Responsive Table
+
+====================================*/
+@media (max-width: 767.98px) {
+  table.is-responsive,
+  table.is-responsive caption,
+  table.is-responsive thead,
+  table.is-responsive tbody,
+  table.is-responsive tfoot,
+  table.is-responsive tr,
+  table.is-responsive th,
+  table.is-responsive td {
+    display: block;
+  }
+}
+
+/*====================================
+
+    2.3. Anomaly <dl> Table
+
+====================================*/
+/* dl-table */
+.dl-table {
+  display: table;
+  margin: 1.0em 0;
+  border-collapse: collapse;
+}
+
+.dl-table .dl-table {
+  margin: 0;
+}
+
+.dl-table .dl-table-responsive {
+  margin: 0;
+}
+
+.dl-table__caption {
+  display: table-caption;
+}
+
+.dl-table__header {
+  display: table-header-group;
+}
+
+.dl-table__body {
+  display: table-row-group;
+}
+
+.dl-table__footer {
+  display: table-footer-group;
+}
+
+.dl-table dl,
+.dl-table__header dl,
+.dl-table__body dl,
+.dl-table__footer dl {
+  display: table-row;
+}
+
+.dl-table dl dt,
+.dl-table dl dd,
+.dl-table__header dl dt,
+.dl-table__header dl dd,
+.dl-table__body dl dt,
+.dl-table__body dl dd,
+.dl-table__footer dl dt,
+.dl-table__footer dl dd {
+  display: table-cell;
+}
+
+.dl-table-responsive {
+  display: block;
+  margin: 1.0em 0;
+}
+
+.dl-table-responsive .dl-table {
+  margin: 0;
+}
+
+.dl-table-responsive .dl-table-responsive {
+  margin: 0;
+}
+
+.dl-table-responsive .dl-table__caption {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__header {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__body {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__footer {
+  display: block;
+}
+
+.dl-table-responsive dl,
+.dl-table-responsive .dl-table__header dl,
+.dl-table-responsive .dl-table__body dl,
+.dl-table-responsive .dl-table__footer dl {
+  display: block;
+}
+
+.dl-table-responsive dl dt,
+.dl-table-responsive dl dd,
+.dl-table-responsive .dl-table__header dl dt,
+.dl-table-responsive .dl-table__header dl dd,
+.dl-table-responsive .dl-table__body dl dt,
+.dl-table-responsive .dl-table__body dl dd,
+.dl-table-responsive .dl-table__footer dl dt,
+.dl-table-responsive .dl-table__footer dl dd {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .dl-table-responsive {
+    display: table;
+    border-collapse: collapse;
+  }
+  .dl-table-responsive .dl-table {
+    margin: 0;
+  }
+  .dl-table-responsive .dl-table-responsive {
+    margin: 0;
+  }
+  .dl-table-responsive .dl-table__caption {
+    display: table-caption;
+  }
+  .dl-table-responsive .dl-table__header {
+    display: table-header-group;
+  }
+  .dl-table-responsive .dl-table__body {
+    display: table-row-group;
+  }
+  .dl-table-responsive .dl-table__footer {
+    display: table-footer-group;
+  }
+  .dl-table-responsive dl,
+  .dl-table-responsive .dl-table__header dl,
+  .dl-table-responsive .dl-table__body dl,
+  .dl-table-responsive .dl-table__footer dl {
+    display: table-row;
+  }
+  .dl-table-responsive dl dt,
+  .dl-table-responsive dl dd,
+  .dl-table-responsive .dl-table__header dl dt,
+  .dl-table-responsive .dl-table__header dl dd,
+  .dl-table-responsive .dl-table__body dl dt,
+  .dl-table-responsive .dl-table__body dl dd,
+  .dl-table-responsive .dl-table__footer dl dt,
+  .dl-table-responsive .dl-table__footer dl dd {
+    display: table-cell;
+  }
+}
+
+/*====================================
+
+    2.4. Anomaly <ul> Table
+
+====================================*/
+/* list-table  */
+.list-table {
+  width: 100%;
+  display: block;
+}
+
+.list-table li {
+  display: block;
+  position: relative;
+}
+
+.list-table .list-table__header,
+.list-table .list-table__data {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .list-table {
+    display: table;
+    border-collapse: collapse;
+  }
+  .list-table li {
+    display: table-row;
+  }
+  .list-table .list-table__header,
+  .list-table .list-table__data {
+    display: table-cell;
+  }
+  .list-table .list-table__header {
+    white-space: nowrap;
+    width: 1%;
+  }
+}
+
+.list-table.non-responsive {
+  display: table;
+  border-collapse: collapse;
+}
+
+.list-table.non-responsive li {
+  display: table-row;
+}
+
+.list-table.non-responsive .archive-list__date,
+.list-table.non-responsive .archive-list__info {
+  display: table-cell;
+}
+
+.list-table.non-responsive .archive-list__date {
+  white-space: nowrap;
+  width: 1%;
+}
+
+/* archive-list  */
+.archive-list {
+  width: 100%;
+  display: block;
+}
+
+.archive-list ul {
+  width: 100%;
+  display: block;
+}
+
+.archive-list li {
+  display: block;
+  position: relative;
+}
+
+.archive-list .archive-list__date,
+.archive-list .archive-list__label {
+  display: inline-block;
+}
+
+.archive-list .archive-list__info {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .archive-list {
+    display: table;
+    border-collapse: collapse;
+  }
+  .archive-list ul {
+    display: table;
+    border-collapse: collapse;
+  }
+  .archive-list li {
+    display: table-row;
+  }
+  .archive-list .archive-list__date,
+  .archive-list .archive-list__label,
+  .archive-list .archive-list__info {
+    display: table-cell;
+  }
+  .archive-list .archive-list__date,
+  .archive-list .archive-list__label {
+    white-space: nowrap;
+    width: 1%;
+  }
+}
+
+.archive-list.non-responsive {
+  display: table;
+  border-collapse: collapse;
+}
+
+.archive-list.non-responsive ul {
+  display: table;
+  border-collapse: collapse;
+}
+
+.archive-list.non-responsive li {
+  display: table-row;
+}
+
+.archive-list.non-responsive .archive-list__date,
+.archive-list.non-responsive .archive-list__label,
+.archive-list.non-responsive .archive-list__info {
+  display: table-cell;
+}
+
+.archive-list.non-responsive .archive-list__date,
+.archive-list.non-responsive .archive-list__label {
+  white-space: nowrap;
+  width: 1%;
+}
+
+/* ===========================================================
+
+	responsive scroll table
+
+=========================================================== */
+/* ===========================================================
+
+	table-style
+
+=========================================================== */
+/* ===========================================================
+
+	dl-table
+
+=========================================================== */
+.dl-table {
+  display: table;
+  margin: 1.0em 0;
+  border-collapse: collapse;
+}
+
+.dl-table .dl-table {
+  margin: 0;
+}
+
+.dl-table .dl-table-responsive {
+  margin: 0;
+}
+
+.dl-table__caption {
+  display: table-caption;
+}
+
+.dl-table__header {
+  display: table-header-group;
+}
+
+.dl-table__body {
+  display: table-row-group;
+}
+
+.dl-table__footer {
+  display: table-footer-group;
+}
+
+.dl-table > dl,
+.dl-table__header > dl,
+.dl-table__body > dl,
+.dl-table__footer > dl {
+  display: table-row;
+}
+
+.dl-table > dl > dt,
+.dl-table > dl > dd,
+.dl-table__header > dl > dt,
+.dl-table__header > dl > dd,
+.dl-table__body > dl > dt,
+.dl-table__body > dl > dd,
+.dl-table__footer > dl > dt,
+.dl-table__footer > dl > dd {
+  display: table-cell;
+}
+
+.dl-table-responsive {
+  display: block;
+  margin: 1.0em 0;
+}
+
+.dl-table-responsive .dl-table {
+  margin: 0;
+}
+
+.dl-table-responsive .dl-table-responsive {
+  margin: 0;
+}
+
+.dl-table-responsive .dl-table__caption {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__header {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__body {
+  display: block;
+}
+
+.dl-table-responsive .dl-table__footer {
+  display: block;
+}
+
+.dl-table-responsive > dl,
+.dl-table-responsive .dl-table__header > dl,
+.dl-table-responsive .dl-table__body > dl,
+.dl-table-responsive .dl-table__footer > dl {
+  display: block;
+}
+
+.dl-table-responsive > dl > dt,
+.dl-table-responsive > dl > dd,
+.dl-table-responsive .dl-table__header > dl > dt,
+.dl-table-responsive .dl-table__header > dl > dd,
+.dl-table-responsive .dl-table__body > dl > dt,
+.dl-table-responsive .dl-table__body > dl > dd,
+.dl-table-responsive .dl-table__footer > dl > dt,
+.dl-table-responsive .dl-table__footer > dl > dd {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .dl-table-responsive {
+    display: table;
+    border-collapse: collapse;
+  }
+  .dl-table-responsive .dl-table {
+    margin: 0;
+  }
+  .dl-table-responsive .dl-table-responsive {
+    margin: 0;
+  }
+  .dl-table-responsive .dl-table__caption {
+    display: table-caption;
+  }
+  .dl-table-responsive .dl-table__header {
+    display: table-header-group;
+  }
+  .dl-table-responsive .dl-table__body {
+    display: table-row-group;
+  }
+  .dl-table-responsive .dl-table__footer {
+    display: table-footer-group;
+  }
+  .dl-table-responsive > dl,
+  .dl-table-responsive .dl-table__header > dl,
+  .dl-table-responsive .dl-table__body > dl,
+  .dl-table-responsive .dl-table__footer > dl {
+    display: table-row;
+  }
+  .dl-table-responsive > dl > dt,
+  .dl-table-responsive > dl > dd,
+  .dl-table-responsive .dl-table__header > dl > dt,
+  .dl-table-responsive .dl-table__header > dl > dd,
+  .dl-table-responsive .dl-table__body > dl > dt,
+  .dl-table-responsive .dl-table__body > dl > dd,
+  .dl-table-responsive .dl-table__footer > dl > dt,
+  .dl-table-responsive .dl-table__footer > dl > dd {
+    display: table-cell;
+  }
+}
+
+.dl-table-align--dt-left dt,
+.dl-table-align--dd-left dd,
+.dl-table-align--left dt,
+.dl-table-align--left dd {
+  text-align: left;
+}
+
+.dl-table-align--dt-center dt,
+.dl-table-align--dd-center dd,
+.dl-table-align--center dt,
+.dl-table-align--center dd {
+  text-align: center;
+}
+
+.dl-table-align--dt-right dt,
+.dl-table-align--dd-right dd,
+.dl-table-align--right dt,
+.dl-table-align--right dd {
+  text-align: right;
+}
+
+/* ===========================================================
+
+	date-list
+
+=========================================================== */
+.date-list {
+  display: table;
+  border-collapse: collapse;
+}
+
+.date-list > dl {
+  display: table-row;
+}
+
+.date-list > dl > dt,
+.date-list > dl > dd {
+  display: table-cell;
+}
+
+.date-list > dl > dt {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.date-list > dl > dd {
+  vertical-align: middle;
+}
+
+.date-list > p {
+  display: table-caption;
+}
+
+.date-list-responsive {
+  display: block;
+}
+
+.date-list-responsive > dl {
+  display: block;
+}
+
+.date-list-responsive > dl > dt,
+.date-list-responsive > dl > dd,
+.date-list-responsive > p {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .date-list-responsive {
+    display: table;
+    border-collapse: collapse;
+  }
+  .date-list-responsive > dl {
+    display: table-row;
+  }
+  .date-list-responsive > dl > dt,
+  .date-list-responsive > dl > dd {
+    display: table-cell;
+  }
+  .date-list-responsive > dl > dt {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  .date-list-responsive > dl > dd {
+    vertical-align: middle;
+  }
+  .date-list-responsive > p {
+    display: table-caption;
+  }
+}
+
+/* 未着手 */

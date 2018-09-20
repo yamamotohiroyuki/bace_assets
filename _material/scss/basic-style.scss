@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*! v1.0.6 */
+/* Scss Document */
+/* =======================================================
+***********************************************************
+このファイルはSCSSで作成されています。
+数値の調整などは、
+/assets/scss/basic-style/のなかのファイルを編集してください。
+***********************************************************
+======================================================== */
+
+/* =======================================================
+    Variables
+======================================================== */
+
+@import "basic-style/variables";
+
+/* =======================================================
+    bourbon
+======================================================== */
+// bourbon
+@import "../../_submodule/bourbon/core/bourbon";
+
+/* =======================================================
+    bootstrap
+======================================================== */
+
+@import "../../_submodule/bootstrap/scss/functions";
+@import "../../_submodule/bootstrap/scss/mixins";
+
+/* =======================================================
+    import style
+======================================================== */
+// 0.Reset Style
+@import "basic-style/reset";
+// 1.Text Style
+@import "basic-style/text";
+/* 以下作業中 */
+// 2.Table Style
+@import "basic-style/table";
+
+
+
+
+/* 未着手 */
+// 2.mark
+//@import "basic-style/mark";
+// grid
+//@import "basic-style/grid";
+// input-style
+//@import "basic-style/input-style";
+// list-style
+//@import "basic-style/list-style";
+// indent-list
+//@import "basic-style/indent-list";
+// clear&float
+//@import "basic-style/clear-float";
+// module
+//@import "basic-style/module";
+// responsive
+//@import "basic-style/responsive";
+// size
+//@import "basic-style/size";

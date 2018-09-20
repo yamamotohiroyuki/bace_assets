@@ -1,0 +1,46 @@
+@charset "UTF-8";
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  font-weight: inherit;
+}
+
+caption {
+  text-align: left;
+}
+
+thead th,
+thead td {
+  text-align: center;
+}
+
+tbody th,
+tbody td {
+  text-align: left;
+}
+
+tfoot th,
+tfoot td {
+  text-align: left;
+}
+
+table {}
+
+caption {}
+
+thead {}
+
+tbody {}
+
+tfoot {}
+
+tr {}
+
+th {}
+
+td {}
+

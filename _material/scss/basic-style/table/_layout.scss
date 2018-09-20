@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* table layout fixed */
+
+table.table-layout--fixed {
+  table-layout: fixed !important;
+  th,
+  td { width: auto; white-space: normal; }
+}
+table th.cell-width--fit, /*削除予定*/
+table td.cell-width--fit, //削除予定
+table th.width--fit,
+table td.width--fit {
+    width: 1% !important;
+    white-space: nowrap !important;
+}
+
+/* table cell border */
+
+table th.cell-border--none, //削除予定
+table td.cell-border--none, //削除予定
+table th.border--none,
+table td.border--none { border: none !important; }
+
+table th.cell-border--top-none, //削除予定
+table td.cell-border--top-none, //削除予定
+table th.border-top--none,
+table td.border-top--none { border-top: none !important; }
+
+table th.cell-border--left-none, //削除予定
+table td.cell-border--left-none, //削除予定
+table th.border-left--none,
+table td.border-left--none { border-left: none !important; }
+
+table th.cell-border--right-none, //削除予定
+table td.cell-border--right-none, //削除予定
+table th.border-right--none,
+table td.border-right--none { border-right: none !important; }
+
+table th.cell-border--bottom-none, //削除予定
+table td.cell-border--bottom-none, //削除予定
+table th.border-bottom--none,
+table td.border-bottom--none { border-bottom: none !important; }
+
+/* align */
+
+.text-align--left th,
+.text-align--left td { text-align: left!important; }
+
+.text-align--center th,
+.text-align--center td { text-align: center!important; }
+
+.text-align--right th,
+.text-align--right td { text-align: right!important; }
+
+
+.vertical-align--top th,
+.vertical-align--top td { vertical-align: top !important; }
+
+.vertical-align--middle th,
+.vertical-align--middle td { vertical-align: middle !important; }
+
+.vertical-align--top th,
+.vertical-align--top td { vertical-align: top !important; }
+
+.vertical-align--bottom th,
+.vertical-align--bottom td { vertical-align: bottom !important; }

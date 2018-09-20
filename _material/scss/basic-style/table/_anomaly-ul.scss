@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* list-table  */
+.list-table {
+    width: 100%;
+    display: block;
+    li {
+        display: block;
+        position: relative;
+    }
+    .list-table__header,
+    .list-table__data{ display: block; }
+
+    .list-table__header { }
+    .list-table__data { }
+
+}
+
+@media print, screen and (min-width:768px) {
+    .list-table {
+        display: table;
+        border-collapse: collapse;
+        li {
+            display: table-row;
+        }
+        .list-table__header,
+        .list-table__data { display: table-cell; }
+
+        .list-table__header { white-space: nowrap; width: 1%; }
+        .list-table__data { }
+    }
+}
+
+.list-table.non-responsive {
+    display: table;
+    border-collapse: collapse;
+    li {
+        display: table-row;
+    }
+    .archive-list__date,
+    .archive-list__info { display: table-cell; }
+
+    .archive-list__date { white-space: nowrap; width: 1%; }
+    .archive-list__info { }
+}
+
+
+
+
+/* archive-list  */
+.archive-list {
+    width: 100%;
+    display: block;
+    ul {
+        width: 100%;
+        display: block;
+    }
+    li {
+        display: block;
+        position: relative;
+    }
+    .archive-list__date,
+    .archive-list__label,
+    .archive-list__info { }
+
+    .archive-list__date,
+    .archive-list__label { display: inline-block; }
+    .archive-list__info { display: block; }
+
+    .archive-list__date { }
+    .archive-list__label { }
+    .archive-list__info { }
+
+}
+
+
+@media print, screen and (min-width:768px) {
+    
+    .archive-list {
+        display: table;
+        border-collapse: collapse;
+        ul {
+            display: table;
+            border-collapse: collapse;
+        }
+        li {
+            display: table-row;
+        }
+        .archive-list__date,
+        .archive-list__label,
+        .archive-list__info { display: table-cell; }
+
+        .archive-list__date,
+        .archive-list__label { white-space: nowrap; width: 1%; }
+        .archive-list__info { }
+    }
+}
+
+.archive-list.non-responsive {
+    display: table;
+    border-collapse: collapse;
+    ul {
+        display: table;
+        border-collapse: collapse;
+    }
+    li {
+        display: table-row;
+    }
+    .archive-list__date,
+    .archive-list__label,
+    .archive-list__info { display: table-cell; }
+
+    .archive-list__date,
+    .archive-list__label { white-space: nowrap; width: 1%; }
+    .archive-list__info { }
+}

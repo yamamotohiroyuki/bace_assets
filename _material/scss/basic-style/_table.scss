@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/*====================================
+
+  2.Table Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    2.0. Default
+    2.1. Layout Style
+    2.2. Responsive Table
+    2.3. Anomaly <dl> Table
+    2.4. Anomaly <ul> Table
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/8/8   Founding
+    
+====================================*/
+/*====================================
+
+    2.0. Default
+
+====================================*/
+
+@import "table/default";
+
+/*====================================
+
+    2.1. Layout Style
+
+====================================*/
+
+@import "table/layout";
+
+/*====================================
+
+    2.2. Responsive Table
+
+====================================*/
+
+@import "table/responsive";
+
+/*====================================
+
+    2.3. Anomaly <dl> Table
+
+====================================*/
+
+@import "table/anomaly-dl";
+
+/*====================================
+
+    2.4. Anomaly <ul> Table
+
+====================================*/
+
+@import "table/anomaly-ul";
+
+
+/* ===========================================================
+
+	responsive scroll table
+
+=========================================================== */
+
+/* ===========================================================
+
+	table-style
+
+=========================================================== */
+
+
+
+/* ===========================================================
+
+	dl-table
+
+=========================================================== */
+
+.dl-table {
+    display: table;
+    margin: 1.0em 0;
+    border-collapse: collapse;
+    .dl-table {
+        margin: 0;
+    }
+    .dl-table-responsive {
+        margin: 0;
+    }
+}
+
+.dl-table__caption {
+    display: table-caption;
+}
+
+.dl-table__header {
+    display: table-header-group;
+}
+
+.dl-table__body {
+    display: table-row-group;
+}
+
+.dl-table__footer {
+    display: table-footer-group;
+}
+
+.dl-table,
+.dl-table__header,
+.dl-table__body,
+.dl-table__footer {
+    >dl {
+        display: table-row;
+    }
+    >dl>dt,
+    >dl>dd {
+        display: table-cell;
+    }
+}
+
+.dl-table-responsive {
+    display: block;
+    margin: 1.0em 0;
+    .dl-table {
+        margin: 0;
+    }
+    .dl-table-responsive {
+        margin: 0;
+    }
+}
+
+.dl-table-responsive .dl-table__caption {
+    display: block;
+}
+
+.dl-table-responsive .dl-table__header {
+    display: block;
+}
+
+.dl-table-responsive .dl-table__body {
+    display: block;
+}
+
+.dl-table-responsive .dl-table__footer {
+    display: block;
+}
+
+.dl-table-responsive,
+.dl-table-responsive .dl-table__header,
+.dl-table-responsive .dl-table__body,
+.dl-table-responsive .dl-table__footer {
+    >dl {
+        display: block;
+    }
+    >dl>dt,
+    >dl>dd {
+        display: block;
+    }
+}
+
+@media print, screen and (min-width:768px) {
+    .dl-table-responsive {
+        display: table;
+        border-collapse: collapse;
+        .dl-table {
+            margin: 0;
+        }
+        .dl-table-responsive {
+            margin: 0;
+        }
+    }
+    .dl-table-responsive .dl-table__caption {
+        display: table-caption;
+    }
+    .dl-table-responsive .dl-table__header {
+        display: table-header-group;
+    }
+    .dl-table-responsive .dl-table__body {
+        display: table-row-group;
+    }
+    .dl-table-responsive .dl-table__footer {
+        display: table-footer-group;
+    }
+    .dl-table-responsive,
+    .dl-table-responsive .dl-table__header,
+    .dl-table-responsive .dl-table__body,
+    .dl-table-responsive .dl-table__footer {
+        >dl {
+            display: table-row;
+        }
+        >dl>dt,
+        >dl>dd {
+            display: table-cell;
+        }
+    }
+}
+
+.dl-table-align--dt-left dt,
+.dl-table-align--dd-left dd,
+.dl-table-align--left dt,
+.dl-table-align--left dd {
+    text-align: left;
+}
+
+.dl-table-align--dt-center dt,
+.dl-table-align--dd-center dd,
+.dl-table-align--center dt,
+.dl-table-align--center dd {
+    text-align: center;
+}
+
+.dl-table-align--dt-right dt,
+.dl-table-align--dd-right dd,
+.dl-table-align--right dt,
+.dl-table-align--right dd {
+    text-align: right;
+}
+
+/* ===========================================================
+
+	date-list
+
+=========================================================== */
+
+.date-list {
+    display: table;
+    border-collapse: collapse;
+    >dl {
+        display: table-row;
+    }
+    >dl>dt,
+    >dl>dd {
+        display: table-cell;
+    }
+    >dl>dt {
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+    >dl>dd {
+        vertical-align: middle;
+    }
+    >p {
+        display: table-caption;
+    }
+}
+
+.date-list-responsive {
+    display: block;
+    >dl {
+        display: block;
+    }
+    >dl>dt,
+    >dl>dd,
+    >p {
+        display: block;
+    }
+}
+
+@media print,
+screen and (min-width:768px) {
+    .date-list-responsive {
+        display: table;
+        border-collapse: collapse;
+        >dl {
+            display: table-row;
+            >dt,
+            >dd {
+                display: table-cell;
+            }
+            >dt {
+                width: 1%;
+                white-space: nowrap;
+                vertical-align: top;
+            }
+            >dd {
+                vertical-align: middle;
+            }
+        }
+        >p {
+            display: table-caption;
+        }
+    }
+}

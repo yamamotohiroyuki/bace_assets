@@ -1,0 +1,472 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*====================================
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0. variable
+    1. default
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/8/8   Founding
+    
+====================================*/
+/*====================================
+
+    0. variable
+
+====================================*/
+$set_hiragana: あ,い,う,え,お,か,き,く,け,こ,さ,し,す,せ,そ,た,ち,つ,て,と,な,に,ぬ,ね,の,は,ひ,ふ,へ,ほ,ま,み,む,め,も,や,ゆ,よ,ら,り,る,れ,ろ,わ,を,ん;
+$set_hiragana_iroha: い,ろ,は,に,ほ,へ,と,ち,り,ぬ,る,を,わ,か,よ,た,れ,そ,つ,ね,な,ら,む,う,ゐ,の,お,く,や,ま,け,ふ,こ,え,て,あ,さ,き,ゆ,め,み,し,ゑ,ひ,も,せ,す,ん;
+$set_katakana: ア,イ,ウ,エ,オ,カ,キ,ク,ケ,コ,サ,シ,ス,セ,ソ,タ,チ,ツ,テ,ト,ナ,ニ,ヌ,ネ,ノ,ハ,ヒ,フ,ヘ,ホ,マ,ミ,ム,メ,モ,ヤ,ユ,ヨ,ラ,リ,ル,レ,ロ,ワ,ヲ,ン;
+$set_katakana_iroha: イ,ロ,ハ,ニ,ホ,ヘ,ト,チ,リ,ヌ,ル,ヲ,ワ,カ,ヨ,タ,レ,ソ,ツ,ネ,ナ,ラ,ム,ウ,ヰ,ノ,オ,ク,ヤ,マ,ケ,フ,コ,エ,テ,ア,サ,キ,ユ,メ,ミ,シ,ヱ,ヒ,モ,セ,ス,ン;
+/*====================================
+
+    1. default
+
+====================================*/
+
+
+
+/* リスト */
+
+.list-style--circle,
+.list-style--disc,
+.list-style--square,
+.list-style--decimal,
+.list-style--decimal-zero,
+.list-style--lower-roman,
+.list-style--upper-roman,
+.list-style--lower-alpha,
+.list-style--upper-alpha,
+.list-style--cjk-ideographic,
+.list-style--hiragana,
+.list-style--hiragana-iroha,
+.list-style--katakana,
+.list-style--katakana-iroha,
+.list-style--none { margin-left: $list_margin !important; list-style-position: outside; text-indent: 0; }
+
+.list-style--circle > li { list-style-type: circle; }
+.list-style--disc > li { list-style-type: disc; }
+.list-style--square > li { list-style-type: square; }
+
+.list-style--decimal > li {list-style-type: decimal;}
+.list-style--decimal-zero > li { list-style-type: decimal-leading-zero; }
+.list-style--lower-roman > li {list-style-type: lower-roman;}
+.list-style--upper-roman > li {list-style-type: upper-roman;}
+.list-style--lower-alpha > li {list-style-type: lower-alpha;}
+.list-style--upper-alpha > li {list-style-type: upper-alpha;}
+
+.list-style--cjk-ideographic > li { list-style-type: cjk-ideographic; }
+
+.list-style--hiragana > li { list-style-type: hiragana; }
+.list-style--hiragana-iroha li { list-style-type: hiragana-iroha; }
+
+.list-style--katakana > li { list-style-type: katakana; }
+.list-style--katakana-iroha > li { list-style-type: katakana-iroha; }
+
+.list-style--none > li {list-style: none;}
+
+
+
+/* リスト */
+.list-style__peculiar {
+	margin-left: $list_margin !important;
+	
+	> li {
+		list-style-type:none;
+		list-style-position:inside;
+		text-indent: -$list_margin;
+		
+		&::before {
+			display: inline-block; width: $list_margin; text-indent: 0;
+		}
+	}
+}
+
+/* spanでリストヘッド自由入力 */
+.list-style__peculiar--original {
+	@extend .list-style__peculiar;
+	> li {
+		counter-increment: cnt_brackets-decimal;
+		&::before{
+			display: none;
+		}
+	}
+	.list-style__peculiar--original__mark { display: inline-block; width: $list_margin; text-indent: 0; }
+}
+
+/* (1) カッコに数字 */
+.list-style__peculiar--brackets-decimal {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-decimal 0;
+	> li {
+		counter-increment: cnt_brackets-decimal;
+		&::before{
+			content: "(" counter(cnt_brackets-decimal) ") ";
+		}
+	}
+}
+
+/* (i) カッコに小文字ローマ数字 */
+.list-style__peculiar--brackets-lowerroman {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-lowerroman 0;
+	> li {
+		counter-increment: cnt_brackets-lowerroman;
+		&::before{
+			content: "(" counter(cnt_brackets-lowerroman, lower-roman) ") ";
+		}
+	}
+}
+
+/* (I) カッコに大文字ローマ数字 */
+.list-style__peculiar--brackets-upperroman {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-upperroman 0;
+	> li {
+		counter-increment: cnt_brackets-upperroman;
+		&::before{
+			content: "(" counter(cnt_brackets-upperroman, upper-roman) ") ";
+		}
+	}
+}
+
+/* (a) カッコに小文字アルファベット */
+.list-style__peculiar--brackets-loweralpha {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-loweralpha 0;
+	> li {
+		counter-increment: cnt_brackets-loweralpha;
+		&::before{
+			content: "(" counter(cnt_brackets-loweralpha, lower-alpha) ") ";
+		}
+	}
+}
+
+/* (A) カッコに大文字アルファベット */
+.list-style__peculiar--brackets-upperalpha {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-upperalpha 0;
+	> li {
+		counter-increment: cnt_brackets-upperalpha;
+		&::before{
+			content: "(" counter(cnt_brackets-upperalpha, upper-alpha) ") ";
+		}
+	}
+}
+
+/* (あ) カッコにひらがな */
+.list-style__peculiar--brackets-hiragana {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana {
+		$key: index($set_hiragana, $value);
+		> li:nth-child(#{$key}):before{
+			content: '(#{nth($set_hiragana, $key)})';
+		}
+	}
+}
+/* (い) カッコにいろは  */
+.list-style__peculiar--brackets-hiragana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana_iroha {
+		$key: index($set_hiragana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '(#{nth($set_hiragana_iroha, $key)})';
+		}
+	}
+}
+
+/* (ア) カッコにカタカナ */
+.list-style__peculiar--brackets-katakana {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana {
+		$key: index($set_katakana, $value);
+		> li:nth-child(#{$key}):before{
+			content: '(#{nth($set_katakana, $key)})';
+		}
+	}
+}
+/* (イ) カッコにイロハ  */
+.list-style__peculiar--brackets-katakana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana_iroha {
+		$key: index($set_katakana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '(#{nth($set_katakana_iroha, $key)})';
+		}
+	}
+}
+
+/* 1) 片方カッコに数字 */
+.list-style__peculiar--side-brackets-decimal {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-decimal 0;
+	> li {
+		counter-increment: cnt_brackets-decimal;
+		&::before{
+			content: counter(cnt_brackets-decimal) ") ";
+		}
+	}
+}
+
+/* a) 片方カッコに小文字アルファベット */
+.list-style__peculiar--side-brackets-lowerroman {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-lowerroman 0;
+	> li {
+		counter-increment: cnt_brackets-lowerroman;
+		&::before{
+			content: counter(cnt_brackets-lowerroman, lower-roman) ") ";
+		}
+	}
+}
+
+/* A) 片方カッコに大文字アルファベット */
+.list-style__peculiar--side-brackets-upperroman {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-upperroman 0;
+	> li {
+		counter-increment: cnt_brackets-upperroman;
+		&::before{
+			content: counter(cnt_brackets-upperroman, upper-roman) ") ";
+		}
+	}
+}
+
+/* i) 片方カッコに小文字アルファベット */
+.list-style__peculiar--side-brackets-loweralpha {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-loweralpha 0;
+	> li {
+		counter-increment: cnt_brackets-loweralpha;
+		&::before{
+			content: counter(cnt_brackets-loweralpha, lower-alpha) ") ";
+		}
+	}
+}
+
+/* I) 片方カッコに大文字アルファベット */
+.list-style__peculiar--side-brackets-upperalpha {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_brackets-upperalpha 0;
+	> li {
+		counter-increment: cnt_brackets-upperalpha;
+		&::before{
+			content: counter(cnt_brackets-upperalpha, upper-alpha) ") ";
+		}
+	}
+}
+
+/* あ) 片方カッコにひらがな */
+.list-style__peculiar--side-brackets-hiragana {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana {
+		$key: index($set_hiragana, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_hiragana, $key)})';
+		}
+	}
+}
+/* い) 片方カッコにいろは */
+.list-style__peculiar--side-brackets-hiragana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana_iroha {
+		$key: index($set_hiragana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_hiragana_iroha, $key)})';
+		}
+	}
+}
+
+/* ア) 片方カッコにカタカナ */
+.list-style__peculiar--side-brackets-katakana {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana {
+		$key: index($set_katakana, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_katakana, $key)})';
+		}
+	}
+}
+/* イ) 片方カッコにイロハ */
+.list-style__peculiar--side-brackets-katakana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana_iroha {
+		$key: index($set_katakana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_katakana_iroha, $key)})';
+		}
+	}
+}
+
+
+
+
+
+/* 1. ドットに数字 */
+.list-style__peculiar--dot-decimal {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_dot-decimal 0;
+	> li {
+		counter-increment: cnt_dot-decimal;
+		&::before{
+			content: counter(cnt_dot-decimal) ".";
+		}
+	}
+}
+
+/* a. ドットに小文字アルファベット */
+.list-style__peculiar--dot-lowerroman {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_dot-lowerroman 0;
+	> li {
+		counter-increment: cnt_dot-lowerroman;
+		&::before{
+			content: counter(cnt_dot-lowerroman, lower-roman) ".";
+		}
+	}
+}
+
+/* A. ドットに大文字アルファベット */
+.list-style__peculiar--dot-upperroman {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_dot-upperroman 0;
+	> li {
+		counter-increment: cnt_dot-upperroman;
+		&::before{
+			content: counter(cnt_dot-upperroman, upper-roman) ".";
+		}
+	}
+}
+
+
+/* i. ドットに小文字アルファベット */
+.list-style__peculiar--dot-loweralpha {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_dot-loweralpha 0;
+	> li {
+		counter-increment: cnt_dot-loweralpha;
+		&::before{
+			content: counter(cnt_dot-loweralpha, lower-alpha) ".";
+		}
+	}
+}
+
+/* I. ドットに大文字アルファベット */
+.list-style__peculiar--dot-upperalpha {
+	@extend .list-style__peculiar;
+	counter-reset: cnt_dot-upperalpha 0;
+	> li {
+		counter-increment: cnt_dot-upperalpha;
+		&::before{
+			content: counter(cnt_dot-upperalpha, upper-alpha) ".";
+		}
+	}
+}
+
+
+/* あ. ドットにひらがな */
+.list-style__peculiar--dot-hiragana {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana {
+		$key: index($set_hiragana, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_hiragana, $key)}.';
+		}
+	}
+}
+
+/* い. ドットにいろは */
+.list-style__peculiar--dot-hiragana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_hiragana_iroha {
+		$key: index($set_hiragana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_hiragana_iroha, $key)}.';
+		}
+	}
+}
+
+/* ア. ドットにカタカナ */
+.list-style__peculiar--dot-katakana {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana {
+		$key: index($set_katakana, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_katakana, $key)}.';
+		}
+	}
+}
+
+/* イ. ドットにイロハ */
+.list-style__peculiar--dot-katakana-iroha {
+	@extend .list-style__peculiar;
+	@each $value in $set_katakana_iroha {
+		$key: index($set_katakana_iroha, $value);
+		> li:nth-child(#{$key}):before{
+			content: '#{nth($set_katakana_iroha, $key)}.';
+		}
+	}
+}
+
+/* character */
+
+/* ① 丸数字 */
+.list-style__peculiar--character_circle-decimal {
+	@extend .list-style__peculiar;
+	
+	> li:nth-of-type(1)::before { content: "\02460"; }
+	> li:nth-of-type(2)::before { content: "\02461"; }
+	> li:nth-of-type(3)::before { content: "\02462"; }
+	> li:nth-of-type(4)::before { content: "\02463"; }
+	> li:nth-of-type(5)::before { content: "\02464"; }
+	> li:nth-of-type(6)::before { content: "\02465"; }
+	> li:nth-of-type(7)::before { content: "\02466"; }
+	> li:nth-of-type(8)::before { content: "\02467"; }
+	> li:nth-of-type(9)::before { content: "\02468"; }
+	> li:nth-of-type(10)::before{ content: "\02469"; }
+	> li:nth-of-type(11)::before{ content: "\0246a"; }
+	> li:nth-of-type(12)::before{ content: "\0246b"; }
+	> li:nth-of-type(13)::before{ content: "\0246c"; }
+	> li:nth-of-type(14)::before{ content: "\0246d"; }
+	> li:nth-of-type(15)::before{ content: "\0246e"; }
+	> li:nth-of-type(16)::before{ content: "\0246f"; }
+	> li:nth-of-type(17)::before{ content: "\02470"; }
+	> li:nth-of-type(18)::before{ content: "\02471"; }
+	> li:nth-of-type(19)::before{ content: "\02472"; }
+	> li:nth-of-type(20)::before{ content: "\02473"; }
+	
+}
+/* ❶ 丸数字 */
+.list-style__peculiar--character_round-decimal {
+	@extend .list-style__peculiar;
+	
+	> li:nth-of-type(1)::before { content: "\02776"; }
+	> li:nth-of-type(2)::before { content: "\02777"; }
+	> li:nth-of-type(3)::before { content: "\02778"; }
+	> li:nth-of-type(4)::before { content: "\02779"; }
+	> li:nth-of-type(5)::before { content: "\0277a"; }
+	> li:nth-of-type(6)::before { content: "\0277b"; }
+	> li:nth-of-type(7)::before { content: "\0277c"; }
+	> li:nth-of-type(8)::before { content: "\0277d"; }
+	> li:nth-of-type(9)::before { content: "\0277e"; }
+	> li:nth-of-type(10)::before{ content: "\0277f"; }
+	> li:nth-of-type(11)::before{ content: "\024eb"; }
+	> li:nth-of-type(12)::before{ content: "\024ec"; }
+	> li:nth-of-type(13)::before{ content: "\024ed"; }
+	> li:nth-of-type(14)::before{ content: "\024ee"; }
+	> li:nth-of-type(15)::before{ content: "\024ef"; }
+	> li:nth-of-type(16)::before{ content: "\024f0"; }
+	> li:nth-of-type(17)::before{ content: "\024f1"; }
+	> li:nth-of-type(18)::before{ content: "\024f2"; }
+	> li:nth-of-type(19)::before{ content: "\024f3"; }
+	> li:nth-of-type(20)::before{ content: "\024f4"; }
+	
+}
+
+
+
