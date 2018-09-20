@@ -33,3 +33,6 @@
 [submodule "_submodule/sticky-kit"]
 	path = _submodule/sticky-kit
 	url = https://github.com/leafo/sticky-kit
+[submodule "_submodule/prefixfree"]
+	path = _submodule/prefixfree
+	url = https://github.com/LeaVerou/prefixfree
