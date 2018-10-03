@@ -48,3 +48,6 @@
 [submodule "_submodule/snap-svg"]
 	path = _submodule/snap-svg
 	url = https://github.com/adobe-webplatform/Snap.svg
+[submodule "_submodule/jquery-match-height"]
+	path = _submodule/jquery-match-height
+	url = https://github.com/liabru/jquery-match-height
