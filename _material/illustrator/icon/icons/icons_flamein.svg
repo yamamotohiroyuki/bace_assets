@@ -3,6 +3,6 @@
 <svg version="1.2" baseProfile="tiny" id="レイヤー_1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
 	 xml:space="preserve">
-<polygon points="256,0 256,64 448,64 448,448 256,448 256,512 512,512 512,0 "/>
-<polygon points="193.61,97.61 148.35,142.86 229.49,224 0,224 0,288 229.49,288 148.35,369.14 193.61,414.39 352,256 "/>
+<path d="M512,0v512H256v-64h192V64H256V0H512z M193.61,97.61l-45.25,45.25L229.49,224H0v64h229.49l-81.14,81.14l45.25,45.25L352,256
+	L193.61,97.61z"/>
 </svg>

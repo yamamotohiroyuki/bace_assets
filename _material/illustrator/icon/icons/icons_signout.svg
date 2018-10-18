@@ -3,6 +3,5 @@
 <svg version="1.2" baseProfile="tiny" id="レイヤー_1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
 	 xml:space="preserve">
-<polygon points="128,362 320,362 320,448 512,256 320,64 320,152 128,152 "/>
-<polygon points="224,512 224,448 64,448 64,64 224,64 224,0 0,0 0,512 "/>
+<path d="M128,152h192l0-88l192,192L320,448l0-86H128V152z M224,512v-64H64V64h160V0H0v512H224z"/>
 </svg>

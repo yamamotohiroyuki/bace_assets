@@ -4,6 +4,5 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
 	 xml:space="preserve">
 <path d="M319.66,64.76V160h-192v192h192v95.23L512,256L319.66,64.76z M335.65,336h-192V176h192v-72.77L489.31,256L335.65,408.77V336
-	z"/>
-<polygon points="224,496 16,496 16,16 224,16 224,0 0,0 0,512 224,512 "/>
+	z M224,512H0V0h224v16H16v480h208V512z"/>
 </svg>
