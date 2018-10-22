@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "font-family-unescape-loader": "github:swcho/font-family-unescape-loader",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
     "gulp-rename": "^1.4.0",
