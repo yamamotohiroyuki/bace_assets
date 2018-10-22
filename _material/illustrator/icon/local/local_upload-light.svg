@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="レイヤー_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 xml:space="preserve">
+<g>
+	<path d="M64.77,192.34H160v192h192v-192h95.23L256,0L64.77,192.34z M336,176.35v192H176v-192h-72.77L256,22.69l152.77,153.65H336z"
+		/>
+	<polygon points="384,336 384,352 496,352 496,496 16,496 16,352 128,352 128,336 0,336 0,512 512,512 512,336 	"/>
+	<circle cx="368" cy="432" r="16"/>
+	<circle cx="432" cy="432" r="16"/>
+</g>
+</svg>

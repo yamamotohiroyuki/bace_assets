@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.2" baseProfile="tiny" id="レイヤー_1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 448 512"
 	 xml:space="preserve">
-<path d="M224,32C100.29,32,0,132.29,0,256s100.29,224,224,224s224-100.29,224-224S347.71,32,224,32z M400,256
-	c0,97.2-78.8,176-176,176S48,353.2,48,256S126.8,80,224,80S400,158.8,400,256z"/>
-<polygon points="96,280 260.12,280 178.98,361.14 212.92,395.08 352,256 212.92,116.92 178.98,150.86 260.12,232 96,232 "/>
+<path d="M352,256L216.24,391.76l-22.63-22.63L290.75,272H96v-32h194.75l-97.14-97.14l22.63-22.63L352,256z M450,256
+	c0,123.71-100.29,224-224,224S2,379.71,2,256S102.29,32,226,32S450,132.29,450,256z M226,64C119.96,64,34,149.96,34,256
+	s85.96,192,192,192s192-85.96,192-192S332.04,64,226,64z"/>
 </svg>

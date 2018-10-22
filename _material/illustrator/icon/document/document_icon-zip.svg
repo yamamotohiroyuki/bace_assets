@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="レイヤー_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 xml:space="preserve">
+<path d="M224,224c0,0-32,86-32,112s28.65,48,64,48s64-22,64-48s-32-112-32-112s-16,0-32,0v-32h-32V224z M256,320
+	c17.67,0,32,7.16,32,16s-14.33,16-32,16s-32-7.16-32-16S238.33,320,256,320z M256,192v-32h32v32H256z M224,128h32v32h-32V128z
+	 M64,64L64,64v384v0h385v0V64v0H64z M417,416H96V96h160v32h32V96h129V416z"/>
+</svg>

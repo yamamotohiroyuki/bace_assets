@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="レイヤー_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 448 512"
+	 xml:space="preserve">
+<g>
+	<ellipse cx="224" cy="368" rx="32" ry="16"/>
+	<path d="M384,32H224v32h32v32h-32v32h32v32h-32v32h32v32h-32v32c16,0,32,0,32,0s32,86,32,112s-28.65,48-64,48s-64-22-64-48
+		s32-112,32-112v-32h32v-32h-32v-32h32v-32h-32V96h32V64h-32V32H64C28.65,32,0,60.65,0,96v320c0,35.35,28.65,64,64,64h320
+		c35.35,0,64-28.65,64-64V96C448,60.65,419.35,32,384,32z"/>
+</g>
+</svg>
