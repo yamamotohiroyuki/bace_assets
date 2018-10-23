@@ -31,12 +31,14 @@
 /* =======================================================
     import style
 ======================================================== */
-// 0.Reset Style
+// 0.Reset Style & iconfont
 @import "basic-style/reset";
-// 1.Text Style
+// 0.iconfont
+@import "basic-style/icon/style";
+// 2.Text Style
 @import "basic-style/text";
 /* 以下作業中 */
-// 2.Table Style
+// 3.Table Style
 @import "basic-style/table";
 
 
