@@ -1,91 +1,201 @@
 @charset "UTF-8";
-/* CSS Document */
+/*====================================
 
-/* ===========================================================
+  4.Mark Style
 
-	mark
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. link mark
+    0.1. blank mark
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/10/30   Founding
+    
+====================================*/
 
-=========================================================== */
-a.link-triangle,
-.link-triangle a,
-a.link-triangle--top,
-.link-triangle--top a,
-a.link-triangle--left,
-.link-triangle--left a,
-a.link-triangle--bottom,
-.link-triangle--bottom a,
-a.link-triangle--right,
-.link-triangle--right a {
-	position: relative;
-	padding-left: 0.75em;
-	&::before {
-		display: block;
-		position: absolute; content: "";
-		top: 50%; left: 0;
-		width: 0; height: 0;
-		margin-top: -0.20em;
-		border-style: solid;
-		border-width: 0.20em 0 0.20em 0.25em;
-		border-color: transparent transparent transparent #000;
-	}
+/*====================================
+
+    0.0. link mark
+
+====================================*/
+
+a.link-mark {
+  position: relative;
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    font-family: "basicicon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
-a.link-triangle::before,
-.link-triangle a::before { -webkit-transform: rotate(0); transform: rotate(0); }
-
-a.link-triangle--top::before,
-.link-triangle--top a::before { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
-
-a.link-triangle--left::before,
-.link-triangle--left a::before { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
-
-a.link-triangle--bottom::before,
-.link-triangle--bottom a::before { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
-
-a.link-triangle--right::before,
-.link-triangle--right a::before { -webkit-transform: rotate(0); transform: rotate(0); }
-
-
-
-
-a.link-arrow,
-.link-arrow a,
-a.link-arrow--top,
-.link-arrow--top a,
-a.link-arrow--left,
-.link-arrow--left a,
-a.link-arrow--bottom,
-.link-arrow--bottom a,
-a.link-arrow--right,
-.link-arrow--right a {
-	position: relative;
-	padding-left: 0.75em;
-	&::before {
-		display: block;
-		position: absolute;
-		content: "";
-		top: 50%;
-		left: 0;
-		width: 0.40em;
-		height: 0.40em;
-		line-height: 1;
-		margin-top: -0.20em;
-		border-top: 1px solid #000;
-		border-left: 1px solid transparent;
-		border-bottom: 1px solid transparent;
-		border-right: 1px solid #000;
-	}
+.link-mark a {
+  @extend .link-mark;
 }
-a.link-arrow::before,
-.link-arrow a::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-a.link-arrow--top::before,
-.link-arrow--top a::before { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+/* angle--right */
 
-a.link-arrow--left::before,
-.link-arrow--left a::before { -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+a.link-mark--angle--right,
+.link-mark--angle--right a {
+  @extend .link-mark;
+  padding-left: 0.75em;
+  &::before {
+    content: "\e901";
+  }
+}
 
-a.link-arrow--bottom::before,
-.link-arrow--bottom a::before { -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+/* angle--down */
 
-a.link-arrow--right::before,
-.link-arrow--right a::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+a.link-mark--angle--down,
+.link-mark--angle--down a {
+  @extend .link-mark;
+  padding-left: 0.75em;
+  &::before {
+    content: "\e903";
+  }
+}
+
+/* angle--right-border-circle */
+
+a.link-mark--angle--right-circle,
+.link-mark--angle--right-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\e94f";
+  }
+}
+/* angle--down-border-circle */
+
+a.link-mark--angle--down-circle,
+.link-mark--angle--down-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\e951";
+  }
+}
+
+/* angle--right-border-circle */
+
+a.link-mark--angle--right-border-circle,
+.link-mark--angle--right-border-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\e937";
+  }
+}
+/* angle--down-border-circle */
+
+a.link-mark--angle--down-border-circle,
+.link-mark--angle--down-border-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\e939";
+  }
+}
+
+
+
+/* caret--right */
+
+a.link-mark--caret--right,
+.link-mark--caret--right a {
+  @extend .link-mark;
+  padding-left: 0.75em;
+  &::before {
+    content: "\ea13";
+  }
+}
+
+/* caret--down */
+
+a.link-mark--caret--down,
+.link-mark--caret--down a {
+  @extend .link-mark;
+  padding-left: 0.75em;
+  &::before {
+    content: "\ea15";
+  }
+}
+
+/* caret--right-border-circle */
+
+a.link-mark--caret--right-circle,
+.link-mark--caret--right-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\ea49";
+  }
+}
+/* caret--down-border-circle */
+
+a.link-mark--caret--down-circle,
+.link-mark--caret--down-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\ea4b";
+  }
+}
+
+/* caret--right-border-circle */
+
+a.link-mark--caret--right-border-circle,
+.link-mark--caret--right-border-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\ea61";
+  }
+}
+/* caret--down-border-circle */
+
+a.link-mark--caret--down-border-circle,
+.link-mark--caret--down-border-circle a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+  &::before {
+    content: "\ea63";
+  }
+}
+
+
+/*====================================
+
+    0.1. blank mark
+
+====================================*/
+.link-blank,
+.blank {
+  position: relative;
+  &::after {
+    display: inline-block;
+    margin-left: 0.25em;
+    content: "\e983";
+    font-family: "basicicon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

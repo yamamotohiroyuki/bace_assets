@@ -36,7 +36,9 @@
 .is-select,
 .is-open,
 .is-close,
-.is-loded {
+.is-loded,
+.is-en,
+.is-ja {
   color: inherit;
 }
 
@@ -2483,7 +2485,6 @@ dfn[title] {
   vertical-align: bottom !important;
 }
 
-/* 以下作業中 */
 /*====================================
 
   2.Table Style
@@ -2879,4 +2880,371 @@ table td.border-bottom--none {
   }
 }
 
+/*====================================
+
+  4.Mark Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. link mark
+    0.1. blank mark
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/10/30   Founding
+    
+====================================*/
+/*====================================
+
+    0.0. link mark
+
+====================================*/
+a.link-mark, .link-mark a, a.link-mark--angle--right,
+.link-mark--angle--right a, a.link-mark--angle--down,
+.link-mark--angle--down a, a.link-mark--angle--right-circle,
+.link-mark--angle--right-circle a, a.link-mark--angle--down-circle,
+.link-mark--angle--down-circle a, a.link-mark--angle--right-border-circle,
+.link-mark--angle--right-border-circle a, a.link-mark--angle--down-border-circle,
+.link-mark--angle--down-border-circle a, a.link-mark--caret--right,
+.link-mark--caret--right a, a.link-mark--caret--down,
+.link-mark--caret--down a, a.link-mark--caret--right-circle,
+.link-mark--caret--right-circle a, a.link-mark--caret--down-circle,
+.link-mark--caret--down-circle a, a.link-mark--caret--right-border-circle,
+.link-mark--caret--right-border-circle a, a.link-mark--caret--down-border-circle,
+.link-mark--caret--down-border-circle a {
+  position: relative;
+}
+
+a.link-mark::before, .link-mark a::before, a.link-mark--angle--right::before,
+.link-mark--angle--right a::before, a.link-mark--angle--down::before,
+.link-mark--angle--down a::before, a.link-mark--angle--right-circle::before,
+.link-mark--angle--right-circle a::before, a.link-mark--angle--down-circle::before,
+.link-mark--angle--down-circle a::before, a.link-mark--angle--right-border-circle::before,
+.link-mark--angle--right-border-circle a::before, a.link-mark--angle--down-border-circle::before,
+.link-mark--angle--down-border-circle a::before, a.link-mark--caret--right::before,
+.link-mark--caret--right a::before, a.link-mark--caret--down::before,
+.link-mark--caret--down a::before, a.link-mark--caret--right-circle::before,
+.link-mark--caret--right-circle a::before, a.link-mark--caret--down-circle::before,
+.link-mark--caret--down-circle a::before, a.link-mark--caret--right-border-circle::before,
+.link-mark--caret--right-border-circle a::before, a.link-mark--caret--down-border-circle::before,
+.link-mark--caret--down-border-circle a::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  font-family: "basicicon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* angle--right */
+a.link-mark--angle--right,
+.link-mark--angle--right a {
+  padding-left: 0.75em;
+}
+
+a.link-mark--angle--right::before,
+.link-mark--angle--right a::before {
+  content: "\e901";
+}
+
+/* angle--down */
+a.link-mark--angle--down,
+.link-mark--angle--down a {
+  padding-left: 0.75em;
+}
+
+a.link-mark--angle--down::before,
+.link-mark--angle--down a::before {
+  content: "\e903";
+}
+
+/* angle--right-border-circle */
+a.link-mark--angle--right-circle,
+.link-mark--angle--right-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--angle--right-circle::before,
+.link-mark--angle--right-circle a::before {
+  content: "\e94f";
+}
+
+/* angle--down-border-circle */
+a.link-mark--angle--down-circle,
+.link-mark--angle--down-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--angle--down-circle::before,
+.link-mark--angle--down-circle a::before {
+  content: "\e951";
+}
+
+/* angle--right-border-circle */
+a.link-mark--angle--right-border-circle,
+.link-mark--angle--right-border-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--angle--right-border-circle::before,
+.link-mark--angle--right-border-circle a::before {
+  content: "\e937";
+}
+
+/* angle--down-border-circle */
+a.link-mark--angle--down-border-circle,
+.link-mark--angle--down-border-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--angle--down-border-circle::before,
+.link-mark--angle--down-border-circle a::before {
+  content: "\e939";
+}
+
+/* caret--right */
+a.link-mark--caret--right,
+.link-mark--caret--right a {
+  padding-left: 0.75em;
+}
+
+a.link-mark--caret--right::before,
+.link-mark--caret--right a::before {
+  content: "\ea13";
+}
+
+/* caret--down */
+a.link-mark--caret--down,
+.link-mark--caret--down a {
+  padding-left: 0.75em;
+}
+
+a.link-mark--caret--down::before,
+.link-mark--caret--down a::before {
+  content: "\ea15";
+}
+
+/* caret--right-border-circle */
+a.link-mark--caret--right-circle,
+.link-mark--caret--right-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--caret--right-circle::before,
+.link-mark--caret--right-circle a::before {
+  content: "\ea49";
+}
+
+/* caret--down-border-circle */
+a.link-mark--caret--down-circle,
+.link-mark--caret--down-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--caret--down-circle::before,
+.link-mark--caret--down-circle a::before {
+  content: "\ea4b";
+}
+
+/* caret--right-border-circle */
+a.link-mark--caret--right-border-circle,
+.link-mark--caret--right-border-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--caret--right-border-circle::before,
+.link-mark--caret--right-border-circle a::before {
+  content: "\ea61";
+}
+
+/* caret--down-border-circle */
+a.link-mark--caret--down-border-circle,
+.link-mark--caret--down-border-circle a {
+  padding-left: 1.00em;
+}
+
+a.link-mark--caret--down-border-circle::before,
+.link-mark--caret--down-border-circle a::before {
+  content: "\ea63";
+}
+
+/*====================================
+
+    0.1. blank mark
+
+====================================*/
+.link-blank,
+.blank {
+  position: relative;
+}
+
+.link-blank::after,
+.blank::after {
+  display: inline-block;
+  margin-left: 0.25em;
+  content: "\e983";
+  font-family: "basicicon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 以下作業中 */
 /* 未着手 */
+/* =======================================================
+    plugin style
+======================================================== */
+/*====================================
+
+  0.slick style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. basic style
+    0.1. basic button reset
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/10/30   Founding
+    
+====================================*/
+/*====================================
+
+    0.0. basic style
+
+====================================*/
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/*====================================
+
+    0.1. basic button reset
+
+====================================*/
+.slick-slider button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}

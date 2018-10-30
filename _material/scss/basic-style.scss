@@ -37,16 +37,15 @@
 @import "basic-style/icon/style";
 // 2.Text Style
 @import "basic-style/text";
-/* 以下作業中 */
 // 3.Table Style
 @import "basic-style/table";
+// 4.mark
+@import "basic-style/mark";
 
-
+/* 以下作業中 */
 
 
 /* 未着手 */
-// 2.mark
-//@import "basic-style/mark";
 // grid
 //@import "basic-style/grid";
 // input-style
@@ -63,3 +62,9 @@
 //@import "basic-style/responsive";
 // size
 //@import "basic-style/size";
+
+/* =======================================================
+    plugin style
+======================================================== */
+// 1.slick
+@import "basic-style/slick";

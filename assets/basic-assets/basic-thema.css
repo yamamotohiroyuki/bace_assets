@@ -275,14 +275,11 @@ a.link-reverse:hover {
 
 /* 外部リンク */
 
-.link-blank,
-.blank {
-  display: inline-block;
-  padding-right: 15px;
-  margin: 0;
-  background-image: url(../img/common/icon-blank.png);
-  background-repeat: no-repeat;
-  background-position: right center;
+.link-blank::after,
+.blank::after {
+  /* Default (Basic form : basicstyle.css)
+  content: "\e983";
+	*/
 }
 
 /* 矢印付きリンク（三角） */
