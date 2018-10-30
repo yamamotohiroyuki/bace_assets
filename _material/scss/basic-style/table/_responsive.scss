@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@include media-breakpoint-down(small) {
+@media print,screen and (max-width: $breakpoints_medium) {
     table.is-responsive,
     table.is-responsive caption,
     table.is-responsive thead,

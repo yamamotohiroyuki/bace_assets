@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* ===========================================================
+
+	Title: basic-variables.css
+	Created: 2018-10-24
+  root変数「basic-style.css」「basic-thema.css」よりも
+  前に読み込む
+  ただ、IE11で使うにはハードル高め、今バージョンでは見送り
+
+=========================================================== */
+
+/*
+	root変数
+
+
+=========================================================== */
+
+:root {
+  /* color set 
+   - rgbの場合
+     color: rgb(var(--primary-color));
+   - rgbaの場合
+     color: rgba(var(--primary-color));
+  -------------------------------------------------- */
+  --primary-color: 0, 123, 255;
+  --secondary-color: 108, 117, 125;
+
+  /* 主にtableのボーダーカラー 
+  -------------------------------------------------- */
+  --border-line-color: 211, 211, 211;
+
+  /* .list-style__peculiar系のマージン 
+  -------------------------------------------------- */
+  --list-margin: 2.5em;
+
+  /* breakpoint 
+  -------------------------------------------------- */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+}
