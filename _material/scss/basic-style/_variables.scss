@@ -19,9 +19,9 @@
 
 ====================================*/
 
-//リストのマージンなんかの値
+// リストのマージンなんかの値
 $list_margin: 2.5em;
-//サイズの書き出し刻み方
+// サイズの書き出し刻み方
 $size_num: 5;
 
 $breakpoints_x-small: 0;
@@ -29,3 +29,14 @@ $breakpoints_small: 576px;
 $breakpoints_medium: 768px;
 $breakpoints_large: 992px;
 $breakpoints_x-large: 1200px;
+
+// 主要判定子一覧
+// is-
+.is-current,
+.is-active,
+.is-select,
+.is-open,
+.is-close,
+.is-loded { color: inherit; }
+// no-
+.no-responsive { color: inherit; }
