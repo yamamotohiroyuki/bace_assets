@@ -33,10 +33,10 @@
 	基本設定
 
 =========================================================== */
-
+html { font-size: 100%; }
 body {
   color: #000;
-  font-size: 16px;
+  font-size: 1.0rem;
   line-height: 1;
   font-weight: 500;
   text-rendering: optimizeSpeed;

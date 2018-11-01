@@ -1,182 +1,312 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* ===========================================================
+/*====================================
 
-	column
+  0.glid Style
 
-=========================================================== */
-@mixin column_flex() {
-	display: flex; flex-wrap: wrap;
-	margin-left: -1.0em; margin-right: -1.0em;
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. flex set
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/10/30   Founding
+    
+====================================*/
+
+/*====================================
+
+    0.0. flex set
+
+====================================*/
+
+@mixin flex-width($width:100%) {
+  flex-basis: $width;
+  width: $width;
+  max-width: $width;
 }
-@mixin column_flex__cell() {
-	padding-left: 1.0em; padding-right: 1.0em;
+
+.column {
+  display: flex;
+  margin: -0.5rem;
+  &:not(.no-responsive) {
+    flex-direction: column;
+    @media print,
+    screen and (min-width: $breakpoints_medium) {
+      flex-direction: row;
+    }
+  }
+  &.no-responsive {
+    flex-direction: row;
+  }
 }
 
-@mixin column_flex--block() {
-	display: block;
-	margin-left: 0; margin-right: 0;
-}
-@mixin column_flex__cell--block() {
-	margin-left: 0; margin-right: 0;
+.column__cell {
+  display: block;
+  padding: 0.5rem;
+  position: relative;
+  max-width: 100%;
+  min-height: 1px;
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
-.column { @include column_flex(); }
-.column__cell { @include column_flex__cell(); }
+.is-full {
+  @include flex-width();
+}
 
-/* 等幅コラム */
-.column--equal-width { @extend .column; flex-wrap: nowrap; }
-.column--equal-width .column__cell {
-	@include column_flex__cell();
-	flex-grow: 1; flex-basis: 100%;
+.column {
+  @extend .column;
+  flex-wrap: no-wrap;
+}
+
+/* 隙間なし　*/
+
+.column.no-gutter {
+  margin: 0;
+}
+
+.column.no-gutter .column__cell {
+  padding: 0;
+}
+
+.column--wrap {
+  @extend .column;
+  flex-wrap: wrap;
 }
 
 /* 2等分コラム */
-.column--2 { @extend .column; }
-.column--2 .column__cell,
-.column--2 .column__cell--2of1 {
-	@include column_flex__cell();
-	flex-basis: 50%; width: 50%;
-}
-.column--2 .column__cell--2of2 {
-	@include column_flex__cell();
-	flex-basis: 100%; width: 100%;
+
+.column--2-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @include flex-width();
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(50%);
+      }
+      &.is-x2,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
+  &.no-responsive {
+    .column__cell {
+      @include flex-width(50%);
+      &.is-x2,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
 }
 
 /* 3等分コラム */
-.column--3 { @extend .column; }
-.column--3 .column__cell,
-.column--3 .column__cell--3of1 {
-	@include column_flex__cell();
-	flex-basis: 33.3333%; width: 33.3333%;
-}
-.column--3 .column__cell--3of2 {
-	@include column_flex__cell();
-	flex-basis: 66.6666%; width: 66.6666%;
-}
-.column--3 .column__cell--3of3 {
-	@include column_flex__cell();
-	flex-basis: 100%; width: 100%;
+
+.column--3-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @include flex-width();
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(33.33333%);
+        &.is-x2 {
+          @include flex-width(66.66666%);
+        }
+      }
+      &.is-x3,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
+  &.no-responsive {
+    .column__cell {
+      @include flex-width(33.33333%);
+      &.is-x2 {
+        @include flex-width(66.66666%);
+      }
+      &.is-x3,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
 }
 
 
 /* 4等分コラム */
-.column--4 { @extend .column; }
-.column--4 .column__cell,
-.column--4 .column__cell--4of1 {
-	@include column_flex__cell();
-	flex-basis: 25%; width: 25%;
-}
-.column--4 .column__cell--4of2 {
-	@include column_flex__cell();
-	flex-basis: 50%; width: 50%;
-}
-.column--4 .column__cell--4of3 {
-	@include column_flex__cell();
-	flex-basis: 75%; width: 75%;
-}
-.column--4 .column__cell--4of4 {
-	@include column_flex__cell();
-	flex-basis: 100%; width: 100%;
-}
 
-
-
-/* ===========================================================
-
-	column-responsive
-
-=========================================================== */
-.column-responsive { @include column_flex--block(); }
-.column-responsive .column__cell { @include column_flex__cell--block(); }
-
-/* 等幅コラム */
-.column-responsive--equal-width { @extend .column-responsive; }
-.column-responsive--equal-width .column__cell { @include column_flex__cell--block(); }
-
-
-/* 2等分コラム */
-.column-responsive--2 { @extend .column-responsive; }
-.column-responsive--2 .column__cell,
-.column-responsive--2 .column__cell--2of1 { @include column_flex__cell--block(); }
-.column-responsive--2 .column__cell--2of2 { @include column_flex__cell--block(); }
-
-/* 3等分コラム */
-.column-responsive--3 { @extend .column-responsive; }
-.column-responsive--3 .column__cell,
-.column-responsive--3 .column__cell--3of1 { @include column_flex__cell--block(); }
-.column-responsive--3 .column__cell--3of2 { @include column_flex__cell--block(); }
-.column-responsive--3 .column__cell--3of3 { @include column_flex__cell--block(); }
-
-/* 4等分コラム */
-.column-responsive--4 { @extend .column-responsive; }
-.column-responsive--4 .column__cell,
-.column-responsive--4 .column__cell--4of1 { @include column_flex__cell--block(); }
-.column-responsive--4 .column__cell--4of2 { @include column_flex__cell--block(); }
-.column-responsive--4 .column__cell--4of3 { @include column_flex__cell--block(); }
-.column-responsive--4 .column__cell--4of4 { @include column_flex__cell--block(); }
-
-@media print, screen and (min-width:768px) {
-	
-	.column-responsive { @include column_flex(); }
-	.column-responsive__cell { @include column_flex__cell(); }
-	
-	/* 等幅コラム */
-	.column-responsive--equal-width { @include column_flex(); flex-wrap: nowrap; }
-	.column-responsive--equal-width .column__cell {
-		@include column_flex__cell();
-		flex-grow: 1; flex-basis: 100%;
-	}
-
-	/* 2等分コラム */
-	.column-responsive--2 { @include column_flex(); }
-	.column-responsive--2 .column__cell,
-	.column-responsive--2 .column-responsive__cell--2of1 {
-		@include column_flex__cell();
-		flex-basis: 50%; width: 50%;
-	}
-	.column-responsive--2 .column-responsive__cell--2of2 {
-		@include column_flex__cell();
-		flex-basis: 100%; width: 100%;
-	}
-
-	/* 3等分コラム */
-	.column-responsive--3 { @include column_flex(); }
-	.column-responsive--3 .column__cell,
-	.column-responsive--3 .column-responsive__cell--3of1 {
-		@include column_flex__cell();
-		flex-basis: 33.3333%; width: 33.3333%;
-	}
-	.column-responsive--3 .column-responsive__cell--3of2 {
-		@include column_flex__cell();
-		flex-basis: 66.6666%; width: 66.6666%;
-	}
-	.column-responsive--3 .column-responsive__cell--3of3 {
-		@include column_flex__cell();
-		flex-basis: 100%; width: 100%;
-	}
-
-
-	/* 4等分コラム */
-	.column-responsive--4 { @include column_flex(); }
-	.column-responsive--4 .column__cell,
-	.column-responsive--4 .column-responsive__cell--4of1 {
-		@include column_flex__cell();
-		flex-basis: 25%; width: 25%;
-	}
-	.column-responsive--4 .column-responsive__cell--4of2 {
-		@include column_flex__cell();
-		flex-basis: 50%; width: 50%;
-	}
-	.column-responsive--4 .column-responsive__cell--4of3 {
-		@include column_flex__cell();
-		flex-basis: 75%; width: 75%;
-	}
-	.column-responsive--4 .column-responsive__cell--4of4 {
-		@include column_flex__cell();
-		flex-basis: 100%; width: 100%;
-	}
-	
+.column--4-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @include flex-width();
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(25%);
+        &.is-x2 {
+          @include flex-width(50%);
+        }
+        &.is-x3 {
+          @include flex-width(75%);
+        }
+      }
+      &.is-x4,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
+  &.no-responsive {
+    .column__cell {
+      @include flex-width(25%);
+      &.is-x2 {
+        @include flex-width(50%);
+      }
+      &.is-x3 {
+        @include flex-width(75%);
+      }
+    }
+    &.is-x4,
+    &.is-full {
+      @extend .is-full;
+    }
+  }
 }
 
+/* 5等分コラム */
+
+.column--5-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @include flex-width();
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(20%);
+        &.is-x2 {
+          @include flex-width(40%);
+        }
+        &.is-x3 {
+          @include flex-width(60%);
+        }
+        &.is-x4 {
+          @include flex-width(80%);
+        }
+      }
+      &.is-x5,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
+  &.no-responsive {
+    .column__cell {
+      @include flex-width(20%);
+      &.is-x2 {
+        @include flex-width(40%);
+      }
+      &.is-x3 {
+        @include flex-width(60%);
+      }
+      &.is-x4 {
+        @include flex-width(80%);
+      }
+    }
+    &.is-x5,
+    &.is-full {
+      @extend .is-full;
+    }
+  }
+}
+
+
+/* 6等分コラム */
+
+
+.column--6-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @include flex-width();
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(16.66666%);
+        &.is-x2 {
+          @include flex-width(33.33333%);
+        }
+        &.is-x3 {
+          @include flex-width(50%);
+        }
+        &.is-x4 {
+          @include flex-width(66.66666%);
+        }
+        &.is-x5 {
+          @include flex-width(83.33333%);
+        }
+      }
+      &.is-x6,
+      &.is-full {
+        @extend .is-full;
+      }
+    }
+  }
+  &.no-responsive {
+    .column__cell {
+      @include flex-width(16.66666%);
+      &.is-x2 {
+        @include flex-width(33.33333%);
+      }
+      &.is-x3 {
+        @include flex-width(50%);
+      }
+      &.is-x4 {
+        @include flex-width(66.66666%);
+      }
+      &.is-x5 {
+        @include flex-width(83.33333%);
+      }
+    }
+    &.is-x6,
+    &.is-full {
+      @extend .is-full;
+    }
+  }
+}
+/*
+.column--6-cell {
+  @extend .column--wrap;
+}
+
+.column--6-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @extend .column__cell;
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(16.66666%);
+        &.is-x2 {
+          @include flex-width(33.33333%);
+        }
+        &.is-x3 {
+          @include flex-width(50%);
+        }
+        &.is-x4 {
+          @include flex-width(66.66666%);
+        }
+        &.is-x5 {
+          @include flex-width(83.33333%);
+        }
+      }
+    }
+  }
+}
+*/

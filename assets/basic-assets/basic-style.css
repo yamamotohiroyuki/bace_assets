@@ -3104,6 +3104,324 @@ a.link-mark--caret--down-border-circle::before,
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* CSS Document */
+/*====================================
+
+  0.glid Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. flex set
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/10/30   Founding
+    
+====================================*/
+/*====================================
+
+    0.0. flex set
+
+====================================*/
+.column, .column--wrap, .column--2-cell, .column--3-cell, .column--4-cell, .column--5-cell, .column--6-cell {
+  display: flex;
+  margin: -0.5rem;
+}
+
+.column:not(.no-responsive), .column--wrap:not(.no-responsive), .column--2-cell:not(.no-responsive), .column--3-cell:not(.no-responsive), .column--4-cell:not(.no-responsive), .column--5-cell:not(.no-responsive), .column--6-cell:not(.no-responsive) {
+  flex-direction: column;
+}
+
+@media print, screen and (min-width: 768px) {
+  .column:not(.no-responsive), .column--wrap:not(.no-responsive), .column--2-cell:not(.no-responsive), .column--3-cell:not(.no-responsive), .column--4-cell:not(.no-responsive), .column--5-cell:not(.no-responsive), .column--6-cell:not(.no-responsive) {
+    flex-direction: row;
+  }
+}
+
+.no-responsive.column, .no-responsive.column--wrap, .no-responsive.column--2-cell, .no-responsive.column--3-cell, .no-responsive.column--4-cell, .no-responsive.column--5-cell, .no-responsive.column--6-cell {
+  flex-direction: row;
+}
+
+.column__cell {
+  display: block;
+  padding: 0.5rem;
+  position: relative;
+  max-width: 100%;
+  min-height: 1px;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.is-full, .column--2-cell:not(.no-responsive) .column__cell.is-x2, .column--2-cell:not(.no-responsive) .column__cell.is-full, .column--2-cell.no-responsive .column__cell.is-x2, .column--2-cell.no-responsive .column__cell.is-full, .column--3-cell:not(.no-responsive) .column__cell.is-x3, .column--3-cell:not(.no-responsive) .column__cell.is-full, .column--3-cell.no-responsive .column__cell.is-x3, .column--3-cell.no-responsive .column__cell.is-full, .column--4-cell:not(.no-responsive) .column__cell.is-x4, .column--4-cell:not(.no-responsive) .column__cell.is-full, .column--4-cell.no-responsive.is-x4, .column--4-cell.no-responsive.is-full, .column--5-cell:not(.no-responsive) .column__cell.is-x5, .column--5-cell:not(.no-responsive) .column__cell.is-full, .column--5-cell.no-responsive.is-x5, .column--5-cell.no-responsive.is-full, .column--6-cell:not(.no-responsive) .column__cell.is-x6, .column--6-cell:not(.no-responsive) .column__cell.is-full, .column--6-cell.no-responsive.is-x6, .column--6-cell.no-responsive.is-full {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.column, .column--wrap, .column--2-cell, .column--3-cell, .column--4-cell, .column--5-cell, .column--6-cell {
+  flex-wrap: no-wrap;
+}
+
+/* 隙間なし　*/
+.no-gutter.column, .no-gutter.column--wrap, .no-gutter.column--2-cell, .no-gutter.column--3-cell, .no-gutter.column--4-cell, .no-gutter.column--5-cell, .no-gutter.column--6-cell {
+  margin: 0;
+}
+
+.no-gutter.column .column__cell, .no-gutter.column--wrap .column__cell, .no-gutter.column--2-cell .column__cell, .no-gutter.column--3-cell .column__cell, .no-gutter.column--4-cell .column__cell, .no-gutter.column--5-cell .column__cell, .no-gutter.column--6-cell .column__cell {
+  padding: 0;
+}
+
+.column--wrap, .column--2-cell, .column--3-cell, .column--4-cell, .column--5-cell, .column--6-cell {
+  flex-wrap: wrap;
+}
+
+/* 2等分コラム */
+.column--2-cell:not(.no-responsive) .column__cell {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .column--2-cell:not(.no-responsive) .column__cell {
+    flex-basis: 50%;
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+.column--2-cell.no-responsive .column__cell {
+  flex-basis: 50%;
+  width: 50%;
+  max-width: 50%;
+}
+
+/* 3等分コラム */
+.column--3-cell:not(.no-responsive) .column__cell {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .column--3-cell:not(.no-responsive) .column__cell {
+    flex-basis: 33.33333%;
+    width: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .column--3-cell:not(.no-responsive) .column__cell.is-x2 {
+    flex-basis: 66.66666%;
+    width: 66.66666%;
+    max-width: 66.66666%;
+  }
+}
+
+.column--3-cell.no-responsive .column__cell {
+  flex-basis: 33.33333%;
+  width: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.column--3-cell.no-responsive .column__cell.is-x2 {
+  flex-basis: 66.66666%;
+  width: 66.66666%;
+  max-width: 66.66666%;
+}
+
+/* 4等分コラム */
+.column--4-cell:not(.no-responsive) .column__cell {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .column--4-cell:not(.no-responsive) .column__cell {
+    flex-basis: 25%;
+    width: 25%;
+    max-width: 25%;
+  }
+  .column--4-cell:not(.no-responsive) .column__cell.is-x2 {
+    flex-basis: 50%;
+    width: 50%;
+    max-width: 50%;
+  }
+  .column--4-cell:not(.no-responsive) .column__cell.is-x3 {
+    flex-basis: 75%;
+    width: 75%;
+    max-width: 75%;
+  }
+}
+
+.column--4-cell.no-responsive .column__cell {
+  flex-basis: 25%;
+  width: 25%;
+  max-width: 25%;
+}
+
+.column--4-cell.no-responsive .column__cell.is-x2 {
+  flex-basis: 50%;
+  width: 50%;
+  max-width: 50%;
+}
+
+.column--4-cell.no-responsive .column__cell.is-x3 {
+  flex-basis: 75%;
+  width: 75%;
+  max-width: 75%;
+}
+
+/* 5等分コラム */
+.column--5-cell:not(.no-responsive) .column__cell {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .column--5-cell:not(.no-responsive) .column__cell {
+    flex-basis: 20%;
+    width: 20%;
+    max-width: 20%;
+  }
+  .column--5-cell:not(.no-responsive) .column__cell.is-x2 {
+    flex-basis: 40%;
+    width: 40%;
+    max-width: 40%;
+  }
+  .column--5-cell:not(.no-responsive) .column__cell.is-x3 {
+    flex-basis: 60%;
+    width: 60%;
+    max-width: 60%;
+  }
+  .column--5-cell:not(.no-responsive) .column__cell.is-x4 {
+    flex-basis: 80%;
+    width: 80%;
+    max-width: 80%;
+  }
+}
+
+.column--5-cell.no-responsive .column__cell {
+  flex-basis: 20%;
+  width: 20%;
+  max-width: 20%;
+}
+
+.column--5-cell.no-responsive .column__cell.is-x2 {
+  flex-basis: 40%;
+  width: 40%;
+  max-width: 40%;
+}
+
+.column--5-cell.no-responsive .column__cell.is-x3 {
+  flex-basis: 60%;
+  width: 60%;
+  max-width: 60%;
+}
+
+.column--5-cell.no-responsive .column__cell.is-x4 {
+  flex-basis: 80%;
+  width: 80%;
+  max-width: 80%;
+}
+
+/* 6等分コラム */
+.column--6-cell:not(.no-responsive) .column__cell {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .column--6-cell:not(.no-responsive) .column__cell {
+    flex-basis: 16.66666%;
+    width: 16.66666%;
+    max-width: 16.66666%;
+  }
+  .column--6-cell:not(.no-responsive) .column__cell.is-x2 {
+    flex-basis: 33.33333%;
+    width: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .column--6-cell:not(.no-responsive) .column__cell.is-x3 {
+    flex-basis: 50%;
+    width: 50%;
+    max-width: 50%;
+  }
+  .column--6-cell:not(.no-responsive) .column__cell.is-x4 {
+    flex-basis: 66.66666%;
+    width: 66.66666%;
+    max-width: 66.66666%;
+  }
+  .column--6-cell:not(.no-responsive) .column__cell.is-x5 {
+    flex-basis: 83.33333%;
+    width: 83.33333%;
+    max-width: 83.33333%;
+  }
+}
+
+.column--6-cell.no-responsive .column__cell {
+  flex-basis: 16.66666%;
+  width: 16.66666%;
+  max-width: 16.66666%;
+}
+
+.column--6-cell.no-responsive .column__cell.is-x2 {
+  flex-basis: 33.33333%;
+  width: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.column--6-cell.no-responsive .column__cell.is-x3 {
+  flex-basis: 50%;
+  width: 50%;
+  max-width: 50%;
+}
+
+.column--6-cell.no-responsive .column__cell.is-x4 {
+  flex-basis: 66.66666%;
+  width: 66.66666%;
+  max-width: 66.66666%;
+}
+
+.column--6-cell.no-responsive .column__cell.is-x5 {
+  flex-basis: 83.33333%;
+  width: 83.33333%;
+  max-width: 83.33333%;
+}
+
+/*
+.column--6-cell {
+  @extend .column--wrap;
+}
+
+.column--6-cell {
+  @extend .column--wrap;
+  &:not(.no-responsive) {
+    .column__cell {
+      @extend .column__cell;
+      @media print,
+      screen and (min-width: $breakpoints_medium) {
+        @include flex-width(16.66666%);
+        &.is-x2 {
+          @include flex-width(33.33333%);
+        }
+        &.is-x3 {
+          @include flex-width(50%);
+        }
+        &.is-x4 {
+          @include flex-width(66.66666%);
+        }
+        &.is-x5 {
+          @include flex-width(83.33333%);
+        }
+      }
+    }
+  }
+}
+*/
 /* 以下作業中 */
 /* 未着手 */
 /* =======================================================
