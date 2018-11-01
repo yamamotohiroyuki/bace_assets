@@ -97,6 +97,8 @@ html {
   /* normalize.css */
   -webkit-text-size-adjust: 100%;
   /* normalize.css */
+  -ms-overflow-style: scrollbar;
+  /* from bootstrap */
 }
 
 html,
