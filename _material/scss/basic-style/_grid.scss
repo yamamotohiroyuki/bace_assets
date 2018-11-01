@@ -140,7 +140,6 @@
   }
 }
 
-
 /* 4等分コラム */
 
 .column--4-cell {
@@ -173,10 +172,10 @@
       &.is-x3 {
         @include flex-width(75%);
       }
-    }
-    &.is-x4,
-    &.is-full {
-      @extend .is-full;
+      &.is-x4,
+      &.is-full {
+        @extend .is-full;
+      }
     }
   }
 }
@@ -219,17 +218,15 @@
       &.is-x4 {
         @include flex-width(80%);
       }
-    }
-    &.is-x5,
-    &.is-full {
-      @extend .is-full;
+      &.is-x5,
+      &.is-full {
+        @extend .is-full;
+      }
     }
   }
 }
 
-
 /* 6等分コラム */
-
 
 .column--6-cell {
   @extend .column--wrap;
@@ -273,40 +270,10 @@
       &.is-x5 {
         @include flex-width(83.33333%);
       }
-    }
-    &.is-x6,
-    &.is-full {
-      @extend .is-full;
-    }
-  }
-}
-/*
-.column--6-cell {
-  @extend .column--wrap;
-}
-
-.column--6-cell {
-  @extend .column--wrap;
-  &:not(.no-responsive) {
-    .column__cell {
-      @extend .column__cell;
-      @media print,
-      screen and (min-width: $breakpoints_medium) {
-        @include flex-width(16.66666%);
-        &.is-x2 {
-          @include flex-width(33.33333%);
-        }
-        &.is-x3 {
-          @include flex-width(50%);
-        }
-        &.is-x4 {
-          @include flex-width(66.66666%);
-        }
-        &.is-x5 {
-          @include flex-width(83.33333%);
-        }
+      &.is-x6,
+      &.is-full {
+        @extend .is-full;
       }
     }
   }
 }
-*/
