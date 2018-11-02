@@ -3,7 +3,7 @@
 
 
 /* リスト */
-.list-style__peculiar {
+.list-style-peculiar {
 	margin-left: $list_margin !important;
 	
 	> li {
@@ -18,20 +18,20 @@
 }
 
 /* spanでリストヘッド自由入力 */
-.list-style__peculiar--original {
-	@extend .list-style__peculiar;
+.list-style-peculiar--original {
+	@extend .list-style-peculiar;
 	> li {
 		counter-increment: cnt_brackets-decimal;
 		&::before{
 			display: none;
 		}
 	}
-	.list-style__peculiar--original__mark { display: inline-block; width: $list_margin; text-indent: 0; }
+	.list-style-peculiar--original_mark { display: inline-block; width: $list_margin; text-indent: 0; }
 }
 
 /* (1) カッコに数字 */
-.list-style__peculiar--brackets-decimal {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-decimal {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-decimal 0;
 	> li {
 		counter-increment: cnt_brackets-decimal;
@@ -42,8 +42,8 @@
 }
 
 /* (i) カッコに小文字ローマ数字 */
-.list-style__peculiar--brackets-lowerroman {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-lowerroman {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-lowerroman 0;
 	> li {
 		counter-increment: cnt_brackets-lowerroman;
@@ -54,8 +54,8 @@
 }
 
 /* (I) カッコに大文字ローマ数字 */
-.list-style__peculiar--brackets-upperroman {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-upperroman {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-upperroman 0;
 	> li {
 		counter-increment: cnt_brackets-upperroman;
@@ -66,8 +66,8 @@
 }
 
 /* (a) カッコに小文字アルファベット */
-.list-style__peculiar--brackets-loweralpha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-loweralpha {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-loweralpha 0;
 	> li {
 		counter-increment: cnt_brackets-loweralpha;
@@ -78,8 +78,8 @@
 }
 
 /* (A) カッコに大文字アルファベット */
-.list-style__peculiar--brackets-upperalpha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-upperalpha {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-upperalpha 0;
 	> li {
 		counter-increment: cnt_brackets-upperalpha;
@@ -90,8 +90,8 @@
 }
 
 /* (あ) カッコにひらがな */
-.list-style__peculiar--brackets-hiragana {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-hiragana {
+	@extend .list-style-peculiar;
 	@each $value in $set_hiragana {
 		$key: index($set_hiragana, $value);
 		> li:nth-child(#{$key}):before{
@@ -100,8 +100,8 @@
 	}
 }
 /* (い) カッコにいろは  */
-.list-style__peculiar--brackets-hiragana-iroha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-hiragana-iroha {
+	@extend .list-style-peculiar;
 	@each $value in $set_hiragana_iroha {
 		$key: index($set_hiragana_iroha, $value);
 		> li:nth-child(#{$key}):before{
@@ -111,8 +111,8 @@
 }
 
 /* (ア) カッコにカタカナ */
-.list-style__peculiar--brackets-katakana {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-katakana {
+	@extend .list-style-peculiar;
 	@each $value in $set_katakana {
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
@@ -121,8 +121,8 @@
 	}
 }
 /* (イ) カッコにイロハ  */
-.list-style__peculiar--brackets-katakana-iroha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--brackets-katakana-iroha {
+	@extend .list-style-peculiar;
 	@each $value in $set_katakana_iroha {
 		$key: index($set_katakana_iroha, $value);
 		> li:nth-child(#{$key}):before{
@@ -132,8 +132,8 @@
 }
 
 /* 1) 片方カッコに数字 */
-.list-style__peculiar--side-brackets-decimal {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-decimal {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-decimal 0;
 	> li {
 		counter-increment: cnt_brackets-decimal;
@@ -144,8 +144,8 @@
 }
 
 /* a) 片方カッコに小文字アルファベット */
-.list-style__peculiar--side-brackets-lowerroman {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-lowerroman {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-lowerroman 0;
 	> li {
 		counter-increment: cnt_brackets-lowerroman;
@@ -156,8 +156,8 @@
 }
 
 /* A) 片方カッコに大文字アルファベット */
-.list-style__peculiar--side-brackets-upperroman {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-upperroman {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-upperroman 0;
 	> li {
 		counter-increment: cnt_brackets-upperroman;
@@ -168,8 +168,8 @@
 }
 
 /* i) 片方カッコに小文字アルファベット */
-.list-style__peculiar--side-brackets-loweralpha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-loweralpha {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-loweralpha 0;
 	> li {
 		counter-increment: cnt_brackets-loweralpha;
@@ -180,8 +180,8 @@
 }
 
 /* I) 片方カッコに大文字アルファベット */
-.list-style__peculiar--side-brackets-upperalpha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-upperalpha {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_brackets-upperalpha 0;
 	> li {
 		counter-increment: cnt_brackets-upperalpha;
@@ -192,8 +192,8 @@
 }
 
 /* あ) 片方カッコにひらがな */
-.list-style__peculiar--side-brackets-hiragana {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-hiragana {
+	@extend .list-style-peculiar;
 	@each $value in $set_hiragana {
 		$key: index($set_hiragana, $value);
 		> li:nth-child(#{$key}):before{
@@ -202,8 +202,8 @@
 	}
 }
 /* い) 片方カッコにいろは */
-.list-style__peculiar--side-brackets-hiragana-iroha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-hiragana-iroha {
+	@extend .list-style-peculiar;
 	@each $value in $set_hiragana_iroha {
 		$key: index($set_hiragana_iroha, $value);
 		> li:nth-child(#{$key}):before{
@@ -213,8 +213,8 @@
 }
 
 /* ア) 片方カッコにカタカナ */
-.list-style__peculiar--side-brackets-katakana {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-katakana {
+	@extend .list-style-peculiar;
 	@each $value in $set_katakana {
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
@@ -223,8 +223,8 @@
 	}
 }
 /* イ) 片方カッコにイロハ */
-.list-style__peculiar--side-brackets-katakana-iroha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--side-brackets-katakana-iroha {
+	@extend .list-style-peculiar;
 	@each $value in $set_katakana_iroha {
 		$key: index($set_katakana_iroha, $value);
 		> li:nth-child(#{$key}):before{
@@ -238,8 +238,8 @@
 
 
 /* 1. ドットに数字 */
-.list-style__peculiar--dot-decimal {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-decimal {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_dot-decimal 0;
 	> li {
 		counter-increment: cnt_dot-decimal;
@@ -250,8 +250,8 @@
 }
 
 /* a. ドットに小文字アルファベット */
-.list-style__peculiar--dot-lowerroman {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-lowerroman {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_dot-lowerroman 0;
 	> li {
 		counter-increment: cnt_dot-lowerroman;
@@ -262,8 +262,8 @@
 }
 
 /* A. ドットに大文字アルファベット */
-.list-style__peculiar--dot-upperroman {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-upperroman {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_dot-upperroman 0;
 	> li {
 		counter-increment: cnt_dot-upperroman;
@@ -275,8 +275,8 @@
 
 
 /* i. ドットに小文字アルファベット */
-.list-style__peculiar--dot-loweralpha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-loweralpha {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_dot-loweralpha 0;
 	> li {
 		counter-increment: cnt_dot-loweralpha;
@@ -287,8 +287,8 @@
 }
 
 /* I. ドットに大文字アルファベット */
-.list-style__peculiar--dot-upperalpha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-upperalpha {
+	@extend .list-style-peculiar;
 	counter-reset: cnt_dot-upperalpha 0;
 	> li {
 		counter-increment: cnt_dot-upperalpha;
@@ -300,8 +300,8 @@
 
 
 /* あ. ドットにひらがな */
-.list-style__peculiar--dot-hiragana {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-hiragana {
+	@extend .list-style-peculiar;
 	@each $value in $set_hiragana {
 		$key: index($set_hiragana, $value);
 		> li:nth-child(#{$key}):before{
@@ -311,8 +311,8 @@
 }
 
 /* い. ドットにいろは */
-.list-style__peculiar--dot-hiragana-iroha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-hiragana-iroha {
+	@extend .list-style-peculiar;
 	@each $value in $set_hiragana_iroha {
 		$key: index($set_hiragana_iroha, $value);
 		> li:nth-child(#{$key}):before{
@@ -322,8 +322,8 @@
 }
 
 /* ア. ドットにカタカナ */
-.list-style__peculiar--dot-katakana {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-katakana {
+	@extend .list-style-peculiar;
 	@each $value in $set_katakana {
 		$key: index($set_katakana, $value);
 		> li:nth-child(#{$key}):before{
@@ -333,8 +333,8 @@
 }
 
 /* イ. ドットにイロハ */
-.list-style__peculiar--dot-katakana-iroha {
-	@extend .list-style__peculiar;
+.list-style-peculiar--dot-katakana-iroha {
+	@extend .list-style-peculiar;
 	@each $value in $set_katakana_iroha {
 		$key: index($set_katakana_iroha, $value);
 		> li:nth-child(#{$key}):before{
@@ -346,8 +346,8 @@
 /* character */
 
 /* ① 丸数字 */
-.list-style__peculiar--character_circle-decimal {
-	@extend .list-style__peculiar;
+.list-style-peculiar--character_circle-decimal {
+	@extend .list-style-peculiar;
 	
 	> li:nth-of-type(1)::before { content: "\02460"; }
 	> li:nth-of-type(2)::before { content: "\02461"; }
@@ -372,8 +372,8 @@
 	
 }
 /* ❶ 丸数字 */
-.list-style__peculiar--character_round-decimal {
-	@extend .list-style__peculiar;
+.list-style-peculiar--character_round-decimal {
+	@extend .list-style-peculiar;
 	
 	> li:nth-of-type(1)::before { content: "\02776"; }
 	> li:nth-of-type(2)::before { content: "\02777"; }
