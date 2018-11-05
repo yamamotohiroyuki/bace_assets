@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .list-style--circle,
 .list-style--disc,
 .list-style--square,
@@ -14,25 +13,68 @@
 .list-style--hiragana-iroha,
 .list-style--katakana,
 .list-style--katakana-iroha,
-.list-style--none { margin-left: $list_margin !important; list-style-position: outside; text-indent: 0; }
+.list-style--none {
+  margin-left: $list_margin !important;
+  list-style-position: outside;
+  text-indent: 0;
+}
 
-.list-style--circle > li { list-style-type: circle; }
-.list-style--disc > li { list-style-type: disc; }
-.list-style--square > li { list-style-type: square; }
+.list-style--circle>li {
+  list-style-type: circle;
+}
 
-.list-style--decimal > li {list-style-type: decimal;}
-.list-style--decimal-zero > li { list-style-type: decimal-leading-zero; }
-.list-style--lower-roman > li {list-style-type: lower-roman;}
-.list-style--upper-roman > li {list-style-type: upper-roman;}
-.list-style--lower-alpha > li {list-style-type: lower-alpha;}
-.list-style--upper-alpha > li {list-style-type: upper-alpha;}
+.list-style--disc>li {
+  list-style-type: disc;
+}
 
-.list-style--cjk-ideographic > li { list-style-type: cjk-ideographic; }
+.list-style--square>li {
+  list-style-type: square;
+}
 
-.list-style--hiragana > li { list-style-type: hiragana; }
-.list-style--hiragana-iroha li { list-style-type: hiragana-iroha; }
+.list-style--decimal>li {
+  list-style-type: decimal;
+}
 
-.list-style--katakana > li { list-style-type: katakana; }
-.list-style--katakana-iroha > li { list-style-type: katakana-iroha; }
+.list-style--decimal-zero>li {
+  list-style-type: decimal-leading-zero;
+}
 
-.list-style--none > li {list-style: none;}
+.list-style--lower-roman>li {
+  list-style-type: lower-roman;
+}
+
+.list-style--upper-roman>li {
+  list-style-type: upper-roman;
+}
+
+.list-style--lower-alpha>li {
+  list-style-type: lower-alpha;
+}
+
+.list-style--upper-alpha>li {
+  list-style-type: upper-alpha;
+}
+
+.list-style--cjk-ideographic>li {
+  list-style-type: cjk-ideographic;
+}
+
+.list-style--hiragana>li {
+  list-style-type: hiragana;
+}
+
+.list-style--hiragana-iroha li {
+  list-style-type: hiragana-iroha;
+}
+
+.list-style--katakana>li {
+  list-style-type: katakana;
+}
+
+.list-style--katakana-iroha>li {
+  list-style-type: katakana-iroha;
+}
+
+.list-style--none>li {
+  list-style: none;
+}

@@ -45,26 +45,30 @@
 @import "basic-style/grid";
 // 6.list-style
 @import "basic-style/list-style";
+// 7.indent-list
+@import "basic-style/indent-list";
+// 8.responsive
+@import "basic-style/responsive";
+// 9.clear&float
+// 10.module
+@import "basic-style/module";
 
 /* 以下作業中 */
-/* 未着手 */
-// input-style
-//@import "basic-style/input-style";
-// list-style
-//@import "basic-style/list-style";
-// indent-list
-//@import "basic-style/indent-list";
-// clear&float
-//@import "basic-style/clear-float";
-// module
-//@import "basic-style/module";
-// responsive
-//@import "basic-style/responsive";
-// size
-//@import "basic-style/size";
+// 11.input-style
+@import "basic-style/input-style";
+
 
 /* =======================================================
     plugin style
 ======================================================== */
 // 1.slick
 @import "basic-style/slick";
+
+
+
+/* =======================================================
+    plugin style
+======================================================== */
+
+// 99.size
+@import "basic-style/size";

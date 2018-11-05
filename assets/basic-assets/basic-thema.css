@@ -23,11 +23,6 @@
 
 
 =========================================================== */
-
-:root {
-  --border-line-color: 211, 211, 211;
-}
-
 /* ===========================================================
 
 	基本設定
@@ -40,7 +35,7 @@ body {
   line-height: 1;
   font-weight: 500;
   text-rendering: optimizeSpeed;
-  font-family: "Yu Gothic", YuGothic, sans-serif;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
   /**/
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -48,9 +43,9 @@ body {
   padding: 20px;
 }
 
-body.is_ja {}
+body.is-ja {}
 
-body.is_en {}
+body.is-en {}
 
 @media all and (-ms-high-contrast:none) {
   body {
@@ -373,31 +368,41 @@ a.link-arrow--right::before,
 [class^="list-style--"],
 [class*=" list-style--"] {
   /* Default (Basic form : basicstyle.css)
-	margin-left: 2em;
+	margin-left: 2.5em;
 */
 }
 
 /* リスト調整(peculiar) */
 
-[class^="list-style__peculiar"],
-[class*=" list-style__peculiar"] {
-  /* Default (Basic form : basicstyle.css)
-	margin-left: 2em !important;
-*/
+[class^="list-style-peculiar"],
+[class*=" list-style-peculiar"] {
+	margin-left: 2.5em !important;
 }
 
-[class^="list-style__peculiar"]>li,
-[class*=" list-style__peculiar"]>li {
-  /* Default (Basic form : basicstyle.css)
-	text-indent: -2em !important;
-*/
+[class^="list-style-peculiar"]>li,
+[class*=" list-style-peculiar"]>li {
+	text-indent: -2.5em !important;
 }
 
-[class^="list-style__peculiar"]>li::before,
-[class*=" list-style__peculiar"]>li::before {
-  /* Default (Basic form : basicstyle.css)
-	width: 2em !important;
-*/
+[class^="list-style-peculiar"]>li::before,
+[class*=" list-style-peculiar"]>li::before {
+	width: 2.5em !important;
+}
+/* リスト調整(icon) */
+
+[class^="list-style-icon"],
+[class*=" list-style-icon"] {
+	margin-left: 1.5em !important;
+}
+
+[class^="list-style-icon"]>li,
+[class*=" list-style-icon"]>li {
+	text-indent: -1.5em !important;
+}
+
+[class^="list-style-icon"]>li::before,
+[class*=" list-style-icon"]>li::before {
+	width: 1.5em !important;
 }
 
 /* ===========================================================
@@ -1071,4 +1076,22 @@ table.table--narrow-padding td {
 }
 
 /* archive-list */
+
+
+
+
+/* ===========================================================
+
+	コンテンツスタイル : input-ui
+
+=========================================================== */
+.input-ui input[type="text"],
+.input-ui input[type="search"],
+.input-ui input[type="tel"],
+.input-ui input[type="url"],
+.input-ui input[type="email"],
+.input-ui input[type="password"],
+.input-ui input[type="date"],
+.input-ui input[type="number"],
+.input-ui input[type="color"] {}
 

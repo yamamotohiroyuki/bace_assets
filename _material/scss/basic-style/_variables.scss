@@ -23,6 +23,7 @@
 $list_margin: 2.5em;
 // サイズの書き出し刻み方
 $size_num: 5;
+$size_num_em: 0.25;
 
 $breakpoints_x-small: 0;
 $breakpoints_small: 576px;
@@ -40,5 +41,14 @@ $breakpoints_x-large: 1200px;
 .is-loded,
 .is-en,
 .is-ja { color: inherit; }
+// size
+.is-mini { font-size: 0.688em; }
+.is-tiny { font-size: 0.75em; }
+.is-small { font-size: 0.875em; }
+.is-medium { font-size: 1.0em; }
+.is-large { font-size: 1.125em; }
+.is-big { font-size: 1.25em; }
+.is-huge { font-size: 1.5em; }
+.is-massive { font-size: 2.0em; }
 // no-
 .no-responsive { color: inherit; }
