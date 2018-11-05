@@ -1,35 +1,32 @@
 @charset "UTF-8";
 /* Scss Document */
 
-/* ===========================================================
+/*====================================
 
-	indent-list ( 旧・indent-table )
+  7.indent-list Style
 
-=========================================================== */
+    ----------------------------------
+        Structure
+    ----------------------------------
+    7.0. indent list set
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/11/02   Founding
+    
+====================================*/
 
-.indent-list {
-	display: table;
-	> li {
-		display: table-row;
-		> span,
-		> div {
-			display: table-cell;
-			padding: 0.25em 0 0.25em 0.25em;
-			vertical-align: top;
-		}
-	}
-	> li::before {
-		display: table-cell;
-		padding: 0.25em 0;
-		vertical-align: top;
-		width: 1%; white-space: nowrap;
-		content: attr(data-indent-head);
-	}
-}
+/*====================================
 
+    7.0. indent list set
 
+====================================*/
+
+.indent-list,
 .caption,
-.caution {
+.caution,
+.notes {
 	display: table;
 	> li {
 		display: table-row;
