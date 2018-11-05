@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+@import "icon/variables";
+
+/* リスト */
+.list-style-icon {
+	margin-left: $list_margin !important;
+	
+	> li {
+		list-style-type:none;
+		list-style-position:inside;
+		text-indent: -$list_margin;
+		
+		&::before {
+      display: inline-block; width: $list_margin; text-indent: 0;
+      font-family: '#{$icomoon-font-family}' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+		}
+	}
+}
+.list-style-icon--circle {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-condition_circle-circle);
+		}
+	}
+}
+.list-style-icon--disc {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-condition_blank-circle);
+		}
+	}
+}
+.list-style-icon--square {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-condition_blank-square);
+		}
+	}
+}
+.list-style-icon--square-border {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-condition_square-square);
+		}
+	}
+}
+.list-style-icon--check {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-condition_check-bold);
+		}
+	}
+}
+.list-style-icon--check-circle {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-condition_check-circle);
+		}
+	}
+}
+.list-style-icon--exclamation-circle {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-attention_exclamation-circle);
+		}
+	}
+}
+.list-style-icon--exclamation-square {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-attention_exclamation-square);
+		}
+	}
+}
+.list-style-icon--exclamation-triangle {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-attention_exclamation-triangle);
+		}
+	}
+}
+.list-style-icon--question-circle {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-attention_question-circle);
+		}
+	}
+}
+.list-style-icon--question-square {
+  @extend .list-style-icon;
+	> li {
+		&::before {
+      content: bi-content($bi-attention_question-square);
+		}
+	}
+}
