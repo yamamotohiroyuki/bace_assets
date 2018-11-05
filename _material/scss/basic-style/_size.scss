@@ -1,77 +1,233 @@
 @charset "UTF-8";
 /* Scss Document */
+
+/*====================================
+
+  99. size Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    99.0. input reset
+    99.1. input ui
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/11/05   Founding
+    
+====================================*/
+
+/*====================================
+
+    8.0. input reset
+
+====================================*/
+
 @for $i from 0 through 140 {
-	// px
-	.width--#{$i * $size_num} { width: #{$i * $size_num}px !important; }
-}
-@for $i from 0 through 20 {
-	// percent
-	.width--percent-#{$i * $size_num} { width:  #{$i * $size_num}% !important; }
-}
-@for $i from 0 through 140 {
-	// px
-	.height--#{$i * $size_num} { height: #{$i * $size_num}px !important; }
-}
-@for $i from 0 through 20 {
-	// percent
-	.height--percent-#{$i * $size_num} { height:  #{$i * $size_num}% !important; }
+  // px width
+  .width--#{$i * $size_num} {
+    width: #{$i * $size_num}px !important;
+  }
+  // px height
+  .height--#{$i * $size_num} {
+    height: #{$i * $size_num}px !important;
+  }
 }
 
-.margin--auto { margin: auto !important; }
-.margin-horizontal--auto { margin-right: auto !important; margin-left: auto !important; }
-.margin-vertical--auto { margin-top: auto !important; margin-bottom: auto !important; }
-.margin-top--auto { margin-top: auto !important; }
-.margin-right--auto { margin-right: auto !important; }
-.margin-bottom--auto { margin-bottom: auto !important; }
-.margin-left--auto { margin-left: auto !important; }
+@for $i from 0 through 20 {
+  // percent width
+  .width--percent-#{$i * $size_num} {
+    width : #{$i * $size_num}% !important;
+  }
+  // percent height
+  .height--percent-#{$i * $size_num} {
+    height : #{$i * $size_num}% !important;
+  }
+}
+@for $i from 0 through 40 {
+  // em width
+  .width--em-#{$i * $size_num_em * 100} {
+    width : #{$i * $size_num_em}em !important;
+  }
+  // rem width
+  .width--rem-#{$i * $size_num_em* 100} {
+    width : #{$i * $size_num_em}rem !important;
+  }
+  // em height
+  .height--em-#{$i * $size_num_em* 100} {
+    height : #{$i * $size_num_em}em !important;
+  }
+  // rem height
+  .height--rem-#{$i * $size_num_em* 100} {
+    height : #{$i * $size_num_em}rem !important;
+  }
+}
+
+
+.margin--auto {
+  margin: auto !important;
+}
+
+.margin-horizontal--auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.margin-vertical--auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.margin-top--auto {
+  margin-top: auto !important;
+}
+
+.margin-right--auto {
+  margin-right: auto !important;
+}
+
+.margin-bottom--auto {
+  margin-bottom: auto !important;
+}
+
+.margin-left--auto {
+  margin-left: auto !important;
+}
 
 @for $i from 0 through 30 {
-	// margin px
-	.margin--#{$i * $size_num} { margin: #{$i * $size_num}px !important; }
-	.margin-horizontal--#{$i * $size_num} { margin-right: #{$i * $size_num}px !important; margin-left: #{$i * $size_num}px !important; }
-	.margin-vertical--#{$i * $size_num} { margin-top: #{$i * $size_num}px !important; margin-bottom: #{$i * $size_num}px !important; }
-	.margin-top--#{$i * $size_num} { margin-top: #{$i * $size_num}px !important; }
-	.margin-right--#{$i * $size_num} { margin-right: #{$i * $size_num}px !important; }
-	.margin-bottom--#{$i * $size_num} { margin-bottom: #{$i * $size_num}px !important; }
-	.margin-left--#{$i * $size_num} { margin-left: #{$i * $size_num}px !important; }
-	// padding px
-	.padding--#{$i * $size_num} { padding: #{$i * $size_num}px !important; }
-	.padding-horizontal--#{$i * $size_num} { padding-right: #{$i * $size_num}px !important; padding-left: #{$i * $size_num}px !important; }
-	.padding-vertical--#{$i * $size_num} { padding-top: #{$i * $size_num}px !important; padding-bottom: #{$i * $size_num}px !important; }
-	.padding-top--#{$i * $size_num} { padding-top: #{$i * $size_num}px !important; }
-	.padding-right--#{$i * $size_num} { padding-right: #{$i * $size_num}px !important; }
-	.padding-bottom--#{$i * $size_num} { padding-bottom: #{$i * $size_num}px !important; }
-	.padding-left--#{$i * $size_num} { padding-left: #{$i * $size_num}px !important; }
-	// negative margin px
-	.margin--negative-#{$i * $size_num} { margin: -#{$i * $size_num}px !important; }
-	.margin-horizontal--negative-#{$i * $size_num} { margin-right: -#{$i * $size_num}px !important; margin-left: -#{$i * $size_num}px !important; }
-	.margin-vertical--negative-#{$i * $size_num} { margin-top: -#{$i * $size_num}px !important; margin-bottom: -#{$i * $size_num}px !important; }
-	.margin-top--negative-#{$i * $size_num} { margin-top: -#{$i * $size_num}px !important; }
-	.margin-right--negative-#{$i * $size_num} { margin-right: -#{$i * $size_num}px !important; }
-	.margin-bottom--negative-#{$i * $size_num} { margin-bottom: -#{$i * $size_num}px !important; }
-	.margin-left--negative-#{$i * $size_num} { margin-left: -#{$i * $size_num}px !important; }
+  // margin px
+  .margin--#{$i * $size_num} {
+    margin: #{$i * $size_num}px !important;
+  }
+  .margin-horizontal--#{$i * $size_num} {
+    margin-right: #{$i * $size_num}px !important;
+    margin-left: #{$i * $size_num}px !important;
+  }
+  .margin-vertical--#{$i * $size_num} {
+    margin-top: #{$i * $size_num}px !important;
+    margin-bottom: #{$i * $size_num}px !important;
+  }
+  .margin-top--#{$i * $size_num} {
+    margin-top: #{$i * $size_num}px !important;
+  }
+  .margin-right--#{$i * $size_num} {
+    margin-right: #{$i * $size_num}px !important;
+  }
+  .margin-bottom--#{$i * $size_num} {
+    margin-bottom: #{$i * $size_num}px !important;
+  }
+  .margin-left--#{$i * $size_num} {
+    margin-left: #{$i * $size_num}px !important;
+  } // padding px
+  .padding--#{$i * $size_num} {
+    padding: #{$i * $size_num}px !important;
+  }
+  .padding-horizontal--#{$i * $size_num} {
+    padding-right: #{$i * $size_num}px !important;
+    padding-left: #{$i * $size_num}px !important;
+  }
+  .padding-vertical--#{$i * $size_num} {
+    padding-top: #{$i * $size_num}px !important;
+    padding-bottom: #{$i * $size_num}px !important;
+  }
+  .padding-top--#{$i * $size_num} {
+    padding-top: #{$i * $size_num}px !important;
+  }
+  .padding-right--#{$i * $size_num} {
+    padding-right: #{$i * $size_num}px !important;
+  }
+  .padding-bottom--#{$i * $size_num} {
+    padding-bottom: #{$i * $size_num}px !important;
+  }
+  .padding-left--#{$i * $size_num} {
+    padding-left: #{$i * $size_num}px !important;
+  } // negative margin px
+  .margin--negative-#{$i * $size_num} {
+    margin: #{$i * $size_num * -1}px !important;
+  }
+  .margin-horizontal--negative-#{$i * $size_num} {
+    margin-right: #{$i * $size_num * -1}px !important;
+    margin-left: #{$i * $size_num * -1}px !important;
+  }
+  .margin-vertical--negative-#{$i * $size_num} {
+    margin-top: #{$i * $size_num * -1}px !important;
+    margin-bottom: #{$i * $size_num * -1}px !important;
+  }
+  .margin-top--negative-#{$i * $size_num} {
+    margin-top: #{$i * $size_num * -1}px !important;
+  }
+  .margin-right--negative-#{$i * $size_num} {
+    margin-right: #{$i * $size_num * -1}px !important;
+  }
+  .margin-bottom--negative-#{$i * $size_num} {
+    margin-bottom: #{$i * $size_num * -1}px !important;
+  }
+  .margin-left--negative-#{$i * $size_num} {
+    margin-left: #{$i * $size_num * -1}px !important;
+  }
 }
 
 @for $i from 0 through 20 {
-	// margin percent
-	.margin--percent-#{$i * $size_num} { margin: #{$i * $size_num}% !important; }
-	.margin-horizontal--percent-#{$i * $size_num} { margin-right: #{$i * $size_num}% !important; margin-left: #{$i * $size_num}% !important; }
-	.margin-vertical--percent-#{$i * $size_num} { margin-top: #{$i * $size_num}% !important; margin-bottom: #{$i * $size_num}% !important; }
-	.margin-top--percent-#{$i * $size_num} { margin-top: #{$i * $size_num}% !important; }
-	.margin-right--percent-#{$i * $size_num} { margin-right: #{$i * $size_num}% !important; }
-	.margin-bottom--percent-#{$i * $size_num} { margin-bottom: #{$i * $size_num}% !important; }
-	.margin-left--percent-#{$i * $size_num} { margin-left: #{$i * $size_num}% !important; }
-	// padding percent
-	.padding-top--percent-#{$i * $size_num} { padding-top: #{$i * $size_num}% !important; }
-	.padding-right--percent-#{$i * $size_num} { padding-right: #{$i * $size_num}% !important; }
-	.padding-bottom--percent-#{$i * $size_num} { padding-bottom: #{$i * $size_num}% !important; }
-	.padding-left--percent-#{$i * $size_num} { padding-left: #{$i * $size_num}% !important; }
-	// negative margin percent
-	.margin--negative-percent-#{$i * $size_num} { margin: -#{$i * $size_num}% !important; }
-	.margin-horizontal--negative-percent-#{$i * $size_num} { margin-right: -#{$i * $size_num}% !important; margin-left: -#{$i * $size_num}% !important; }
-	.margin-vertical--negative-percent-#{$i * $size_num} { margin-top: -#{$i * $size_num}% !important; margin-bottom: -#{$i * $size_num}% !important; }
-	.margin-top--negative-percent-#{$i * $size_num} { margin-top: -#{$i * $size_num}% !important; }
-	.margin-right--negative-percent-#{$i * $size_num} { margin-right: -#{$i * $size_num}% !important; }
-	.margin-bottom--negative-percent-#{$i * $size_num} { margin-bottom: -#{$i * $size_num}% !important; }
-	.margin-left--negative-percent-#{$i * $size_num} { margin-left: -#{$i * $size_num}% !important; }
+  // margin percent
+  .margin--percent-#{$i * $size_num} {
+    margin: #{$i * $size_num}% !important;
+  }
+  .margin-horizontal--percent-#{$i * $size_num} {
+    margin-right: #{$i * $size_num}% !important;
+    margin-left: #{$i * $size_num}% !important;
+  }
+  .margin-vertical--percent-#{$i * $size_num} {
+    margin-top: #{$i * $size_num}% !important;
+    margin-bottom: #{$i * $size_num}% !important;
+  }
+  .margin-top--percent-#{$i * $size_num} {
+    margin-top: #{$i * $size_num}% !important;
+  }
+  .margin-right--percent-#{$i * $size_num} {
+    margin-right: #{$i * $size_num}% !important;
+  }
+  .margin-bottom--percent-#{$i * $size_num} {
+    margin-bottom: #{$i * $size_num}% !important;
+  }
+  .margin-left--percent-#{$i * $size_num} {
+    margin-left: #{$i * $size_num}% !important;
+  }
+  // padding percent
+  .padding-top--percent-#{$i * $size_num} {
+    padding-top: #{$i * $size_num}% !important;
+  }
+  .padding-right--percent-#{$i * $size_num} {
+    padding-right: #{$i * $size_num}% !important;
+  }
+  .padding-bottom--percent-#{$i * $size_num} {
+    padding-bottom: #{$i * $size_num}% !important;
+  }
+  .padding-left--percent-#{$i * $size_num} {
+    padding-left: #{$i * $size_num}% !important;
+  }
+  // negative margin percent
+  .margin--negative-percent-#{$i * $size_num} {
+    margin: #{$i * $size_num * -1}% !important;
+  }
+  .margin-horizontal--negative-percent-#{$i * $size_num} {
+    margin-right: #{$i * $size_num * -1}% !important;
+    margin-left: #{$i * $size_num * -1}% !important;
+  }
+  .margin-vertical--negative-percent-#{$i * $size_num} {
+    margin-top: #{$i * $size_num * -1}% !important;
+    margin-bottom: #{$i * $size_num * -1}% !important;
+  }
+  .margin-top--negative-percent-#{$i * $size_num} {
+    margin-top: #{$i * $size_num * -1}% !important;
+  }
+  .margin-right--negative-percent-#{$i * $size_num} {
+    margin-right: #{$i * $size_num * -1}% !important;
+  }
+  .margin-bottom--negative-percent-#{$i * $size_num} {
+    margin-bottom: #{$i * $size_num * -1}% !important;
+  }
+  .margin-left--negative-percent-#{$i * $size_num} {
+    margin-left: #{$i * $size_num * -1}% !important;
+  }
 }
