@@ -153,13 +153,13 @@ $placeholder_color: #666;
         left: 0;
         width: 1.0em;
         height: 1.0em;
-        border: solid 1px $border_color;
         transition: all 0.5s;
         color: #000;
       }
       &::before {
         z-index: 1;
         background-color: #f1f1f1;
+        border: solid 1px $border_color;
       }
       &::after {
         z-index: 2;
@@ -202,8 +202,8 @@ $placeholder_color: #666;
         &::before,
         &::after {}
         &::after {
-          width: 1.0em; height: 0.5em; border-width: 2px;
-          border-color: transparent;
+          width: 1.0em; height: 0.5em;
+          border: solid 3px transparent;
           background-color: transparent;
         }
       }
@@ -212,7 +212,6 @@ $placeholder_color: #666;
         &+span {
           &::after {
             border-color: transparent;
-            border-width: 2px;
             margin-top: calc((0.35em + 2px) * -1);
             border-left-color: currentColor;
             border-bottom-color: currentColor;
@@ -239,29 +238,59 @@ $placeholder_color: #666;
       }
     }
   }
-  .radio02-input+label::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #999;
-    border-radius: 50%;
+  .input-ui__field {
+    display: flex;
+    .input-ui__add {
+      display: flex; padding: 0 1.0rem;
+      justify-content: center; align-items: center; align-content: center;
+      background-color: #f1f1f1;
+      border: solid 1px $border_color;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      &:first-child {
+        border-right: none;
+        border-left: solid 1px $border_color;
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-right: solid 1px $border_color;
+        border-left: none;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    input[type="text"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="number"],
+    input[type="color"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    textarea,
+    select {
+      border: solid 1px $border_color;
+      border-radius: 0;
+      &:focus {
+        border: solid 1px $focus_color;
+      }
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+    }
   }
-  .radio02-input:checked+label {
-    color: #009a9a;
-  }
-  .radio02-input:checked+label::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 11px;
-    height: 11px;
-    background: #009a9a;
-    border-radius: 50%;
-  }
+/*
+  <div class="input-ui__field">
+  <span class="input-ui__add">a</span>
+  <input type="text" class="is-mini" name="c1" placeholder="is-mini">
+</div>*/
 }
