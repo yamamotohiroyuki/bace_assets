@@ -518,66 +518,6 @@ sub {
 
 small {}
 
-.contents-style input,
-.contents-style button,
-.contents-style textarea,
-.contents-style select {
-  transition: all 0.5s;
-}
-
-.contents-style .input-ui__select {
-  /*
-	display: block; padding: 0; margin: 0;
-	border: solid 1px #ddd; border-radius: 4px;
-	position: relative; overflow: hidden;*/
-}
-
-.contents-style .input-ui__select select {
-  /*
-	display: block; width: 100%; padding: 0.5em 2.0em 0.5em 1.0em; margin: 0;
-	font-size: 1em; line-height: 28px;
-	*/
-  padding: 0.5em 3.0em 0.5em 1.0em;
-}
-
-.contents-style .input-ui__select::before {
-  display: block;
-  padding: 0.5em 0;
-  margin: 0;
-  position: absolute;
-  content: "\f107";
-  font-family: FontAwesome;
-  top: 0;
-  right: 0;
-  text-align: center;
-  width: 3.0em;
-  height: auto;
-  line-height: 28px;
-  border: none;
-  transform: rotate(0);
-}
-
-.contents-style input.input-ui__button {
-  border: solid 1px #131327;
-  background-color: #131327;
-  color: #fff;
-}
-
-.contents-style input.input-ui__button:hover {
-  background-color: #fff;
-  color: #131327;
-}
-
-.contents-style input.input-ui__button.input-ui__button--sub {
-  border: solid 1px #ddd;
-  background-color: #fff;
-  color: #000;
-}
-
-.contents-style input.input-ui__button.input-ui__button--sub:hover {
-  background-color: #ddd;
-  color: #131327;
-}
 
 /* ===========================================================
 

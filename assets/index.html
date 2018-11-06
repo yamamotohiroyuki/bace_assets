@@ -7,9 +7,8 @@
   <!-- meta -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <!-- css -->
-  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-variables.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
 
   <style>
   </style>
@@ -19,21 +18,26 @@
   <div class="contents-style">
     <div class="input-ui">
       <h2>.input-ui</h2>
-      <div class="input-ui__field is-mini">
+      <div class="input-ui__field">
         <span class="input-ui__add">a</span>
         <input type="text" name="c1" placeholder="is-mini">
         <span class="input-ui__add">a</span>
         <input type="text" name="c1" placeholder="is-mini">
-        <span class="input-ui__add">a</span>
-        <select name="">
-          <option selected>インプット</option>
-          <option>インプット</option>
-          <option>インプット</option>
-          <option>インプット</option>
-          <option>インプット</option>
-        </select>
         <span class="input-ui__add">a</span>
       </div>
+      <div class="input-ui">
+        <h2>.input-ui</h2>
+        <div class="input-ui__field">
+          <span class="input-ui__add">a</span>
+          <select name="">
+            <option selected>インプット</option>
+            <option>インプット</option>
+            <option>インプット</option>
+            <option>インプット</option>
+            <option>インプット</option>
+          </select>
+          <span class="input-ui__add">a</span>
+        </div>
 
 
 
@@ -82,9 +86,9 @@
       </p>
 
 
-      <p><input type="range"></p>
+      <p><input type="range" class="is-mini"></p>
 
-      <p><input type="file" name="c5" value="ファイル選択"></p>
+      <p><input type="file" value="ファイル選択"></p>
 
       <p><input type="submit" value="送信ボタン"></p>
 
@@ -94,7 +98,7 @@
 
       <p><button>ボタン</button></p>
 
-      <p><input type="hidden" name="c6" value="隠しデータ"></p>
+      <p><input type="hidden" value="隠しデータ"></p>
 
       <p><textarea name=""></textarea></p>
       <p><select name="">
@@ -104,21 +108,28 @@
           <option>インプット</option>
           <option>インプット</option>
         </select></p>
+        <p><select name="" multiple>
+            <option selected>インプット</option>
+            <option>インプット</option>
+            <option>インプット</option>
+            <option>インプット</option>
+            <option>インプット</option>
+          </select></p>
 
     </div>
     <div class="input-reset">
       <h2>.input-reset</h2>
-      <p><input type="text" name="c1" value="テキスト入力欄"></p>
+      <p><input type="text" value="テキスト入力欄"></p>
 
-      <p><input type="password" name="c2" value="パスワード入力欄"></p>
+      <p><input type="password" value="パスワード入力欄"></p>
 
-      <p><input type="radio" name="c3" value="ラジオボタン"></p>
+      <p><input type="radio" value="ラジオボタン"></p>
 
-      <p><input type="checkbox" name="c4" value="チェックボックス"></p>
+      <p><input type="checkbox" value="チェックボックス"></p>
 
-      <p><input type="file" name="c5" value="ファイル選択"></p>
+      <p><input type="file" value="ファイル選択"></p>
 
-      <p><input type="hidden" name="c6" value="隠しデータ"></p>
+      <p><input type="hidden" value="隠しデータ"></p>
 
       <p><input type="submit" value="送信ボタン"></p>
 
@@ -159,7 +170,7 @@
       <li>list-style-icon--exclamation-circle</li>
     </ul>
     <ul class="list-style-icon--exclamation-square">
-      <li>list-style-icon--exclamation-circle</li>
+      <li>list-style-icon--exclamation-square</li>
     </ul>
     <ul class="list-style-icon--exclamation-triangle">
       <li>list-style-icon--exclamation-triangle</li>
@@ -168,7 +179,7 @@
       <li>list-style-icon--question-circle</li>
     </ul>
     <ul class="list-style-icon--question-square">
-      <li>list-style-icon--question-circle</li>
+      <li>list-style-icon--question-square</li>
     </ul>
 
     <div class="column--6-cell no-responsive">
