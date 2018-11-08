@@ -1,5 +1,5 @@
 $icomoon-font-family: "basicicon" !default;
-$icomoon-font-path: "icon" !default;
+$icomoon-font-path: "../icon" !default;
 @function bi-content($bi-var) {
   @return unquote("\"#{ $bi-var }\"");
 }

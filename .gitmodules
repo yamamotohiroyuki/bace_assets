@@ -36,9 +36,6 @@
 [submodule "_submodule/prefixfree"]
 	path = _submodule/prefixfree
 	url = https://github.com/LeaVerou/prefixfree
-[submodule "_submodule/modernizr"]
-	path = _submodule/modernizr
-	url = https://github.com/Modernizr/Modernizr
 [submodule "_submodule/FortAwesome"]
 	path = _submodule/FortAwesome
 	url = https://github.com/FortAwesome/Font-Awesome

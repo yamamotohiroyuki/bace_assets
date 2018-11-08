@@ -580,6 +580,31 @@ small {}
 
 =========================================================== */
 
+.archive-list {
+  border-bottom: solid 1px #ddd;
+}
+.archive-list ul.archive-list--additional {
+  margin: 0.5rem 0 -0.5rem 0
+}
+
+.archive-list__header,
+.archive-list__body {
+  padding: 0.5rem 0;
+  border-top: solid 1px #ddd;
+}
+.archive-list__body {
+  padding: 0.5rem 0 0.5rem 1.0rem;
+}
+
+
+
+
+/* ===========================================================
+
+	基本スタイル : シンプルテーブル
+
+=========================================================== */
+
 /* modifyはcontents.cssにて */
 
 /* dl-table  (Basic form : basicstyle.css) */

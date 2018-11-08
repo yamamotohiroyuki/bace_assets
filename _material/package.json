@@ -9,19 +9,30 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^16.2.3",
     "font-family-unescape-loader": "github:swcho/font-family-unescape-loader",
+    "grunt-contrib-cssmin": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
+    "gulp-jquery": "^1.1.2",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-modernizr": "^3.0.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "install": "^0.12.2",
+    "npm": "^6.4.1"
   },
   "dependencies": {
     "gulp-minify-css": "^1.2.4",
-    "use": "^3.1.1"
+    "gulp-uglify": "^3.0.1",
+    "use": "^3.1.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "description": ""
 }

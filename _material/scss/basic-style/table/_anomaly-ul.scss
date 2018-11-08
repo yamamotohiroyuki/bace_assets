@@ -38,15 +38,11 @@ screen and (min-width: $breakpoints_medium) {
   width: 100%;
   display: block;
   overflow: hidden;
-  >ul {
+  ul {
     display: block;
     position: relative;
-    >li {
-      display: block;
-      position: relative;
-    }
   }
-  >li {
+  li {
     display: block;
     position: relative;
   }
@@ -59,19 +55,15 @@ screen and (min-width: $breakpoints_medium) {
 
 @media print,
 screen and (min-width: $breakpoints_medium) {
-  .archive-list:not(.no-responsive) {
+  .archive-list:not(.no-responsive),
+  .archive-list:not(.is-vertical) {
     display: table;
     border-collapse: collapse;
-    >ul {
+    ul.archive-list--additional {
       display: table;
-      >li {
-        display: table-row;
-        position: relative;
-      }
     }
-    >li {
+    li {
       display: table-row;
-      position: relative;
     }
     .archive-list__header,
     .archive-list__body {
@@ -80,6 +72,15 @@ screen and (min-width: $breakpoints_medium) {
     .archive-list__header {
       width: 1%;
       white-space: nowrap;
+    }
+    .archive-list__date,
+    .archive-list__label {
+      display: inline-block;
+      position: relative;
+    }
+    .archive-list__date {
+    }
+    .archive-list__label {
     }
   }
 }
