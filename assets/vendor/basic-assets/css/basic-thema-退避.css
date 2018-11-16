@@ -1,0 +1,1062 @@
+@charset "UTF-8";
+/* ===========================================================
+
+	Title: style.css
+	Created: 2018-01-18
+	必要に応じて編集。モジュール一覧に準拠
+
+=========================================================== */
+
+/*
+	基本設定
+	基本スタイル : テキスト
+	基本スタイル : コンテンツ間にマージンをとる
+	基本スタイル : リンク
+	基本スタイル : インデントリスト・注意書き
+	基本スタイル : シンプルテーブル
+	基本スタイル : テーブル
+	基本スタイル : コラム
+	基本スタイル : 画像
+	コンテンツスタイル : タブモジュール
+	コンテンツスタイル : リリースリスト
+	コンテンツスタイル : リンクモジュール
+
+
+=========================================================== */
+/* ===========================================================
+
+	基本設定
+
+=========================================================== */
+html { font-size: 100%; }
+body {
+  color: #000;
+  font-size: 1.0rem;
+  line-height: 1;
+  font-weight: 500;
+  text-rendering: optimizeSpeed;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  /**/
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt" 1;
+  padding: 20px;
+}
+
+body.is-ja {}
+
+body.is-en {}
+
+@media all and (-ms-high-contrast:none) {
+  body {
+    font-family: "メイリオ", Meiryo, "Yu Gothic", YuGothic, sans-serif;
+  }
+}
+
+.contents-style {
+  font-size: 1.0em;
+  line-height: 1.8;
+}
+
+.link-button-parade a {
+  color: #000;
+  border: solid 1px #000;
+  border-radius: 2px;
+}
+
+.link-button-parade a:hover,
+.link-button-parade a.current,
+.link-button-parade a.current:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.link-button-parade a.button-category--all:hover,
+.link-button-parade a.button-category--all.current {}
+
+/* HP更新 */
+
+.sticker-category--1,
+.link-button-parade a.button-category--1:hover,
+.link-button-parade a.button-category--1.current {
+  background-color: #2c3871;
+  border: solid 1px #2c3871;
+}
+
+/* お知らせ */
+
+.sticker-category--2,
+.link-button-parade a.button-category--2:hover,
+.link-button-parade a.button-category--2.current {
+  background-color: #712c4c;
+  border: solid 1px #712c4c;
+}
+
+/* 物件 */
+
+.sticker-category--3,
+.link-button-parade a.button-category--3:hover,
+.link-button-parade a.button-category--3.current {
+  background-color: #24502e;
+  border: solid 1px #24502e;
+}
+
+/* 決算 */
+
+.sticker-category--4,
+.link-button-parade a.button-category--4:hover,
+.link-button-parade a.button-category--4.current {
+  background-color: #7c6632;
+  border: solid 1px #7c6632;
+}
+
+/* 借入 */
+
+.sticker-category--5,
+.link-button-parade a.button-category--5:hover,
+.link-button-parade a.button-category--5.current {
+  background-color: #552c71;
+  border: solid 1px #552c71;
+}
+
+/* 増資 */
+
+.sticker-category--6,
+.link-button-parade a.button-category--6:hover,
+.link-button-parade a.button-category--6.current {
+  background-color: #712c2c;
+  border: solid 1px #712c2c;
+}
+
+/* その他 */
+
+.sticker-category--7,
+.link-button-parade a.button-category--7:hover,
+.link-button-parade a.button-category--7.current {
+  background-color: #999;
+  border: solid 1px #999;
+}
+
+/* ===========================================================
+
+	基本スタイル : テキスト
+
+=========================================================== */
+
+/* 超小文字 12px */
+
+.text--x-small {
+  font-size: 0.750rem !important;
+}
+
+/* 小文字 14px */
+
+.text--small {
+  font-size: 0.875rem !important;
+}
+
+/* 通常 16px */
+
+.text--medium {
+  font-size: 1.00rem !important;
+}
+
+/* 大文字 18px */
+
+.text--large {
+  font-size: 1.125rem !important;
+}
+
+/* 特大文字 20px */
+
+.text--x-large {
+  font-size: 1.250rem !important;
+}
+
+/* 色文字 */
+
+.contents-style em {
+  color: #131327;
+  font-style: normal;
+}
+
+/* 太文字 */
+
+.contents-style strong {
+  font-weight: bold;
+}
+
+/* リード文 */
+
+.text--read {
+  font-size: 1.250rem;
+  letter-spacing: 0.1em;
+}
+
+/* 強調 */
+
+.text--emphasis {
+  border: solid 1px #a72b2a;
+  padding: 1.0em;
+}
+
+/* フォントファミリーリセット */
+
+.font-family--reset {
+  font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace !important;
+}
+
+/* 赤文字 */
+
+.text--red {
+  color: #f00;
+}
+
+/* 白文字 */
+
+.text--white {
+  color: #fff;
+}
+
+/* ===========================================================
+
+	基本スタイル : コンテンツ間にマージンをとる
+
+=========================================================== */
+
+.contents-style section,
+.cont-margin {
+  margin-bottom: 4.0em !important;
+}
+
+/* ===========================================================
+
+	基本スタイル : リンク
+
+=========================================================== */
+
+a {
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.5s;
+}
+
+a:link,
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #285183;
+}
+
+/* リンク色反転 */
+
+.link-reverse a:link,
+.link-reverse a:visited,
+a.link-reverse:link,
+a.link-reverse:visited {
+  color: #000;
+  text-decoration: underline;
+}
+
+.link-reverse a:hover,
+a.link-reverse:hover {
+  color: #285183;
+  text-decoration: underline;
+}
+
+/* 外部リンク */
+
+.link-blank::after,
+.blank::after {
+  /* Default (Basic form : basicstyle.css)
+  content: "\e983";
+	*/
+}
+
+/* 矢印付きリンク（三角） */
+
+a.link-triangle,
+.link-triangle a,
+a.link-triangle--top,
+.link-triangle--top a,
+a.link-triangle--left,
+.link-triangle--left a,
+a.link-triangle--bottom,
+.link-triangle--bottom a,
+a.link-triangle--right,
+.link-triangle--right a {
+  /* Default (Basic form : basicstyle.css)
+	padding-left: 0.75em;
+	*/
+}
+
+a.link-triangle::before,
+.link-triangle a::before,
+a.link-triangle--top::before,
+.link-triangle--top a::before,
+a.link-triangle--left::before,
+.link-triangle--left a::before,
+a.link-triangle--bottom::before,
+.link-triangle--bottom a::before,
+a.link-triangle--right::before,
+.link-triangle--right a::before {
+  /* Default (Basic form : basicstyle.css)
+	margin-top: -0.20em;
+	border-width: 0.20em 0 0.20em 0.25em;
+	border-color: transparent transparent transparent #000;
+	*/
+  border-color: transparent transparent transparent #285183;
+}
+
+/* 矢印付きリンク */
+
+a.link-arrow,
+.link-arrow a,
+a.link-arrow--top,
+.link-arrow--top a,
+a.link-arrow--left,
+.link-arrow--left a,
+a.link-arrow--bottom,
+.link-arrow--bottom a,
+a.link-arrow--right,
+.link-arrow--right a {
+  /* Default (Basic form : basicstyle.css)
+	padding-left: 0.75em;
+	*/
+}
+
+a.link-arrow::before,
+.link-arrow a::before,
+a.link-arrow--top::before,
+.link-arrow--top a::before,
+a.link-arrow--left::before,
+.link-arrow--left a::before,
+a.link-arrow--bottom::before,
+.link-arrow--bottom a::before,
+a.link-arrow--right::before,
+.link-arrow--right a::before {
+  /* Default (Basic form : basicstyle.css)
+	width: 0.30em;
+	height: 0.30em;
+	margin-top: -0.15em;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	*/
+  border-top: 1px solid #285183;
+  border-right: 1px solid #285183;
+}
+
+/* リンクボタン */
+
+.link-button {
+  display: inline-block;
+  padding: 0.25em 2.0em;
+  background-color: #131327;
+  color: #fff !important;
+}
+
+.link-button:hover {
+  background-color: #285183;
+}
+
+/* リスト調整 */
+
+[class^="list-style--"],
+[class*=" list-style--"] {
+  /* Default (Basic form : basicstyle.css)
+	margin-left: 2.5em;
+*/
+}
+
+/* リスト調整(peculiar) */
+
+[class^="list-style-peculiar"],
+[class*=" list-style-peculiar"] {
+	margin-left: 2.5em !important;
+}
+
+[class^="list-style-peculiar"]>li,
+[class*=" list-style-peculiar"]>li {
+	text-indent: -2.5em !important;
+}
+
+[class^="list-style-peculiar"]>li::before,
+[class*=" list-style-peculiar"]>li::before {
+	width: 2.5em !important;
+}
+/* リスト調整(icon) */
+
+[class^="list-style-icon"],
+[class*=" list-style-icon"] {
+	margin-left: 1.5em !important;
+}
+
+[class^="list-style-icon"]>li,
+[class*=" list-style-icon"]>li {
+	text-indent: -1.5em !important;
+}
+
+[class^="list-style-icon"]>li::before,
+[class*=" list-style-icon"]>li::before {
+	width: 1.5em !important;
+}
+
+/* ===========================================================
+
+	基本スタイル : ヘッドライン
+
+=========================================================== */
+
+.contents-style h2 {
+  display: block;
+  padding: 1.0em 0 0 0;
+  margin: 2.0em 0 1.0em 0;
+  position: relative;
+  font-size: 1.450em;
+  color: #131327;
+}
+
+.contents-style h2::after {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #131327;
+  content: "";
+  width: 60px;
+  height: 2px;
+}
+
+.contents-style>h2:first-child {
+  margin: 0 0 1.0em 0;
+}
+
+.contents-style h3 {
+  display: block;
+  padding: 0 0 0.5em 0;
+  margin: 2.0em 0 0.5em 0;
+  font-size: 1.250em;
+  font-weight: bold;
+  color: #131327;
+  position: relative;
+  border-bottom: solid 1px #ddd;
+}
+
+.contents-style h4 {
+  display: block;
+  padding: 0;
+  margin: 1.0em 0 0.5em 0;
+  font-size: 1.125em;
+  color: #131327;
+  position: relative;
+}
+
+.contents-style h5 {
+  display: block;
+  padding: 0;
+  margin: 1.0em 0 0.5em 0;
+  font-size: 1.000em;
+  font-weight: bold;
+  color: #222;
+  position: relative;
+}
+
+.contents-style h6 {
+  display: block;
+  padding: 0;
+  margin: 1.0em 0 0.5em 0;
+  font-size: 1.000em;
+  color: #333;
+  position: relative;
+}
+
+.contents-style p {
+  margin: 0.5em 0;
+}
+
+.contents-style>p:first-child {
+  margin: 0 0 0.5em 0;
+}
+
+.contents-style ul,
+.contents-style ol {
+  margin: 1.00em 0;
+}
+
+.contents-style li {
+  margin: 0.25em 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+small,
+sup,
+sub {
+  font-size: 0.75em;
+  font-style: inherit;
+  font-weight: inherit;
+  position: relative;
+}
+
+sup {
+  vertical-align: super;
+  top: 0;
+}
+
+sub {
+  vertical-align: baseline;
+  top: 0;
+}
+
+small {}
+
+
+/* ===========================================================
+
+	time-stamp
+
+=========================================================== */
+
+.time-stamp {
+  text-align: right;
+  color: #666;
+  font-size: 0.875em;
+}
+
+/* ===========================================================
+
+	基本スタイル : インデントリスト・注意書き
+
+=========================================================== */
+
+.indent-list {}
+
+.indent-list>li {}
+
+.indent-list>li>span {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0.25em 0 0.25em 0.25em;
+	*/
+  padding-left: 1.0em;
+}
+
+.indent-list>li::before {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0.25em 0;
+	*/
+}
+
+.caution-text,
+.caution {
+  color: #666;
+  font-size: 0.750em;
+}
+
+.caution>li {}
+
+.caution>li>span {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0.25em 0 0.25em 0.25em;
+	*/
+}
+
+.caution>li::before {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0.25em 0;
+	*/
+}
+
+/* ===========================================================
+
+	基本スタイル : シンプルテーブル
+
+=========================================================== */
+
+.archive-list {
+  border-bottom: solid 1px #ddd;
+}
+.archive-list ul.archive-list--additional {
+  margin: 0.5rem 0 -0.5rem 0
+}
+
+.archive-list__header,
+.archive-list__body {
+  padding: 0.5rem 0;
+  border-top: solid 1px #ddd;
+}
+.archive-list__body {
+  padding: 0.5rem 0 0.5rem 1.0rem;
+}
+
+
+
+
+/* ===========================================================
+
+	基本スタイル : シンプルテーブル
+
+=========================================================== */
+
+/* modifyはcontents.cssにて */
+
+/* dl-table  (Basic form : basicstyle.css) */
+
+.dl-table {}
+
+.dl-table>dl {}
+
+.dl-table>dl>dt,
+.dl-table>dl>dd {}
+
+.dl-table>dl>dt {
+  padding-right: 1.0em;
+}
+
+.dl-table>dl>dd {}
+
+/* ===========================================================
+
+	基本スタイル : テーブル
+
+=========================================================== */
+
+table {
+  margin: 1.0em 0;
+  line-height: 1.4;
+  width: 100%;
+}
+
+table caption {
+  padding: 1.0em 1.0em;
+  line-height: 1.2;
+  background-color: rgba(35, 43, 79, 0.90);
+  border-top: solid 1px #ddd;
+  color: #fff;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 1.0em;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  border-left: solid 1px #ddd;
+  vertical-align: middle;
+}
+
+table th:first-child,
+table td:first-child {
+  border-left: none;
+}
+
+table thead th,
+table thead td {
+  color: #fff;
+  text-align: center;
+}
+
+table thead th {
+  background-color: rgba(35, 43, 79, 1.00);
+}
+
+table thead td {
+  background-color: rgba(35, 43, 79, 0.80);
+}
+
+table tbody th,
+table tbody td {}
+
+table tbody th {
+  background-color: rgba(35, 43, 79, 0.05);
+}
+
+table tbody td {
+  background-color: #fff;
+}
+
+table tfoot th,
+table tfoot td {
+  text-align: center;
+}
+
+table tfoot th {
+  color: #fff;
+  background-color: rgba(35, 43, 79, 0.60);
+}
+
+table tfoot td {
+  background-color: rgba(35, 43, 79, 0.10);
+}
+
+/* 狹い余白のテーブル */
+
+table.table--narrow-padding {}
+
+table.table--narrow-padding caption,
+table.table--narrow-padding th,
+table.table--narrow-padding td {
+  padding: 0.25em;
+}
+
+/* ===========================================================
+
+	基本スタイル : コラム
+
+=========================================================== */
+
+.column {
+  /* Default (Basic form : basicstyle.css)
+	margin: 0 -1em;
+	*/
+}
+
+.column__cell {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0 1.0em; margin: 0;
+	*/
+}
+
+/* 等幅コラム */
+
+.column--equal-width {
+  /* Default (Basic form : basicstyle.css)
+	margin: 0 -1em;
+	*/
+}
+
+.column--equal-width .column__cell {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0 1.0em; margin: 0;
+	*/
+}
+
+/* 3等分コラム */
+
+.column--3 {
+  /* Default (Basic form : basicstyle.css)
+	margin: 0 -1em;
+	*/
+}
+
+.column--3 .column__cell--3of1,
+.column--3 .column__cell--3of2,
+.column--3 .column__cell--3of3 {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0 1.0em; margin: 0;
+	*/
+}
+
+/* 4等分コラム */
+
+.column--4 {
+  /* Default (Basic form : basicstyle.css)
+	margin: 0 -1em;
+	*/
+}
+
+.column--4 .column__cell--4of1,
+.column--4 .column__cell--4of2,
+.column--4 .column__cell--4of3,
+.column--4 .column__cell--4of4 {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0 1.0em; margin: 0;
+	*/
+}
+
+/* ===========================================================
+
+	基本スタイル : 画像
+
+=========================================================== */
+
+.img-float--right {
+  /* Default (Basic form : basicstyle.css)
+	0 0 2.0em 2.0em;
+	*/
+}
+
+.img-float--left {
+  /* Default (Basic form : basicstyle.css)
+	margin: 0 2.0em 2.0em 0;
+	*/
+}
+
+.img-float--none {
+  /* Default (Basic form : basicstyle.css)
+	margin: 0 0 2.0em 0;
+	*/
+}
+
+/* ===========================================================
+
+	コンテンツスタイル : タブモジュール
+
+=========================================================== */
+
+.tab-row {
+  /* Default (Basic form : basicstyle.css)
+	display: flex; flex-wrap: nowrap;
+	*/
+  margin: 1.0em 0 !important;
+}
+
+.tab-row>li {
+  /* Default (Basic form : basicstyle.css)
+	display: flex; width: 100%; flex-flow: 1;
+	*/
+  margin: 0;
+  border: solid 1px #131327;
+  border-left: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tab-row>li:first-child {
+  border-left: solid 1px #131327;
+  border-radius: 4px 0 0 4px;
+}
+
+.tab-row>li:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.tab-row>li>a {
+  /* Default (Basic form : basicstyle.css)
+	display: flex; width: 100%; flex-flow: 1; 
+	align-items: center; align-content: center;
+	*/
+}
+
+.tab-row>li>a:hover {
+  color: #fff;
+  background-color: #131327;
+}
+
+.tab-row>li>a.current,
+.tab-row>li>a.active,
+.tab-row>li>a.current:hover,
+.tab-row>li>a.active:hover {
+  color: #fff;
+  background-color: #232b4f;
+}
+
+.tab-row>li>a>span {
+  /* Default (Basic form : basicstyle.css)
+	display: block; width: 100%;
+	*/
+  padding: 0.50em 1.0em;
+}
+
+/* ===========================================================
+
+	コンテンツスタイル : リリースリスト
+
+=========================================================== */
+
+/* date-list */
+
+.date-list {}
+
+.date-list>dl {}
+
+.date-list>dl>dt,
+.date-list>dl>dd {}
+
+.date-list>dl>dt {
+  padding: 1.0em 1em;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.date-list__date {
+  display: inline-block;
+  line-height: 20px;
+  font-size: 0.875em;
+  padding: 0 1.0em 0 0;
+}
+
+.date-list>dl>dd {
+  padding: 1.0em 0;
+  line-height: 1.8;
+  font-size: 1.0em;
+}
+
+.date-list>dl>dd a {
+  display: inline;
+}
+
+.date-list>dl>dd a[target="_blank"]:after {}
+
+.date-list__text {
+  font-size: 0.875em;
+}
+
+/* ===========================================================
+
+	コンテンツスタイル : リンクモジュール
+
+=========================================================== */
+
+/* ボタンパレード */
+
+.link-button-parade {
+  /* Default (Basic form : basicstyle.css)
+	margin-left: -0.25em; margin-right: -0.25em;
+	*/
+  margin: 0 -0.25em 1.0em -0.25em !important;
+}
+
+.link-button-parade li {
+  /* Default (Basic form : basicstyle.css)
+	padding-left: 0.25em; padding-right: 0.25em;
+	*/
+  padding: 0 0.25em;
+}
+
+.link-button-parade a {
+  padding: 0.25em 1.0em;
+  font-size: 0.875em;
+  line-height: 1.4;
+}
+
+.link-button-parade a:hover,
+.link-button-parade a.current,
+.link-button-parade a.current:hover {}
+
+/* ページ内リンク */
+
+.link-button-parade.link-button-parade--in-page a {
+  padding: 0.25em 1.0em 0.25em 2.0em;
+}
+
+.link-button-parade.link-button-parade--in-page a::before {
+  left: 0.75em;
+}
+
+.link-button-parade.link-button-parade--in-page a:hover {
+  background-color: #fff;
+  color: #285183;
+}
+
+/* テキストパレード */
+
+.link-text-parade {
+  /* Default (Basic form : basicstyle.css)
+	margin-left: -1.0em; margin-right: -1.0em;
+	*/
+  margin-bottom: 1.0em !important;
+}
+
+.link-text-parade li {
+  /* Default (Basic form : basicstyle.css)
+	padding: 0 1.0em;
+	*/
+  border-right: solid 1px #ddd;
+}
+
+.link-text-parade li:first-child {
+  border-left: solid 1px #ddd;
+}
+
+.link-text-parade a {
+  font-size: 0.875em;
+  line-height: 1.4;
+  border-bottom: solid 1px transparent;
+}
+
+.link-text-parade a:hover,
+.link-text-parade a.current,
+.link-text-parade a.current:hover {
+  border-bottom: solid 1px #285183;
+}
+
+/* 関連リンク */
+
+.link-list-box,
+.link-list-box--row,
+.link-list-box--column {
+  margin: 0 0 1.0em 0;
+}
+
+.link-list-box>dt,
+.link-list-box--row>dt,
+.link-list-box--column>dt {
+  padding: 0 1.0em;
+  background-color: rgba(35, 43, 79, 0.05);
+  color: #131327;
+  border: solid 1px #ddd;
+}
+
+.link-list-box>dt {
+  border-right: none;
+}
+
+.link-list-box--row>dt {
+  border-right: none;
+}
+
+.link-list-box--column>dt {
+  padding: 0.5em 1.0em;
+  border-bottom: none;
+}
+
+.link-list-box>dd,
+.link-list-box--row>dd,
+.link-list-box--column>dd {
+  border: solid 1px #ddd;
+}
+
+.link-list-box>dd {
+  padding: 0.25em 1.0em;
+}
+
+.link-list-box--row>dd {
+  padding: 0.25em 1.0em;
+}
+
+.link-list-box--column>dd {
+  padding: 0.25em 1.0em;
+}
+
+.link-list-box ul,
+.link-list-box--row ul,
+.link-list-box--column ul {
+  margin: 0 -1.0em;
+}
+
+.link-list-box li,
+.link-list-box--row li,
+.link-list-box--column li {
+  display: block;
+  padding: 0.25em 1.0em;
+  margin: 0;
+}
+
+/* archive-list */
+
+
+
+
+/* ===========================================================
+
+	コンテンツスタイル : input-ui
+
+=========================================================== */
+.input-ui input[type="text"],
+.input-ui input[type="search"],
+.input-ui input[type="tel"],
+.input-ui input[type="url"],
+.input-ui input[type="email"],
+.input-ui input[type="password"],
+.input-ui input[type="date"],
+.input-ui input[type="number"],
+.input-ui input[type="color"] {}
+
