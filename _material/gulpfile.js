@@ -32,12 +32,15 @@ var gulp = require('gulp'),
     buffer     = require('vinyl-buffer'),*/
     plumber = require('gulp-plumber'), //監視エラー
     rename = require('gulp-rename'), // ファイル名のリネーム
-    browserSync =require('browser-sync'); // ブラウザシンク
-
-    
+    browserSync =require('browser-sync'), // ブラウザシンク
+    aigis = require('gulp-aigis'); // aigis
 
 // css task
-gulp.task('default', ['sasswatch', 'sass']);
+gulp.task('default', ['sasswatch', 'sass', 'jswatch', 'js', 'browser-sync', 'filewatch', 'aigis']);
+
+
+
+
 gulp.task('sasswatch', function () {
   gulp.watch(scss_watch, ['sass']);
 });
@@ -56,7 +59,6 @@ gulp.task('sass', function () {
 });
 
 // js task
-gulp.task('default', ['jswatch', 'js']);
 gulp.task('jswatch', function () {
   gulp.watch(js_watch, ['js']);
 });
@@ -75,11 +77,12 @@ gulp.task('js', function () {
 });
 
 
+// ブラウザシンク
 gulp.task('browser-sync', function() {
   browserSync({
       server: {
-           baseDir: "../"       //対象ディレクトリ
-          ,index  : "index.html"      //インデックスファイル
+           baseDir: "../" //対象ディレクトリ
+          ,index  : "index.html" //インデックスファイル
       }
   });
 });
@@ -94,8 +97,14 @@ gulp.task('bs-reload', function () {
 //
 //監視ファイル
 //
-gulp.task('default', ['browser-sync'], function () {
+gulp.task('filewatch', function () {
   gulp.watch("../assets/*.html",   ['bs-reload']);
   gulp.watch("../assets/**/*.css", ['bs-reload']);
   gulp.watch("../assets/**/*.js",  ['bs-reload']);
+});
+
+// aigis
+gulp.task('aigis', function() {
+  return gulp.src('../basic-docment/aigis_config.yml')
+    .pipe(aigis());
 });
