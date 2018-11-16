@@ -51,3 +51,9 @@
 [submodule "_submodule/flexboxgrid"]
 	path = _submodule/flexboxgrid
 	url = https://github.com/kristoferjoseph/flexboxgrid
+[submodule "_submodule/bxslider-4"]
+	path = _submodule/bxslider-4
+	url = https://github.com/stevenwanderski/bxslider-4
+[submodule "_submodule/paginationjs"]
+	path = _submodule/paginationjs
+	url = https://github.com/superRaytin/paginationjs
