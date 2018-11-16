@@ -31,7 +31,10 @@ var gulp = require('gulp'),
     source     = require('vinyl-source-stream'),
     buffer     = require('vinyl-buffer'),*/
     plumber = require('gulp-plumber'), //監視エラー
-    rename = require('gulp-rename'); // ファイル名のリネーム
+    rename = require('gulp-rename'), // ファイル名のリネーム
+    browserSync =require('browser-sync'); // ブラウザシンク
+
+    
 
 // css task
 gulp.task('default', ['sasswatch', 'sass']);
@@ -69,4 +72,30 @@ gulp.task('js', function () {
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
     .pipe(gulp.dest(js_path));
+});
+
+
+gulp.task('browser-sync', function() {
+  browserSync({
+      server: {
+           baseDir: "../"       //対象ディレクトリ
+          ,index  : "index.html"      //インデックスファイル
+      }
+  });
+});
+
+//
+//ブラウザリロード
+//
+gulp.task('bs-reload', function () {
+  browserSync.reload();
+});
+
+//
+//監視ファイル
+//
+gulp.task('default', ['browser-sync'], function () {
+  gulp.watch("../assets/*.html",   ['bs-reload']);
+  gulp.watch("../assets/**/*.css", ['bs-reload']);
+  gulp.watch("../assets/**/*.js",  ['bs-reload']);
 });

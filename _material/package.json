@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
     "font-family-unescape-loader": "github:swcho/font-family-unescape-loader",
     "grunt-contrib-cssmin": "^3.0.0",
