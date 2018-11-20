@@ -32,11 +32,10 @@ var gulp = require('gulp'),
     buffer     = require('vinyl-buffer'),*/
     plumber = require('gulp-plumber'), //監視エラー
     rename = require('gulp-rename'), // ファイル名のリネーム
-    browserSync =require('browser-sync'), // ブラウザシンク
-    aigis = require('gulp-aigis'); // aigis
+    browserSync =require('browser-sync'); // ブラウザシンク
 
 // css task
-gulp.task('default', ['sasswatch', 'sass', 'jswatch', 'js', 'browser-sync', 'filewatch', 'aigis']);
+gulp.task('default', ['sasswatch', 'sass', 'jswatch', 'js', 'browser-sync', 'filewatch']);
 
 
 
@@ -101,10 +100,4 @@ gulp.task('filewatch', function () {
   gulp.watch("../assets/*.html",   ['bs-reload']);
   gulp.watch("../assets/**/*.css", ['bs-reload']);
   gulp.watch("../assets/**/*.js",  ['bs-reload']);
-});
-
-// aigis
-gulp.task('aigis', function() {
-  return gulp.src('../basic-docment/aigis_config.yml')
-    .pipe(aigis());
 });

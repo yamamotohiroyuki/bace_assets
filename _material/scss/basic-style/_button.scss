@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*====================================
+
+  12.Button Style
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    12.0. bace set
+ 
+    ----------------------------------
+        Change Log
+    ----------------------------------
+    -2018/11/19   Founding
+    
+====================================*/
+
+/*====================================
+
+    12.0. bace set
+
+====================================*/
+.link-button {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375em .75em;
+  font-size: 1.0em;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: all .5s ease-in-out;
+  text-decoration: none;
+  &.is-primary,
+  &.is-secondary,
+  &.is-sub {
+    color: #fff;
+    border: solid 1px currentColor;
+  }
+  &.is-primary {
+    &:hover{
+    }
+  }
+  &.is-secondary {
+    &:hover{
+    }
+  }
+  &.is-sub {
+    &:hover{
+    }
+  }
+  &.is-border-primary,
+  &.is-border-secondary,
+  &.is-border-sub,
+  &.is-border-white {
+    color: #fff;
+    border: solid 1px currentColor;
+    &:hover{
+      color: #fff;
+    }
+  }
+  &.is-border-primary {
+    &:hover{
+    }
+  }
+  &.is-border-secondary {
+    &:hover{
+    }
+  }
+  &.is-border-sub {
+    &:hover{
+    }
+  }
+}

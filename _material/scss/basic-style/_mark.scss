@@ -45,135 +45,353 @@ a.link-mark {
   @extend .link-mark;
 }
 
-/* angle--right */
-
-a.link-mark--angle--right,
-.link-mark--angle--right a {
+/* angle */
+a.link-mark--angle-up,
+.link-mark--angle-up a,
+a.link-mark--angle-left,
+.link-mark--angle-left a,
+a.link-mark--angle-right,
+.link-mark--angle-right a,
+a.link-mark--angle-down,
+.link-mark--angle-down a {
   @extend .link-mark;
   padding-left: 0.75em;
+}
+
+a.link-mark--angle-up,
+.link-mark--angle-up a {
+  &::before {
+    content: "\e902";
+  }
+}
+a.link-mark--angle-left,
+.link-mark--angle-left a {
+  &::before {
+    content: "\e900";
+  }
+}
+a.link-mark--angle-down,
+.link-mark--angle-down a {
+  &::before {
+    content: "\e903";
+  }
+}
+a.link-mark--angle-right,
+.link-mark--angle-right a {
   &::before {
     content: "\e901";
   }
 }
 
-/* angle--down */
 
-a.link-mark--angle--down,
-.link-mark--angle--down a {
-  @extend .link-mark;
-  padding-left: 0.75em;
-  &::before {
-    content: "\e903";
-  }
-}
-
-/* angle--right-border-circle */
-
-a.link-mark--angle--right-circle,
-.link-mark--angle--right-circle a {
+/* angle-circle */
+a.link-mark--angle-circle-up,
+.link-mark--angle-circle-up a,
+a.link-mark--angle-circle-left,
+.link-mark--angle-circle-left a,
+a.link-mark--angle-circle-right,
+.link-mark--angle-circle-right a,
+a.link-mark--angle-circle-down,
+.link-mark--angle-circle-down a {
   @extend .link-mark;
   padding-left: 1.25em;
+}
+
+a.link-mark--angle-circle-up,
+.link-mark--angle-circle-up a {
   &::before {
-    content: "\e94f";
+    content: "\e950";
   }
 }
-/* angle--down-border-circle */
-
-a.link-mark--angle--down-circle,
-.link-mark--angle--down-circle a {
-  @extend .link-mark;
-  padding-left: 1.25em;
+a.link-mark--angle-circle-left,
+.link-mark--angle-circle-left a {
+  &::before {
+    content: "\e94e";
+  }
+}
+a.link-mark--angle-circle-down,
+.link-mark--angle-circle-down a {
   &::before {
     content: "\e951";
   }
 }
-
-/* angle--right-border-circle */
-
-a.link-mark--angle--right-border-circle,
-.link-mark--angle--right-border-circle a {
-  @extend .link-mark;
-  padding-left: 1.25em;
+a.link-mark--angle-circle-right,
+.link-mark--angle-circle-right a {
   &::before {
-    content: "\e937";
+    content: "\e94f";
   }
 }
-/* angle--down-border-circle */
 
-a.link-mark--angle--down-border-circle,
-.link-mark--angle--down-border-circle a {
+/* angle-circle-border */
+a.link-mark--angle-circle-border-up,
+.link-mark--angle-circle-border-up a,
+a.link-mark--angle-circle-border-left,
+.link-mark--angle-circle-border-left a,
+a.link-mark--angle-circle-border-right,
+.link-mark--angle-circle-border-right a,
+a.link-mark--angle-circle-border-down,
+.link-mark--angle-circle-border-down a {
   @extend .link-mark;
   padding-left: 1.25em;
+}
+
+a.link-mark--angle-circle-border-up,
+.link-mark--angle-circle-border-up a {
+  &::before {
+    content: "\e938";
+  }
+}
+a.link-mark--angle-circle-border-left,
+.link-mark--angle-circle-border-left a {
+  &::before {
+    content: "\e936";
+  }
+}
+a.link-mark--angle-circle-border-down,
+.link-mark--angle-circle-border-down a {
   &::before {
     content: "\e939";
   }
 }
+a.link-mark--angle-circle-border-right,
+.link-mark--angle-circle-border-right a {
+  &::before {
+    content: "\e937";
+  }
+}
 
-
-
-/* caret--right */
-
-a.link-mark--caret--right,
-.link-mark--caret--right a {
+/* caret */
+a.link-mark--caret-up,
+.link-mark--caret-up a,
+a.link-mark--caret-left,
+.link-mark--caret-left a,
+a.link-mark--caret-right,
+.link-mark--caret-right a,
+a.link-mark--caret-down,
+.link-mark--caret-down a {
   @extend .link-mark;
   padding-left: 0.75em;
+}
+
+a.link-mark--caret-up,
+.link-mark--caret-up a {
+  &::before {
+    content: "\ea14";
+  }
+}
+a.link-mark--caret-left,
+.link-mark--caret-left a {
+  &::before {
+    content: "\ea12";
+  }
+}
+a.link-mark--caret-down,
+.link-mark--caret-down a {
+  &::before {
+    content: "\ea15";
+  }
+}
+a.link-mark--caret-right,
+.link-mark--caret-right a {
   &::before {
     content: "\ea13";
   }
 }
 
-/* caret--down */
 
-a.link-mark--caret--down,
-.link-mark--caret--down a {
-  @extend .link-mark;
-  padding-left: 0.75em;
-  &::before {
-    content: "\ea15";
-  }
-}
-
-/* caret--right-border-circle */
-
-a.link-mark--caret--right-circle,
-.link-mark--caret--right-circle a {
+/* caret-circle */
+a.link-mark--caret-circle-up,
+.link-mark--caret-circle-up a,
+a.link-mark--caret-circle-left,
+.link-mark--caret-circle-left a,
+a.link-mark--caret-circle-right,
+.link-mark--caret-circle-right a,
+a.link-mark--caret-circle-down,
+.link-mark--caret-circle-down a {
   @extend .link-mark;
   padding-left: 1.25em;
-  &::before {
-    content: "\ea49";
-  }
-}
-/* caret--down-border-circle */
-
-a.link-mark--caret--down-circle,
-.link-mark--caret--down-circle a {
-  @extend .link-mark;
-  padding-left: 1.25em;
-  &::before {
-    content: "\ea4b";
-  }
 }
 
-/* caret--right-border-circle */
-
-a.link-mark--caret--right-border-circle,
-.link-mark--caret--right-border-circle a {
-  @extend .link-mark;
-  padding-left: 1.25em;
+a.link-mark--caret-circle-up,
+.link-mark--caret-circle-up a {
   &::before {
-    content: "\ea61";
+    content: "\ea62";
   }
 }
-/* caret--down-border-circle */
-
-a.link-mark--caret--down-border-circle,
-.link-mark--caret--down-border-circle a {
-  @extend .link-mark;
-  padding-left: 1.25em;
+a.link-mark--caret-circle-left,
+.link-mark--caret-circle-left a {
+  &::before {
+    content: "\ea60";
+  }
+}
+a.link-mark--caret-circle-down,
+.link-mark--caret-circle-down a {
   &::before {
     content: "\ea63";
   }
 }
+a.link-mark--caret-circle-right,
+.link-mark--caret-circle-right a {
+  &::before {
+    content: "\ea61";
+  }
+}
+
+/* caret-circle-border */
+a.link-mark--caret-circle-border-up,
+.link-mark--caret-circle-border-up a,
+a.link-mark--caret-circle-border-left,
+.link-mark--caret-circle-border-left a,
+a.link-mark--caret-circle-border-right,
+.link-mark--caret-circle-border-right a,
+a.link-mark--caret-circle-border-down,
+.link-mark--caret-circle-border-down a {
+  @extend .link-mark;
+  padding-left: 1.25em;
+}
+
+a.link-mark--caret-circle-border-up,
+.link-mark--caret-circle-border-up a {
+  &::before {
+    content: "\ea48";
+  }
+}
+a.link-mark--caret-circle-border-left,
+.link-mark--caret-circle-border-left a {
+  &::before {
+    content: "\ea48";
+  }
+}
+a.link-mark--caret-circle-border-down,
+.link-mark--caret-circle-border-down a {
+  &::before {
+    content: "\ea4b";
+  }
+}
+a.link-mark--caret-circle-border-right,
+.link-mark--caret-circle-border-right a {
+  &::before {
+    content: "\ea49";
+  }
+}
+
+/* arrow */
+a.link-mark--arrow-up,
+.link-mark--arrow-up a,
+a.link-mark--arrow-left,
+.link-mark--arrow-left a,
+a.link-mark--arrow-right,
+.link-mark--arrow-right a,
+a.link-mark--arrow-down,
+.link-mark--arrow-down a {
+  @extend .link-mark;
+  padding-left: 1.00em;
+}
+
+a.link-mark--arrow-up,
+.link-mark--arrow-up a {
+  &::before {
+    content: "\e978";
+  }
+}
+a.link-mark--arrow-left,
+.link-mark--arrow-left a {
+  &::before {
+    content: "\e976";
+  }
+}
+a.link-mark--arrow-down,
+.link-mark--arrow-down a {
+  &::before {
+    content: "\e979";
+  }
+}
+a.link-mark--arrow-right,
+.link-mark--arrow-right a {
+  &::before {
+    content: "\e977";
+  }
+}
+
+
+/* arrow-circle */
+a.link-mark--arrow-circle-up,
+.link-mark--arrow-circle-up a,
+a.link-mark--arrow-circle-left,
+.link-mark--arrow-circle-left a,
+a.link-mark--arrow-circle-right,
+.link-mark--arrow-circle-right a,
+a.link-mark--arrow-circle-down,
+.link-mark--arrow-circle-down a {
+  @extend .link-mark;
+  padding-left: 1.25em;
+}
+
+a.link-mark--arrow-circle-up,
+.link-mark--arrow-circle-up a {
+  &::before {
+    content: "\ea08";
+  }
+}
+a.link-mark--arrow-circle-left,
+.link-mark--arrow-circle-left a {
+  &::before {
+    content: "\ea06";
+  }
+}
+a.link-mark--arrow-circle-down,
+.link-mark--arrow-circle-down a {
+  &::before {
+    content: "\ea09";
+  }
+}
+a.link-mark--arrow-circle-right,
+.link-mark--arrow-circle-right a {
+  &::before {
+    content: "\ea07";
+  }
+}
+
+/* arrow-circle-border */
+a.link-mark--arrow-circle-border-up,
+.link-mark--arrow-circle-border-up a,
+a.link-mark--arrow-circle-border-left,
+.link-mark--arrow-circle-border-left a,
+a.link-mark--arrow-circle-border-right,
+.link-mark--arrow-circle-border-right a,
+a.link-mark--arrow-circle-border-down,
+.link-mark--arrow-circle-border-down a {
+  @extend .link-mark;
+  padding-left: 1.25em;
+}
+
+a.link-mark--arrow-circle-border-up,
+.link-mark--arrow-circle-border-up a {
+  &::before {
+    content: "\e9f1";
+  }
+}
+a.link-mark--arrow-circle-border-left,
+.link-mark--arrow-circle-border-left a {
+  &::before {
+    content: "\e9ee";
+  }
+}
+a.link-mark--arrow-circle-border-down,
+.link-mark--arrow-circle-border-down a {
+  &::before {
+    content: "\e9f0";
+  }
+}
+a.link-mark--arrow-circle-border-right,
+.link-mark--arrow-circle-border-right a {
+  &::before {
+    content: "\e9ef";
+  }
+}
+
+
+
 
 
 /*====================================

@@ -55,8 +55,7 @@ screen and (min-width: $breakpoints_medium) {
 
 @media print,
 screen and (min-width: $breakpoints_medium) {
-  .archive-list:not(.no-responsive),
-  .archive-list:not(.is-vertical) {
+  .archive-list:not(.no-responsive) {
     display: table;
     border-collapse: collapse;
     ul.archive-list--additional {
@@ -72,6 +71,7 @@ screen and (min-width: $breakpoints_medium) {
     .archive-list__header {
       width: 1%;
       white-space: nowrap;
+      padding-right: 1.0rem;
     }
     .archive-list__date,
     .archive-list__label {

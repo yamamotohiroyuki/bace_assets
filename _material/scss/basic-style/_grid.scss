@@ -24,34 +24,41 @@
 ====================================*/
 
 @mixin flex-width($width:100%) {
+  -ms-flex-preferred-size: $width;
   flex-basis: $width;
-  width: $width;
   max-width: $width;
 }
 
 .column {
   display: flex;
-  margin: -0.5rem;
+  margin: $column_gutter * -1;
   &:not(.no-responsive) {
     flex-direction: column;
-    @media print,
-    screen and (min-width: $breakpoints_medium) {
+    @media print, screen and (min-width: $breakpoints_medium) {
       flex-direction: row;
     }
   }
   &.no-responsive {
     flex-direction: row;
   }
+  /* 隙間なし　*/
+  &.no-gutter {
+    margin: 0;
+    .column__cell {
+      padding: 0;
+    }
+  }
 }
 
 .column__cell {
   display: block;
-  padding: 0.5rem;
+  padding: $column_gutter;
   position: relative;
   max-width: 100%;
   min-height: 1px;
-  flex-grow: 1;
-  flex-basis: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
 }
 
 .is-full {
@@ -61,16 +68,6 @@
 .column {
   @extend .column;
   flex-wrap: no-wrap;
-}
-
-/* 隙間なし　*/
-
-.column.no-gutter {
-  margin: 0;
-}
-
-.column.no-gutter .column__cell {
-  padding: 0;
 }
 
 .column--wrap {
@@ -85,8 +82,7 @@
   &:not(.no-responsive) {
     .column__cell {
       @include flex-width();
-      @media print,
-      screen and (min-width: $breakpoints_medium) {
+      @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(50%);
       }
       &.is-x2,
@@ -113,8 +109,7 @@
   &:not(.no-responsive) {
     .column__cell {
       @include flex-width();
-      @media print,
-      screen and (min-width: $breakpoints_medium) {
+      @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(33.33333%);
         &.is-x2 {
           @include flex-width(66.66666%);
@@ -147,8 +142,7 @@
   &:not(.no-responsive) {
     .column__cell {
       @include flex-width();
-      @media print,
-      screen and (min-width: $breakpoints_medium) {
+      @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(25%);
         &.is-x2 {
           @include flex-width(50%);
@@ -187,8 +181,7 @@
   &:not(.no-responsive) {
     .column__cell {
       @include flex-width();
-      @media print,
-      screen and (min-width: $breakpoints_medium) {
+      @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(20%);
         &.is-x2 {
           @include flex-width(40%);
@@ -233,8 +226,7 @@
   &:not(.no-responsive) {
     .column__cell {
       @include flex-width();
-      @media print,
-      screen and (min-width: $breakpoints_medium) {
+      @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(16.66666%);
         &.is-x2 {
           @include flex-width(33.33333%);
@@ -277,3 +269,12 @@
     }
   }
 }
+
+
+/*====================================
+
+    5.1. flex set
+
+====================================*/
+
+
