@@ -57,3 +57,6 @@
 [submodule "_submodule/paginationjs"]
 	path = _submodule/paginationjs
 	url = https://github.com/superRaytin/paginationjs
+[submodule "_submodule/autoprefixer"]
+	path = _submodule/autoprefixer
+	url = https://github.com/postcss/autoprefixer
