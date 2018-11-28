@@ -11,6 +11,7 @@
     9.0. clear & float
     9.1. img clear & float
     9.2. Display
+    9.3. Print Display
  
     ----------------------------------
         Change Log
@@ -48,7 +49,11 @@
 /* clearfix */
 
 .clearfix {
-  @include clearfix;
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }
 
 .clearfix {
@@ -83,14 +88,35 @@
 
 ====================================*/
 
-.display-inline {
-  display: inline !important;
-}
+@include responsive-fullset('display', 'none');
+@include responsive-fullset('display', 'inline');
+@include responsive-fullset('display', 'inline-block');
+@include responsive-fullset('display', 'block');
+@include responsive-fullset('display', 'table');
+@include responsive-fullset('display', 'table-row');
+@include responsive-fullset('display', 'table-cell');
+@include responsive-fullset('display', 'flex');
+@include responsive-fullset('display', 'inline-flex');
 
-.display-block {
-  display: block !important;
-}
 
-.display-none {
-  display: none !important;
+/*====================================
+
+    9.3. Print Display
+
+====================================*/
+
+//
+// Utilities for toggling `display` in print
+//
+
+@media print {
+  .display-print-none         { display: none !important; }
+  .display-print-inline       { display: inline !important; }
+  .display-print-inline-block { display: inline-block !important; }
+  .display-print-block        { display: block !important; }
+  .display-print-table        { display: table !important; }
+  .display-print-table-row    { display: table-row !important; }
+  .display-print-table-cell   { display: table-cell !important; }
+  .display-print-flex         { display: flex !important; }
+  .display-print-inline-flex  { display: inline-flex !important; }
 }

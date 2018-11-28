@@ -10,6 +10,9 @@ var js_watch = 'javascript/**/*.js';
 var submodule_path = '../_submodule/';
 var jsarray = [
   //prefixfree
+  'javascript/vendor/jquery/jquery.js',
+  'javascript/vendor/jquery/jquery-ui.js',
+  'javascript/modernizr.js',
   submodule_path+'prefixfree/prefixfree.js',
   submodule_path+'prefixfree/plugins/prefixfree.vars.js',
   submodule_path+'prefixfree/plugins/prefixfree.viewport-units.js',

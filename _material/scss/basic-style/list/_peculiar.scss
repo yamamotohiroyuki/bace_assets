@@ -4,15 +4,15 @@
 
 /* リスト */
 .list-style-peculiar {
-	margin-left: $list_margin !important;
+	margin-left: $list_margin_icon !important;
 	
 	> li {
 		list-style-type:none;
 		list-style-position:inside;
-		text-indent: -$list_margin;
+		text-indent: -$list_margin_icon;
 		
 		&::before {
-			display: inline-block; width: $list_margin; text-indent: 0;
+			display: inline-block; width: $list_margin_icon; text-indent: 0;
 		}
 	}
 }
@@ -26,7 +26,7 @@
 			display: none;
 		}
 	}
-	.list-style-peculiar--original_mark { display: inline-block; width: $list_margin; text-indent: 0; }
+	.list-style-peculiar--original_mark { display: inline-block; width: $list_margin_icon; text-indent: 0; }
 }
 
 /* (1) カッコに数字 */

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/*====================================
+  global.css
+  ----------------------------------
+  Overview
+  ----------------------------------
+  サイトの共通部分のスタイルを編集。
+  推奨プレフィックス「global-」
+  ----------------------------------
+  Variable
+  ----------------------------------
+  --primary: #3ab483 rgba(58,180,131,1.00) hsla(156, 51%, 47%, 1.00);
+  --secondary: #317e70 rgba(49,126,112,1.00) hsla(169, 44%, 34%, 1.00);
+
+  --white: #fff rgba(255,255,125, 1.00) hsla(0, 0%, 100%, 1.00);
+  --lightgray: #e6e6e6 rgba(230,230,230,1.00) hsla(0, 0%, 90%, 1.00);
+  --mediumgray: #bfbfbf rgba(191,191,191,1.00) hsla(0, 0%, 75%, 1.00);
+  --darkgray: #808080 rgba(128,128,128,1.00) hsla(0, 0%, 50%, 1.00);
+  ----------------------------------
+  Structure
+  ----------------------------------
+  Header
+  Main
+  Global Navigation
+  Breadcrumb
+  Contents
+  Sub Navigation
+  Footer
+  ----------------------------------
+  Change Log
+  ----------------------------------
+  -2018/11/27   Founding
+====================================*/
+/*====================================
+
+  Header
+
+====================================*/
+
+.global-header {
+  display: flex;
+  padding: 0; margin: 0;
+  justify-content: space-between;
+  background-color: hsla(156, 51%, 47%, 1.00);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+.global-header h1 {
+  display: block;
+  padding: 0; margin: 0;
+}
+.global-header h1 a {
+  display: block;
+  padding: 1.0rem; margin: 0;
+  font-size: 2.0rem;
+  color: #fff;
+}
+.global-header ul {
+  display: flex;
+  padding: 0; margin: 0;
+}
+
+/* ===========================================================
+
+  Main
+
+=========================================================== */
+.global-main-wrapper {
+  display: flex; padding: 0; margin: 0;
+  height: calc(100vh - 64px);
+}
+.global-main {
+  display: block; padding: 1.0rem;
+  width: calc(100% - (14rem + 10rem));
+  -ms-flex-preferred-size: calc(100% - (14rem + 10rem));
+  flex-basis: calc(100% - (14rem + 10rem));
+  max-width: calc(100% - (14rem + 10rem));
+}
+.global-navigation {
+  display: block; padding: 1.0rem;
+  background-color: hsla(156, 51%, 57%, 1.00);
+}
+
+
+/* ===========================================================
+
+  Global Navigation
+
+=========================================================== */
+
+.global-navigation {
+  display: block; padding: 1.0rem;
+  width: 14rem;
+  -ms-flex-preferred-size: 14rem;
+  flex-basis: 14rem;
+  max-width: 14rem;
+}
+
+/* ===========================================================
+
+  Breadcrumb
+
+=========================================================== */
+
+.global-breadcrumb {}
+
+/* ===========================================================
+
+  Contents
+
+=========================================================== */
+
+.global-contents {
+  display: block;
+}
+
+/* ===========================================================
+
+  Sub Navigation
+
+=========================================================== */
+.global-pagenavigation {
+  display: block; padding: 1.0rem;
+  width: 10rem;
+  -ms-flex-preferred-size: 10rem;
+  flex-basis: 10rem;
+  max-width: 10rem;
+}
+
+/* ===========================================================
+
+  Footer
+
+=========================================================== */
+
+.global-footer {}
+
+

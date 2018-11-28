@@ -1,18 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="utf-8">
-  <title>Japan REIT投資法人</title>
+  <title>Basic assets</title>
   <!-- meta -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+  <!-- basic-assets -->
   <link rel="stylesheet" href="../assets/vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
   <link rel="stylesheet" href="../assets/vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
+  <!-- styles -->
+  <link rel="stylesheet" href="assets/css/global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/contents.css" type="text/css" media="all" />
+  <!-- prism -->
+  <link rel="stylesheet" href="assets/vendor/prism/prism.css" type="text/css" media="all" />
+  <script src="assets/vendor/prism/prism.js"></script>
+  <!-- javascript -->
+  <script src="../assets/vendor/basic-assets/js/basic-bundle.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <h1>Introduction</h1>
-
+  <header class="global-header">
+    <h1><a href="#">Basic assets</a></h1>
+    <ul>
+      <li><a href="#" target="_blank"></a></li>
+      <li><a href="#" target="_blank"></a></li>
+    </ul>
+  </header><!-- / .global-header -->
+  <div class="global-main-wrapper">
+    <nav class="global-navigation">
+      <dl>
+        <dt><a href="#">概要</a></dt>
+        <dd>
+          <ul>
+            <li><a href="#">あああああああ</a></li>
+            <li><a href="#">いいいいいい</a></li>
+            <li><a href="#">ううううう</a></li>
+            <li><a href="#">ええええええ</a></li>
+            <li><a href="#">おおおおお</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </nav><!-- / .global-navigation -->
+    <main class="global-main">
+      <div class="global-contents">
+        <section class="global-contents__main">
+          <div class="contents-style">
+            <h1>概要</h1>
+            <p>サイト制作における基礎スタイルと、テーマによる自由度の高いスタイル変更を目指し、作られたアセットです。</p>
+            <p><code>basic-style.min.css</code>と<code>basic-thema.css</code>を読み込んで制作を始めましょう。</p>
+            <div class="code-space">
+              <pre class="line-numbers">
+                <code class="language-html"><!--
+                  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
+                  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
+                --></code>
+              </pre><!-- / .line-numbers -->
+            </div><!-- / .code-space -->
+            <h2>基本ディレクトリ構成</h2>
+            <div class="code-space">
+              <pre class="line-numbers" data-line="10">
+                <code class="language-markup"><!--
+                  site_root/
+                  ├── index.html --トップページ
+                  └── assets/
+                      ├── css/ --スタイルシート置き場
+                      │    ├── contents.css --コンテンツ内での共通部分のスタイル
+                      │    └── global.css --ヘッダーとかフッターとかの共通部分のスタイル
+                      ├── img/ --画像置き場
+                      ├── js/ --javascript置き場
+                      └── vendor/ --プラグインとかの置き場
+                          └── basic-assets/ --ここにまとめて入れておく
+                                ├── css/
+                                │    ├── basic-style.css -- source maps付きのminify前のcss（原則編集禁止）
+                                │    ├── basic-style.min.css -- minifyしたやつを使いましょう（原則編集禁止）
+                                │    └── basic-thema.css -- basic-styleにスタイルを与えたり基礎的なテーマ編集用
+                                ├── icon/ --アイコンフォント
+                                │    ├── basicicon.woff
+                                │    ├── basicicon.eot
+                                │    ├── basicicon.ttf
+                                │    └── basicicon.svg
+                                └── js/ --未着手ゆくゆく作りたい
+                                      ├── basic-bundle.js -- 代表的なプラグインをmix（原則編集禁止）
+                                      └── basic-bundle.min.js -- minifyしたやつを使いましょう（原則編集禁止）
+                --></code>
+              </pre><!-- / .line-numbers -->
+            </div><!-- / .code-space -->
+            
+            <h2>基本スタイル</h2>
+            <div class="column--2-cell">
+              <div class="column__cell"></div>
+              <div class="column__cell">
+                <pre class="line-numbers">
+                  <code class="language-html"><!--
+                    <h1 class="contents-title">モジュール一覧 : 基本スタイル</h1>
+                  --></code>
+                </pre>
+              </div>
+            </div>
+          </div><!-- / .contents-style -->
+        </section><!-- / .global-contents__main -->
+      </div><!-- / .global-contents -->
+    </main><!-- / .global-main -->
+    <nav class="global-pagenavigation">
+      ああああ
+    </nav><!-- / .global-pagenavigation -->
+  </div><!-- / .global-main-wrapper -->
 </body>
+
 </html>

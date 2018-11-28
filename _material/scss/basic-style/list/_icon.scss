@@ -4,15 +4,15 @@
 
 /* リスト */
 .list-style-icon {
-	margin-left: $list_margin !important;
+	margin-left: $list_margin_icon !important;
 	
 	> li {
 		list-style-type:none;
 		list-style-position:inside;
-		text-indent: -$list_margin;
+		text-indent: -$list_margin_icon;
 		
 		&::before {
-      display: inline-block; width: $list_margin; text-indent: 0;
+      display: inline-block; width: $list_margin_icon; text-indent: 0;
       font-family: '#{$icomoon-font-family}' !important;
       speak: none;
       font-style: normal;

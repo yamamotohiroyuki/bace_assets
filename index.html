@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<title>Basic assets</title>
+<!-- meta -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+<script type="text/javascript" src="/assets/vendor/basic-assets/js/basic-bundle.min.js"></script>
+
+<style>
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+ 
+.app {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 450px 1fr;
+  grid-template-columns: 200px 1fr;
+}
+ 
+header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .16);
+  /* グリッド ラインの1から始まり、最後まで占める */
+  grid-column: 1/-1;
+  -ms-grid-column: 1/-1;
+}
+ 
+aside {
+  background-color: #213e48;
+}
+</style>
+</head>
+<body>
+  <div class="app">
+    <header></header>
+    <aside></aside>
+    <main></main>
+  </div>
+</body>
+</html>

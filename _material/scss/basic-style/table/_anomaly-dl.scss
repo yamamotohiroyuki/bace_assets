@@ -36,8 +36,7 @@
 }
 
 
-@media print,
-screen and (min-width: $breakpoints_medium) {
+@media (min-width: $breakpoints_medium) {
   .dl-table:not(.no-responsive) {
     display: table;
     border-collapse: collapse;

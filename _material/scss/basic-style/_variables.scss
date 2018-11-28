@@ -21,17 +21,63 @@
 
 // リストのマージンなんかの値
 $list_margin: 2.5em;
+$list_margin_icon: 1.25em;
 // サイズの書き出し刻み方
 $size_num: 5;
 $size_num_em: 0.25;
+$size_num_emx10: 0.1;
 
-$breakpoints_x-small: 0;
-$breakpoints_small: 576px;
-$breakpoints_medium: 768px;
-$breakpoints_large: 992px;
-$breakpoints_x-large: 1200px;
+$breakpoints_mini   :  320px;
+$breakpoints_tiny   :  420px;
+$breakpoints_small  :  576px;
+$breakpoints_medium :  768px;
+$breakpoints_large  :  992px;
+$breakpoints_big    : 1200px;
+$breakpoints_huge   : 1600px;
+$breakpoints_massive: 1800px;
 
-$column_gutter: 0.5rem;
+$breakpoints: (
+  (
+    mini   : $breakpoints_mini,
+    tiny   : $breakpoints_tiny,
+    small  : $breakpoints_small,
+    medium : $breakpoints_medium,
+    large  : $breakpoints_large,
+    big    : $breakpoints_big,
+    huge   : $breakpoints_huge,
+    massive: $breakpoints_massive
+  )
+);
+
+$fontsize: (
+  (
+    mini   : 0.688em,
+    tiny   : 0.750em,
+    small  : 0.875em,
+    medium : 1.000em,
+    large  : 1.50em,
+    big    : 1.875em,
+    huge   : 2.000em,
+    massive: 4.000em
+  )
+);
+
+$colors: (
+  (
+    blue:    #007bff,
+    indigo:  #6610f2,
+    purple:  #6f42c1,
+    pink:    #e83e8c,
+    red:     #dc3545,
+    orange:  #fd7e14,
+    yellow:  #ffc107,
+    green:   #28a745,
+    teal:    #20c997,
+    cyan:    #17a2b8
+  )
+);
+
+$column_gutter: (16px / 2);
 
 // 主要判定子一覧
 // is-
@@ -43,14 +89,26 @@ $column_gutter: 0.5rem;
 .is-loded,
 .is-en,
 .is-ja { color: inherit; }
+
 // size
-.is-mini { font-size: 0.688em; }
-.is-tiny { font-size: 0.75em; }
-.is-small { font-size: 0.875em; }
-.is-medium { font-size: 1.0em; }
-.is-large { font-size: 1.125em; }
-.is-big { font-size: 1.25em; }
-.is-huge { font-size: 1.5em; }
-.is-massive { font-size: 2.0em; }
+@each $modifier, $size in $fontsize {
+  .is-#{$modifier} {
+    font-size: $size;
+  }
+}
+// text color
+@each $modifier, $color in $colors {
+  .is-color-#{$modifier} {
+    color: $color;
+  }
+}
+// background color
+@each $modifier, $color in $colors {
+  .is-backgroundcolor-#{$modifier} {
+    background-color: $color;
+  }
+}
+
 // no-
 .no-responsive { color: inherit; }
+

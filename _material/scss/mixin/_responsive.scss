@@ -1,0 +1,41 @@
+
+@mixin responsive-min($class, $bp: $breakpoints) {
+  @each $suffix, $value in $bp {
+    @media (min-width: #{$value}) {
+      #{$class}-min--#{$suffix} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin responsive-max($class, $bp: $breakpoints) {
+  @each $suffix, $value in $bp {
+    @media (max-width: #{$value - 0.2 }) {
+      #{$class}-max--#{$suffix} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin responsive-set($class) {
+  @include responsive-min($class) {
+    @content;
+  }
+  @include responsive-max($class) {
+    @content;
+  }
+}
+
+
+
+@mixin responsive-fullset($propaty, $modify) {
+  $classname: '.#{$propaty}-#{$modify}';
+  #{$classname} {
+    #{$propaty}: $modify !important;
+  }
+  @include responsive-set(#{$classname}) {
+    #{$propaty}: $modify;
+  }
+}
