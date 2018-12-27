@@ -51,7 +51,9 @@
     plugin style
 ======================================================== */
 // 1.slick
-@import "basic-style/slick";
+@import "basic-style/plugin/slick";
+// 2.slicknav
+@import "basic-style/plugin/slicknav";
 
 
 /* =======================================================
