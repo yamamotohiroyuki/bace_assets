@@ -60,3 +60,9 @@
 [submodule "_submodule/autoprefixer"]
 	path = _submodule/autoprefixer
 	url = https://github.com/postcss/autoprefixer
+[submodule "_submodule/jquery-transit"]
+	path = _submodule/jquery-transit
+	url = https://github.com/rstacruz/jquery.transit
+[submodule "_submodule/slicknav"]
+	path = _submodule/slicknav
+	url = https://github.com/ComputerWolf/SlickNav
