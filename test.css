@@ -1,0 +1,49 @@
+:root {
+  --main-bg-color: brown;
+} 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+ 
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "header header" "nav main" "nav  footer";
+  -ms-grid-columns: 120px 20px 1fr;
+  grid-template-columns: 120px 1fr;
+  -ms-grid-rows: 50px 20px 1fr 20px 50px;
+  grid-template-rows: 50px 1fr 50px;
+  grid-gap: 0;
+  min-height: 100vh;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: aliceblue;
+}
+
+nav {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  background-color: aqua;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: main;
+  background-color: aquamarine;
+}
+
+footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: footer;
+  background-color: var(--main-bg-color);
+}
