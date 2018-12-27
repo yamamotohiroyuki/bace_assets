@@ -10,15 +10,15 @@ var js_watch = 'javascript/**/*.js';
 var submodule_path = '../_submodule/';
 var jsarray = [
   //prefixfree
-  'javascript/vendor/jquery/jquery.js',
-  'javascript/vendor/jquery/jquery-ui.js',
   'javascript/modernizr.js',
   submodule_path+'prefixfree/prefixfree.js',
+  submodule_path+'prefixfree/plugins/prefixfree.jquery.js',
   submodule_path+'prefixfree/plugins/prefixfree.vars.js',
   submodule_path+'prefixfree/plugins/prefixfree.viewport-units.js',
-  'javascript/modernizr.js',
   submodule_path+'anime-js/anime.min.js',
   submodule_path+'slick/slick/slick.js',
+  submodule_path+'slicknav/dist/jquery.slicknav.js',
+  submodule_path+'sticky-kit/dist/sticky-kit.js',
   'javascript/basic-bundle.js'
 ];
 // gulpプラグインの読み込み
