@@ -10,11 +10,87 @@
   <link rel="stylesheet" href="vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
   <link rel="stylesheet" href="vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
   <!-- js -->
+  <script src="vendor/basic-assets/js/basic-adjust.min.js"></script>
+  <script src="vendor/jquery.min.js"></script>
   <script src="vendor/basic-assets/js/basic-bundle.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="vendor/basic-assets/js/basic-ie.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
   <div class="contents-style">
+
+      <div class="wrapper">
+          <div class="square" id="elem">elem</div>
+        </div>
+
+
+
+      <div class="top-jumbotron js-top-jumbotron">
+      
+          <div class="top-jumbotron__cell top-jumbotron__cell--00">
+            <div class="top-jumbotron__cell-text">
+              <div class="top-jumbotron__cell-inner">
+                <div class="top-jumbotron__text-group">
+                  <h1>Japan Excellent,Inc.</h1>
+                  <p class="top-jumbotron__cell-text-body">本投資法人は、不動産及び金融に強みを持つスポンサー企業の総合力を活用し、<br>これを集結して、「収益の安定と拡大」を追求することにより、<br>投資主価値の最大化を目指します。</p>
+                </div><!-- / .top-jumbotron__text-group -->
+              </div><!-- / .top-jumbotron__cell-inner -->
+            </div><!-- / .top-jumbotron__cell-text -->
+          </div><!-- / .top-jumbotron__cell top-jumbotron__cell--00 -->
+          
+          <div class="top-jumbotron__cell top-jumbotron__cell--01">
+            <div class="top-jumbotron__cell-text">
+              <div class="top-jumbotron__cell-inner">
+                <div class="top-jumbotron__text-group">
+                <h2>スポンサー企業の総合力</h2>
+                  <p class="top-jumbotron__cell-text-body">不動産及び金融それぞれに強みを持つ<br>スポンサー企業から資産運用会社へ人材・ノウハウ等を提供</p>
+                  <p class="top-jumbotron__cell-button"><a href="#"><span>資産運用会社</span></a></p>
+                </div><!-- / .top-jumbotron__text-group -->
+              </div><!-- / .top-jumbotron__cell-inner -->
+            </div><!-- / .top-jumbotron__cell-text -->
+          </div><!-- / .top-jumbotron__cell top-jumbotron__cell--01 -->
+          
+          <div class="top-jumbotron__cell top-jumbotron__cell--02">
+            <div class="top-jumbotron__cell-text">
+              <div class="top-jumbotron__cell-inner">
+                <div class="top-jumbotron__text-group">
+                  <h2>投資方針</h2>
+                  <p class="top-jumbotron__cell-text-body">大都市圏のオフィスビルを中心とした<br>ポートフォリオ運用で収益の安定と拡大を追求</p>
+                  <p class="top-jumbotron__cell-button"><a href="#"><span>投資方針</span></a></p>
+                </div><!-- / .top-jumbotron__text-group -->
+              </div><!-- / .top-jumbotron__cell-inner -->
+            </div><!-- / .top-jumbotron__cell-text -->
+          </div><!-- / .top-jumbotron__cell top-jumbotron__cell--02 -->
+          
+          <div class="top-jumbotron__cell top-jumbotron__cell--03">
+            <div class="top-jumbotron__cell-text">
+              <div class="top-jumbotron__cell-inner">
+                <div class="top-jumbotron__text-group">
+                  <h2>質の高いアセット</h2>
+                  <p class="top-jumbotron__cell-text-body">本投資法人は、収益の「安定」と「拡大」のバランスを両立させるべく、<br>質の高いアセット（資産）を取得しポートフォリオを構築することを目指しています。<br>そのキーワードが、「東京圏」×「オフィスビル」です。</p>
+                  <p class="top-jumbotron__cell-button"><a href="#"><span>運用方針</span></a></p>
+                </div><!-- / .top-jumbotron__text-group -->
+              </div><!-- / .top-jumbotron__cell-inner -->
+            </div><!-- / .top-jumbotron__cell-text -->
+          </div><!-- / .top-jumbotron__cell top-jumbotron__cell--03 -->
+          
+          <div class="top-jumbotron__cell top-jumbotron__cell--04">
+            <div class="top-jumbotron__cell-text">
+              <div class="top-jumbotron__cell-inner">
+                <div class="top-jumbotron__text-group">
+                  <h2>安定した経営実績</h2>
+                  <p class="top-jumbotron__cell-text-body">ジャパンエクセレント投資法人は、「優良なスポンサー」と「質の高いアセット（資産）」に支えられ、<br>経営環境の変化に左右されにくいポートフォリオ構築と、地道な収益性の向上に向けた努力、<br>保守的な財務体質の確立を継続することで、安定的な経営を維持します。</p>
+                  <p class="top-jumbotron__cell-button"><a href="#"><span>財務方針</span></a></p>
+                </div><!-- / .top-jumbotron__text-group -->
+              </div><!-- / .top-jumbotron__cell-inner -->
+            </div><!-- / .top-jumbotron__cell-text -->
+          </div><!-- / .top-jumbotron__cell top-jumbotron__cell--04 -->
+          
+        </div><!-- / .top-jumbotron -->
+
+
     <p class="display-none-max--medium ">display-none-min--medium </p>
     <p>
       <a href="#" class="link-button">button</a>
@@ -415,6 +491,24 @@
       </tfoot>
     </table>
   </div>
+  <script>
+  $('.js-top-jumbotron').slick({
+  dots: true,
+  arrows:false,
+  infinite: true,
+  fade: true,
+  speed: 1000,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+var elem = document.getElementById('elem');
+elem.addEventListener('click',function(){
+  anime({
+    targets: elem,
+    translateX: 250                
+  })              
+})
+  </script>
 </body>
 
 </html>
