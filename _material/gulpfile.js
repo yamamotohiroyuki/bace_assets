@@ -7,20 +7,57 @@ var scss_watch = 'scss/**/*.scss';
 var js_path = root_path+'js'; // 吐き出し
 var js_watch = 'javascript/**/*.js';
 
+var material_css_path = 'css';
+var material_js_path = 'javascript';
+
 var submodule_path = '../_submodule/';
-var jsarray = [
-  //prefixfree
-  'javascript/modernizr.js',
-  submodule_path+'prefixfree/prefixfree.js',
-  submodule_path+'prefixfree/plugins/prefixfree.jquery.js',
-  submodule_path+'prefixfree/plugins/prefixfree.vars.js',
-  submodule_path+'prefixfree/plugins/prefixfree.viewport-units.js',
+
+var task_array = [
+  'sasswatch',
+  'sass',
+  'jswatch',
+  'bundlejs',
+  'iejs',
+  'adjustjs',
+  'browser-sync',
+  'filewatch'
+];
+
+
+
+var bundle_array = [
   submodule_path+'anime-js/anime.min.js',
   submodule_path+'slick/slick/slick.js',
   submodule_path+'slicknav/dist/jquery.slicknav.js',
   submodule_path+'sticky-kit/dist/sticky-kit.js',
+  'javascript/vendor/yuga.js',
   'javascript/basic-bundle.js'
 ];
+var adjust_array = [
+  submodule_path+'prefixfree/prefixfree.js',
+  submodule_path+'prefixfree/plugins/prefixfree.jquery.js',
+  submodule_path+'prefixfree/plugins/prefixfree.vars.js',
+  submodule_path+'prefixfree/plugins/prefixfree.viewport-units.js',
+  'javascript/modernizr.js'
+];
+var iejs_array = [
+  //ie
+  submodule_path+'css3-mediaqueries-js/css3-mediaqueries.js',
+  submodule_path+'html5shiv/html5shiv.js'
+];
+
+
+function jsminify(filename, array) {
+  gulp.src(array)
+    .pipe(plumber())
+    .pipe(concat('basic-' + filename + '.js'))
+    .pipe(gulp.dest(material_js_path))
+    .pipe(uglify())
+    .pipe(rename({extname: '.min.js'}))
+    .pipe(gulp.dest(js_path));
+}
+
+
 // gulpプラグインの読み込み
 var gulp = require('gulp'),
     sass = require('gulp-sass'), // sassのコンパイル
@@ -38,7 +75,7 @@ var gulp = require('gulp'),
     browserSync =require('browser-sync'); // ブラウザシンク
 
 // css task
-gulp.task('default', ['sasswatch', 'sass', 'jswatch', 'js', 'browser-sync', 'filewatch']);
+gulp.task('default', task_array);
 
 
 
@@ -60,23 +97,21 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(css_path));
 });
 
+
+
 // js task
 gulp.task('jswatch', function () {
-  gulp.watch(js_watch, ['js']);
+  gulp.watch(js_watch, ['bundlejs',]);
 });
 gulp.task('modernizr', function () {
-  gulp.pipe(modernizr())
-    .pipe(gulp.dest('javascript'))
+  gulp.pipe(modernizr()).pipe(gulp.dest(material_js_path))
 });
-gulp.task('js', function () {
-  gulp.src(jsarray)
-    .pipe(plumber())
-    .pipe(concat('basic-bundle.js'))
-    .pipe(gulp.dest(js_path))
-    .pipe(uglify())
-    .pipe(rename({extname: '.min.js'}))
-    .pipe(gulp.dest(js_path));
-});
+gulp.task('bundlejs', jsminify('bundle', bundle_array));
+gulp.task('adjustjs', jsminify('adjust', adjust_array));
+// ie専用js
+gulp.task('iejs', jsminify('ie', iejs_array));
+
+
 
 
 // ブラウザシンク
@@ -104,3 +139,4 @@ gulp.task('filewatch', function () {
   gulp.watch("../assets/**/*.css", ['bs-reload']);
   gulp.watch("../assets/**/*.js",  ['bs-reload']);
 });
+

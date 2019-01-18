@@ -66,3 +66,12 @@
 [submodule "_submodule/slicknav"]
 	path = _submodule/slicknav
 	url = https://github.com/ComputerWolf/SlickNav
+[submodule "_submodule/css3-mediaqueries-js"]
+	path = _submodule/css3-mediaqueries-js
+	url = https://github.com/livingston/css3-mediaqueries-js
+[submodule "_submodule/html5shiv"]
+	path = _submodule/html5shiv
+	url = https://github.com/aFarkas/html5shiv
+[submodule "_submodule/yuga.js-TT-Custom"]
+	path = _submodule/yuga.js-TT-Custom
+	url = https://github.com/dounokouno/yuga.js-TT-Custom
