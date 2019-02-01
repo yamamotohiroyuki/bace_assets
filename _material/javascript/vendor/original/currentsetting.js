@@ -21,7 +21,7 @@
  */
 
 /*
- * yuga.js BA Custom
+ * currentsetting.js BA Custom
  *
  * Copyright (c) 2019 Japan REIT (hiroyuki.yamamoto@japan-reit.co.jp)
  * Licensed under the MIT License:
@@ -33,15 +33,15 @@
 
 (function($) {
 	$(function() {
-		$.yuga.selflink();
-		$.yuga.category();
+		$.currentsetting.selflink();
+		$.currentsetting.category();
 	});
 })(jQuery);
 
 
 (function($) {
 
-	$.yuga = {
+	$.currentsetting = {
 		// URIを解析したオブジェクトを返すfunction
 		Uri: function(path){
 			var self = this;
@@ -88,7 +88,7 @@
 				parentsLinkClass:'is-parents'
 			}, options);
 			$(c.selfLinkAreaSelector+((c.selfLinkAreaSelector)?' ':'')+'a[href]').each(function(){
-				var href = new $.yuga.Uri(this.getAttribute('href'));
+				var href = new $.currentsetting.Uri(this.getAttribute('href'));
 				if ((href.absolutePath == location.href) && !href.fragment) {
 					//同じ文書にリンク
 					$(this).addClass(c.selfLinkClass);
@@ -102,7 +102,7 @@
 		category: function(options) {
 			var c = $.extend({
 				buttonSelector: '.js-same-category',
-				selectClass: 'is-same'
+				selectClass: 'is-same-category'
 			}, options);
 			var bodyClasses = new Array();
 			if ($('body').attr('class')) {

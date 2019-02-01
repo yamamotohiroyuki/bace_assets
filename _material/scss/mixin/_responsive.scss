@@ -2,7 +2,7 @@
 @mixin responsive-min($class, $bp: $breakpoints) {
   @each $suffix, $value in $bp {
     @media (min-width: #{$value}) {
-      #{$class}-min--#{$suffix} {
+      #{$class}--min--#{$suffix} {
         @content;
       }
     }
@@ -12,7 +12,7 @@
 @mixin responsive-max($class, $bp: $breakpoints) {
   @each $suffix, $value in $bp {
     @media (max-width: #{$value - 0.2 }) {
-      #{$class}-max--#{$suffix} {
+      #{$class}--max--#{$suffix} {
         @content;
       }
     }

@@ -31,7 +31,8 @@
 
 .js-panels {}
 .js-panel { display: none; }
-.js-panel.active { display: block; }
+.js-panel.is-active,
+.js-panel.is-current { display: block; }
 
 /* tab-row */
 .tab-row {

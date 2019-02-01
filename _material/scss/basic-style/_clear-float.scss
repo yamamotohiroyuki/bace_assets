@@ -88,15 +88,10 @@
 
 ====================================*/
 
-@include responsive-fullset('display', 'none');
-@include responsive-fullset('display', 'inline');
-@include responsive-fullset('display', 'inline-block');
-@include responsive-fullset('display', 'block');
-@include responsive-fullset('display', 'table');
-@include responsive-fullset('display', 'table-row');
-@include responsive-fullset('display', 'table-cell');
-@include responsive-fullset('display', 'flex');
-@include responsive-fullset('display', 'inline-flex');
+@include responsive-fullset('display', none);
+@include responsive-fullset('display', inline);
+@include responsive-fullset('display', inline-block);
+@include responsive-fullset('display', block);
 
 
 /*====================================
