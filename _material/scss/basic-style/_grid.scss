@@ -31,7 +31,7 @@
 
 .column {
   display: flex;
-  margin: $column_gutter * -1;
+  margin: ($column_gutter * 2) * -1;
   &:not(.no-responsive) {
     flex-direction: column;
     @media print, screen and (min-width: $breakpoints_medium) {
@@ -48,11 +48,67 @@
       padding: 0;
     }
   }
+  /* 隙間 /4　*/
+  &.is-gutter-mini {
+    margin: ($column_gutter / 4) * -1;
+    .column__cell {
+      padding: ($column_gutter / 4);
+    }
+  }
+  /* 隙間 /2　*/
+  &.is-gutter-tiny {
+    margin: ($column_gutter / 2) * -1;
+    .column__cell {
+      padding: ($column_gutter / 2);
+    }
+  }
+  /* 隙間 　*/
+  &.is-gutter-small {
+    margin: ($column_gutter) * -1;
+    .column__cell {
+      padding: ($column_gutter);
+    }
+  }
+  /* 隙間 *2 　*/
+  &.is-gutter-medium {
+    margin: ($column_gutter * 2) * -1;
+    .column__cell {
+      padding: ($column_gutter * 2);
+    }
+  }
+  /* 隙間 *3 　*/
+  &.is-gutter-large {
+    margin: ($column_gutter * 3) * -1;
+    .column__cell {
+      padding: ($column_gutter * 3);
+    }
+  }
+  /* 隙間 *4 　*/
+  &.is-gutter-big {
+    margin: ($column_gutter * 4) * -1;
+    .column__cell {
+      padding: ($column_gutter * 4);
+    }
+  }
+  /* 隙間 *5 　*/
+  &.is-gutter-huge {
+    margin: ($column_gutter * 5) * -1;
+    .column__cell {
+      padding: ($column_gutter * 5);
+    }
+  }
+  /* 隙間 *6 　*/
+  &.is-gutter-massive {
+    margin: ($column_gutter * 6) * -1;
+    .column__cell {
+      padding: ($column_gutter * 6);
+    }
+  }
 }
 
 .column__cell {
   display: block;
-  padding: $column_gutter;
+  padding: ($column_gutter * 2);
   position: relative;
   max-width: 100%;
   min-height: 1px;
@@ -80,7 +136,7 @@
 .column--2-cell {
   @extend .column--wrap;
   &:not(.no-responsive) {
-    .column__cell {
+    > .column__cell {
       @include flex-width();
       @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(50%);
@@ -92,7 +148,7 @@
     }
   }
   &.no-responsive {
-    .column__cell {
+    > .column__cell {
       @include flex-width(50%);
       &.is-x2,
       &.is-full {
@@ -107,7 +163,7 @@
 .column--3-cell {
   @extend .column--wrap;
   &:not(.no-responsive) {
-    .column__cell {
+    > .column__cell {
       @include flex-width();
       @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(33.33333%);
@@ -122,7 +178,7 @@
     }
   }
   &.no-responsive {
-    .column__cell {
+    > .column__cell {
       @include flex-width(33.33333%);
       &.is-x2 {
         @include flex-width(66.66666%);
@@ -140,7 +196,7 @@
 .column--4-cell {
   @extend .column--wrap;
   &:not(.no-responsive) {
-    .column__cell {
+    > .column__cell {
       @include flex-width();
       @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(25%);
@@ -158,7 +214,7 @@
     }
   }
   &.no-responsive {
-    .column__cell {
+    > .column__cell {
       @include flex-width(25%);
       &.is-x2 {
         @include flex-width(50%);
@@ -179,7 +235,7 @@
 .column--5-cell {
   @extend .column--wrap;
   &:not(.no-responsive) {
-    .column__cell {
+    > .column__cell {
       @include flex-width();
       @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(20%);
@@ -200,7 +256,7 @@
     }
   }
   &.no-responsive {
-    .column__cell {
+    > .column__cell {
       @include flex-width(20%);
       &.is-x2 {
         @include flex-width(40%);
@@ -224,7 +280,7 @@
 .column--6-cell {
   @extend .column--wrap;
   &:not(.no-responsive) {
-    .column__cell {
+    > .column__cell {
       @include flex-width();
       @media print, screen and (min-width: $breakpoints_medium) {
         @include flex-width(16.66666%);
@@ -248,7 +304,7 @@
     }
   }
   &.no-responsive {
-    .column__cell {
+    > .column__cell {
       @include flex-width(16.66666%);
       &.is-x2 {
         @include flex-width(33.33333%);

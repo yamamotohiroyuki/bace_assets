@@ -30,8 +30,8 @@ var bundle_array = [
   submodule_path+'slick/slick/slick.js',
   submodule_path+'slicknav/dist/jquery.slicknav.js',
   submodule_path+'sticky-kit/dist/sticky-kit.js',
-  'javascript/original/currentsetting.js',
-  'javascript/original/acs.js',
+  'javascript/vendor/original/currentsetting.js',
+  'javascript/vendor/original/acs.js',
   'javascript/basic-bundle.js'
 ];
 var adjust_array = [
