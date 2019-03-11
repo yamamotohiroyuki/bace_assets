@@ -6,16 +6,6 @@
   <title>Basic assets</title>
   <!-- meta -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/meta/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/meta/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/meta/favicon-16x16.png">
-  <link rel="manifest" href="../assets/img/meta/site.webmanifest">
-  <link rel="mask-icon" href="../assets/img/meta/safari-pinned-tab.svg" color="#59c99d">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-
   <!-- css -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
   <!-- basic-assets -->
@@ -24,8 +14,11 @@
   <!-- styles -->
   <link rel="stylesheet" href="assets/css/global.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/css/contents.css" type="text/css" media="all" />
+  <!-- javascript -->
+  <script type="text/javascript" src="../assets/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/vendor/basic-assets/js/basic-adjust.min.js"></script>
+  <script type="text/javascript" src="../assets/vendor/basic-assets/js/basic-bundle.min.js"></script>
 </head>
-
 <body>
   <main class="global-main">
     <div class="global-contents">
@@ -37,8 +30,12 @@
           <div class="code-space">
             <pre class="line-numbers">
                 <code class="language-html"><!--
+                  // CSS
                   <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
                   <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
+                  //JS
+                  <script type="text/javascript" src="/assets/vendor/basic-assets/js/basic-adjust.min.js"></script>
+                  <script type="text/javascript" src="/assets/vendor/basic-assets/js/basic-bundle.min.js"></script>
                 --></code>
               </pre><!-- / .line-numbers -->
           </div><!-- / .code-space -->
@@ -52,37 +49,28 @@
                       ├── css/ --スタイルシート置き場
                       │    ├── contents.css --コンテンツ内での共通部分のスタイル
                       │    └── global.css --ヘッダーとかフッターとかの共通部分のスタイル
+                      │    └── basic-thema.css -- basic-styleにスタイルを与えたり基礎的なテーマ編集用
                       ├── img/ --画像置き場
                       ├── js/ --javascript置き場
-                      └── vendor/ --プラグインとかの置き場
+                      └── vendor/ --プラグインとかの置き場（原則編集禁止）
                           └── basic-assets/ --ここにまとめて入れておく
-                                ├── css/
+                                ├── css/ --↓よりもわちゃわちゃ入ってるけど無視してください。
                                 │    ├── basic-style.css -- source maps付きのminify前のcss（原則編集禁止）
                                 │    ├── basic-style.min.css -- minifyしたやつを使いましょう（原則編集禁止）
-                                │    └── basic-thema.css -- basic-styleにスタイルを与えたり基礎的なテーマ編集用
+                                │    └── basic-thema.css -- /assets/css/に持っていきましょう。
                                 ├── icon/ --アイコンフォント
                                 │    ├── basicicon.woff
                                 │    ├── basicicon.eot
                                 │    ├── basicicon.ttf
                                 │    └── basicicon.svg
-                                └── js/ --未着手ゆくゆく作りたい
-                                      ├── basic-bundle.js -- 代表的なプラグインをmix（原則編集禁止）
-                                      └── basic-bundle.min.js -- minifyしたやつを使いましょう（原則編集禁止）
+                                └── js/
+                                      ├── basic-adjust.min.js -- 代表的なブラウザアジャストのスクリプトmix（原則編集禁止）
+                                      ├── basic-bundle.min.js -- 代表的なプラグインをmix（原則編集禁止）
+                                      └── basic-ie.min.js -- ie10以下用のスクリプトをmix（原則編集禁止）（もういらないよね）
                 --></code>
               </pre><!-- / .line-numbers -->
           </div><!-- / .code-space -->
 
-          <h2>基本スタイル</h2>
-          <div class="column--2-cell">
-            <div class="column__cell"></div>
-            <div class="column__cell">
-              <pre class="line-numbers">
-                  <code class="language-html"><!--
-                    <h1 class="contents-title">モジュール一覧 : 基本スタイル</h1>
-                  --></code>
-                </pre>
-            </div>
-          </div>
         </div><!-- / .contents-style -->
       </section><!-- / .global-contents__main -->
     </div><!-- / .global-contents -->
@@ -93,8 +81,6 @@
   <script src="assets/vendor/prism/prism.js"></script>
   <!-- javascript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-  <script src="../assets/vendor/basic-assets/js/basic-bundle.min.js" crossorigin="anonymous"></script>
   <script src="assets/js/global.js"></script>
 </body>
 </html>

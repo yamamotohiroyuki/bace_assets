@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+
+
+.element {
+  display: block;
+  background-color: rgba(var(--primary-color), 1.0);
+}
+.element-link a {
+  display: block; padding: var(--list-padding);
+  background-color: rgba(var(--primary-color), 1.0);
+  transition: all 0.5s;
+}
+.element-link a:hover {
+  background-color: rgba(var(--secondary-color), 1.0);
+}
+
+@media print, screen and (min-width: 768px) {
+  .element-link a {
+    padding: var(--list-padding-2);
+    display: block;
+    background-color: rgba(var(--secondary-color), 1.0);
+  }
+  .element-link a:hover {
+    background-color: rgba(var(--primary-color), 1.0);
+  }
+
+}
