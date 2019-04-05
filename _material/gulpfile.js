@@ -67,6 +67,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'), // JavaScript の 連結処理
     uglify = require('gulp-uglify'), // javascript minify
     modernizr = require('gulp-modernizr'), // modernizr
+    cleancss = require('gulp-clean-css'), // CleanCSS
     /*
     browserify = require('browserify'),
     source     = require('vinyl-source-stream'),
@@ -93,6 +94,7 @@ gulp.task('sass', function () {
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sourcemaps.write())
     .pipe(gulp.dest(css_path))
+    .pipe(cleancss())
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(css_path));
@@ -128,10 +130,10 @@ gulp.task('browser-sync', function() {
 //
 //ブラウザリロード
 //
+
 gulp.task('bs-reload', function () {
   browserSync.reload();
 });
-
 //
 //監視ファイル
 //
