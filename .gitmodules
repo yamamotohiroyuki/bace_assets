@@ -69,3 +69,6 @@
 [submodule "_submodule/yuga.js-TT-Custom"]
 	path = _submodule/yuga.js-TT-Custom
 	url = https://github.com/dounokouno/yuga.js-TT-Custom
+[submodule "_submodule/masonry"]
+	path = _submodule/masonry
+	url = https://github.com/desandro/masonry
