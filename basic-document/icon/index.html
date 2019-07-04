@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>icon : Basic assets</title>
+  <!-- meta -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+  <!-- basic-assets -->
+  <link rel="stylesheet" href="../assets/vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../assets/vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
+  <!-- styles -->
+  <link rel="stylesheet" href="assets/css/global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/contents.css" type="text/css" media="all" />
+  <!-- javascript -->
+  <script type="text/javascript" src="../assets/vendor/basic-assets/js/basic-adjust.min.js"></script>
+  <script type="text/javascript" src="../assets/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/vendor/basic-assets/js/basic-bundle.min.js"></script>
+</head>
+<body>
+  <main class="global-main">
+    <div class="global-contents">
+      <section class="global-contents__main">
+        <div class="contents-style">
+          <h1>Basic Icon</h1>
+          <p>サイト制作における基礎スタイルと、テーマによる自由度の高いスタイル変更を目指し、作られたアセットです。</p>
+          <p><code>basic-style.min.css</code>と<code>basic-thema.css</code>を読み込んで制作を始めましょう。</p>
+          <div class="code-space">
+            <pre class="line-numbers">
+                <code class="language-html"><!--
+                  // CSS
+                  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-style.min.css" type="text/css" media="all" />
+                  <link rel="stylesheet" href="/assets/vendor/basic-assets/css/basic-thema.css" type="text/css" media="all" />
+                  //JS
+                  <script type="text/javascript" src="/assets/vendor/basic-assets/js/basic-adjust.min.js"></script>
+                  <script type="text/javascript" src="/assets/vendor/jquery.min.js"></script>
+                  <script type="text/javascript" src="/assets/vendor/basic-assets/js/basic-bundle.min.js"></script>
+                --></code>
+              </pre><!-- / .line-numbers -->
+          </div><!-- / .code-space -->
+          <h2>基本ディレクトリ構成</h2>
+          <div class="code-space">
+            <pre class="line-numbers" data-line="10">
+                <code class="language-markup"><!--
+                  site_root/
+                  ├── index.html --トップページ
+                  └── assets/
+                      ├── css/ --スタイルシート置き場
+                      │    ├── contents.css --コンテンツ内での共通部分のスタイル
+                      │    └── global.css --ヘッダーとかフッターとかの共通部分のスタイル
+                      │    └── basic-thema.css -- basic-styleにスタイルを与えたり基礎的なテーマ編集用
+                      ├── img/ --画像置き場
+                      ├── js/ --javascript置き場
+                      └── vendor/ --プラグインとかの置き場（原則編集禁止）
+                          └── basic-assets/ --ここにまとめて入れておく
+                                ├── css/ --↓よりもわちゃわちゃ入ってるけど無視してください。
+                                │    ├── basic-style.css -- source maps付きのminify前のcss（原則編集禁止）
+                                │    ├── basic-style.min.css -- minifyしたやつを使いましょう（原則編集禁止）
+                                │    └── basic-thema.css -- /assets/css/に持っていきましょう。
+                                ├── icon/ --アイコンフォント
+                                │    ├── basicicon.woff
+                                │    ├── basicicon.eot
+                                │    ├── basicicon.ttf
+                                │    └── basicicon.svg
+                                └── js/
+                                      ├── basic-adjust.min.js -- 代表的なブラウザアジャストのスクリプトmix（原則編集禁止）
+                                      ├── basic-bundle.min.js -- 代表的なプラグインをmix（原則編集禁止）
+                                      └── basic-ie.min.js -- ie10以下用のスクリプトをmix（原則編集禁止）（もういらないよね）
+                --></code>
+              </pre><!-- / .line-numbers -->
+          </div><!-- / .code-space -->
+
+        </div><!-- / .contents-style -->
+      </section><!-- / .global-contents__main -->
+    </div><!-- / .global-contents -->
+  </main><!-- / .global-main -->
+
+  <!-- prism (code highlight) -->
+  <link rel="stylesheet" href="assets/vendor/prism/prism.css" type="text/css" media="all" />
+  <script src="assets/vendor/prism/prism.js"></script>
+  <!-- javascript -->
+  <script src="assets/js/global.js"></script>
+</body>
+</html>

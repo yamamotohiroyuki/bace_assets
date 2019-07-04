@@ -434,4 +434,64 @@
 
 ====================================*/
 
+$grid-rows: 12;
+$grid-sizes: (sm 480px, md 768px, lg 992px, xl 1200px);
+$grid-prefix: 'w';
+$grid-padding: 6px 4px;
 
+.container{
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  > div[class*='#{$grid-prefix}-'] {
+    padding: $grid-padding;
+    box-sizing: border-box;
+  }
+  > div:not([class*='#{$grid-prefix}-']) {
+    flex: 1;
+    padding: $grid-padding;
+  }
+  @for $i from 1 through $grid-rows {
+    .#{$grid-prefix}-#{$i} {
+      flex-basis: $i / $grid-rows * 100%;
+    }
+    .#{$grid-prefix}-offset-#{$i} {
+      margin-left: $i / $grid-rows * 100%;
+    }
+    @each $sizeLabel, $value in $grid-sizes {
+      [class*='#{$grid-prefix}-offset-#{$sizeLabel}-'] {
+        margin-left: 0;
+      }
+      .#{$grid-prefix}-#{$sizeLabel}-#{$i} {
+        flex-basis: 100%
+      }
+    }
+  }
+  @each $classLabel, $cssValue in (align-start flex-start, align-center center, align-end flex-end) {
+    > div[class*='#{$grid-prefix}-'].#{$classLabel} {
+      align-self: $cssValue;
+    }
+  }
+  @each $classLabel, $cssValue in (align-start flex-start, align-center center, align-end flex-end, space-around space-around, space-between space-between) {
+    &.#{$classLabel} {
+      justify-content: $cssValue;
+    }
+  }
+}
+@each $sizeLabel, $value in $grid-sizes {
+  @media only screen and (min-width: #{$value}) {
+    @for $i from 1 through $grid-rows {
+      .row > .#{$grid-prefix}-#{$sizeLabel}-#{$i} {
+        flex-basis: $i / $grid-rows * 100%;
+      }
+      .row > .#{$grid-prefix}-offset-#{$sizeLabel}-#{$i} {
+        margin-left: $i / $grid-rows * 100%;
+      }
+    }
+    .container {
+      width: if(index($grid-sizes,$sizeLabel $value) > 2, $value, 99%);
+    }
+  }
+}
